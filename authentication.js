@@ -5,9 +5,9 @@ var OnshapeStrategy = require('passport-onshape').Strategy;
 
 var oauthClientId;
 var oauthClientSecret;
-var callbackUrl = "https://onshape-app-stl.herokuapp.com/oauthRedirect";
-var oauthUrl = 'https://oauth.onshape.com';
-var apiUrl = 'https://cad.onshape.com';
+var callbackUrl = "https://test-onshape-app.herokuapp.com/oauthRedirect";
+var oauthUrl = 'https://rogers.onshape.com';
+var apiUrl = 'https://rogers.onshape.com';
 
 if (process.env.OAUTH_CLIENT_ID) {
   oauthClientId = process.env.OAUTH_CLIENT_ID;
