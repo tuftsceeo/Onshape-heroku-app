@@ -21,21 +21,23 @@ th {
 
 
 #home-button{
-  background-color: #7FFFD4;
-  border: none;
-  color: rgb(0, 0, 0);
-  text-align: center; 
+  border: 2px solid black;
+  text-align: left; 
   font-size: 16px;
-  padding: 15px 32px; 
+  padding: 32px; 
   margin: 2px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: auto; 
 }
 
 #another-button{
   background-image: linear-gradient(red,yellow);
   border: none; 
-  text-align: center; 
+  text-align: left; 
   font-size: 20px;
   margin: 2px;
+  padding: 32px; 
 }
 
 #stl-menu-bar {
