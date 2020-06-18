@@ -35,7 +35,7 @@ authentication.init();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('hbs').__express);
 app.set('view engine', 'html');
-app.use('/images', express.static(path.join(__dirname, 'images')));
+// app.use('/images', express.static(path.join(__dirname, 'images')));
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
