@@ -21,7 +21,7 @@ th {
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #CAC8CD;
   padding: 20px 10px; 
 }
 
@@ -46,13 +46,16 @@ th {
   color: black;
 }
 
-.header a.active{
-  background-color: #8F39FE;
-  color: white;
-}
-
 .header-right {
   float: right;
+}
+
+.header-right button {
+  background-color: #6CCFF7;
+  border: none; 
+  color: black; 
+  padding: 10px 24px;
+  cursor: pointer;
 }
 
 #home-button{
