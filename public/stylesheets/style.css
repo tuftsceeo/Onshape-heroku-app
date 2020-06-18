@@ -21,11 +21,20 @@ th {
 
 .header {
   overflow: hidden;
-  background-color: #CAC8CD;
+  background-color: #EDEFF0;
   padding: 20px 10px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5%;
+  box-shadow: 0px 15px 6px -6px #777; 
 }
 
-.header a {
+.header-left {
+  width: 50%;
+}
+
+.header-left a {
   float: left;
   color: black; 
   text-align: center; 
@@ -36,25 +45,25 @@ th {
   border-radius: 4px;
 }
 
-.header a.logo {
+.header-left a.logo {
   font-size: 25px; 
   font-weight: bold; 
 }
 
-.header a:hover{
+.header-left a:hover{
   background-color: #A5E8F3;
   color: black;
 }
 
-.header-right {
+/* .header-right {
   float: right;
-}
+} */
 
 .header-right button {
   background-color: #6CCFF7;
-  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0px 10px 6px -6px #777;
   color: black; 
-  padding: 10px 24px;
   cursor: pointer;
 }
 
@@ -63,7 +72,6 @@ th {
   text-align: left; 
   font-size: 16px;
   padding: 32px; 
-  margin: 2px;
 }
 
 #another-button{
