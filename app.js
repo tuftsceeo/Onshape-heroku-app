@@ -50,7 +50,7 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/signin', express.static(path.join(__dirname, '..', 'dist')));
-app.use('/image', express.static(path.join(__dirname, 'public')));
+// app.use('/image', express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   store: new RedisStore({
