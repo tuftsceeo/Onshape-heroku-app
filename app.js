@@ -35,7 +35,6 @@ authentication.init();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('hbs').__express);
 app.set('view engine', 'html');
-// app.use('/images', express.static(path.join(__dirname, 'images')));
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -50,7 +49,8 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/signin', express.static(path.join(__dirname, '..', 'dist')));
-// app.use('/image', express.static(path.join(__dirname, 'public')));
+app.use('/image', express.static(path.join(__dirname, 'public')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use(session({
   store: new RedisStore({
