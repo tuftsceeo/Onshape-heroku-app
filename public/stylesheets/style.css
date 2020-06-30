@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Landasans Ultra';
+  font-family: 'LandasansLight';
   src: url('./Landasans-UltraLight.eot');
   src: url('./Landasans-UltraLight.eot?#iefix') format('embedded-opentype'),
       url('./Landasans-UltraLight.woff2') format('woff2'),
@@ -8,7 +8,7 @@
       url('./Landasans-UltraLight.eot') format('svg');
 }
 @font-face {
-  font-family: 'LEMON MILK';
+  font-family: 'LemonBold';
   src: url('./LEMONMILK-Medium.eot');
   src: url('./LEMONMILK-Medium.eot?#iefix') format('embedded-opentype'),
       url('./LEMONMILK-Medium.woff2') format('woff2'),
