@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'LandasansLight';
-  src: url('stylesheets/LandasansUltraLight-qZYq5.ttf');
+  src: url('https://test-onshape-app.herokuapp.com/stylesheets/LandasansUltraLight-qZYq5.ttf');
 }
 
 @font-face {
   font-family: 'LemonBold';
-  src: url('stylesheets/LemonMilkMedium-mLZYV.otf');
+  src: url('https://test-onshape-app.herokuapp.com/stylesheets/LemonMilkMedium-mLZYV.otf');
 }
 
 .container {
