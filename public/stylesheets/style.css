@@ -88,11 +88,17 @@ body {
 .image-right {
   margin-left: 5%;
   margin-right: 2%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .image-left {
   margin-right: 5%;
   margin-left: 2%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 h3 {
