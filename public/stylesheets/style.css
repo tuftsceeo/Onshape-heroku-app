@@ -103,7 +103,7 @@ body {
 
 .image-right {
   margin-right: 1%;
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: flex-end;
 }
@@ -113,6 +113,26 @@ body {
   width: 90%;
   display: flex;
   justify-content: flex-start;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2%;
+  width: 80%;
+  height: 650px;
+  background-color: #F1F1F5;
+}
+
+img.shadow { 
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 8px -2px #777;
 }
 
 h3 {
