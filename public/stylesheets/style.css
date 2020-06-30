@@ -132,7 +132,7 @@ img.shadow {
   width: 80%;
   height: 80%;
   border-radius: 10px;
-  box-shadow: 0 10px 8px -2px #777;
+  box-shadow: 0 10px 14px -4px #777;
 }
 
 h3 {
@@ -142,6 +142,10 @@ h3 {
   font-family: 'LemonBold';
   font-size: 20px;
   /*float: left;*/
+}
+
+h3.title { 
+  margin-bottom: 5px;
 }
 
 img.med {
