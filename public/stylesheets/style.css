@@ -1,11 +1,20 @@
 @font-face {
-  font-family: 'LandasansLight';
-  src: url('./LandasansUltraLight-qZYq5.ttf') format('truetype');
+  font-family: 'Landasans Ultra';
+  src: url('./Landasans-UltraLight.eot');
+  src: url('./Landasans-UltraLight.eot?#iefix') format('embedded-opentype'),
+      url('./Landasans-UltraLight.woff2') format('woff2'),
+      url('./Landasans-UltraLight.woff') format('woff'),
+      url('./Landasans-UltraLight.ttf') format('truetype'),
+      url('./Landasans-UltraLight.eot') format('svg');
 }
-
 @font-face {
-  font-family: 'LemonBold';
-  src: url('./LemonMilkMedium-mLZYV.otf') format('truetype');
+  font-family: 'LEMON MILK';
+  src: url('./LEMONMILK-Medium.eot');
+  src: url('./LEMONMILK-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./LEMONMILK-Medium.woff2') format('woff2'),
+      url('./LEMONMILK-Medium.woff') format('woff'),
+      url('./LEMONMILK-Medium.ttf') format('truetype'),
+      url('./LEMONMILK-Medium.svg') format('svg');
 }
 
 .container {
