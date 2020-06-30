@@ -72,7 +72,7 @@ body {
   align-content: flex-start;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 2.5%;
+  margin: 2%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -101,6 +101,12 @@ h3 {
   font-family: 'LemonBold';
   font-size: 20px;
   /*float: left;*/
+}
+
+img.med {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
 }
 
 img { 
