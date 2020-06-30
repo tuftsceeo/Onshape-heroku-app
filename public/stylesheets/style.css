@@ -134,7 +134,7 @@ body {
   margin: 2%;
   width: 70%;
   height: 650px;
-  background-color: #F1F1F5;
+  background-color: #3C4FCC;
 }
 
 img.shadow { 
@@ -154,7 +154,8 @@ h3 {
 }
 
 h3.title { 
-  margin-bottom: 5px;
+  color: #F1F1F5;
+  margin-bottom: 7px;
 }
 
 img.med {
@@ -180,4 +181,8 @@ p {
   padding: 0;
   font-family: 'LandasansLight';
   font-size: 23px;
+}
+
+p.white {
+  color: #F1F1F5;
 }
