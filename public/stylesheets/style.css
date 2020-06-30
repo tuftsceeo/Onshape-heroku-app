@@ -132,7 +132,7 @@ body {
   border-radius: 12px;
   padding: 2%;
   margin: 2%;
-  width: 80%;
+  width: 70%;
   height: 650px;
   background-color: #F1F1F5;
 }
@@ -141,7 +141,7 @@ img.shadow {
   width: 80%;
   height: 80%;
   border-radius: 10px;
-  box-shadow: 0 10px 14px -4px #777;
+  box-shadow: 0 8px 16px -4px #777;
 }
 
 h3 {
