@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'LandasansLight';
-  src: url('./LandasansUltraLight-qZYq5.ttf');
+  src: url('./LandasansUltraLight-qZYq5.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'LemonBold';
-  src: url('./LemonMilkMedium-mLZYV.otf');
+  src: url('./LemonMilkMedium-mLZYV.otf') format('truetype');
 }
 
 .container {
@@ -95,8 +95,8 @@ h3 {
 }
 
 img { 
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   border-radius: 10px;
 }
 
