@@ -86,16 +86,16 @@ body {
 }
 
 .image-right {
-  margin-left: 5%;
-  margin-right: 2%;
+  margin-left: 3%;
+  margin-right: 1%;
   width: 90%;
   display: flex;
   justify-content: flex-end;
 }
 
 .image-left {
-  margin-right: 5%;
-  margin-left: 2%;
+  margin-right: 3%;
+  margin-left: 1%;
   width: 90%;
   display: flex;
   justify-content: flex-start;
