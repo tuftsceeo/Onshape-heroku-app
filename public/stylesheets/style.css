@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'LandasansLight';
-  src: url('LandasansUltraLight-qZYq5.ttf');
+  src: url('stylesheets/LandasansUltraLight-qZYq5.ttf');
 }
 
 @font-face {
   font-family: 'LemonBold';
-  src: url('LemonMilkMedium-mLZYV.otf');
+  src: url('stylesheets/LemonMilkMedium-mLZYV.otf');
 }
 
 .container {
