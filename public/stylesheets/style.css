@@ -59,6 +59,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 10%;
 }
@@ -67,7 +68,7 @@ body {
   background-color: #F1F1F5;
   border-radius: 10px;	
   width: 300px;
-  height: 300px;
+  height: 350px;
   text-align: left;
   align-content: flex-start;
   padding-left: 20px;
@@ -104,8 +105,8 @@ h3 {
 }
 
 img.med {
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
   border-radius: 10px;
 }
 
