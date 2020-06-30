@@ -134,7 +134,7 @@ body {
   margin: 2%;
   width: 70%;
   height: 650px;
-  background-color: #3C4FCC;
+  background-color: #F1F1F5;
 }
 
 img.shadow { 
@@ -154,7 +154,6 @@ h3 {
 }
 
 h3.title { 
-  color: #F1F1F5;
   margin-bottom: 7px;
 }
 
