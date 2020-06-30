@@ -86,7 +86,6 @@ body {
 }
 
 .image-right {
-  margin-left: 3%;
   margin-right: 1%;
   width: 90%;
   display: flex;
@@ -94,7 +93,6 @@ body {
 }
 
 .image-left {
-  margin-right: 3%;
   margin-left: 1%;
   width: 90%;
   display: flex;
