@@ -64,6 +64,15 @@ body {
   margin-bottom: 10%;
 }
 
+.contents-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
 .text-description-med {
   background-color: #F1F1F5;
   border-radius: 10px;	
