@@ -145,6 +145,8 @@ img.shadow {
 }
 
 img.shadow2 { 
+  width: 1021px;
+  height: 804px;
   border-radius: 10px;
   box-shadow: 0 8px 16px -4px #000;
 }
