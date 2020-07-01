@@ -228,12 +228,21 @@ p {
   height: 80%; 
 }
 
-.container-text { 
+.container-text-1 { 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 9%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.container-text-2 { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10%;
   margin-right: 5%;
 }
 
