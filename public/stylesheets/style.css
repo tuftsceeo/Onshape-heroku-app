@@ -241,3 +241,7 @@ p.bold {
   color: #F1F1F5;
   font-size: 35px;
 }
+
+p.normal {
+  font-family: "Swansea";
+}
