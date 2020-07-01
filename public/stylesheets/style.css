@@ -17,6 +17,16 @@
       url('./LEMONMILK-Medium.svg') format('svg');
 }
 
+@font-face {
+  font-family: 'Swansea';
+  src: url('./Swansea.eot');
+  src: url('./Swansea.eot?#iefix') format('embedded-opentype'),
+      url('./Swansea.woff2') format('woff2'),
+      url('./Swansea.woff') format('woff'),
+      url('./Swansea.ttf') format('truetype'),
+      url('./Swansea.svg#Swansea') format('svg');
+}
+
 .container {
   display: flex;
   align-items: center;
