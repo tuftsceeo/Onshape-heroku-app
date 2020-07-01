@@ -192,6 +192,12 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2%;
+  width: 85%;
+  height: 700px;
+  background-color: #3C4FCC;
 }
 
 p {
@@ -208,12 +214,6 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 12px;
-  padding: 2%;
-  margin: 2%;
-  width: 85%;
-  height: 700px;
-  background-color: #3C4FCC;
 }
 
 .container-text { 
