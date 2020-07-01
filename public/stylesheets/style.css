@@ -169,6 +169,7 @@ h3.title-white {
   margin-bottom: 7px;
   font-size: 35px;
   color: #F1F1F5;
+  margin-bottom: 10px;
 }
 
 img.med {
@@ -195,8 +196,8 @@ img {
   border-radius: 12px;
   padding: 2%;
   margin: 2%;
-  width: 85%;
-  height: 700px;
+  width: 80%;
+  height: 600px;
   background-color: #3C4FCC;
 }
 
@@ -214,6 +215,7 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 70%; 
 }
 
 .container-text { 
