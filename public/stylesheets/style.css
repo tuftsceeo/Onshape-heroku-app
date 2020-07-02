@@ -50,6 +50,16 @@ h2 {
   margin: 0;
 }
 
+ul {
+  margin: 0; 
+  padding: 0;
+  list-style-type: none; 
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px; 
+}
 
 body {
   background-color: #251C2C;
