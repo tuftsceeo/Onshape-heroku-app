@@ -53,11 +53,15 @@ h2 {
 ul {
   margin: 0; 
   padding: 0;
+  font-family: 'LemonBold';
+  color: white; 
   list-style-type: none; 
 }
 
 li {
   display: inline-block;
+  font-family: 'LemonBold';
+  color: white; 
   margin-right: 20px; 
 }
 
