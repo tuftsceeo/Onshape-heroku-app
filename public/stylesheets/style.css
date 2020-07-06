@@ -279,6 +279,7 @@ p.normal {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 10%;
+  font-size: 25px; 
 }
 
 .form-container {
@@ -301,6 +302,7 @@ hr {
 
 .submitbtn {
   background-color: pink;
+  font-family: "Swansea";
   color: black; 
   padding: 16px 20px;
   margin: 8px 0;
@@ -312,4 +314,21 @@ hr {
 
 .submitbtn:hover {
   opacity:1;
+}
+
+.rating {
+  unicode-bidi: bidi-override; 
+  direction: rtl;
+}
+
+.rating > span {
+  display: inline-block; 
+  position: relative; 
+  width: 1.1em;
+}
+
+.rating > span:hover:before, 
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
 }

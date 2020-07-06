@@ -123,15 +123,27 @@
 
       <div class="feedback-form">
         <div class="form-container">
-          <h3>Feedback Form</h3>
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
           <form action="/action_page.php">
             <hr>
-            <label for="fname">First Name:</label><br>
-            <input type="text" placehodler="Enter your first name" id="fname" name="fname" required><br>
+            <label for="liked">What did you like about this app?</label><br>
+            <input type="text" placeholder="Example: I liked the way it was structured..." id="liked" name="liked" required><br>
 
-            <label for="lname">Last Name:</label><br>
-            <input type="text" placeholder="Enter your last name" id="lname" name="lname" required>
+            <label for="disliked">What didn't you like about this app?</label><br>
+            <input type="text" placeholder="Example: I didn't like how there was no audio..." id="disliked" name="disliked" required><br>
+
+            <label for="comments">What did you wish/didn't wish to see?</label><br>
+            <input type="text" placeholder="Example: I wish I saw different functions..." id="comments" name="comments"><br>
+
+            <label for="additional">Any additional comments?</label><br>
+            <input type="text" placeholder="Example: Awesome app!" id="additional" name="additional"><br>
             <hr>
+
+            <label for="rate-app">Rate our app!</label><br>
+            <div class="rating">
+              <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
 
             <button type="submit" class="submitbtn">Submit</button>
           </form>
