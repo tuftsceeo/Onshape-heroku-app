@@ -329,6 +329,22 @@ hr {
   opacity:1;
 }
 
+.google-docs {
+  background-color: pink; 
+  font-family: "LandasansLight";
+  color: black; 
+  padding: 16px 20px; 
+  margin: 8px 0; 
+  border: none; 
+  cursor: pointer; 
+  width: 100%; 
+  opacity: 0.9; 
+}
+
+.google-docs:hover {
+  opacity: 1;
+}
+
 .hide {
   display: none; 
 }
