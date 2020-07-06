@@ -293,17 +293,18 @@ p.normal {
   width: 80%;
   height: 600px;
   background-color: #3C4FCC;
+  overflow: scroll;
 }
 
 label {
   color:white;
-  font-size: 35px;
+  font-size: 25px;
   font-family: "normal";
 }
 
 input {
   width: 450px;
-  padding: 30px;
+  padding: 20px;
   margin: 8px 0; 
 }
 
