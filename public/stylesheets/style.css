@@ -342,7 +342,7 @@ hr {
 }
 
 .rating > label {
-  display: block; 
+  display: inline; 
   padding: 5px; 
   margin: 0; 
   width: 1.1em; 
