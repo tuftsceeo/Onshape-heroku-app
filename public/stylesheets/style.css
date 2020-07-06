@@ -347,7 +347,7 @@ hr {
   padding: 0; 
   margin: 0; 
   position: relative; 
-  width: 1em; 
+  width: 0.8em; 
   cursor: pointer; 
   color: #000; 
 }
