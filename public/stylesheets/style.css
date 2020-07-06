@@ -342,12 +342,10 @@ hr {
 }
 
 .rating > label {
-  float: right; 
   display: block; 
   padding: 5px; 
   margin: 0; 
-  position: relative; 
-  width: 0.7em; 
+  width: 1.1em; 
   cursor: pointer; 
   color: #000; 
 }
