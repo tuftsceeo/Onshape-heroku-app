@@ -141,7 +141,21 @@
             <hr>
 
             <label for="rate-app">Rate our app!</label><br>
-            <fieldset class="rating">
+            <form>
+              <div class="rating">
+                <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+                <label for="star5" >☆</label>
+                <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+                <label for="star4" >☆</label>
+                <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+                <label for="star3" >☆</label>
+                <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+                <label for="star2" >☆</label>
+                <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+                <label for="star1" >☆</label>
+              </div>
+            </form>
+            <!-- <fieldset class="rating">
               <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><br>
               <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome"></label>
               <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5"></label>
@@ -153,7 +167,7 @@
               <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Not good - 1.5"></label>
               <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Not good - 1"></label>
               <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks - 0.5"></label>
-            </fieldset>
+            </fieldset> -->
 
             <button type="submit" class="submitbtn">Submit</button>
           </form>
