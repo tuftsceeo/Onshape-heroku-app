@@ -343,7 +343,7 @@ hr {
 
 .rating > label {
   float: right; 
-  display: none; 
+  display: block; 
   padding: 5px; 
   margin: 0; 
   position: relative; 
