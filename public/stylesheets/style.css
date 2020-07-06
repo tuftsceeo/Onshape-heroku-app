@@ -329,19 +329,36 @@ hr {
   opacity:1;
 }
 
+
+fieldset, label {
+  margin: 0; 
+  padding: 0; 
+}
+
+
 .rating {
-  unicode-bidi: bidi-override; 
+  border: none; 
   direction: rtl;
 }
 
-.rating > span {
-  display: inline-block; 
-  position: relative; 
-  width: 1.1em;
+.rating > input {
+  display: none; 
 }
 
-.rating > span:hover:before, 
-.rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
+.rating > label:before {
+  margin: 5px; 
+  font-size: 1.25em; 
+  font-family: "Swansea";
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute; 
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
 }
