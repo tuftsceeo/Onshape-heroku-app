@@ -344,8 +344,8 @@ hr {
 .rating > label {
   float: right; 
   display: inline; 
-  padding: 0; 
-  margin: 0; 
+  padding: 5px; 
+  margin: 5px; 
   position: relative; 
   width: 0.7em; 
   cursor: pointer; 
