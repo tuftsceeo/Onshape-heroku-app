@@ -295,6 +295,16 @@ p.normal {
   background-color: #3C4FCC;
 }
 
+label {
+  color:white;
+  font-size: 16px;
+  font-family: "normal";
+}
+
+input {
+  width: 25px;
+}
+
 hr {
   border : 1px solid #f1f1f1;
   margin-bottom: 25px; 
@@ -302,7 +312,7 @@ hr {
 
 .submitbtn {
   background-color: pink;
-  font-family: "Swansea";
+  font-family: "normal";
   color: black; 
   padding: 16px 20px;
   margin: 8px 0;
