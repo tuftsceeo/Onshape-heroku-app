@@ -297,12 +297,12 @@ p.normal {
 
 label {
   color:white;
-  font-size: 16px;
+  font-size: 50px;
   font-family: "normal";
 }
 
 input {
-  width: 150px;
+  width: 450px;
 }
 
 hr {
