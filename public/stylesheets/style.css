@@ -334,11 +334,10 @@ hr {
 }
 
 .rating {
-  width: 90px; 
+  width: 30px; 
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: center;
-  position: relative; 
 }
 
 .rating > label {
