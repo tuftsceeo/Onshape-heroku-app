@@ -28,9 +28,8 @@
           <li><a href="https://test-onshape-app.herokuapp.com/">Cube Demo</a></li>
         </ul>
       </nav> -->
-    </div>
 
-    <div>
+      <!-- if we want to have links to other pages -->
       <a class="nav-link" href="home-page.html">Home</a>
     </div>
     
@@ -119,6 +118,23 @@
           <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
           <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube. </p>
           <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot start off with an Extrude Remove before making your cube. **</strong></p>
+        </div>
+      </div>
+
+      <div class="feedback-form">
+        <div class="form-container">
+          <h3>Feedback Form</h3>
+          <form action="/action_page.php">
+            <hr>
+            <label for="fname">First Name:</label><br>
+            <input type="text" placehodler="Enter your first name" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" placeholder="Enter your last name" id="lname" name="lname" required>
+            <hr>
+            
+            <button type="submit" class="submitbtn">Submit</button>
+          </form>
         </div>
       </div>
 

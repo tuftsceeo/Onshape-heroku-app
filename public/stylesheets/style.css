@@ -270,3 +270,46 @@ p.normal {
   font-family: "Swansea";
   font-size: 18px;
 }
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2%;
+  width: 80%;
+  height: 600px;
+  background-color: #3C4FCC;
+}
+
+hr {
+  border : 1px solid #f1f1f1;
+  margin-bottom: 25px; 
+}
+
+.submitbtn {
+  background-color: pink;
+  color: black; 
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none; 
+  cursor: pointer;
+  width: 100%; 
+  opacity: 0.9;
+}
+
+.submitbtn:hover {
+  opacity:1;
+}
