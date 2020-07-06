@@ -288,7 +288,7 @@ p.normal {
   align-items: center;
   border-radius: 12px;
   padding: 2%;
-  margin: 2%;
+  margin: auto;
   width: 80%;
   height: 600px;
   background-color: #3C4FCC;
