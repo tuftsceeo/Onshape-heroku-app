@@ -130,7 +130,7 @@
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="test-form">
+          <form name="google-sheets-form">
             <hr>
             <label for="liked">What did you like about this app?</label><br>
             <input type="text" placeholder="Example: I liked the way it was structured..." id="liked" name="liked" required><br>
@@ -160,6 +160,22 @@
                 <label for="star1">☆</label>
               </div>
             </form>
+
+            <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+            <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+            <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+            <script>
+              const scriptURL='<https://script.google.com/macros/s/AKfycbwjSZXRxMQ8EgEiq3Ic0mKmYFFzNzNEWNBxVMld6MAVIYHmxj2u/exec>'
+              const form = document.forms['google-sheets-form']
+              
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => console.log('Success!', response))
+                  .then(error => console.error('Error!', error.message))
+              })
+            </script>
             <!-- <fieldset class="rating">
               <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><br>
               <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome"></label>

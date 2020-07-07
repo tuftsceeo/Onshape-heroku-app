@@ -327,7 +327,7 @@ hr {
   margin: 8px 0;
   border: none; 
   cursor: pointer;
-  width: 100%; 
+  width: 50%; 
   opacity: 0.9;
 }
 
@@ -395,8 +395,7 @@ hr {
 
 .menu-botton:hover {
   border-radius: 50%;
-  background: #F1F1F5;
-  opacity: 70%;
+  background: #bababd;
 }
 
 .bar1, .bar2, .bar3 { 
