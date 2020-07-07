@@ -372,11 +372,18 @@ label {
 
 .rating > label {
   padding: 0; 
-  margin: 0; 
+  margin-right: 2px;
+  margin-left: 2px; 
   position: relative; 
   width: 1.1em; 
   cursor: pointer; 
   color: #000; 
+}
+
+.rate { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .rating > label:hover, 
