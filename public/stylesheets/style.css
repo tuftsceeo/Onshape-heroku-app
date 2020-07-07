@@ -288,6 +288,17 @@ p.normal {
   font-size: 25px; 
 }
 
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10%;
+  font-size: 25px; 
+  align-items: center;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -328,7 +339,7 @@ hr {
   padding: 14px 18px;
   border: none;
   cursor: pointer;
-  width: 35%; 
+  width: 150px; 
   opacity: 0.9;
 }
 
