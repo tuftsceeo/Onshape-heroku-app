@@ -352,11 +352,11 @@ hr {
   opacity: 1;
 }
 
-/* .hide {
+.hide {
   display: none; 
-} */
+}
 
-/* .rating {
+.rating {
   width: 30px; 
   unicode-bidi: bidi-override;
   direction: rtl;
@@ -399,7 +399,7 @@ label {
   content: "\2605";
   position: absolute; 
   color: #FFD700;
-} */
+}
 
 .menu-button { 
   margin-left: 1.5%;
