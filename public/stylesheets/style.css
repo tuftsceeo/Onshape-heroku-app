@@ -324,8 +324,9 @@ hr {
   font-family: "LemonBold";
   color: #E56878;
   font-size: 35px; 
-  padding: 16px 20px;
-  margin: 8px 0;
+  border-radius: 15%;
+  padding: 14px 18px;
+  margin: 4px 0;
   border: none; 
   cursor: pointer;
   width: 30%; 
