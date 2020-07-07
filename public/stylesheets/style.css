@@ -327,7 +327,7 @@ hr {
   margin: 8px 0;
   border: none; 
   cursor: pointer;
-  width: 50%; 
+  width: 30%; 
   opacity: 0.9;
 }
 
@@ -389,11 +389,8 @@ hr {
 
 .menu-button { 
   margin-left: 1.5%;
-  cursor: pointer;
   left: 0;
-  border-radius: 50%;
   width: 60px;
-  background-color: #3F3888; 
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 0;
@@ -401,9 +398,10 @@ hr {
   opacity: .9;
 }
 
-.menu-botton div:hover {  
+.menu-button:hover {  
   background-color: #d2d2d6;
   opacity: 1;
+  cursor: pointer;
 }
 
 .bar1, .bar2, .bar3 { 
