@@ -324,7 +324,8 @@ label {
 input {
   width: 450px;
   padding: 20px;
-  margin: 8px 0; 
+  margin-top: 2px;
+  margin-bottom: 15px;
 }
 
 hr {
