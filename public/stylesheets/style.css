@@ -43,7 +43,7 @@
   text-align: center;
   display: flex; 
   flex-direction: row; 
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -319,7 +319,7 @@ hr {
 }
 
 .submitbtn {
-  background-color: pink;
+  background-color: #E56878;
   font-family: "normal";
   color: black; 
   padding: 16px 20px;
@@ -335,7 +335,7 @@ hr {
 }
 
 .google-docs {
-  background-color: pink; 
+  background-color: #E56878; 
   font-family: "LandasansLight";
   color: black; 
   padding: 16px 20px; 
