@@ -392,10 +392,13 @@ hr {
   cursor: pointer;
   left: 0;
   border-radius: 50%;
+  background: #bababd;
+  opacity: .7;
 }
 
 .menu-botton:hover {
   background: #bababd;
+  opacity: 1;
 }
 
 .bar1, .bar2, .bar3 { 
