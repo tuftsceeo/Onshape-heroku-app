@@ -395,10 +395,16 @@ hr {
   width: 60px;
   height: 60px;
   background-color: #3F3888; 
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 0;
+  opacity: .9;
 }
 
 .menu-botton:hover {  
   background-color: #d2d2d6;
+  opacity: 1;
 }
 
 .bar1, .bar2, .bar3 { 
