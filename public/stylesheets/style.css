@@ -317,6 +317,8 @@ label {
   color:#F1F1F5;
   font-size: 25px;
   font-family: "normal";
+  margin-bottom: 0;
+  padding: 0;
 }
 
 input {
@@ -328,6 +330,7 @@ input {
 hr {
   border : 1px solid #F1F1F5;
   margin-bottom: 25px; 
+  width: 400px;
 }
 
 .text-input { 
