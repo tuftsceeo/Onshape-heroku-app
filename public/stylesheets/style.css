@@ -51,6 +51,8 @@ h2 {
   font-size: 50px;
   margin: 0;
   align-self: center;
+  position: absolute; 
+  left: 50%;
 }
 
 ul {
@@ -385,12 +387,13 @@ hr {
 }
 
 .menu-button { 
-  margin-right: 20%;
   display: inline-block;
   cursor: pointer;
 }
 
 .bar1, .bar2, .bar3 { 
+  margin-top: 5px;
+  margin-bottom: 5px;
   position: relative;
   display: block;
   width: 50px;
