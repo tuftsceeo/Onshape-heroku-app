@@ -326,9 +326,8 @@ hr {
   font-size: 40px; 
   border-radius: 40px;
   padding: 14px 18px;
-  border: none; 
   cursor: pointer;
-  width: 35%; 
+  width: 40%; 
   opacity: 0.9;
 }
 
