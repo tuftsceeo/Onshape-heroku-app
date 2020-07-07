@@ -41,6 +41,8 @@
   position: fixed;
   top: 0;
   text-align: center;
+  display: flex; 
+  
 }
 
 h2 {
@@ -353,7 +355,6 @@ hr {
   width: 30px; 
   unicode-bidi: bidi-override;
   direction: rtl;
-  text-align: center;
   position: relative; 
 }
 
