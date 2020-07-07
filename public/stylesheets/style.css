@@ -366,6 +366,10 @@ hr {
   justify-content: space-evenly;
 }
 
+label { 
+  font-family: "Swansea";
+}
+
 .rating > label {
   padding: 0; 
   margin: 0; 
