@@ -182,6 +182,7 @@ body {
   height: 100%;
   border-radius: 10px;
   position: relative;
+  text-align: center; 
   z-index: 0;
 }
 
