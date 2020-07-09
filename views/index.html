@@ -14,6 +14,7 @@
   <script src="javascripts/index.js"></script>
 
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
   <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
@@ -24,11 +25,16 @@
 <body>
   <div class="container">
     <div class="top">
-      <div class="menu-button" onclick=""> 
+      <!-- <div class="menu-button" onclick=""> 
         <div class="bar1" style="--delay: 0.00s"></div>
         <div class="bar2" style="--delay: 0.10s"></div>
         <div class="bar3" style="--delay: 0.20s"></div>
-      </div> 
+      </div>  -->
+      <button class="hamburger" type="button">
+        <span class="hamburger-spin">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
       <h2 class="header-text"> Cube with A Hole </h2> 
       <!-- <nav>
         <ul>
@@ -70,7 +76,10 @@
       <div class="contents">
         <div class="image-container">
           <div class="gif-left">
-            <img src="https://test-onshape-app.herokuapp.com/images/sketch1-new.gif" alt="Square Sketch">
+            <!-- <img src="https://test-onshape-app.herokuapp.com/images/sketch1-new.gif" alt="Square Sketch"> -->
+            <video width="480" height="360" controls>
+              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+            </video>
           </div>
         </div> 
         <div class="text-description-large">
