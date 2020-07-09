@@ -448,15 +448,16 @@ label {
 }
 
 @media (hover: hover) {
-  .menu-button div{
-    transform: translateY(2px);
+  .menu-button .bar1 .bar2 .bar3{
+    transform: translateY(4px);
     box-shadow: 0 2px 3px -1px #777;
-    opacity: 1;
     transition: 0.2s;
   }
   .menu-button:hover div {
     transform: translateY(2px);
-    transition-delay: var(--delay); 
+    transition-delay: var(--delay);
+    opacity: 1; 
+    box-shadow: 0 2px 3px -1px #777;
   }
 }
 
