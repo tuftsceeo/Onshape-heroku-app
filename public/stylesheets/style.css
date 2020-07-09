@@ -383,6 +383,9 @@ hr {
   display: none; 
 }
 
+button:focus { outline: none; }
+video:focus { outline: none;}
+
 .rating {
   width: 30px; 
   unicode-bidi: bidi-override;
