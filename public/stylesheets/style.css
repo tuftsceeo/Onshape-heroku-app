@@ -441,6 +441,10 @@ video:focus { outline: none;}
   color: #F1F1F5;
 }
 
+.small hr { 
+  width: 100px;
+}
+
 label { 
   font-family: "Swansea";
 }
