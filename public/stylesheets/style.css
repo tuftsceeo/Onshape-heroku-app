@@ -169,6 +169,14 @@ body {
   background-color: #F1F1F5;
 }
 
+.video-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+}
+
 .container-video {
   width: 100%;
   height: 100%;
@@ -419,17 +427,17 @@ video:focus { outline: none;}
   position: fixed;
   display: flex; 
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center; 
-  width: 250px;
-  height: 400px;
+  width: 150px;
+  height: 150px;
   border-radius: 8px;
   box-shadow: 0 8px 25px -4px #000;
 }
 
 .overlay-content a { 
   font-family: 'LemonBold';
-  font-size: 20px;
+  font-size: 30px;
   color: #F1F1F5;
 }
 
