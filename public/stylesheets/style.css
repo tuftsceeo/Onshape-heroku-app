@@ -169,6 +169,14 @@ body {
   background-color: #F1F1F5;
 }
 
+.container-video {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+}
+
 img.shadow { 
   width: 80%;
   height: 80%;
