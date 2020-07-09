@@ -182,6 +182,7 @@ body {
   height: 100%;
   border-radius: 10px;
   position: relative;
+  text-align: center; 
   z-index: 0;
 }
 
@@ -233,8 +234,8 @@ img {
 }
 
 video {
-  width: 85%;
-  height: 100%;
+  width: 2448px;
+  height: 1560px;
   border-radius: 10px;
   position: relative;
   z-index: 0;
