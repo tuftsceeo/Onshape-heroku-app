@@ -35,6 +35,7 @@
 }
 
 .top {
+  z-index: 8;
   background-color: #3F3888;
   width: 100%;
   height: 10%;
@@ -219,6 +220,8 @@ video {
   width: 85%;
   height: 100%;
   border-radius: 10px;
+  position: relative;
+  z-index: 0;
 }
 
 .footer {
@@ -386,9 +389,6 @@ hr {
 button:focus { outline: none; }
 video:focus { outline: none;}
 
-video { 
-  z-index: 0; 
-}
 
 .rating {
   width: 30px; 
