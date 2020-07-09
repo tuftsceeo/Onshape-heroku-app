@@ -447,6 +447,18 @@ label {
   background: #F1F1F5;
 }
 
+@media (hover: hover) {
+  .bar1, .bar2, .bar3 {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px -1px #777;
+    transition: 0.2s;
+  }
+  .list:hover span {
+    transform: translateY(2px);
+    transition-delay: var(--delay); 
+  }
+}
+
 /* fieldset, label {
   margin: 0; 
   padding: 0; 
