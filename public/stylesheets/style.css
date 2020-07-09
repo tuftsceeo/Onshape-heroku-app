@@ -441,7 +441,7 @@ video:focus { outline: none;}
   font-size: 25px;
   color: #F1F1F5;
   text-decoration: none; 
-  opacity: .5;
+  opacity: .7;
 }
 
 .overlay-content a:hover { 
@@ -449,7 +449,7 @@ video:focus { outline: none;}
 }
 
 .small { 
-  width: 100px;
+  width: 120px;
 }
 
 label { 
