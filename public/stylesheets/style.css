@@ -402,8 +402,8 @@ video:focus { outline: none;}
 
 .overlay-content { 
   z-index: 9;
-  margin-left: 50px;
-  margin-top: 15px;
+  /* margin-left: 50px;
+  margin-top: 15px; */
   background-color: #3F3888;
   position: fixed;
   display: flex; 
