@@ -449,14 +449,13 @@ label {
 
 @media (hover: hover) {
   .menu-button .bar1 .bar2 .bar3{
-    transform: translateY(4px);
-    box-shadow: 0 4px 6px -3px #000;
-    opacity: 1;
-    transition: 0.2s;
+    transform: translateY(2px);
+    transition: 0.2s ease-in;
+    opacity: .5;
   }
   .menu-button:hover div {
     transform: translateY(-2px);
-    transition-delay: var(--delay);
+    transition-delay: var(--delay) ease-in;
     opacity: 1; 
     box-shadow: 0 4px 6px -3px #000;
   }
