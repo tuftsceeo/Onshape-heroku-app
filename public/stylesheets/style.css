@@ -455,9 +455,9 @@ label {
   }
   .menu-button:hover div {
     transform: translateY(-2px);
-    transition-delay: var(--delay) ease-in;
+    transition-delay: var(--delay);
     opacity: 1; 
-    box-shadow: 0 4px 6px -3px #000;
+    box-shadow: 0 5px 10px -4px #000;
   }
 }
 
