@@ -182,6 +182,7 @@ body {
   height: 100%;
   border-radius: 10px;
   position: relative;
+  align-items: center; 
   z-index: 0;
 }
 
@@ -437,11 +438,11 @@ video:focus { outline: none;}
 
 .overlay-content a { 
   font-family: 'LemonBold';
-  font-size: 30px;
+  font-size: 25px;
   color: #F1F1F5;
 }
 
-.small hr { 
+.small { 
   width: 100px;
 }
 
