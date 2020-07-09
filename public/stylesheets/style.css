@@ -386,6 +386,10 @@ hr {
 button:focus { outline: none; }
 video:focus { outline: none;}
 
+video { 
+  z-index: 0; 
+}
+
 .rating {
   width: 30px; 
   unicode-bidi: bidi-override;
