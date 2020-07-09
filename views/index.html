@@ -21,24 +21,6 @@
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
-<script>
-  function openNav() {
-    hamburger.classList.add("is-active");
-    document.getElementById("popUpNav").style.display = "block";
-  }
-
-  function closeNav() {
-    hamburger.classList.remove("is-active");
-    document.getElementById("popUpNav").style.display = "none";
-  }
-
-  // Hamburger Menu Spin
-  var hamburger = document.querySelector(".hamburger");
-
-  hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
-
-  closeNav();
-</script> 
 <body>
   <div class="container">
     <div class="top">
@@ -217,5 +199,23 @@
     <div class="footer">
     </div>
   </div>
+  <script>
+    function openNav() {
+      hamburger.classList.add("is-active");
+      document.getElementById("popUpNav").style.display = "block";
+    }
+  
+    function closeNav() {
+      hamburger.classList.remove("is-active");
+      document.getElementById("popUpNav").style.display = "none";
+    }
+  
+    // Hamburger Menu Spin
+    var hamburger = document.querySelector(".hamburger");
+  
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+  
+    closeNav();
+  </script> 
 </body>
 </html>
