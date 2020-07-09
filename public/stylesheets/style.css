@@ -432,10 +432,10 @@ label {
   opacity: .5;
 }
 
-.menu-button:hover {  
+/* .menu-button:hover {  
   cursor: pointer;
   opacity: 1;
-}
+} */
 
 .bar1, .bar2, .bar3 { 
   margin-top: 5px;
@@ -448,12 +448,13 @@ label {
 }
 
 @media (hover: hover) {
-  .bar1, .bar2, .bar3 {
+  .menu-button div{
     transform: translateY(2px);
     box-shadow: 0 2px 3px -1px #777;
+    opacity: 1;
     transition: 0.2s;
   }
-  .list:hover span {
+  .menu-button:hover div {
     transform: translateY(2px);
     transition-delay: var(--delay); 
   }
