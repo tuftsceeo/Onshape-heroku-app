@@ -21,7 +21,24 @@
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+<script>
+  function openNav() {
+    hamburger.classList.add("is-active");
+    document.getElementById("popUpNav").style.display = "block";
+  }
 
+  function closeNav() {
+    hamburger.classList.remove("is-active");
+    document.getElementById("popUpNav").style.display = "none";
+  }
+
+  // Hamburger Menu Spin
+  var hamburger = document.querySelector(".hamburger");
+
+  hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+  closeNav();
+</script> 
 <body>
   <div class="container">
     <div class="top">
@@ -35,6 +52,14 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>  
+      <div id="popUpNav" class="overlay" onclick="closeNav()">
+        <div class="overlay-content">
+          <a href="#" data-scroll onclick="closeNav()">Link 1</a>
+          <a href="#" data-scroll onclick="closeNav()">Link 2</a>
+          <a href="#" data-scroll onclick="closeNav()">Link 3</a>
+          <a href="#" data-scroll onclick="closeNav()">Link 4</a>
+        </div>
+      </div>
       <h2 class="header-text"> Cube with A Hole </h2> 
       <!-- <nav>
         <ul>
