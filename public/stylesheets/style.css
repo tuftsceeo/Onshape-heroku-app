@@ -170,8 +170,8 @@ body {
 }
 
 .video-container {
-  width: 720px;
-  height: 390px;
+  width: 1152px;
+  height: 624px;
   border-radius: 10px;
   position: relative;
   z-index: 0;
