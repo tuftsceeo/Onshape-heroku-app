@@ -325,7 +325,7 @@ p.normal {
   align-items: center;
 }
 
-.feedback closed { 
+.closed { 
   display: none;
 }
 
@@ -335,7 +335,10 @@ p.normal {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 8px;
+  padding: 4px;
+  text-align: center;
   background-color: #3F3888;
 }
 
