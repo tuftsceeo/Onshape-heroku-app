@@ -225,11 +225,16 @@
       return false;
     });
     function formPost() { 
-      let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTuQ3MsW3H0b1pI76LNfpLlSlwkJdYgBkblB1DdMjjOZdSxg/formResponse";
+      let url = "https://script.google.com/macros/s/AKfycbyuWGi4NZQx4xCj4YpyKFMCXFGYXRDzan7aEmghFQNqUN5VfXEG/exec";
       let method = "POST";
       let headers = {'Content-type': 'application/json; charset=UTF-8'};
       let elements = document.getElementById("feedback").elements;
       let body = {};
+      function getFormData(object) {
+        const formData = new FormData();
+        Object.keys(object).forEach(key => formData.append(key, object[key]));
+        return formData;
+      }
       for (var i = 0, element; element = elements[i++];) {
           if (element.type === "text"){
             let name = element.name;
@@ -238,7 +243,7 @@
       }
       console.log(body);
 
-      fetch(url, {method: method, headers: headers, data: JSON.stringify(body)}).then(res => console.log(res.json()));
+      fetch(url, {method: method, body: getFormData(body)}).then(res => console.log(res.json()));
 
       formSubmitClose();
     }
