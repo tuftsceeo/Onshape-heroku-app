@@ -13,6 +13,7 @@ var uuid = require('uuid');
 
 var api = require('./routes/api');
 var index = require('./routes/index');
+var tools = require('./routes/tools');
 var grantDenied = require('./routes/grantDenied');
 
 var client;
@@ -66,6 +67,7 @@ app.use(passport.session());
 app.use('/api', api);
 
 app.get('/', index.renderPage);
+app.get('/tools', tools.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
 // GET /oauthSignin
