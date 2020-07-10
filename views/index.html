@@ -227,27 +227,23 @@
     function formPost() { 
       let url = "https://script.google.com/macros/s/AKfycbyuWGi4NZQx4xCj4YpyKFMCXFGYXRDzan7aEmghFQNqUN5VfXEG/exec";
       let method = "POST";
-      let headers = {'Content-type': 'application/json; charset=UTF-8'};
+      let headers = {"Content-Type": "multipart/form-data"}
       let elements = document.getElementById("feedback").elements;
-      const form = document.forms['google-sheets'];
+      // const form = document.forms['google-sheets'];
       let body = {};
-      function getFormData(object) {
-        const formData = new FormData();
-        Object.keys(object).forEach(key => formData.append(key, object[key]));
-        return formData;
-      }
+      const formData = new FormData();
       for (var i = 0, element; element = elements[i++];) {
           if (element.type === "text"){
             let name = element.name;
             body[name] = element.value;
+            formData.append(name, element.value);
           }
       }
       console.log(body);
-      let new_body = getFormData(body);
-      console.log(new_body);
+      console.log(formData);
 
-      fetch(url, {method: method, body: body}).then(res => console.log(res));
-      fetch(url, {method: method, body: new FormData(form)}).then(res => console.log(res));
+      fetch(url, {headers: headers, method: method, body: body}).then(res => console.log(res));
+      fetch(url, {headers: headers, method: method, body: formData}).then(res => console.log(res));
 
       formSubmitClose();
     }
