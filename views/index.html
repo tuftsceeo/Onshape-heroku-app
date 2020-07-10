@@ -242,8 +242,10 @@
           }
       }
       console.log(body);
+      let new_body = getFormData(body);
+      console.log(new_body);
 
-      fetch(url, {method: method, body: getFormData(body)}).then(res => console.log(res.json()));
+      fetch(url, {method: method, body: new_body}).then(res => console.log(res.json()));
 
       formSubmitClose();
     }
