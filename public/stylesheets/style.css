@@ -215,10 +215,11 @@ h3.title {
 }
 
 h3.title-white { 
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
   font-size: 35px;
   color: #F1F1F5;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 img.med {
@@ -339,7 +340,7 @@ p.normal {
   border-radius: 8px;
   padding: 4px;
   text-align: center;
-  background-color: #3F3888;
+  background-color: #3C4FCC;
 }
 
 .form-container {
