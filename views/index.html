@@ -242,7 +242,7 @@
       console.log(body);
       console.log(formData);
 
-      fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
       fetch(url, {method: method, body: formData}).then(res => console.log(res));
 
       formSubmitClose();
