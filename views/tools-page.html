@@ -37,5 +37,24 @@
     </div>
   <div class="footer">
   </div>
+
+  <script>
+    function openNav() {
+      hamburger.classList.add("is-active");
+      document.getElementById("popUpNav").style.display = "block";
+    }
+  
+    function closeNav() {
+      hamburger.classList.remove("is-active");
+      document.getElementById("popUpNav").style.display = "none";
+    }
+  
+    // Hamburger Menu Spin
+    var hamburger = document.querySelector(".hamburger");
+    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+  
+    closeNav();
+  </script> 
 </body>
 </html>
