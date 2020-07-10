@@ -167,7 +167,7 @@
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="dummy">
+          <form id="feedback" target="dummy" name="google-sheets">
             <hr>
             <div class="text-input">
               <label for="liked">What did you like about this app?</label>
@@ -229,6 +229,7 @@
       let method = "POST";
       let headers = {'Content-type': 'application/json; charset=UTF-8'};
       let elements = document.getElementById("feedback").elements;
+      const form = document.forms['google-sheets'];
       let body = {};
       function getFormData(object) {
         const formData = new FormData();
@@ -246,7 +247,7 @@
       console.log(new_body);
 
       fetch(url, {method: method, body: body}).then(res => console.log(res));
-      fetch(url, {method: method, body: new_body}).then(res => console.log(res));
+      fetch(url, {method: method, body: new FormData(form)}).then(res => console.log(res));
 
       formSubmitClose();
     }
