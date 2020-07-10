@@ -304,7 +304,7 @@ p.normal {
 }
 
 
-.feedback-form {
+#feedback-form {
   display: flex;
   flex-direction: row;
   align-items: center;

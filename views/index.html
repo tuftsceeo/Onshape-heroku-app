@@ -163,7 +163,7 @@
 
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
-      <div class="feedback-form">
+      <div id="feedback-form">
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
@@ -249,7 +249,7 @@
     }
 
     function formSubmitClose() { 
-      var form = document.getElementById("feedback");
+      var form = document.getElementById("feedback-form");
       form.classList.add("closed");
       document.getElementById("form-closed").style.display = "flex";
     }
