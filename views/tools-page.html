@@ -21,10 +21,21 @@
 <body>
   <div class="container">
     <div class="top">
+      <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+      <div id="popUpNav" class="overlay" onclick="closeNav()">
+        <div class="overlay-content">
+          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+          <hr class="small">
+          <a href="#" data-scroll onclick="closeNav()">Activities</a>
+        </div>
+      </div>
       <h2 class="header-text"> Tools Page </h2> 
     </div>
-    <div class="footer">
-    </div>
+  <div class="footer">
   </div>
 </body>
 </html>
