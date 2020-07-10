@@ -314,7 +314,7 @@ p.normal {
   font-size: 25px; 
 }
 
-.feedback {
+#feedback {
   display: flex;
   flex-direction: column;
   align-items: center;

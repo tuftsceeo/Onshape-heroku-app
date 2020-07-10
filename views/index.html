@@ -167,7 +167,7 @@
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form class="feedback" onsubmit="formPost()" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTuQ3MsW3H0b1pI76LNfpLlSlwkJdYgBkblB1DdMjjOZdSxg/formResponse" target="form-closed" method="POST">
+          <form id="feedback" onsubmit="formPost()" target="form-closed">
             <hr>
             <div class="text-input">
               <label for="liked">What did you like about this app?</label>
@@ -225,7 +225,7 @@
       let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTuQ3MsW3H0b1pI76LNfpLlSlwkJdYgBkblB1DdMjjOZdSxg/formResponse";
       let method = "POST";
       let headers = {'Content-type': 'application/json; charset=UTF-8'};
-      let elements = document.querySelector("feedback").elements;
+      let elements = document.getElementById("feedback").elements;
       let body = new Object();
       for (var i = 0, element; element = elements[i++];) {
           if (element.type === "text"){
@@ -241,7 +241,7 @@
     }
 
     function formSubmitClose() { 
-      var form = document.querySelector(".feedback");
+      var form = document.getElementById("feedback");
       form.classList.add("closed");
       document.getElementById("form-closed").style.display = "flex";
     }
