@@ -67,7 +67,6 @@ app.use('/api', api);
 
 app.get('/', index.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
-// app.get('/tools-page', tools-page.renderPage);
 
 // GET /oauthSignin
 //   Use passport.authenticate() as route middleware to authenticate the
