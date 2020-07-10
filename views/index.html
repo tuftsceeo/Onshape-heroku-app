@@ -242,8 +242,8 @@
       console.log(body);
       console.log(formData);
 
-      fetch(url, {headers: headers, method: method, body: body}).then(res => console.log(res));
-      fetch(url, {headers: headers, method: method, body: formData}).then(res => console.log(res));
+      fetch(url, {headers: headers, mode: 'no-cors', method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {headers: headers, mode: 'no-cors', method: method, body: formData}).then(res => console.log(res));
 
       formSubmitClose();
     }
