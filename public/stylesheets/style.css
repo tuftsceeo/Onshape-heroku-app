@@ -325,6 +325,20 @@ p.normal {
   align-items: center;
 }
 
+.feedback closed { 
+  display: none;
+}
+
+#form-closed { 
+  width: 300px; 
+  height: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #3F3888;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;

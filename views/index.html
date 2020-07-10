@@ -162,12 +162,12 @@
       </div>
 
 
-      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <!-- <iframe name="dummy" id="dummy" style="display: none;"></iframe> -->
       <div class="feedback-form">
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form class="feedback"action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTuQ3MsW3H0b1pI76LNfpLlSlwkJdYgBkblB1DdMjjOZdSxg/formResponse" target="dummy" method="POST">
+          <form class="feedback"action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfTuQ3MsW3H0b1pI76LNfpLlSlwkJdYgBkblB1DdMjjOZdSxg/formResponse" target="_self" method="POST">
             <hr>
             <div class="text-input">
               <label for="liked">What did you like about this app?</label>
@@ -206,9 +206,13 @@
               </div>
             </div> -->
 
-            <input type="submit" class="submitbtn" value="Submit">
+            <input type="submit" class="submitbtn" value="Submit" onclick="formSubmitClose()">
           </form>
         </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
       </div>
 
     </div>
@@ -216,6 +220,12 @@
     </div>
   </div>
   <script>
+    function formSubmitClose() { 
+      var form = document.querySelector(".feedback");
+      form.classList.add("closed");
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
@@ -228,7 +238,7 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-  
+    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();
