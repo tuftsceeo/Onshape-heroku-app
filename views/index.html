@@ -162,12 +162,12 @@
       </div>
 
 
-      <!-- <iframe name="dummy" id="dummy" style="display: none;"></iframe> -->
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div class="feedback-form">
         <div class="form-container">
           <h3 class="title-white">Feedback Form</h3>
           <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="form-closed">
+          <form id="feedback" target="dummy">
             <hr>
             <div class="text-input">
               <label for="liked">What did you like about this app?</label>
@@ -229,16 +229,16 @@
       let method = "POST";
       let headers = {'Content-type': 'application/json; charset=UTF-8'};
       let elements = document.getElementById("feedback").elements;
-      let body = new FormData();
+      let body = {};
       for (var i = 0, element; element = elements[i++];) {
           if (element.type === "text"){
             let name = element.name;
-            body.append(name, element.value);
+            body[name] = element.value;
           }
       }
       console.log(body);
 
-      fetch(url, {method: method, headers: headers, body: JSON.stringify(body)}).then(res => console.log(res.json()));
+      fetch(url, {method: method, headers: headers, data: JSON.stringify(body)}).then(res => console.log(res.json()));
 
       formSubmitClose();
     }
