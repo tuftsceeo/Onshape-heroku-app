@@ -259,6 +259,19 @@ video {
   background-color: #3C4FCC;
 }
 
+.wrapper-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2%;
+  width: 80%;
+  height: 400px;
+  background-color: #3C4FCC;
+}
+
 p {
   /*float: left;*/
   margin-top: 2%;
