@@ -1,7 +1,5 @@
 var express = require('express');
-var multer = require('multer');
 var path = require('path');
-// const helpers = require('./helpers');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -12,7 +10,6 @@ var RedisStore = require('connect-redis')(session);
 var passport = require('passport');
 var http = require('http');
 var uuid = require('uuid');
-var fs = require('fs');
 
 var api = require('./routes/api');
 var index = require('./routes/index');
@@ -54,7 +51,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/signin', express.static(path.join(__dirname, '..', 'dist')));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static(__dirname + '/public'));
 
 app.use(session({
   store: new RedisStore({
@@ -74,31 +70,6 @@ app.get('/', index.renderPage);
 app.get('/tools', tools.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
-
-// let runPy = new Promise(function(success, nosuccess) {
-
-//   const { spawn } = require('child_process');
-//   const pyprog = spawn('python3', ['image-to-onshape.py']);
-
-//   pyprog.stdout.on('data', function(data) {
-
-//       success(data);
-//   });
-
-//   pyprog.stderr.on('data', (data) => {
-
-//       nosuccess(data);
-//   });
-// });
-
-// app.get('/contour-script', (req, res) => {
-//   res.write('running contour script... sending to Onshape\n');
-
-//     runPy.then(function(fromRunpy) {
-//         console.log(fromRunpy.toString());
-//         res.end(fromRunpy);
-//     });
-// })
 
 // GET /oauthSignin
 //   Use passport.authenticate() as route middleware to authenticate the
@@ -197,84 +168,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
-// const handleError = (err, res) => {
-//   res
-//     .status(500)
-//     .contentType("text/plain")
-//     .end("Oops! Something went wrong!");
-// };
-
-// const upload = multer({
-//   dest: "/public/images"
-//   // you might also want to set some limits: https://github.com/expressjs/multer#limits
-// });
-
-// app.post(
-//   "/upload",
-//   upload.single("file" /* name attribute of <file> element in your form */),
-//   (req, res) => {
-//     const tempPath = req.file.path;
-//     const targetPath = path.join(__dirname, "./public/image.png");
-
-//     if (path.extname(req.file.originalname).toLowerCase() === ".png") {
-//       fs.rename(tempPath, targetPath, err => {
-//         if (err) return handleError(err, res);
-
-//         res
-//           .status(200)
-//           .contentType("text/plain")
-//           .end("File uploaded!");
-//       });
-//     } else {
-//       fs.unlink(tempPath, err => {
-//         if (err) return handleError(err, res);
-
-//         res
-//           .status(403)
-//           .contentType("text/plain")
-//           .end("Only .png files are allowed!");
-//       });
-//     }
-//   }
-// );
-
-
-// const storage = multer.diskStorage({
-//   destination: function(req, file, cb) {
-//       cb(null, 'uploads/');
-//   },
-
-//   // By default, multer removes file extensions so let's add them back
-//   filename: function(req, file, cb) {
-//       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-//   }
-// });
-
-// app.listen(env, () => console.log(`Listening on port ${env}...`));
-
-// app.post('/upload-profile-pic', (req, res) => {
-//   // 'profile_pic' is the name of our file input field in the HTML form
-//   let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('profile_pic');
-
-//   upload(req, res, function(err) {
-//       // req.file contains information of uploaded file
-//       // req.body contains information of text fields, if there were any
-
-//       if (req.fileValidationError) {
-//           return res.send(req.fileValidationError);
-//       }
-//       else if (!req.file) {
-//           return res.send('Please select an image to upload');
-//       }
-//       else if (err instanceof multer.MulterError) {
-//           return res.send(err);
-//       }
-//       else if (err) {
-//           return res.send(err);
-//       }
-
-//       // Display uploaded image for user validation
-//       res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
-//   });
-// });
