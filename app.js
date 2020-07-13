@@ -68,6 +68,7 @@ app.use('/api', api);
 
 app.get('/', index.renderPage);
 app.get('/tools', tools.renderPage);
+app.get('/activities', activities.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
 
