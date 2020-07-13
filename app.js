@@ -14,6 +14,7 @@ var uuid = require('uuid');
 var api = require('./routes/api');
 var index = require('./routes/index');
 var tools = require('./routes/tools');
+var activities = require('./routes/activities');
 var grantDenied = require('./routes/grantDenied');
 
 var client;
