@@ -1,6 +1,6 @@
-var express = require('express');
+const express = require('express');
 const multer = require('multer');
-var path = require('path');
+const path = require('path');
 const helpers = require('./helpers');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -30,7 +30,7 @@ if (process.env.REDISTOGO_URL) {
   client = redis.createClient();
 }
 
-var app = express();
+const app = express();
 
 authentication.init();
 
