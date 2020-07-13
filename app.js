@@ -1,7 +1,7 @@
 var express = require('express');
-// var multer = require('multer');
+var multer = require('multer');
 var path = require('path');
-// var helpers = require('./helpers');
+var helpers = require('./helpers');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -197,33 +197,35 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-// var storage = multer.diskStorage({
-//   destination: function(req, file, cb) {
-//     cb(null, 'uploads/');
-//   },
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, 'images/');
+  },
 
-//   // adding file extensions back in since multer removes them automatically
-//   filename: function(req, file, cb) {
-//     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-//   }
-// });
+  // adding file extensions back in since multer removes them automatically
+  filename: function(req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
 
-// app.post('/upload-pic', (req, res) => {
-//   let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('upload-pic');
-//   upload(req, res, function(err) {
-//     if (req.fileValidationError) {
-//       return res.send(req.fileValidationError);
-//     }
-//     else if (!req.file) {
-//       return res.send('Please select an image to upload');
-//     }
-//     else if (err instanceof multer.MulterError) {
-//       return res.send(err);
-//     }
-//     else if (err) {
-//       return res.send(err);
-//     }
+app.listen(env, () => console.log(`Listening on port ${env}...`));
 
-//     res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
-//   });
-// });
+app.post('/upload-pic', (req, res) => {
+  let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('upload-pic');
+  upload(req, res, function(err) {
+    if (req.fileValidationError) {
+      return res.send(req.fileValidationError);
+    }
+    else if (!req.file) {
+      return res.send('Please select an image to upload');
+    }
+    else if (err instanceof multer.MulterError) {
+      return res.send(err);
+    }
+    else if (err) {
+      return res.send(err);
+    }
+
+    res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
+  });
+});
