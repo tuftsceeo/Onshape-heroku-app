@@ -530,6 +530,18 @@ label {
   background: #F1F1F5;
 }
 
+.btn-home {
+  background-color: #F1F1F5;
+  font-family: "LemonBold";
+  color: #E56878;
+  font-size: 40px; 
+  border-radius: 38px;
+  padding: 14px 18px;
+  border: none;
+  cursor: pointer;
+  width: 300px; 
+  opacity: 0.9;
+}
 /* @media (hover: hover) {
   .menu-button .bar1 .bar2 .bar3{
     transform: translateY(2px);
