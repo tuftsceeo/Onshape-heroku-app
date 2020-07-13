@@ -1,5 +1,7 @@
 var express = require('express');
+var multer = require('multer');
 var path = require('path');
+var helpers = require('./helpers');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -69,6 +71,62 @@ app.use('/api', api);
 app.get('/', index.renderPage);
 app.get('/tools', tools.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
+
+var storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, 'uploads/');
+  },
+
+  // adding file extensions back in since multer removes them automatically
+  filename: function(req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+app.post('/upload-pic', (req, res) => {
+  let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('upload-pic');
+  upload(req, res, function(err) {
+    if (req.fileValidationError) {
+      return res.send(req.fileValidationError);
+    }
+    else if (!req.file) {
+      return res.send('Please select an image to upload');
+    }
+    else if (err instanceof multer.MulterError) {
+      return res.send(err);
+    }
+    else if (err) {
+      return res.send(err);
+    }
+
+    res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
+  });
+});
+
+// let runPy = new Promise(function(success, nosuccess) {
+
+//   const { spawn } = require('child_process');
+//   const pyprog = spawn('python3', ['image-to-onshape.py']);
+
+//   pyprog.stdout.on('data', function(data) {
+
+//       success(data);
+//   });
+
+//   pyprog.stderr.on('data', (data) => {
+
+//       nosuccess(data);
+//   });
+// });
+
+// app.get('/contour-script', (req, res) => {
+//   res.write('running contour script... sending to Onshape\n');
+
+//     runPy.then(function(fromRunpy) {
+//         console.log(fromRunpy.toString());
+//         res.end(fromRunpy);
+//     });
+// })
 
 // GET /oauthSignin
 //   Use passport.authenticate() as route middleware to authenticate the
