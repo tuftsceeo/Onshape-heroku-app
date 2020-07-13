@@ -1,7 +1,7 @@
-const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const helpers = require('./helpers');
+var express = require('express');
+var multer = require('multer');
+var path = require('path');
+// const helpers = require('./helpers');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -12,6 +12,7 @@ var RedisStore = require('connect-redis')(session);
 var passport = require('passport');
 var http = require('http');
 var uuid = require('uuid');
+var fs = require('fs');
 
 var api = require('./routes/api');
 var index = require('./routes/index');
@@ -30,7 +31,7 @@ if (process.env.REDISTOGO_URL) {
   client = redis.createClient();
 }
 
-const app = express();
+var app = express();
 
 authentication.init();
 
@@ -53,7 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/signin', express.static(path.join(__dirname, '..', 'dist')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 app.use(session({
   store: new RedisStore({
@@ -197,42 +198,83 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
+// const handleError = (err, res) => {
+//   res
+//     .status(500)
+//     .contentType("text/plain")
+//     .end("Oops! Something went wrong!");
+// };
 
-const storage = multer.diskStorage({
-  destination: function(req, file, cb) {
-      cb(null, 'uploads/');
-  },
+// const upload = multer({
+//   dest: "/public/images"
+//   // you might also want to set some limits: https://github.com/expressjs/multer#limits
+// });
 
-  // By default, multer removes file extensions so let's add them back
-  filename: function(req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  }
-});
+// app.post(
+//   "/upload",
+//   upload.single("file" /* name attribute of <file> element in your form */),
+//   (req, res) => {
+//     const tempPath = req.file.path;
+//     const targetPath = path.join(__dirname, "./public/image.png");
 
-app.listen(env, () => console.log(`Listening on port ${env}...`));
+//     if (path.extname(req.file.originalname).toLowerCase() === ".png") {
+//       fs.rename(tempPath, targetPath, err => {
+//         if (err) return handleError(err, res);
 
-app.post('/upload-profile-pic', (req, res) => {
-  // 'profile_pic' is the name of our file input field in the HTML form
-  let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('profile_pic');
+//         res
+//           .status(200)
+//           .contentType("text/plain")
+//           .end("File uploaded!");
+//       });
+//     } else {
+//       fs.unlink(tempPath, err => {
+//         if (err) return handleError(err, res);
 
-  upload(req, res, function(err) {
-      // req.file contains information of uploaded file
-      // req.body contains information of text fields, if there were any
+//         res
+//           .status(403)
+//           .contentType("text/plain")
+//           .end("Only .png files are allowed!");
+//       });
+//     }
+//   }
+// );
 
-      if (req.fileValidationError) {
-          return res.send(req.fileValidationError);
-      }
-      else if (!req.file) {
-          return res.send('Please select an image to upload');
-      }
-      else if (err instanceof multer.MulterError) {
-          return res.send(err);
-      }
-      else if (err) {
-          return res.send(err);
-      }
 
-      // Display uploaded image for user validation
-      res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
-  });
-});
+// const storage = multer.diskStorage({
+//   destination: function(req, file, cb) {
+//       cb(null, 'uploads/');
+//   },
+
+//   // By default, multer removes file extensions so let's add them back
+//   filename: function(req, file, cb) {
+//       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+//   }
+// });
+
+// app.listen(env, () => console.log(`Listening on port ${env}...`));
+
+// app.post('/upload-profile-pic', (req, res) => {
+//   // 'profile_pic' is the name of our file input field in the HTML form
+//   let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('profile_pic');
+
+//   upload(req, res, function(err) {
+//       // req.file contains information of uploaded file
+//       // req.body contains information of text fields, if there were any
+
+//       if (req.fileValidationError) {
+//           return res.send(req.fileValidationError);
+//       }
+//       else if (!req.file) {
+//           return res.send('Please select an image to upload');
+//       }
+//       else if (err instanceof multer.MulterError) {
+//           return res.send(err);
+//       }
+//       else if (err) {
+//           return res.send(err);
+//       }
+
+//       // Display uploaded image for user validation
+//       res.send(`You have uploaded this image: <hr/><img src="${req.file.path}" width="500"><hr /><a href="./">Upload another image</a>`);
+//   });
+// });
