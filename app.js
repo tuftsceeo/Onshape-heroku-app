@@ -20,6 +20,7 @@ var cup = require('./routes/cup');
 var valentine = require('./routes/valentine');
 var valentinePlacemat = require('./routes/valentine-placemat');
 var dogCollar = require('./routes/dog-collar');
+var dogCollarPlacemat = require('./routes/dog-collar-placemat');
 var grantDenied = require('./routes/grantDenied');
 
 var client;
@@ -80,6 +81,7 @@ app.get('/cup', cup.renderPage);
 app.get('/valentine', valentine.renderPage);
 app.get('/valentine-placemat', valentinePlacemat.renderPage);
 app.get('/dog-collar', dogCollar.renderPage);
+app.get('/dog-collar-placemat', dogCollarPlacemat.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
 
