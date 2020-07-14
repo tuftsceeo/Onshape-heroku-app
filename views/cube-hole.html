@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="javascripts/jquery-1.8.3.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/threejs/three.min.js"></script>
+
+  <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+  <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+  <script src="javascripts/threejs/js/Detector.js"></script>
+  <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+  <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+
+  <script src="javascripts/cube-hole.js"></script>
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/hamburger.css" rel="stylesheet">
+  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
+  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <!-- <div class="menu-button" onclick=""> 
+        <div class="bar1" style="--delay: 0.00s"></div>
+        <div class="bar2" style="--delay: 0.10s"></div>
+        <div class="bar3" style="--delay: 0.20s"></div>
+      </div>  -->
+      <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+      <div id="popUpNav" class="overlay" onclick="closeNav()">
+        <div class="overlay-content">
+          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+          <hr class="small">
+          <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+        </div>
+      </div>
+      <h2 class="header-text"> Cube with A Hole </h2> 
+      <!-- <nav>
+        <ul>
+          <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
+          <li><a href="https://test-onshape-app.herokuapp.com/">Cube Demo</a></li>
+        </ul>
+      </nav> -->
+
+      <!-- if we want to have links to other pages -->
+
+    </div>
+    
+    <div class="mid">
+      <div class="contents-center">
+        <div class="wrapper">
+          <h3 class="title-white"> Take a stab at it! </h3> 
+          <div class="warning-container">
+            <div class="container-text-1">
+              <p class="bold">Try reading the perspective drawing on the right and attempt to solve this problem. If you're stuck, scroll down to find a detailed tutorial. </p>
+              <p> <strong> Once you've finished, please follow the instructions at the bottom of this page and leave us some feedback! </strong> </p>
+            </div> 
+            <img class="shadow2" src="https://test-onshape-app.herokuapp.com/images/final-diagram.png" alt="diagram"> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="contents">
+        <div class="text-description-med">
+          <h3> Goals: </h3>
+          <p class="normal"> This page will teach you how to sketch and extrude a cube with a hole in the middle. 
+            You will be introduced to <strong>Sketches</strong> (on a plane and face) along with <strong>Add/Remove Extrude.</strong>
+            You will also be shown how to rotate and orient your CAD model to see different perspectives and plane views.</p>
+        </div> 
+
+        <div class="image-right">
+          <img class="med" src="https://test-onshape-app.herokuapp.com/images/final-cube-with-hole.png" alt="Final">
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="image-container">
+          <div class="gif-left">
+            <!-- <img src="https://test-onshape-app.herokuapp.com/images/sketch1-new.gif" alt="Square Sketch"> -->
+            <div class="video-container">
+              <video controls>
+                <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div> 
+        <div class="text-description-large">
+          <h3> Sketch a 2" x 2" square </h3>
+          <p class="normal">Start out with a new Part Studio Sketch, which you can add by clicking on the "+" button located at the bottom left corner of the screen.</p>
+          <p class="normal">At the origin, draw a Center Point Rectangle by going to the tool bar on the top and then clicking on the icon with a rectangle.</p> 
+          <p class="normal">Then click once on the origin, move your mouse outward, and click again to stop the sketch.</p> 
+          <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
+          <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. 
+            Click once on a side of the rectangle and move your mouse outward. Click again to adjust the length to 2in.</p>
+          <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+        </div>
+      </div>
+
+      <div class="contents-center">
+        <div class="big-container">
+          <h3 class="title">Extrude a face</h3>
+          <!-- <img class="shadow" src="https://test-onshape-app.herokuapp.com/images/extrudeadd-new.gif" alt="Cube"> -->
+          <div class="container-video">
+            <video controls>
+              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="container-text-2">
+            <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the tool bar.</p>
+            <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
+            <p class="normal"><strong>   1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
+            <p class="normal"><strong>   2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
+            <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
+            <p class="normal">We can change the Depth of the extrude (or height of the cube) to 2in.</p>
+          </div> 
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Sketch a circle with a diameter of 1in</h3>
+          <p class="normal">To make a hole, we need to start with a sketch of a circle, which can be found in the tool bar.</p>
+          <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
+          <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
+          <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once on the origin, moving your mouse outward, and then clicking again to stop the sketch.</p>
+          <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1in.</p>
+        </div>
+
+        <div class="image-right">
+          <!-- <img class="med" src="https://test-onshape-app.herokuapp.com/images/sketch2-new.gif" alt="Circle"> -->
+          <div class="video-container">
+            <video controls>
+              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="image-container">
+          <div class="gif-left">
+            <!-- <img src="https://test-onshape-app.herokuapp.com/images/extrudecut-new.gif" alt="Hole"> -->
+            <div class="video-container">
+              <video controls>
+                <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="text-description-large">
+          <h3>Extrude remove a hole</h3>
+          <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
+          <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube. </p>
+          <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot start off with an Extrude Remove before making your cube. **</strong></p>
+        </div>
+      </div>
+
+
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <div id="feedback-form">
+        <div class="form-container">
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <form id="feedback" target="dummy" name="google-sheets">
+            <hr>
+            <div class="text-input">
+              <label for="liked">What did you like about this app?</label>
+              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
+            </div> 
+            
+            <div class="text-input">
+              <label for="disliked">What didn't you like about this app?</label>
+              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+            </div>
+            
+            <div class="text-input">
+              <label for="comments">What did you wish/didn't wish to see?</label>
+              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
+            </div> 
+
+            <div class="text-input">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+            </div>
+            <hr>
+
+            <!-- <div class="rate">
+              <label for="rate-app">Rate our app!</label><br>
+              <div class="rating">
+                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
+                <label for="star5">☆</label>
+                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
+                <label for="star4">☆</label>
+                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
+                <label for="star3">☆</label>
+                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
+                <label for="star2">☆</label>
+                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
+                <label for="star1">☆</label>
+              </div>
+            </div> -->
+
+            <input type="submit" class="submitbtn" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
+      </div>
+
+    </div>
+    <div class="footer">
+    </div>
+  </div>
+  <script>
+    $('#feedback').submit(function () {
+      formPost();
+      return false;
+    });
+    function formPost() { 
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let method = "POST";
+      let headers = {"Content-Type": "multipart/form-data"}
+      let elements = document.getElementById("feedback").elements;
+      // const form = document.forms['google-sheets'];
+      let body = {};
+      const formData = new FormData();
+      for (var i = 0, element; element = elements[i++];) {
+          if (element.type === "text"){
+            let name = element.name;
+            body[name] = element.value;
+            formData.append(name, element.value);
+          }
+      }
+      console.log(body);
+      console.log(formData);
+
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+      formSubmitClose();
+    }
+
+    function formSubmitClose() { 
+      var form = document.getElementById("feedback-form");
+      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+      document.getElementById("feedback-form").style.display = "none";
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
+    function openNav() {
+      hamburger.classList.add("is-active");
+      document.getElementById("popUpNav").style.display = "block";
+    }
+  
+    function closeNav() {
+      hamburger.classList.remove("is-active");
+      document.getElementById("popUpNav").style.display = "none";
+    }
+  
+    // Hamburger Menu Spin
+    var hamburger = document.querySelector(".hamburger");
+    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+  
+    closeNav();
+  </script> 
+</body>
+</html>
