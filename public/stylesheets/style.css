@@ -137,6 +137,22 @@ body {
   overflow: scroll;
 }
 
+.text-description-short {
+  background-color: #F1F1F5;
+  border-radius: 10px;
+  width: 80%;
+  height: 80px;
+  text-align: left;
+  align-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+  margin-top: 5%;
+}
+
 .image-container {
   margin: 10px;
   padding: 0;
