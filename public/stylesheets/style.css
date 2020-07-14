@@ -555,6 +555,13 @@ label {
   width: 300px; 
   opacity: 0.9;
 }
+
+.small_gif {
+  width: 10%;
+  margin-top: 10%;
+  margin-bottom: 0%;
+}
+
 /* @media (hover: hover) {
   .menu-button .bar1 .bar2 .bar3{
     transform: translateY(2px);
