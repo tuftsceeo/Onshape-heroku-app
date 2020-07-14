@@ -141,7 +141,7 @@ body {
   background-color: #F1F1F5;
   border-radius: 10px;
   width: 80%;
-  height: 80px;
+  height: flex;
   text-align: center;
   align-content: flex-start;
   padding-left: 20px;
@@ -149,7 +149,6 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  overflow: auto;
   margin-top: 5%;
 }
 
