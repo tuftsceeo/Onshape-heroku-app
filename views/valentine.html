@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="javascripts/jquery-1.8.3.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/threejs/three.min.js"></script>
+  
+    <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+    <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+    <script src="javascripts/threejs/js/Detector.js"></script>
+    <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+    <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+  
+    <script src="javascripts/valentine.js"></script>
+  
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/hamburger.css" rel="stylesheet">
+    <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+    <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
+    <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
+</head>
+
+<body>
+
+    <!-- title -->
+
+    <div class="container">
+        <div class="top">
+          <!-- <div class="menu-button" onclick=""> 
+            <div class="bar1" style="--delay: 0.00s"></div>
+            <div class="bar2" style="--delay: 0.10s"></div>
+            <div class="bar3" style="--delay: 0.20s"></div>
+          </div>  -->
+          <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>  
+          <div id="popUpNav" class="overlay" onclick="closeNav()">
+            <div class="overlay-content">
+              <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+              <hr class="small">
+              <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+            </div>
+          </div>
+          <h2 class="header-text"> 3D Valentine </h2> 
+          <!-- <nav>
+            <ul>
+              <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
+              <li><a href="https://test-onshape-app.herokuapp.com/">Cube Demo</a></li>
+            </ul>
+          </nav> -->
+    
+          <!-- if we want to have links to other pages -->
+    
+        </div>
+
+    <!-- example -->
+    <div class="mid">
+        <div class="contents">
+            <div class="text-description">
+                <h3> Example </h3>
+                <p> This 3D heart valentine was created in just a few simple steps using the line, spline, and extrusion tools in Onshape. </p>
+            </div>
+
+            <div class="image-right-1">
+                <img src="images/3D Valentine.png" alt="3D Valentine" border="1">
+            </div>
+        </div>
+
+        <!-- you try -->
+        <div class="contents">
+            <div class="image-container">
+                <div class="gif">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="text-description">
+                <h3> You Try! </h3>
+                <p> To start, create a new sketch by clicking the "Sketch" button in your Onshape project. Select the front plane, either by clicking "Front plane" in the left sidebar or clicking on the front plane in the workspace. Rotate the view cube in
+                    the top right corner so that the front face is displayed head-on. </p>
+            </div>
+            <div class="image-right-2">
+                <img src="images/Sketch click screenshot.png" alt="Click sketch" border="1">
+                <img src="images/Sketch plane.png" alt="sketch plane" border="1">
+            </div>
+        </div>
+
+        <!-- step 1 -->
+        <div class="contents">
+            <div class="image-container">
+                <div class="gif">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="text-description">
+                <h3> Step 1: Begin drawing the heart </h3>
+                <p> Create the bottom of one side of the heart shape by drawing a line. To draw a line, click on the line tool with the new sketch still in editing mode. Make a starting point at the origin by clicking once on the origin with the line tool,
+                    and finish drawing the line segment by placing another point where you want it to end. </p>
+            </div>
+            <div class="image-right-3">
+                <img src="images/line.png" alt="line" border="1">
+            </div>
+        </div>
+
+        <!-- step 2 -->
+
+        <div class="contents">
+            <div class="image-container">
+                <div class="gif">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="text-description">
+                <h3> Step 2: Draw the curves of the heart </h3>
+                <p> Remaining in editing mode for Sketch 1, create the curved portion of half of the heart using the spline tool, which can be found in the toolbar when a sketch is being edited. Select spline, and click on the end of the line you just drew
+                    to begin a new spline. Click several times to complete the curve in a few different segments until you have completed half of the heart. The last point should be on the y axis of the front plane. </p>
+            </div>
+            <div class="image-right-3">
+                <img src="images/spline.png" alt="spline" border="1">
+            </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class="contents">
+            <div class="image-container">
+                <div class="gif">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="image-right-4">
+                <img src="images/mirror line.png" alt="mirror line" border="1">
+                <img src="images/mirrored entities.png" alt="mirrored entities" border="1">
+            </div>
+            <div class="text-description">
+                <h3> Step 3: Create the other half of the heart </h3>
+                <p> While still in editing mode for Sketch 1, click on the mirror tool, which can be found in your toolbar. Select the y axis of the front plane when Onshape prompts you to select a mirror line. Then select all lines of your half heart drawing
+                    when Onshape prompts you to "select entities to be mirrored." The lines will be automatically mirrored to the other side of the axis as you select them. </p>
+            </div>
+
+        </div>
+
+        <!-- step 4 -->
+
+        <div class="contents">
+            <div class="image-container">
+                <div class="gif">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="text-description">
+                <h3> Step 4: Make your heart 3D! </h3>
+                <p> Begin a new extrusion by clicking the "extrude" icon in the toolbar. Then select the entire heart shape. This will automatically give your heart a depth of 1 inch. You can change the depth of the sketch in the menu that appears when you
+                    edit the extrusion. </p>
+            </div>
+            <div class="image-right-3">
+                <img src="images/extrude button.png" alt="extrude button" border="1">
+                <img src="images/extruded.png" alt="extruded" border="1">
+            </div>
+        </div>
+
+        <div class="small_gif">
+            <img src="images/peach heart.gif" alt="heart gif">
+        </div>
+
+    </div>
+    <div class="footer">
+
+    </div>
+    </div>
+
+    <script>
+        $('#feedback').submit(function () {
+          formPost();
+          return false;
+        });
+        function formPost() { 
+          let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+          let method = "POST";
+          let headers = {"Content-Type": "multipart/form-data"}
+          let elements = document.getElementById("feedback").elements;
+          // const form = document.forms['google-sheets'];
+          let body = {};
+          const formData = new FormData();
+          for (var i = 0, element; element = elements[i++];) {
+              if (element.type === "text"){
+                let name = element.name;
+                body[name] = element.value;
+                formData.append(name, element.value);
+              }
+          }
+          console.log(body);
+          console.log(formData);
+    
+          // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+          fetch(url, {method: method, body: formData}).then(res => console.log(res));
+    
+          formSubmitClose();
+        }
+    
+        function formSubmitClose() { 
+          var form = document.getElementById("feedback-form");
+          document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+          document.getElementById("feedback-form").style.display = "none";
+          document.getElementById("form-closed").style.display = "flex";
+        }
+    
+        function openNav() {
+          hamburger.classList.add("is-active");
+          document.getElementById("popUpNav").style.display = "block";
+        }
+      
+        function closeNav() {
+          hamburger.classList.remove("is-active");
+          document.getElementById("popUpNav").style.display = "none";
+        }
+      
+        // Hamburger Menu Spin
+        var hamburger = document.querySelector(".hamburger");
+        // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+        hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+      
+        closeNav();
+      </script> 
+</body>
+</html>
