@@ -268,7 +268,7 @@ video {
   padding: 2%;
   margin: 2%;
   width: 80%;
-  height: 300px;
+  height: flex;
   background-color: #3C4FCC;
 }
 
