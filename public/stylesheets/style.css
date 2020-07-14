@@ -562,6 +562,15 @@ label {
   margin-bottom: 0%;
 }
 
+.contents1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5%;
+  margin-left: 5%;
+  margin-top: 0%;
+}
 /* @media (hover: hover) {
   .menu-button .bar1 .bar2 .bar3{
     transform: translateY(2px);

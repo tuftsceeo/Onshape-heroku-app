@@ -18,6 +18,7 @@ var activities = require('./routes/activities');
 var cubeHole = require('./routes/cube-hole');
 var cup = require('./routes/cup');
 var valentine = require('./routes/valentine');
+var valentinePlacemat = require('./routes/valentine-placemat');
 var grantDenied = require('./routes/grantDenied');
 
 var client;
@@ -76,6 +77,7 @@ app.get('/activities', activities.renderPage);
 app.get('/cube-hole', cubeHole.renderPage);
 app.get('/cup', cup.renderPage);
 app.get('/valentine', valentine.renderPage);
+app.get('/valentine-placemat', valentinePlacemat.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
 
