@@ -11,7 +11,7 @@
   <script src="javascripts/threejs/js/libs/stats.min.js"></script>
   <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
 
-  <script src="javascripts/cube-hole.js"></script>
+  <script src="javascripts/cup.js"></script>
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
@@ -41,7 +41,7 @@
           <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
         </div>
       </div>
-      <h2 class="header-text"> Cube with A Hole </h2> 
+      <h2 class="header-text"> Cup </h2> 
       <!-- <nav>
         <ul>
           <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
@@ -62,20 +62,20 @@
               <p class="bold">Try reading the perspective drawing on the right and attempt to solve this problem. If you're stuck, scroll down to find a detailed tutorial. </p>
               <p> <strong> Once you've finished, please follow the instructions at the bottom of this page and leave us some feedback! </strong> </p>
             </div> 
-            <img class="shadow2" src="https://test-onshape-app.herokuapp.com/images/cube-diagram.png" alt="diagram"> 
+            <img class="shadow2" src="https://test-onshape-app.herokuapp.com/images/cup-diagram.png" alt="diagram"> 
           </div> 
         </div> 
       </div> 
       <div class="contents">
         <div class="text-description-med">
           <h3> Goals: </h3>
-          <p class="normal"> This page will teach you how to sketch and extrude a cube with a hole in the middle. 
-            You will be introduced to <strong><i>Sketches</i></strong> (on a plane and face) along with <strong><i>Add/Remove Extrude.</i></strong>
-            You will also be shown how to rotate and orient your CAD model to see different perspectives and plane views.</p>
+          <p class="normal"> This page will teach you how to sketch and revolve to create a cup.  
+            You will be introduced to <strong><i>Line</i></strong>,<strong><i>Revolve</i></strong> (a face/sketch about an axis), <strong><i>Plane</i></strong> (adding a new plane),
+            <strong><i>Sweep</i></strong> (a face or edge), and the <strong><i>Appearance Panel</i></strong> (where you can add color to different parts in a Part Studio.</p>
         </div> 
 
         <div class="image-right">
-          <img class="med" src="https://test-onshape-app.herokuapp.com/images/final-cube-with-hole.png" alt="Final">
+          <img class="med" src="https://test-onshape-app.herokuapp.com/images/final-cup.png" alt="Final">
         </div>
       </div>
 
@@ -85,58 +85,49 @@
             <!-- <img src="https://test-onshape-app.herokuapp.com/images/sketch1-new.gif" alt="Square Sketch"> -->
             <div class="video-container">
               <video controls>
-                <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+                <source src="https://test-onshape-app.herokuapp.com/videos/cup-sketch.mp4" type="video/mp4">
               </video>
             </div>
           </div>
         </div> 
         <div class="text-description-large">
-          <h3> Sketch a 2" x 2" square </h3>
-          <p class="normal">Start out with a new Part Studio Sketch, which you can add by clicking on the "+" button located at the bottom left corner of the screen.</p>
-          <p class="normal">At the origin, draw a Center Point Rectangle by going to the tool bar on the top and then clicking on the icon with a rectangle.</p> 
-          <p class="normal">Then click once on the origin, move your mouse outward, and click again to stop the sketch.</p> 
-          <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
-          <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. 
-            Click once on a side of the rectangle and move your mouse outward. Click again to adjust the length to 2in.</p>
-          <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+          <h3> Sketch the cross-sectional area for half of the cup: </h3>
+          <p class="normal">Start out with a new Part Studio Sketch, and pick a plane to sketch on.</p>
+          <p class="normal">Use the Line tool, located on the left in the tool bar, to roughly draw the cross-section of half of your cup. Make sure to connect all of the lines to each other.</p>
+          <p class="normal"><strong>** Note: When we revolve this sketch, we want to revolve it around the center axis, so make sure that you have a vertical line (part of the sketch) that runs through the center point. Therefore, when we use the Revolve function, we can revolve around this vertical line.</strong></p>
         </div>
       </div>
 
       <div class="contents-center">
         <div class="big-container">
-          <h3 class="title">Extrude a face</h3>
+          <h3 class="title">Dimension your cup (optional)</h3>
           <!-- <img class="shadow" src="https://test-onshape-app.herokuapp.com/images/extrudeadd-new.gif" alt="Cube"> -->
           <div class="container-video">
             <video controls>
-              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
+              <source src="https://test-onshape-app.herokuapp.com/videos/cup-dimension.mp4" type="video/mp4">
             </video>
           </div>
           <div class="container-text-2">
-            <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the tool bar.</p>
-            <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
-            <p class="normal"><strong>   1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
-            <p class="normal"><strong>   2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
-            <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
-            <p class="normal">We can change the Depth of the extrude (or height of the cube) to 2in.</p>
+            <p class="normal">Make your cup more exact by using the Dimension tool.</p>
+            <p class="normal">You can dimension your cup however you want - it depends on how thick you want your cup. In our case, we set it to 0.4 inches.</p>
           </div> 
         </div>
       </div>
 
       <div class="contents">
         <div class="text-description-large">
-          <h3>Sketch a circle with a diameter of 1in</h3>
-          <p class="normal">To make a hole, we need to start with a sketch of a circle, which can be found in the tool bar.</p>
-          <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
-          <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
-          <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once on the origin, moving your mouse outward, and then clicking again to stop the sketch.</p>
-          <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1in.</p>
+          <h3>Revolve sketch</h3>
+          <p class="normal">To actually create the cup, we can use the Revolve function, located on the left in the tool bar.</p>
+          <p class="normal">Select your cross-sectional area sketch as the sketch region to revolve, and then click on the vertical axis that passes through the center point, which you drew, as the revolve axis.</p>
+          <p class="normal">** Remember that we intentionally drew a vertical line to act as the vertical axis. You can start to make sense of why we drew that - it also determines that our cup has a closed bottom.</p>
+          <p class="normal">Then click the green check button to finish the Revolve.</p>
         </div>
 
         <div class="image-right">
           <!-- <img class="med" src="https://test-onshape-app.herokuapp.com/images/sketch2-new.gif" alt="Circle"> -->
           <div class="video-container">
             <video controls>
-              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch2.mp4" type="video/mp4">
+              <source src="https://test-onshape-app.herokuapp.com/videos/cup-revolve.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -148,19 +139,92 @@
             <!-- <img src="https://test-onshape-app.herokuapp.com/images/extrudecut-new.gif" alt="Hole"> -->
             <div class="video-container">
               <video controls>
-                <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
+                <source src="https://test-onshape-app.herokuapp.com/videos/cup-handle-plane.mp4" type="video/mp4">
               </video>
             </div>
           </div>
         </div>
         <div class="text-description-large">
-          <h3>Extrude remove a hole</h3>
-          <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
-          <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube. </p>
-          <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot start off with an Extrude Remove before making your cube. **</strong></p>
+          <h3>Create another plane</h3>
+          <p class="normal">To make a handle, we have to sketch on the side of the revolved cup. We will create another plane, which is located on the right in the tool bar.</p>
+          <p class="normal"><strong>** Note: We can't sketch right on the Revolve that we just performed because that sketch is on a different plane. Therefore, we create a new plane that is offset from the plane at the origin since we want our cup handle to be on the edge of our cup instead of in the middle.</strong></p>
+          <p class="normal">Offset the plane near to the edge of the cup, or wherever you want the top of the cup handle to start.</p>
         </div>
       </div>
 
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Sketch a circle for the handle</h3>
+          <p class="normal">We will sketch a circle on the plane that we just created. This circle is essentially the cross-sectional area of the handle.</p>
+          <p class="norma"><strong>** Make sure you sketch the circle in the area where the plane intersects the side of the cup because we want the handle to be attached to the cup.</strong></p>
+          <p class="normal">You may dimension this circle if you want with the Dimension tool, but it is not necessary.</p>
+        </div>
+
+        <div class="image-right">
+          <!-- <img class="med" src="https://test-onshape-app.herokuapp.com/images/sketch2-new.gif" alt="Circle"> -->
+          <div class="video-container">
+            <video controls>
+              <source src="https://test-onshape-app.herokuapp.com/videos/cup-handle-sketch1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="image-container">
+          <div class="gif-left">
+            <!-- <img src="https://test-onshape-app.herokuapp.com/images/extrudecut-new.gif" alt="Hole"> -->
+            <div class="video-container">
+              <video controls>
+                <source src="https://test-onshape-app.herokuapp.com/videos/cup-handle-sketch2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="text-description-large">
+          <h3>Sketch the path of the handle</h3>
+          <p class="normal">We want to sketch the path in which the handle will go. To do this, we can use the 3 point arc tool, located on the left in the tool bar.</p>
+          <p class="normal"><strong>** Note: We do this because we will be using the Sweep tool, which requires an initial sketch and the path which it will follow through.</strong></p>
+          <p class="normal">After selecting the 3 point arc tool, click once on the center of the circle that we just made, once near the bottom of the cup where the handle will end, and then once in between the first two points but outside of the revolved cup to give the handle a curve.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Sweep to create the handle</h3>
+          <p class="normal">We will use the Sweep function, which is located on the left in the tool bar.</p>
+          <p class="norma">Select the circle as the sketch curve to sweep. Then select the 3 point arc that you just sketched as the sweep path.</p>
+          <p class="normal">Click the green check to finish the sweep.</p>
+        </div>
+
+        <div class="image-right">
+          <!-- <img class="med" src="https://test-onshape-app.herokuapp.com/images/sketch2-new.gif" alt="Circle"> -->
+          <div class="video-container">
+            <video controls>
+              <source src="https://test-onshape-app.herokuapp.com/videos/cup-handle-sweep.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="image-container">
+          <div class="gif-left">
+            <!-- <img src="https://test-onshape-app.herokuapp.com/images/extrudecut-new.gif" alt="Hole"> -->
+            <div class="video-container">
+              <video controls>
+                <source src="https://test-onshape-app.herokuapp.com/videos/cup-color.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="text-description-large">
+          <h3>Give your cup some color! (optional)</h3>
+          <p class="normal">Your cup is all done, but you might think that it looks a little boring. We will use the Appearance Panel to change the colors.</p>
+          <p class="normal"><strong>** Note: The cup itself and the handle are two separate parts because the cup is a part while the handle is just a surface that was modified with Sweep. So, in the Appearance Panel, there will be two options to change colors.</strong></p>
+          <p class="normal">There are different ways you can change the color, such as the Palette or the Mixer.</p>
+        </div>
+      </div>
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
