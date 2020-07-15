@@ -589,7 +589,7 @@ label {
   padding: 14px 18px;
   border: none;
   cursor: pointer;
-  width: 300px; 
+  width: flex; 
   opacity: 0.9;
   text-transform: capitalize; 
   position: relative; 
