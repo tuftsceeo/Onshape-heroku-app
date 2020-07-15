@@ -269,7 +269,7 @@ img.med {
   width: 85%;
   height: 85%;
   border-radius: 10px;
-  marigin-left: 40px;
+  margin-left: 40px;
 }
 
 img { 
@@ -636,6 +636,26 @@ label {
   width: 10%;
   margin-top: 10%;
   margin-bottom: 0%;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
 }
 
 .contents1 {
