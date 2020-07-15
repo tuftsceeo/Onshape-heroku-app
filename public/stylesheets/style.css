@@ -633,7 +633,9 @@ label {
 
     .btn-home.arrow-effect::before {
       opacity: 1; 
-      text-indent: 20px;} 
+      text-indent: 20px;
+      visibility: hidden;
+    } 
 
       
 .small_gif {
