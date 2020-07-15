@@ -615,6 +615,7 @@ label {
   height: 100%;
   width: 40px; 
   transition: all 0.2s linear 0s;
+  display: none;
 } 
 
   .btn-home.arrow-effect:hover {
