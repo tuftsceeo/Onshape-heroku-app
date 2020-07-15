@@ -183,6 +183,7 @@ body {
 .image-right {
   margin: 0;
   padding: 0;
+  margin-left: 10px;
   margin-right: 10px;
   width: 90%;
   height: 90%;
@@ -192,6 +193,7 @@ body {
   margin: 0;
   padding: 0;
   margin-left: 10px;
+  margin-right: 10px;
   width: 90%;
   height: 90%;
 }
@@ -633,6 +635,56 @@ label {
   width: 10%;
   margin-top: 10%;
   margin-bottom: 0%;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
 }
 
 .contents1 {
