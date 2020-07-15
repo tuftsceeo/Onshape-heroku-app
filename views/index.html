@@ -132,7 +132,8 @@
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();
-    var $wrapper = $(".contents");
+    var $wrapper = $(".mid");
+    var $el = $(".contents");
     var elHeight = $el.outerHeight();
     var elWidth = $el.outerWidth();
     var starterData = { 
