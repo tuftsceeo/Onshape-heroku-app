@@ -605,11 +605,32 @@ label {
   overflow: hidden; 
 }
 
-/* .btn-home.arrow-effect {
-  transition: all 0.2s linear 0s;
+.arrow-effect {
+  display: inline-block;
+  vertical-align: middle; 
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
 } 
 
-  .btn-home.arrow-effect::before {
+.arrow-effect .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s; 
+  transition-duration: 0.1s; 
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.arrow-effect:hover .hvr-icon, .arrow-effect:focus .hvr-icon, .arrow-effect:active .hvr-icon {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+  /* .arrow-effect::before {
     content: "\f178";
     font-family: FontAwesome;
     font-size: 15px; 
@@ -623,13 +644,14 @@ label {
     height: 100%;
     width: 40px; 
     transition: all 0.2s linear 0s;
-  } 
+  }  */
 
-  .btn-home.arrow-effect:hover {
+  /* .arrow-effect:hover {
     text-indent: -20px;
-  } 
-
-    .btn-home.arrow-effect::before {
+    
+  }  */
+/* 
+    .btn-home.arrow-effect:before {
       opacity: 1; 
       text-indent: 0px;
     }  */
