@@ -98,6 +98,7 @@ body {
   margin-bottom: 5%;
   padding-top: 6%;
   width: 100%;
+  resize: both;
 }
 
 .contents {
