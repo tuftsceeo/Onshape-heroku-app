@@ -27,7 +27,7 @@
       url('./Swansea.svg#Swansea') format('svg');
 }
 
-/* @font-face {
+@font-face {
   font-family: 'FontAwesome';
   src: url('./fontawesome-webfont.eot?v=4.7.0');
   src: url('./fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
@@ -37,7 +37,7 @@
       url('./fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 
 .container {
@@ -623,18 +623,18 @@ label {
     height: 100%;
     width: 40px; 
     transition: all 0.2s linear 0s;
-    /* visibility: hidden; */
+    visibility: hidden;
   } 
 
   .btn-home.arrow-effect:hover {
     text-indent: -20px;
-    /* visibility: visible; */
+    visibility: visible;
   } 
 
     .btn-home.arrow-effect::before {
       opacity: 1; 
       text-indent: 0px;
-      /* visibility: hidden; */
+      visibility: hidden;
     } 
 
       
