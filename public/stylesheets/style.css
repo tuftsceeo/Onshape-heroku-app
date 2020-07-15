@@ -202,6 +202,7 @@ body {
   width: 70%;
   height: 900px;
   background-color: #F1F1F5;
+  overflow-y: scroll
 }
 
 .video-container {
@@ -589,6 +590,10 @@ label {
   cursor: pointer;
   width: 300px; 
   opacity: 0.9;
+  text-transform: capitalize; 
+  position: relative; 
+  text-align: center; 
+  overflow: hidden; 
 }
 
 .small_gif {
