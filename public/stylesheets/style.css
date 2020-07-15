@@ -44,7 +44,7 @@
   text-align: center;
   display: flex; 
   flex-direction: row; 
-  justify-content: center; 
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -54,6 +54,8 @@ h2 {
   font-size: 50px;
   margin: 0;
   align-self: center;
+  flex: 2 0 auto;
+  order: 2;
   /* margin-right: 33.5%; */
 }
 
