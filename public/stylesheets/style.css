@@ -162,9 +162,11 @@ body {
 }
 
 .image-right {
-  margin-right: 1%;
+  margin-right: 35px;
+  margin-left: 35px;
   width: 80%;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
