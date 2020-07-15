@@ -133,7 +133,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .text-description-large {
@@ -314,6 +314,7 @@ p {
   padding: 0;
   font-family: 'LandasansLight';
   font-size: 23px;
+  overflow: scroll; 
 }
 
 .warning-container {
@@ -589,35 +590,6 @@ label {
   cursor: pointer;
   width: 300px; 
   opacity: 0.9;
-}
-
-.btn-home.arrow-effect {
-  transition: all 0.2s linear 0s; 
-
-  &:before {
-    content: "\f178";
-    font-family: FontAwesome;
-    font-size: 15px; 
-    position: absolute; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    right: 0;
-    top: 0; 
-    opacity: 0; 
-    height: 100%;
-    width: 40px; 
-    transition: all 0.2s linear 0s; 
-  }
-
-  &:hover {
-    text-indent: -20px; 
-
-    &:before {
-      opacity: 1; 
-      text-indent: 0px; 
-    }
-  }
 }
 
 .small_gif {
