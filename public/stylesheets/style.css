@@ -605,7 +605,7 @@ label {
   overflow: hidden; 
 }
 
-.btn-home.arrow-effect {
+/* .btn-home.arrow-effect {
   transition: all 0.2s linear 0s;
 } 
 
@@ -632,7 +632,7 @@ label {
     .btn-home.arrow-effect::before {
       opacity: 1; 
       text-indent: 0px;
-    } 
+    }  */
 
       
 .small_gif {
