@@ -133,7 +133,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .text-description-large {
@@ -314,7 +314,6 @@ p {
   padding: 0;
   font-family: 'LandasansLight';
   font-size: 23px;
-  overflow: scroll; 
 }
 
 .warning-container {
