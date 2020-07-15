@@ -589,7 +589,7 @@ label {
   padding: 14px 18px;
   border: none;
   cursor: pointer;
-  width: flex; 
+  width: 350px; 
   opacity: 0.9;
   text-transform: capitalize; 
   position: relative; 
@@ -601,7 +601,7 @@ label {
   transition: all 0.2s linear 0s;
 } 
 
-.btn-home.arrow-effect::before {
+.btn-home.arrow-effect:before {
   content: "\f178";
   font-family: FontAwesome;
   font-size: 15px; 
@@ -620,7 +620,7 @@ label {
   .btn-home.arrow-effect:hover {
     text-indent: -20px;} 
 
-    .btn-home.arrow-effect::before {
+    .btn-home.arrow-effect:before {
       opacity: 1; 
       text-indent: 0px; 
     }
