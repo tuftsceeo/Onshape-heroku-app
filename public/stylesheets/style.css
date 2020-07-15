@@ -42,10 +42,10 @@
   position: fixed;
   top: 0;
   text-align: center;
-  display: flex; 
+  /* display: flex; 
   flex-direction: row; 
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; */
+  /* align-items: center; */
 }
 
 h2 {
@@ -54,7 +54,7 @@ h2 {
   font-size: 50px;
   margin: 0;
   align-self: center;
-  margin-right: 33.5%;
+  /* margin-right: 33.5%; */
 }
 
 ul {
