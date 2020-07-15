@@ -597,11 +597,11 @@ label {
   overflow: hidden; 
 }
 
-.arrow-effect {
+.btn-home.arrow-effect {
   transition: all 0.2s linear 0s;
 } 
 
-.arrow-effect::before {
+.btn-home.arrow-effect::before {
   content: "\f178";
   font-family: FontAwesome;
   font-size: 15px; 
@@ -617,10 +617,10 @@ label {
   transition: all 0.2s linear 0s;
 } 
 
-  .arrow-effect:hover {
+  .btn-home.arrow-effect:hover {
     text-indent: -20px;} 
 
-    .arrow-effect::before {
+    .btn-home.arrow-effect::before {
       opacity: 1; 
       text-indent: 0px; 
     }
