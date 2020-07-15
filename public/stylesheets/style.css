@@ -46,6 +46,7 @@
   flex-direction: row; 
   justify-content: space-between; 
   align-items: center;
+  margin: 0 auto;
 }
 
 h2 {
@@ -56,6 +57,7 @@ h2 {
   align-self: center;
   flex: 2 0 auto;
   order: 2;
+  /* margin-right: 15px;  */
   /* margin-right: 33.5%; */
 }
 
