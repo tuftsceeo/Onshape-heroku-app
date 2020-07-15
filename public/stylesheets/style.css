@@ -623,12 +623,10 @@ label {
     height: 100%;
     width: 40px; 
     transition: all 0.2s linear 0s;
-    visibility: hidden;
   } 
 
   .btn-home.arrow-effect:hover {
     text-indent: -20px;
-    visibility: visible;
   } 
 
     .btn-home.arrow-effect::before {
