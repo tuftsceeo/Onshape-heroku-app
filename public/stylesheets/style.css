@@ -602,7 +602,7 @@ label {
 } 
 
 .btn-home.arrow-effect:before {
-  /* content: "\f178"; */
+  content: "\f178";
   font-family: FontAwesome;
   font-size: 15px; 
   position: absolute; 
