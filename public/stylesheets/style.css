@@ -609,32 +609,32 @@ label {
   transition: all 0.2s linear 0s;
 } 
 
-.btn-home.arrow-effect::before {
-  content: "\f178";
-  font-family: FontAwesome;
-  font-size: 15px; 
-  position: absolute; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  right: 0;
-  top: 0; 
-  opacity: 0; 
-  height: 100%;
-  width: 40px; 
-  transition: all 0.2s linear 0s;
-  visibility: hidden;
-} 
+  .btn-home.arrow-effect::before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px; 
+    position: absolute; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    right: 0;
+    top: 0; 
+    opacity: 0; 
+    height: 100%;
+    width: 40px; 
+    transition: all 0.2s linear 0s;
+    /* visibility: hidden; */
+  } 
 
   .btn-home.arrow-effect:hover {
     text-indent: -20px;
-    visibility: visible;
+    /* visibility: visible; */
   } 
 
     .btn-home.arrow-effect::before {
       opacity: 1; 
-      text-indent: 20px;
-      visibility: hidden;
+      text-indent: 0px;
+      /* visibility: hidden; */
     } 
 
       
