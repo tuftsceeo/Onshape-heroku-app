@@ -606,7 +606,7 @@ label {
   font-family: FontAwesome;
   font-size: 15px; 
   position: absolute; 
-  play: flex; 
+  display: flex; 
   align-items: center; 
   justify-content: center; 
   right: 0;
@@ -619,12 +619,15 @@ label {
 
   .btn-home.arrow-effect:hover {
     text-indent: -20px;} 
-  display: none; 
 
     .btn-home.arrow-effect::before {
       opacity: 1; 
-    /*   text-indent: 0p */x; 
-    text-indent: -20px;} 
+      text-indent: 20px;} 
+
+    .btn-home.arrow-effect:before {
+      opacity: 1; 
+      text-indent: 0px; 
+      text-indent: -20px;} 
 
     .btn-home.arrow-effect:before {
       opacity: 1; 
