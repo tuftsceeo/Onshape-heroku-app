@@ -634,7 +634,6 @@ label {
     .btn-home.arrow-effect::before {
       opacity: 1; 
       text-indent: 0px;
-      visibility: hidden;
     } 
 
       
