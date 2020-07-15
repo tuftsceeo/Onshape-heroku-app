@@ -607,7 +607,7 @@ label {
 } 
 
 .btn-home.arrow-effect::before {
-  /* content: "\f178"; */
+  content: "\f178";
   font-family: FontAwesome;
   font-size: 15px; 
   position: absolute; 
@@ -623,7 +623,6 @@ label {
 } 
 
   .btn-home.arrow-effect:hover {
-    content: "\f178";
     text-indent: -20px;} 
 
     .btn-home.arrow-effect::before {
@@ -635,6 +634,16 @@ label {
   width: 10%;
   margin-top: 10%;
   margin-bottom: 0%;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents1 {
+  display: flex;
+  flex-direction: row;
 }
 
 .contents1 {
