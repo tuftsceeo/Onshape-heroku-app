@@ -175,6 +175,7 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   margin-top: 5%;
+  position: center;
 }
 
 .image-container {
