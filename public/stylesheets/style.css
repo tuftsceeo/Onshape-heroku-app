@@ -203,6 +203,16 @@ body {
   height: 90%;
 }
 
+.image-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5%;
+  margin-left: 5%;
+  margin-top: 0%;
+}
+
 .big-container {
   display: flex;
   flex-direction: column;
@@ -660,7 +670,30 @@ label {
       text-indent: 0px;
     }  */
 
-      
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+  
+.active,
+.accordion:hover {
+    background-color: #ebd2cb;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
 .small_gif {
   width: 5%;
   margin-top: 10%;
