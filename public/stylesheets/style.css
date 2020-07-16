@@ -664,6 +664,8 @@ label {
   width: 5%;
   margin-top: 10%;
   margin-bottom: 0%;
+  margin-right: auto; 
+  margin-left: auto;
 }
 
 .contents1 {
