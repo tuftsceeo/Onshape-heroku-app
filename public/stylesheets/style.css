@@ -177,6 +177,8 @@ body {
   margin-top: 5%;
   margin-left: auto; 
   margin-right: auto;
+  overflow-x: hidden; 
+  overflow-y: scroll;
 }
 
 .image-container {
