@@ -630,8 +630,8 @@ label {
   transition-timing-function: ease-out;
 }
 .arrow-effect:hover .hvr-icon, .arrow-effect:focus .hvr-icon, .arrow-effect:active .hvr-icon {
-  -webkit-transform: translateX(4px);
-  transform: translateX(4px);
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
   /* .arrow-effect::before {
