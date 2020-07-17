@@ -11,7 +11,7 @@
   <script src="javascripts/threejs/js/libs/stats.min.js"></script>
   <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
 
-  <script src="javascripts/volcano-placemat.js"></script>
+  <script src="javascripts/paperclip-placemat.js"></script>
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
@@ -41,7 +41,7 @@
           <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
         </div>
       </div>
-      <h2 class="header-text"> Volcano Placemat </h2> 
+      <h2 class="header-text"> Paperclip Placemat </h2> 
       <!-- <nav>
         <ul>
           <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
@@ -56,13 +56,13 @@
     <div class='mid'>
         <div class="contents1">
             <div class="small_gif">
-                <img src="images/transparent-volcano-animated-6.gif" alt="volcano gif">
+                <img src="images/paper-clips.png" alt="paperclip icon">
             </div>
             <div class="text-description-short">
-                <p class="normal">Use Onshape to create a volcano! </p>
+                <p class="normal">Use Onshape to create a paperclip! </p>
             </div>
             <div class="small_gif">
-                <img src="images/transparent-volcano-animated-6.gif" alt="volcano gif">
+                <img src="images/paper-clips.png" alt="paperclip icon">
             </div>
         </div>
     </div>
@@ -71,74 +71,58 @@
       <div class="contents">
         <div class="text-description-med">
           <h3> Introduction </h3>
-          <p class="normal"> This volcano was created using two part studios for the base and the lava and assembled in an assembly tab.</p>
+          <p class="normal"> This paper clip model was created with just one part studio. The paper clip was sketched with the line and spline tools and 3-dimensionalized with extrude. Fillet was used to round the edges in order to create the cylindrical appearance
+            of wire.</p>
         </div> 
 
         <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/volcano-final.gif" alt="volcano final">
+          <img src="https://test-onshape-app.herokuapp.com/images/paperclip-final.gif" alt="paperclip final">
         </div>
       </div>
 
       <div class="contents-center">
         <div class="text-description-short">
             <h3> You Try! </h3>
-            <p class="normal"> Useful tools for this project are spline, plane, shell, loft, fillet, and extrude. </p>
+            <p class="normal"> Useful tools for this project are arc, line, extrude, and fillet. </p>
         </div>
       </div>
 
       <div class="image-row">
         <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/Spline-button.png" alt="Click sketch">
+            <img src="images/line-paperclip.png" alt="line">
         </div>
     
         <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/fillet.png" alt="sketch plane">
-        </div>
-    
-        <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/Extrude-button-copy.png" alt="sketch plane">
+            <img src="images/arc.png" alt="arc">
         </div>
       </div>
       
       <div class="image-row">
         <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/loft.png" alt="Click sketch">
+            <img src="images/extrude.png" alt="extrude">
         </div>
     
         <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/shell.png" alt="sketch plane">
-        </div>
-    
-        <div class="image-right">
-          <img src="https://test-onshape-app.herokuapp.com/images/Line-button.png" alt="sketch plane">
+            <img src="images/fillet-paperclip.png" alt="fillet">
         </div>
       </div>
 
       <div class="contents">
         <div class="image-container">
           <div class="image-left">
-            <img src="https://test-onshape-app.herokuapp.com/images/plane.png" alt="Edit appearance">
-          </div>
-          <div class="image-left">
-            <img src="https://test-onshape-app.herokuapp.com/images/lofting.png" alt="color select">
+            <img src="images/fillet-2.png" alt="fillet onshape tip">
           </div>
         </div>
         <div class="text-description-large">
-          <h3>Onshape Tip: Using the "loft" tool</h3>
-          <p class="normal">In order to use the "loft" tool to create your volcano, you must create an offset plane. To do so, select the plane tool in the toolbar. Click on the existing plane you want your new plane to be parallel to. Next, set the offset distance
-            to your desired volcano height.</p>
-          <p class="normal">Create a sketch with the spline on the new offset plane, directly over your first sketch on the top plane. Now, your volcano has a top and a bottom.</p>
-          <p class="normal">Next, finish the sketch and select "loft." Select the two sketch faces.</p>
+          <h3>Onshape Tip: Using the fillet tool</h3>
+          <p class="normal">In order to use the fillet tool to create your paper clip, you must first extrude the face of your sketch. Make sure your sketch is dark gray, which means there is a face that can be extruded.</p>
+          <p class="normal">To use fillet on your extruded sketch, select all of the edges of the extrusion. Make sure the cross section is circular in the editor menu that appears while in ediitng mode.</p>
         </div>
       </div>
 
       <button class="accordion"><h3>Hints:</h3></button>
       <div class="panel">
-        <p class="normal">The lava on the side of the volcano is best created in a new plane (offset from the front plane). Once you have the desired size and shape for your lava, copy the sketch by right-clicking on the sketch in the "Features" list and clicking "copy
-          sketch." Then, create a new part studio and paste it into a new sketch, and delete the lava sketch from the first part studio. Extrude the sketch to make it 3D, and use the fillet tool to create your desired shape.</p>
-        <p class="normal">The fillet is used to create a curved edge on the edge of an extrusion instead of a sharp corner. Use it to round out the edges of the volcano's opening once you use the shell tool to hollow out the volcano. You should also use "fillet" on
-          the lava to round out the edges so that it looks similar to real lava.</p>
-        <p class="normal">Change the colors of both parts by right clicking on each and selecting "edit appearance."</p>
+        <p class="normal">The fillet will not complete unless the radius value is small enough for the object you're creating. If you're getting an error, try decreasing the radius.</p>
       </div>
 
       <script>
