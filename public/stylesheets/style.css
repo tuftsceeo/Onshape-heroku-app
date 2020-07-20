@@ -95,7 +95,7 @@ body {
 }
 
 .parallax {
-  background-image: url('activities-bg.png');
+  background-image: url('/images/activities-bg.png');
   height: 100%; 
   background-attachment: fixed; 
   background-position: center; 
