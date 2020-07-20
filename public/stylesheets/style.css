@@ -101,6 +101,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;  */
   /* background-image: url('images/activities-bg.png'); */
+  height: 100vh; 
+  width: 100vw; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
