@@ -106,16 +106,16 @@ body {
   position: absolute; 
   top: 0; 
   left: 0; 
-  width: 1366px;
-  height: 768px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   /* background: "/activities-bg.png"; */
 }
 
-/* .header img {
+.header img {
   height: 1366px; 
   width: 768px; 
-} */
+}
 
 .mid {
   display: flex;
