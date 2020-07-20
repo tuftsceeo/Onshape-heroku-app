@@ -103,7 +103,7 @@ body {
 }
 
 .header #background {
-  position: absolute; 
+  position: fixed; 
   top: flex; 
   left: 0; 
   width: 100%;
