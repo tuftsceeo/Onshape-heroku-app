@@ -109,7 +109,7 @@ body {
   background: #251C2C;
 }
 
-.background {
+/* .background {
   position: absolute; 
   top: 0; 
   left: 0; 
@@ -123,9 +123,9 @@ body {
   margin-bottom: 50px; 
   transform-origin: 0; 
   transform: translateZ(3px);
-}
+} */
 
-/* .header #background {
+.header #background {
   position: absolute; 
   top: 0; 
   left: 0; 
@@ -141,7 +141,7 @@ body {
   height: 100%; 
   position: absolute; 
   object-fit: cover; 
-} */
+}
 
 .mid {
   display: flex;
