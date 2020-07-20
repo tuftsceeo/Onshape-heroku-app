@@ -54,29 +54,27 @@
       <!-- if we want to have links to other pages -->
 
     </div>
-  </div>
 
-  <div class="header">
-    <div id="background">
-      <img src="/images/activities-bg.png" alt="background-img">
+    <div class="header">
+      <div id="background">
+        <img src="/images/activities-bg.png" alt="background-img">
 
-      <!-- <div class="contents-center">
-        <h3 class="title-white"> Try out some CAD problems! </h3><br/>
+        <!-- <div class="contents-center">
+          <h3 class="title-white"> Try out some CAD problems! </h3><br/>
+        </div>
+        <div class="contents-center">
+          <p class="bold">The following are links to some problems for you to try out:</p>
+        </div>  -->
       </div>
-      <div class="contents-center">
-        <p class="bold">The following are links to some problems for you to try out:</p>
-      </div>  -->
     </div>
-  </div>
 
-  <script type="text/javascript">
-    var headerBg = document.getElementById('activities-bg')
-    window.addEventListener('scroll', function(){
-      headerBg.style.opacity = 1 - +window.pageYOffset/550+''
-    })
-  </script>
+    <script type="text/javascript">
+      var headerBg = document.getElementById('background')
+      window.addEventListener('scroll', function(){
+        headerBg.style.opacity = 1 - +window.pageYOffset/550+''
+      })
+    </script>
     
-  <div class="container">
     <div class="mid">
       <div class="contents-center">
         <div class="wrapper-small">
