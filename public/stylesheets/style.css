@@ -108,14 +108,14 @@ body {
   left: 0; 
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   /* background: "/activities-bg.png"; */
 }
 
 .header img {
   height: flex; 
   width: flex; 
-  position: static; 
+  position: relative; 
 }
 
 .mid {
