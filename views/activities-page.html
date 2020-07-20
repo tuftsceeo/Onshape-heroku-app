@@ -74,14 +74,20 @@
         </div>  -->
     </div>
 
-    <script type="text/javascript">
+    <script>
+      $(window).scroll(function(){
+        $(".header").css("opacity", 1 - $(window).scrollTop() / 250);
+      });
+    </script>
+
+    <!-- <script type="text/javascript">
       var headerBg = document.getElementById('header')
       window.addEventListener('scroll', function(){
         headerBg.style.opacity = 1 - +window.pageYOffset/550+''
         headerBg.style.top = +window.pageYOffset+'px'
         headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
       })
-    </script>
+    </script> -->
     
     <div class="mid">
       <div class="contents-center">
