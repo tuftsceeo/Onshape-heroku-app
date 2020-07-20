@@ -98,7 +98,7 @@ body {
   position: relative;
   width: 100%; 
   height: 800px;
-  overflow: auto; 
+  overflow: none; 
   background: #251C2C;
 }
 
