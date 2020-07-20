@@ -115,14 +115,14 @@ body {
   width: 100%;
   height: 100%;
   text-align: center; 
-  /* object-fit: cover; */
-  /* background: "/activities-bg.png"; */
+  object-fit: cover;
+  background: "/activities-bg.png";
 }
 
 #background-img {
   width: 100%; 
   height: 100%; 
-  /* position: absolute;  */
+  position: absolute; 
   object-fit: cover; 
 } */
 
