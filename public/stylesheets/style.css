@@ -123,10 +123,11 @@ body {
   background: #251C2C; */
 }
 
-.top-left {
+.center {
   position: absolute; 
-  top: 8px; 
-  left: 16px; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 35px;
   color: #F1F1F5;
   margin-bottom: 10px;
