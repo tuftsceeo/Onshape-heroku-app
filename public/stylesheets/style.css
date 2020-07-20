@@ -113,8 +113,9 @@ body {
 }
 
 .header img {
-  height: auto; 
-  width: auto; 
+  height: flex; 
+  width: flex; 
+  position: fixed; 
 }
 
 .mid {
