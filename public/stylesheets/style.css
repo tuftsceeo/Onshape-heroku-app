@@ -104,10 +104,10 @@ body {
 
 .header #background {
   position: absolute; 
-  top: flex; 
+  top: 0; 
   left: 0; 
   width: 100%;
-  height: flex;
+  height: 100%;
   /* background: "/images/activities-bg.png"; */
 }
 
