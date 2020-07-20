@@ -123,9 +123,9 @@ body {
   background: #251C2C; */
 }
 
-.bottom-left {
+.top-left {
   position: absolute; 
-  bottom: 8px; 
+  top: 8px; 
   left: 16px; 
   font-size: 35px;
   color: #F1F1F5;
