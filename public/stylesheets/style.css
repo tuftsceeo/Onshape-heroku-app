@@ -107,6 +107,7 @@ body {
   /* top: 0; 
   left: 0;  */
   width: 100%;
+  object-fit: contain;
   /* height: 100%; */
   /* background: "/activities-bg.png"; */
 }
