@@ -115,7 +115,7 @@ body {
 .header img {
   height: flex; 
   width: flex; 
-  position: relative; 
+  position: static; 
 }
 
 .mid {
