@@ -13,6 +13,8 @@
 
   <script src="javascripts/index.js"></script>
 
+  <script async custom-element="amp-fx-collection" src="http://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
@@ -57,7 +59,11 @@
 
     <div class="header">
       <img src="/images/activities-bg.png" id="background-img" alt="background-img">
-      <div class="bottom-left">Try out some CAD problems!</div>
+      <div class="bottom-left">
+        <h4 amp-fx="parallax" data-parallax-factor="1.7">
+          Try out some CAD problems!
+        </h4>
+      </div>
       <!-- <h4 class="title-white"> Try out some CAD problems! </h4> -->
       <!-- <p class="bold">The following are links to some problems for you to try out:</p> -->
         <!-- <div class="contents-center">
