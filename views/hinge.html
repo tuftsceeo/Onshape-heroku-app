@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="javascripts/jquery-1.8.3.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/threejs/three.min.js"></script>
+
+  <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+  <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+  <script src="javascripts/threejs/js/Detector.js"></script>
+  <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+  <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+
+  <script src="javascripts/hinge.js"></script>
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/hamburger.css" rel="stylesheet">
+  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
+  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <!-- <div class="menu-button" onclick=""> 
+        <div class="bar1" style="--delay: 0.00s"></div>
+        <div class="bar2" style="--delay: 0.10s"></div>
+        <div class="bar3" style="--delay: 0.20s"></div>
+      </div>  -->
+      <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+      <div id="popUpNav" class="overlay" onclick="closeNav()">
+        <div class="overlay-content">
+          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+          <hr class="small">
+          <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+          <hr class="small">
+          <a href="/help-page" target="_self" data-scroll onclick="closeNav()">Help</a>
+        </div>
+      </div>
+      <h2 class="header-text"> Hinge </h2> 
+      <!-- <nav>
+        <ul>
+          <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
+          <li><a href="https://test-onshape-app.herokuapp.com/">Cube Demo</a></li>
+        </ul>
+      </nav> -->
+
+      <!-- if we want to have links to other pages -->
+
+    </div>
+    
+    <div class="mid">
+      <div class="contents">
+        <div class="text-description-med">
+          <h3> Challenge </h3>
+          <p class="normal">Use Onshape to construct a basic hinge!</p>
+        </div> 
+
+        <div class="video-container">
+            <video controls>
+                <source src="videos/hinge demo.mov" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project are line, circle, tangent, trim, mirror, and loft, extrude, dimension, and transform.</p>
+        </div>
+      </div>
+
+      <div class="contents-center">
+          <div class="text-description-long">
+              <h3>Think like an artist!</h3>
+              <p class="normal">Create a pair of sunglasses that uses two hinges to attach the arms to the frame.</p>
+              <div class="image-container">
+                <img src="images/sunglasses.png" alt="sunglasses">
+              </div>
+          </div>
+          <div class="text-description-long">
+              <h3>Think like an engineer!</h3>
+              <p class="normal">Create a door with several hinges that can open and close.</p>
+              <div class="image-container">
+                <img src="images/door2.png" alt="door">
+              </div>
+          </div>
+      </div>
+
+      <div class="contents-center">
+          <div class="video-container">
+              <video controls>
+                <source src="images/hinge-1.mov" type="video/mp4">
+              </video>
+          </div>
+          <div class="text-description-long">
+              <h3>Step 1:</h3>
+              <p class="normal"> Outline the shape of the side of the hinge in a new sketch. </p>
+              <p class="normal"> Use the line and circle tools to create the shape.</p>
+              <p class="normal"> Use the tangent tool to make the lines tangent to the two circles. </p>
+              <p class="normal"> Trim the excess lines with the trim tool. </p>
+          </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-long">
+          <h3>Step 2:</h3>
+          <p class="normal">Click on the dimension tool.</p>
+          <p class="normal"> You can now assign any dimension to your hinge by double-clicking the measurement and typing in a new number.</p>
+          <p class="normal"> This will scale down the entire sketch, so you won't have to worry about adjusting other measurements accordingly. </p>
+        </div>
+
+        <div class="video-container">
+          <video controls>
+            <source src="images/hinge-2.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-3.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-description-large">
+          <h3>Step 3:</h3>
+          <p class="normal">Extrude your sketch by your desired amount. This extrusion will determine the height of your hinge.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Step 4:</h3>
+          <p class="normal"> Create a new sketch on the face of your extrusion. </p>
+          <p class="normal"> Use the circle tool to sketch an outline of one of the holes in the hinge. </p>
+          <p class="normal"> Draw a construction line and use the mirror tool to achieve symmetry. Delete the line after you've mirrored the shape. </p>
+          <p class="normal"> Create a new sketch on the opposite face of the extrusion and repeat the process, drawing slightly smaller circles. </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-4.mov" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-5.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-description-large">
+          <h3>Step 5:</h3>
+          <p class="normal"> Use the loft tool to remove each hole. Create a new loft for each hole. </p>
+          <p class="normal"> To create a hole, you must select "remove" in the loft menu and click on each circle from the face it was sketched on.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Step 6:</h3>
+          <p class="normal"> To begin creating the other half of the hinge, construct a new offset plane. </p>
+          <p class="normal"> Mirror the part you've already created over the plane you just constructed. </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-6.mov" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-7.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-description-large">
+          <h3>Step 7:</h3>
+          <p class="normal"> Create a new sketch in order to begin constructing the notches in the hinge. </p>
+          <p class="normal"> Make sure that each rectangle and the spaces between the rectangles are the same height by using the dimension tool.</p>
+          <div class="image-container">
+            <img src="images/rectangle-dimensioning.png" alt="dimensioning">
+          </div>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Step 8:</h3>
+          <p class="normal"> Create a new extrusion and select all of the rectangles you drew. </p>
+          <p class="normal"> The extrusion should be on "remove" in the extrude menu. You may need to create multiple extrusions in opposite directions to remove the parts where the rectangles are positioned. </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-8.mov" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-9.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-description-large">
+          <h3>Step 9:</h3>
+          <p class="normal"> Use the transform tool to line the halves of the hinge. You'll need to select "Translate by XYZ" in the transform menu. </p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description-large">
+          <h3>Step 10:</h3>
+          <p class="normal"> Create a pin for inside your hinge in order to hold it together. </p>
+          <p class="normal"> You can sketch a circle and extrude it as needed. </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="images/hinge-10.mov" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <div id="feedback-form">
+        <div class="form-container">
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <form id="feedback" target="dummy" name="google-sheets">
+            <hr>
+            <div class="text-input">
+              <label for="liked">What did you like?</label>
+              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
+            </div> 
+            
+            <div class="text-input">
+              <label for="disliked">What didn't you like?</label>
+              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+            </div>
+            
+            <div class="text-input">
+              <label for="comments">What did you wish/didn't wish to see?</label>
+              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
+            </div> 
+
+            <div class="text-input">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+            </div>
+            <hr>
+
+            <!-- <div class="rate">
+              <label for="rate-app">Rate our app!</label><br>
+              <div class="rating">
+                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
+                <label for="star5">☆</label>
+                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
+                <label for="star4">☆</label>
+                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
+                <label for="star3">☆</label>
+                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
+                <label for="star2">☆</label>
+                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
+                <label for="star1">☆</label>
+              </div>
+            </div> -->
+
+            <input type="submit" class="submitbtn" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
+      </div>
+
+    </div>
+    <div class="footer">
+    </div>
+  </div>
+  <script>
+    $('#feedback').submit(function () {
+      formPost();
+      return false;
+    });
+    function formPost() { 
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let method = "POST";
+      let headers = {"Content-Type": "multipart/form-data"}
+      let elements = document.getElementById("feedback").elements;
+      // const form = document.forms['google-sheets'];
+      let body = {};
+      const formData = new FormData();
+      for (var i = 0, element; element = elements[i++];) {
+          if (element.type === "text"){
+            let name = element.name;
+            body[name] = element.value;
+            formData.append(name, element.value);
+          }
+      }
+      console.log(body);
+      console.log(formData);
+
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+      formSubmitClose();
+    }
+
+    function formSubmitClose() { 
+      var form = document.getElementById("feedback-form");
+      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+      document.getElementById("feedback-form").style.display = "none";
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
+    function openNav() {
+      hamburger.classList.add("is-active");
+      document.getElementById("popUpNav").style.display = "block";
+    }
+  
+    function closeNav() {
+      hamburger.classList.remove("is-active");
+      document.getElementById("popUpNav").style.display = "none";
+    }
+  
+    // Hamburger Menu Spin
+    var hamburger = document.querySelector(".hamburger");
+    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+  
+    closeNav();
+  </script> 
+</body>
+</html>
