@@ -282,26 +282,26 @@ header::before {
   background-color: #30223a;
 }
 
-.contents-center {
-  /* display: flex;
+.contents-button {
+  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; */
-  /* width: 100%; */
-  /* margin-bottom: 10%; */
-  /* width: 90%;
-  margin-bottom: 0%;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10%;
+  width: 90%;
+  /* margin-bottom: 0%;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 0%; */
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
   width: 90%;
   margin-bottom: 0%;
   margin-left: 5%;
   margin-right: 20%;
-  margin-top: 0%;
+  margin-top: 0%; */
 }
 
 .contents-top {
