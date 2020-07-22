@@ -279,6 +279,7 @@ header::before {
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 10%;
+  background-color: #30223a;
 }
 
 .contents-center {
@@ -286,8 +287,26 @@ header::before {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-bottom: 10%;
+  /* width: 100%; */
+  /* margin-bottom: 10%; */
+
+  width: 90%;
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-right: 20%;
+  margin-top: 0%;
+}
+
+.text-description {
+  background-color: #F1F1F5; 
+  border-radius: 10px; 
+  width: 50%; 
+  height: flex; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll; 
 }
 
 .text-description-med {
@@ -325,6 +344,23 @@ header::before {
   overflow: scroll;
 }
 
+.text-description-long {
+  background-color: #F1F1F5;
+  border-radius: 10px;
+  width: 60%;
+  height: 555px;
+  text-align: left;
+  align-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 2.5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+}
+
 .text-description-short {
   background-color: #F1F1F5;
   border-radius: 10px;
@@ -341,6 +377,24 @@ header::before {
   margin-top: 5%;
   margin-left: auto; 
   margin-right: auto;
+}
+
+.text-description-center {
+  background-color: #F1F1F5;
+  border-radius: 10px;
+  width: 100%;
+  height: 220px;
+  text-align: left;
+  align-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .image-container {
@@ -424,9 +478,11 @@ img.shadow2 {
 h3 {
   color: #E56878;
   margin-bottom: 0;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
   font-family: 'LemonBold';
-  font-size: 20px;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center; 
   /*float: left;*/
 }
 
@@ -457,11 +513,17 @@ img {
 }
 
 video {
-  width: 85%;
+  /* width: 85%;
   height: 100%;
   border-radius: 10px;
-  position: relative;
+  position: relative; */
   z-index: 0;
+  margin-right: 5%;
+  width: 50%;
+  height: 50%;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .footer {
@@ -501,6 +563,8 @@ p {
   padding: 0;
   font-family: 'LandasansLight';
   font-size: 23px;
+  text-align: center; 
+  line-height: 20px; 
 }
 
 .warning-container {
