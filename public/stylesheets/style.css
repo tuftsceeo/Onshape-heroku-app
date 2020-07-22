@@ -428,8 +428,9 @@ header::before {
   align-items: center; 
   width: 100%;
   margin-bottom: 2.5%;
-  margin-left: 5%;
-  margin-top: 0%;
+  margin-left: 2%;
+  margin-top: 2.5%;
+  margin-right: 2%
 }
 
 .image-right {
@@ -704,6 +705,12 @@ hr {
   border : 1px solid #F1F1F5;
   margin-bottom: 25px; 
   width: 400px;
+}
+
+.divider {
+  border : 1px solid #F1F1F5;
+  margin-bottom: 25px; 
+  width: 90%;
 }
 
 .text-input { 
