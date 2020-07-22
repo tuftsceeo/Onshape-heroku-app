@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="javascripts/jquery-1.8.3.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/threejs/three.min.js"></script>
+
+  <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+  <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+  <script src="javascripts/threejs/js/Detector.js"></script>
+  <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+  <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+
+  <script src="javascripts/cup-placemat.js"></script>
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="stylesheets/hamburger.css" rel="stylesheet">
+  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
+  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <!-- <div class="menu-button" onclick=""> 
+        <div class="bar1" style="--delay: 0.00s"></div>
+        <div class="bar2" style="--delay: 0.10s"></div>
+        <div class="bar3" style="--delay: 0.20s"></div>
+      </div>  -->
+      <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+      <div id="popUpNav" class="overlay" onclick="closeNav()">
+        <div class="overlay-content">
+          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+          <hr class="small">
+          <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+          <hr class="small">
+          <a href="/help-page" target="_self" data-scroll onclick="closeNav()">Help</a>
+        </div>
+      </div>
+      <h2 class="header-text"> Cup </h2> 
+      <!-- <nav>
+        <ul>
+          <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
+          <li><a href="https://test-onshape-app.herokuapp.com/">Cube Demo</a></li>
+        </ul>
+      </nav> -->
+
+      <!-- if we want to have links to other pages -->
+
+    </div>
+    
+    <div class="mid">
+      <div class="contents-top">
+        <div class="text-description">
+          <h3> Challenge </h3>
+          <p class="normal">Use Onshape to create a cup or a mug!</p>
+        </div> 
+
+        <img src="images/cube-hole-final.gif" alt="cube-gif">
+
+        <!-- <div class="video-container">
+
+        </div> -->
+      </div>
+
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project are LINE, REVOLVE, ADD PLANE, SWEEP, and APPEARANCE PANEL.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+          <div class="image-container">
+            <img src="images/line-tool.png" alt="line-tool">
+            <img src="images/revolve-tool.png" alt="revolve-tool">
+            <img src="images/plane-tool.png" alt="plane-tool">
+          </div>
+          <div class="image-container">
+            <img src="images/sweep-tool.png" alt="sweep-tool">
+            <img src="images/appearance-tool.png" alt="appearance-tool">
+          </div>
+      </div>
+
+      <button class="accordion"><h3>Hints:</h3></button>
+      <div class="panel">
+        <p class="normal">Think about what the cross-sectional area of a cup or a mug would look like. Once you have that, try using the revolve tool.<br/>The handle is made with the sweep function.</p>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+      </script>
+
+      <div class="contents-button">
+          <div class="wrapper-small">
+              <h3 class="title-white">See how we did it!</h3><br/>
+              <a href="/cup" class="hvr-grow" target="_self"><button type="button" class="btn-home">Our cup</button></a>
+          </div>
+      </div>
+
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <div id="feedback-form">
+        <div class="form-container">
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <form id="feedback" target="dummy" name="google-sheets">
+            <hr>
+            <div class="text-input">
+              <label for="liked">What did you like?</label>
+              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
+            </div> 
+            
+            <div class="text-input">
+              <label for="disliked">What didn't you like?</label>
+              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+            </div>
+            
+            <div class="text-input">
+              <label for="comments">What did you wish/didn't wish to see?</label>
+              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
+            </div> 
+
+            <div class="text-input">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+            </div>
+            <hr>
+
+            <!-- <div class="rate">
+              <label for="rate-app">Rate our app!</label><br>
+              <div class="rating">
+                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
+                <label for="star5">☆</label>
+                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
+                <label for="star4">☆</label>
+                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
+                <label for="star3">☆</label>
+                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
+                <label for="star2">☆</label>
+                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
+                <label for="star1">☆</label>
+              </div>
+            </div> -->
+
+            <input type="submit" class="submitbtn" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
+      </div>
+
+    </div>
+    <div class="footer">
+    </div>
+  </div>
+  <script>
+    $('#feedback').submit(function () {
+      formPost();
+      return false;
+    });
+    function formPost() { 
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let method = "POST";
+      let headers = {"Content-Type": "multipart/form-data"}
+      let elements = document.getElementById("feedback").elements;
+      // const form = document.forms['google-sheets'];
+      let body = {};
+      const formData = new FormData();
+      for (var i = 0, element; element = elements[i++];) {
+          if (element.type === "text"){
+            let name = element.name;
+            body[name] = element.value;
+            formData.append(name, element.value);
+          }
+      }
+      console.log(body);
+      console.log(formData);
+
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+      formSubmitClose();
+    }
+
+    function formSubmitClose() { 
+      var form = document.getElementById("feedback-form");
+      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+      document.getElementById("feedback-form").style.display = "none";
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
+    function openNav() {
+      hamburger.classList.add("is-active");
+      document.getElementById("popUpNav").style.display = "block";
+    }
+  
+    function closeNav() {
+      hamburger.classList.remove("is-active");
+      document.getElementById("popUpNav").style.display = "none";
+    }
+  
+    // Hamburger Menu Spin
+    var hamburger = document.querySelector(".hamburger");
+    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+  
+    closeNav();
+  </script> 
+</body>
+</html>
