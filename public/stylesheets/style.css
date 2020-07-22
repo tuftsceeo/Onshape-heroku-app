@@ -126,6 +126,8 @@ body {
   background-size: cover;
   text-align: center; 
   opacity: 1;
+  z-index: 99%;
+  bottom: 0%; 
 
   /* font-size: 10vw;
   color: #F1F1F5;
