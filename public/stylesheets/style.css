@@ -45,6 +45,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  /* this was just added */
+  z-index: 2;
+  position: absolute;
+  top: 100vh;
+  line-height: 30px;
+  padding: 40px;
 }
 
 .top {
@@ -92,6 +98,15 @@ li {
 body {
   background-color: #251C2C;
   margin: 0;
+  /* these following lines were added */
+  color: white;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .header {
@@ -101,7 +116,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;  */
   /* background-image: url('images/activities-bg.png'); */
-  height: 100vh; 
+
+  /* height: 100vh; 
   width: 100vw; 
   border-radius: 10px;
   background-attachment: fixed;
@@ -109,7 +125,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center; 
-  opacity: 0.5;
+  opacity: 0.5; */
+
   /* font-size: 10vw;
   color: #F1F1F5;
   text-shadow: 1px 1px 2px purple; 
@@ -123,6 +140,42 @@ body {
   height: 100vh;
   overflow: auto; 
   background: #251C2C; */
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header h4 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header,
+header:before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url(home-bg.jpg);
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
 }
 
 .center {
@@ -135,6 +188,7 @@ body {
   color: #F1F1F5;
   margin-bottom: 10px;
   margin-top: 0;
+  opacity: 1; 
 }
 
 .center-home {
