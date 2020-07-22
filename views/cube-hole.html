@@ -43,7 +43,7 @@
           <a href="/help-page" target="_self" data-scroll onclick="closeNav()">Help</a>
         </div>
       </div>
-      <h2 class="header-text"> Cube with A Hole </h2> 
+      <h2 class="header-text"> Cube with a hole </h2> 
       <!-- <nav>
         <ul>
           <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
@@ -56,104 +56,112 @@
     </div>
     
     <div class="mid">
-      <div class="contents-center">
-        <div class="wrapper">
-          <h3 class="title-white"> Take a stab at it! </h3> 
-          <div class="warning-container">
-            <div class="container-text-1">
-              <p class="bold">Try reading the perspective drawing on the right and attempt to solve this problem. If you're stuck, scroll down to find a detailed tutorial. </p>
-              <p> <strong> Once you've finished, please follow the instructions at the bottom of this page and leave us some feedback! </strong> </p>
-            </div> 
-            <img class="shadow2" src="https://test-onshape-app.herokuapp.com/images/cube-diagram.png" alt="diagram"> 
-          </div> 
+      <div class="contents-top">
+        <div class="text-description">
+          <h3> Challenge </h3>
+          <p class="normal">Use Onshape to create a cube with a hole!</p>
         </div> 
-      </div> 
-      <div class="contents">
-        <div class="text-description-med">
-          <h3> Goals: </h3>
-          <p class="normal"> This page will teach you how to sketch and extrude a cube with a hole in the middle. 
-            You will be introduced to <strong><i>Sketches</i></strong> (on a plane and face) along with <strong><i>Add/Remove Extrude.</i></strong>
-            You will also be shown how to rotate and orient your CAD model to see different perspectives and plane views.</p>
-        </div> 
-          <div class="image-right">
-            <img class="med" src="https://test-onshape-app.herokuapp.com/images/final-cube-with-hole.png" alt="Final">
-          </div>
+
+        <img src="/public/images/cube-hole-final.gif" alt="cube-gif">
+
+        <!-- <div class="video-container">
+
+        </div> -->
       </div>
 
-      <div class="contents">
-        <div class="image-container">
-          <div class="image-left">
-            <!-- <img src="https://test-onshape-app.herokuapp.com/images/sketch1-new.gif" alt="Square Sketch"> -->
-              <video controls>
-                <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch1.mp4" type="video/mp4">
-              </video>
-          </div>
-        </div> 
-        <div class="text-description-large">
-          <h3> Sketch a 2" x 2" square </h3>
-          <p class="normal">Start out with a new Part Studio Sketch, which you can add by clicking on the "+" button located at the bottom left corner of the screen.</p>
-          <p class="normal">At the origin, draw a Center Point Rectangle by going to the tool bar on the top and then clicking on the icon with a rectangle.</p> 
-          <p class="normal">Then click once on the origin, move your mouse outward, and click again to stop the sketch.</p> 
-          <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
-          <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. 
-            Click once on a side of the rectangle and move your mouse outward. Click again to adjust the length to 2in.</p>
-          <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project are sketch and extrude add/remove.</p>
         </div>
       </div>
 
-      <div class="contents-center">
-        <div class="big-container">
-          <h3 class="title">Extrude a face</h3>
-          <!-- <img class="shadow" src="https://test-onshape-app.herokuapp.com/images/extrudeadd-new.gif" alt="Cube"> -->
-          <video controls class="video-container">
-            <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
-          </video>
-          <div class="container-text-2">
+<!--       <div class="contents-top">
+          <div class="text-description-long">
+              <h3>Think like an artist!</h3>
+              <p class="normal">Create a pair of sunglasses that uses two hinges to attach the arms to the frame.</p>
+              <div class="image-container">
+                <img src="images/sunglasses.png" alt="sunglasses">
+              </div>
+          </div>
+          <div class="text-description-long">
+              <h3>Think like an engineer!</h3>
+              <p class="normal">Create a door with several hinges that can open and close.</p>
+              <div class="image-container">
+                <img src="images/door2.png" alt="door">
+              </div>
+          </div>
+      </div> -->
+
+      <div class="contents">
+        <video controls>
+          <source src="/public/videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+        </video>
+          <!-- <div class="video-container">
+          </div> -->
+        <div class="text-description">
+            <h3>Step 1: Sketch a 2" x 2" square</h3>
+            <p class="normal">Start out with a new Part Studio Sketch, which you can add by clicking on the "+" button located at the bottom left corner of the screen.</p>
+            <p class="normal">At the origin, draw a Center Point Rectangle by going to the tool bar on the top and then clicking on the icon with a rectangle.</p> 
+            <p class="normal">Then click once on the origin, move your mouse outward, and click again to stop the sketch.</p> 
+            <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
+            <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. 
+              Click once on a side of the rectangle and move your mouse outward. Click again to adjust the length to 2in.</p>
+            <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 2: Extrude add a face</h3>
             <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the tool bar.</p>
             <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
             <p class="normal"><strong>1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
             <p class="normal"><strong>2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
             <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
             <p class="normal">We can change the Depth of the extrude (or height of the cube) to 2in.</p>
-          </div> 
         </div>
+
+        <video controls>
+          <source src="/public/videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
+        </video>
+
+        <!-- <div class="video-container">
+        </div> -->
       </div>
 
       <div class="contents">
-        <div class="text-description-large">
-          <h3>Sketch a circle with a diameter of 1in</h3>
+        <!-- <div class="video-container">
+        </div> -->
+        <video controls>
+          <source src="/public/videos/cube-with-hole-sketch2.mp4" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 3: Sketch a circle with a diameter of 1in</h3>
           <p class="normal">To make a hole, we need to start with a sketch of a circle, which can be found in the tool bar.</p>
           <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
           <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
           <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once on the origin, moving your mouse outward, and then clicking again to stop the sketch.</p>
           <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1in.</p>
         </div>
-
-        <div class="image-right">
-          <!-- <img class="med" src="https://test-onshape-app.herokuapp.com/images/sketch2-new.gif" alt="Circle"> -->
-            <video controls>
-              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-sketch2.mp4" type="video/mp4">
-            </video>
-        </div>
       </div>
 
       <div class="contents">
-        <div class="image-container">
-          <div class="image-left">
-            <!-- <img src="https://test-onshape-app.herokuapp.com/images/extrudecut-new.gif" alt="Hole"> -->
-            <video controls>
-              <source src="https://test-onshape-app.herokuapp.com/videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="text-description-large">
-          <h3>Extrude remove a hole</h3>
+        <div class="text-description">
+          <h3>Step 4: Extrude remove a hole</h3>
           <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
           <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube. </p>
           <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot start off with an Extrude Remove before making your cube. **</strong></p>
         </div>
+        <video controls>
+          <source src="/public/videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
+        </video>
+        <!-- <div class="video-container">
+            <video controls>
+                <source src="videos/hinge-4.mp4" type="video/mp4">
+            </video>
+        </div> -->
       </div>
-
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
@@ -163,12 +171,12 @@
           <form id="feedback" target="dummy" name="google-sheets">
             <hr>
             <div class="text-input">
-              <label for="liked">What did you like about this app?</label>
+              <label for="liked">What did you like?</label>
               <input type="text" placeholder="I liked the way..." id="liked" name="liked">
             </div> 
             
             <div class="text-input">
-              <label for="disliked">What didn't you like about this app?</label>
+              <label for="disliked">What didn't you like?</label>
               <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
             </div>
             
@@ -264,36 +272,6 @@
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();
-    var $wrapper = $(".mid");
-    var $el = $(".contents");
-    var elHeight = $el.outerHeight();
-    var elWidth = $el.outerWidth();
-    var starterData = { 
-      size: {
-        width: $wrapper.width(),
-        height: $wrapper.height()
-      }
-    }
-    function doResize(event, ui) {
-      
-      var scale, origin;
-        
-      scale = Math.min(
-        ui.size.width / elWidth,    
-        ui.size.height / elHeight
-      );
-      
-      $el.css({
-        transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
-      });
-      
-    }
-    $wrapper.resizable({
-      resize: doResize
-    });
-    doResize(null, starterData);
-    $('.mid').css('min-height', screen.height);
-    $('.mid').css('min-width', screen.width);
   </script> 
 </body>
 </html>
