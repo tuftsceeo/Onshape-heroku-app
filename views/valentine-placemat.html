@@ -43,7 +43,7 @@
           <a href="/help-page" target="_self" data-scroll onclick="closeNav()">Help</a>
         </div>
       </div>
-      <h2 class="header-text"> 3D Valentine Placemat</h2> 
+      <h2 class="header-text"> 3D Valentine </h2> 
       <!-- <nav>
         <ul>
           <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
@@ -55,58 +55,86 @@
 
     </div>
     
-    <div class='mid'>
-        <div class="contents1">
-            <div class="small_gif">
-                <img src="images/peach-heart.gif" alt="heart gif">
-            </div>
-            <div class="text-description-short">
-                <p class="normal">Use Onshape to create a 3-dimensional valentine! </p>
-            </div>
-            <div class="small_gif">
-                <img src="images/peach-heart.gif" alt="heart gif">
-            </div>
-        </div>
-    </div>
-
     <div class="mid">
-      <div class="contents">
-        <div class="text-description-med">
-          <h3> Introduction </h3>
-          <p class="normal"> This 3D heart valentine was created in just a few simple steps. 
-            You will be using <strong><i>Line</i></strong>, <strong><i>Spline</i></strong>, and <strong><i>Extrude Add.</i></strong></p>
+      <div class="contents-top">
+        <div class="text-description">
+          <h3> Challenge </h3>
+          <p class="normal">Use Onshape to create a 3D valentine heart!</p>
         </div> 
 
-        <div class="image-right">
-            <img src="https://test-onshape-app.herokuapp.com/images/3D-Valentine.png" alt="3D Valentine">
-        </div>
+        <img src="images/valentine-final.gif" alt="valentine-gif">
+
+        <!-- <div class="video-container">
+
+        </div> -->
       </div>
 
-      <div class="contents-center">
-        <div class="text-description-short">
-            <h3> You Try! </h3>
-            <p class="normal"> Useful tools for this project are line, spline, and extrude. </p>
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project can include LINE, SPLINE, EXTRUDE, MIRROR, 3 POINT CIRCLE, 3 POINT ARC, and any other tools you think might do the trick!</p>
         </div>
       </div>
 
       <div class="contents">
-        <div class="image-right">
-            <img src="https://test-onshape-app.herokuapp.com/images/Line-button.png" alt="Click sketch">
+        <div class="image-container">
+          <img src="images/line-tool.png" alt="line-tool">
         </div>
-    
-        <div class="image-right">
-            <img src="https://test-onshape-app.herokuapp.com/images/Spline-button.png" alt="sketch plane">
+        <div class="image-container">
+          <img src="images/spline-tool.png" alt="spline-tool">
         </div>
-    
-        <div class="image-right">
-            <img src="https://test-onshape-app.herokuapp.com/images/Extrude-button-copy.png" alt="sketch plane">
+        <div class="image-container">
+          <img src="images/mirror-tool.png" alt="mirror-tool">
+            
         </div>
       </div>
 
-      <div class="small_gif">
-        <img src="https://test-onshape-app.herokuapp.com/images/peach-heart.gif" alt="heart gif">
-    </div>
-      
+      <div class="contents">
+        <div class="image-container">
+          <img src="images/3pointarc-tool.png" alt="3pointarc-tool">
+        </div>
+        <div class="image-container">
+          <img src="images/3pointcircle-tool.png" alt="3pointcircle-tool">
+        </div>
+        <div class="image-container">
+          <img src="images/extrude-tool.png" alt="appearance-tool">
+        </div>
+      </div>
+
+      <button class="accordion"><h3>Hints:</h3></button>
+      <div class="panel">
+        <p class="normal">To make the 3D Valentine in the least amount of steps, think about how you can use tools to draw out the shape of a heart.<br>In other ways, try to think about how you can use common shapes, like circles, to get the curves of the top of the heart.</p>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+      </script>
+
+      <hr class="divider"> 
+
+      <div class="contents-button">
+          <div class="wrapper-small">
+              <h3 class="title-white">See how we did it!</h3><br/>
+              <a href="/valentine" class="hvr-grow" target="_self"><button type="button" class="btn-home">Our 3D Valentine</button></a>
+          </div>
+      </div>
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
