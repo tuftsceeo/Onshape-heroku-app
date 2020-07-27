@@ -11,7 +11,7 @@
   <script src="javascripts/threejs/js/libs/stats.min.js"></script>
   <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
 
-  <script src="javascripts/hinge.js"></script>
+  <script src="javascripts/hinge-placemat.js"></script>
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
@@ -43,7 +43,7 @@
           <a href="/help-page" target="_self" data-scroll onclick="closeNav()">Help</a>
         </div>
       </div>
-      <h2 class="header-text"> Our Approach </h2> 
+      <h2 class="header-text"> Hinge </h2> 
       <!-- <nav>
         <ul>
           <li><a href="https://test-onshape-app.herokuapp.com/home-page.html">Home</a></li>
@@ -59,7 +59,7 @@
       <div class="contents-top">
         <div class="text-description">
           <h3> Challenge </h3>
-          <p class="normal">Use Onshape to construct a hinge!</p>
+          <p class="normal">Use Onshape to create a hinge!</p>
         </div> 
 
         <img src="images/paperclip-final.gif" alt="paperclip-gif">
@@ -71,81 +71,65 @@
 
       <div class="contents-top">
         <div class="text-description-center">
-          <h3> We tried! </h3>
-          <p class="normal">We used LINE, CIRCLE, TANGENT, TRIM, MIRROR, LOFT, EXTRUDE, DIMENSION, and TRANSFORM.</p>
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project can include LINE, CIRCLE, TANGENT, TRIM, MIRROR, LOFT, EXTRUDE, DIMENSION, TRANSFORM, and any other tools you think can do the trick!</p>
         </div>
       </div>
 
       <div class="contents">
-        <video controls>
-          <source src="videos/cup-sketch.mp4" type="video/mp4">
-        </video>
-          <!-- <div class="video-container">
-          </div> -->
-        <div class="text-description">
-            <h3>Step 1: </h3>
-            <p class="normal">description</p>
+        <div class="image-container">
+            <img src="images/line-tool.png" alt="line-tool">
+        </div>
+        <div class="image-container">
+            <img src="images/spline-tool.png" alt="spline-tool">
+        </div>
+        <div class="image-container">
+            <img src="images/3pointarc-tool.png" alt="3pointarc-tool">
         </div>
       </div>
 
       <div class="contents">
-        <div class="text-description">
-          <h3>Step 2: </h3>
-            <p class="normal">description</p>
+        <div class="image-container">
+            <img src="images/3pointcircle-tool.png" alt="3pointcircle-tool">
         </div>
-
-        <video controls>
-          <source src="videos/cup-dimension.mp4" type="video/mp4">
-        </video>
-
-        <!-- <div class="video-container">
-        </div> -->
-      </div>
-
-      <div class="contents">
-        <!-- <div class="video-container">
-        </div> -->
-        <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 3:</h3>
-          <p class="normal">description</p>
+        <div class="image-container">
+            <img src="images/appearance-tool.png" alt="appearance-tool">
         </div>
       </div>
 
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 4: </h3>
-          <p class="normal">description</p>
-        </div>
-        <video controls>
-          <source src="videos/cup-handle-plane.mp4" type="video/mp4">
-        </video>
-        <!-- <div class="video-container">
-            <video controls>
-                <source src="videos/hinge-4.mp4" type="video/mp4">
-            </video>
-        </div> -->
+      <button class="accordion"><h3>Hints:</h3></button>
+      <div class="panel">
+        <p class="normal">ONSHAPE TIP: </p>
       </div>
 
-      <div class="contents">
-        <!-- <div class="video-container">
-        </div> -->
-        <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 5: </h3>
-          <p class="normal">description</p>
-        </div>
-      </div>
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+      </script>
+
+      <hr class="divider"> 
 
       <div class="contents-button">
-        <div class="wrapper-small">
-            <h3 class="title-white">Take me back to the placemat</h3><br/>
-            <a href="/hinge-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-        </div>
+          <div class="wrapper-small">
+              <h3 class="title-white">See how we did it!</h3><br/>
+              <a href="/hinge" class="hvr-grow" target="_self"><button type="button" class="btn-home">Our hinge</button></a>
+          </div>
       </div>
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>

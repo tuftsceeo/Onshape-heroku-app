@@ -26,9 +26,12 @@ var dogCollar = require('./routes/dog-collar');
 var dogCollarPlacemat = require('./routes/dog-collar-placemat');
 var volcano = require('./routes/volcano');
 var volcanoPlacemat = require('./routes/volcano-placemat');
+var paperclip = require('./routes/paperclip');
 var paperclipPlacemat = require('./routes/paperclip-placemat');
+var spring = require('./routes/spring');
 var springPlacemat = require('./routes/spring-placemat');
 var hinge = require('./routes/hinge');
+var hingePlacemat = require('./routes/hinge-placemat');
 var grantDenied = require('./routes/grantDenied');
 
 var client;
@@ -95,9 +98,12 @@ app.get('/dog-collar', dogCollar.renderPage);
 app.get('/dog-collar-placemat', dogCollarPlacemat.renderPage);
 app.get('/volcano', volcano.renderPage);
 app.get('/volcano-placemat', volcanoPlacemat.renderPage);
+app.get('/paperclip', paperclip.renderPage);
 app.get('/paperclip-placemat', paperclipPlacemat.renderPage);
+app.get('/spring', spring.renderPage);
 app.get('/spring-placemat', springPlacemat.renderPage);
 app.get('/hinge', hinge.renderPage);
+app.get('/hinge-placemat', hingePlacemat.renderPage);
 app.get('/grantDenied', grantDenied.renderPage);
 
 
