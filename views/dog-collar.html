@@ -120,10 +120,10 @@
 
       <div class="contents">
         <div class="text-description">
-          <h3>Step 4: New part studio, use the 3 point arc tool to create a ring</h3>
+          <h3>Step 4: Use the 3 point arc tool to create a ring</h3>
           <p class="normal">Create a new part studio by clicking on the "+" icon at the bottom left corner of the screen. If you wish to name the part studios according to the parts they contain, you do this by right clicking on the part studio tabs. Pivot your screen
             to see the front plane head-on. Create a new sketch in the front plane.</p>
-          <p class="normal">Within the sketch, draw an arc by clicking where you'd like to place the starting point of the arc, the end of the arc, and the radius of the arc. The distance between the ends of the arc should be at least 1 inch.</p>
+          <p class="normal">Within the sketch, draw an arc by clicking where you'd like to place the starting point of the arc, the end of the arc, and the radius of the arc. The distance between the ends of the arc should be at least 0.5 inches since our collar is 0.5 inches tall.</p>
         </div>
         <video controls>
           <source src="videos/dog-collar-ring-sketch1.mov" type="video/mp4">
@@ -139,12 +139,126 @@
         <!-- <div class="video-container">
         </div> -->
         <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
+          <source src="videos/dog-collar-ring-sketch2.mov" type="video/mp4">
         </video>
         <div class="text-description">
-          <h3>Step 5: Use any shape tool to create a tag</h3>
-          <p class="normal">Create a new part studio. Pivot your screen to see the front plane head-on. Create a new sketch in the front plane. In the sketch, use the line, spline, and mirror (if symmetrical) tools to create a tag with the shape of your choice. Extrude
-            the tag by a very small amount to make it thin and choose a color.</p>
+          <h3>Step 5: Use the 3 point arc tool again to create outer part of ring</h3>
+          <p class="normal">Draw another arc that is slightly bigger than the first arc you drew.</p>
+          <p class="normal">Use the dimension tool to make sure that the distance between the first arc and the second arc are about 0.1 inches.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 6: Use the line tool to close off the ring</h3>
+          <p class="normal">Use lines to attach the outer arc to the inner arc.</p>
+          <p class="normal">Use the dimension tool to make sure that the thickness of the ring is still about 0.1 inches.</p>
+        </div>
+        <video controls>
+          <source src="videos/dog-collar-ring-sketch3.mov" type="video/mp4">
+        </video>
+        <!-- <div class="video-container">
+            <video controls>
+                <source src="videos/hinge-4.mp4" type="video/mp4">
+            </video>
+        </div> -->
+      </div>
+
+      <div class="contents">
+        <video controls>
+          <source src="videos/dog-collar-ring-extrude.mov" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 7: Use the extrude tool</h3>
+          <p class="normal">While still in Sketch mode, click on the extrude tool and extrude add to make your ring 3D.</p>
+          <p class="normal">This works because we closed off our ring with the lines; if we didn't close off our ring, we would not get a 3D ring.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 8: Color your ring</h3>
+          <p class="normal">Use the Appearance Panel to give your ring some color.</p>
+        </div>
+        <video controls>
+          <source src="videos/dog-collar-ring-color.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="contents">
+        <video controls>
+          <source src="videos/dog-collar-tag-sketch1.mov" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 9: Use the line tool to start creating your tag</h3>
+          <p class="normal">Start by creating a quarter of the tag.</p>
+          <p class="normal">Use the dimension tool to make sure that the distance from the line you drew to the center is 0.15 inches.</p>
+          <p class="normal">Depending on how long you want your tag to be, specify a length for the line segment. In this case, I set it to 0.2 inches.</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 10: Use the spline tool to shape the tag</h3>
+          <p class="normal">To get a tag that looks like a dog bone, use the spline tool to create the curves of the dog bone.</p>
+          <p class="normal">To have more control over how curved the bone is, click several times to create checkpoints and move in a circular path.</p>
+          <p class="normal">To make life simpler, only create one out of the four curves of the bone. This will make sense in the next step.</p>
+        </div>
+        <video controls>
+          <source src="videos/dog-collar-tag-spline.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="contents">
+        <video controls>
+          <source src="videos/dog-collar-tag-mirror.mov" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 11: Use the mirror tool to finish the tag sketch</h3>
+          <p class="normal">While still in sketch mode, click on the mirror tool to mirror your sketch, which represents a quarter of the collar, across the x and y axes.</p>
+          <p class="normal"><strong>** Note: You can choose which axis to mirror your sketch across first. Just remember that after you mirror it across one axis, you have to deselect the mirror tool and then select it again to be able to choose another axis.**</strong></p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 12: Use the extrude tool</h3>
+          <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
+        </div>
+        <video controls>
+          <source src="videos/dog-collar-tag-extrude.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="contents">
+        <video controls>
+          <source src="videos/dog-collar-tag-hole.mov" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 13: Use the circle tool to create a hole for the ring</h3>
+          <p class="normal">Create a new sketch on the origin on top of one of the faces of the tag.</p>
+          <p class="normal">Use the circle tool to create a hole. Use the dimension tool and make the hole have a radius of 0.05 inches (diameter of 0.1 inches).</p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="text-description">
+          <h3>Step 14: Use the extrude tool again for the hole</h3>
+          <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
+          <p class="normal">To create the hole, you want to extrude remove.</p>
+        </div>
+        <video controls>
+          <source src="videos/dog-collar-tag-extrude2.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="contents">
+        <video controls>
+          <source src="videos/dog-collar-tag-color.mov" type="video/mp4">
+        </video>
+        <div class="text-description">
+          <h3>Step 15: Give your tag some color</h3>
+          <p class="normal">Use the appearance panel to change the color of your tag.</p>
         </div>
       </div>
 
