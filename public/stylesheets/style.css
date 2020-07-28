@@ -29,12 +29,11 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    /* this was just added */
-    /* z-index: 2;
-  position: absolute;
-  top: 100vh;
-  line-height: 30px;
-  padding: 40px; */
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    line-height: 30px;
+    padding: 40px;
 }
 
 .top {
@@ -331,7 +330,7 @@ header::before {
 }
 
 .text-description2 {
-    background-color: #black;
+    background-color: black;
     border-radius: 10px;
     width: 60%;
     height: 555px;
@@ -403,7 +402,7 @@ header::before {
 }
 
 .text-description-center2 {
-    background-color: #black;
+    background-color: black;
     border-radius: 10px;
     width: 100%;
     height: 220px;
@@ -446,9 +445,9 @@ header::before {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 2.5%;
     margin-left: 2%;
-    margin-top: 2%;
+    margin-top: 2.5%;
     margin-right: 2%
 }
 
@@ -1597,11 +1596,11 @@ pre {
     width: 100%;
     margin-bottom: 2.5%;
     margin: 0;
-    background-color: transparent;
+    background-color: #30223a;
     z-index: 1;
 }
 
-*/ .contents2 {
+.contents2 {
     display: flex;
     flex-direction: row;
     align-items: center;
