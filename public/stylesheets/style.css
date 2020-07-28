@@ -444,6 +444,21 @@ header::before {
     align-self: center;
 }
 
+.image-sneakpeak2 {
+  margin: 10;
+  padding: 0;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2.5px;
+  margin-bottom: 5px;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+}
+
 .image-row {
     display: flex;
     flex-direction: row;
@@ -1930,7 +1945,7 @@ pre {
     overflow: scroll;
 }
 
-.text-description-center {
+/* .text-description-center {
     background-color: #000000;
     border-radius: 10px;
     width: 63%;
@@ -1947,7 +1962,7 @@ pre {
     justify-content: flex-start;
     flex-direction: column;
     overflow: auto;
-}
+} */
 
 .text-description-short {
     background-color: #000000;
