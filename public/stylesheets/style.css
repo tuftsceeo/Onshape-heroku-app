@@ -685,6 +685,12 @@ p.normal {
     font-size: 18px;
 }
 
+p.description {
+    font-family: "Swansea";
+    font-size: 18px; 
+    color: #F1F1F5;
+}
+
 #feedback-form {
     display: flex;
     flex-direction: row;
@@ -839,7 +845,7 @@ video:focus {
     justify-content: space-evenly;
     text-align: center;
     width: 200px;
-    height: 200px;
+    height: 300px;
     border-radius: 8px;
     box-shadow: 0 8px 25px -4px #000;
 }
