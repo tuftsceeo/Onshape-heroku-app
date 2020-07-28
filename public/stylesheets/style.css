@@ -560,12 +560,12 @@ h3.title-white {
 h4 {
     color: #F1F1F5;
     font-family: 'LemonBold';
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
     align-self: center;
-    flex: 2 0 auto;
+    /* flex: 2 0 auto;
     order: 2;
-    margin-right: 60px;
+    margin-right: 60px; */
 }
 
 img.med {
