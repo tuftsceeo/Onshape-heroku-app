@@ -1595,9 +1595,9 @@ pre {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin-bottom: 1.5%;
+    margin-bottom: 2.5%;
     margin: 0;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     background-color: #30223a;
     z-index: 1;
 }
