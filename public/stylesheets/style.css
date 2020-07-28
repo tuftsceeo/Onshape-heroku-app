@@ -338,7 +338,7 @@ header::before {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 90%;
-    height: 600px;
+    height: 700px;
     text-align: left;
     align-content: flex-start;
     padding-left: 20px;
@@ -451,8 +451,8 @@ header::before {
   margin-right: 2px;
   margin-top: 2.5px;
   margin-bottom: 5px;
-  width: 90%;
-  height: 70%;
+  width: 60%;
+  height: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
