@@ -2,5 +2,5 @@ var express = require('express');
 var url = require('url');
 
 exports.renderPage = function(req, res) {
-  res.render('help-page');
+  res.render('resources-page');
 };
