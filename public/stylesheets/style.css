@@ -452,7 +452,7 @@ header::before {
   margin-top: 2.5px;
   margin-bottom: 5px;
   width: 60%;
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -546,7 +546,7 @@ h4 {
     align-self: center;
     flex: 2 0 auto;
     order: 2;
-    margin-right: 80px;
+    margin-right: 70px;
 }
 
 img.med {
