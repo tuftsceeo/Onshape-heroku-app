@@ -558,7 +558,8 @@ h3 {
 
 h3.title {
     margin-bottom: 7px;
-    font-size: 30px;
+    font-size: 25px;
+    color: #F1F1F5;
 }
 
 h3.title-white {
