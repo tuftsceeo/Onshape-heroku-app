@@ -318,7 +318,7 @@ header::before {
     margin-left: 5%;
 }
 
-.text-description-med {
+/* .text-description-med {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 300px;
@@ -332,7 +332,7 @@ header::before {
     justify-content: flex-start;
     flex-direction: column;
     overflow-y: scroll;
-}
+} */
 
 .text-description-large {
     background-color: #F1F1F5;
@@ -354,7 +354,7 @@ header::before {
     margin-left: 5%;
 }
 
-.text-description-long {
+/* .text-description-long {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 60%;
@@ -369,9 +369,9 @@ header::before {
     justify-content: flex-start;
     flex-direction: column;
     overflow: auto;
-}
+} */
 
-.text-description-short {
+/* .text-description-short {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 500px;
@@ -387,7 +387,7 @@ header::before {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 .text-description-center {
     background-color: #F1F1F5;
@@ -1311,7 +1311,7 @@ label {
     margin-top: 0%;
 }
 
-.text-description-long {
+/* .text-description-long {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 60%;
@@ -1326,7 +1326,7 @@ label {
     justify-content: flex-start;
     flex-direction: column;
     overflow: auto;
-}
+} */
 
 
 /* @media (hover: hover) {
@@ -1377,9 +1377,9 @@ label {
   float: right;
 } */
 
-body {
+/* body {
     min-height: 100vh;
-}
+} */
 
 
 /* SIDEBAR POSITION */
@@ -1730,7 +1730,7 @@ html {
 
 /* Style the accordion panel. Note: hidden by default */
 
-.panel {
+/* .panel {
     padding: 0 18px;
     background-color: white;
     display: none;
@@ -1758,7 +1758,7 @@ h2 {
     font-family: 'LemonBold';
     font-size: 50px;
     margin: .7%;
-}
+} */
 
 #stroke {
     color: rgb(255, 255, 255);
@@ -1774,7 +1774,7 @@ h2 {
     -webkit-text-stroke-color: black;
 }
 
-h3 {
+/* h3 {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 14px;
     font-style: normal;
@@ -1790,7 +1790,7 @@ p {
     font-variant: normal;
     font-weight: 400;
     line-height: 20px;
-}
+} */
 
 blockquote {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -1810,7 +1810,7 @@ pre {
     line-height: 18.5714px;
 }
 
-body {
+/* body {
     background-color: transparent;
     margin: 0;
 }
@@ -1843,7 +1843,7 @@ body {
     margin: 0;
     background-color: transparent;
     z-index: 1;
-}
+} */
 
 .contents2 {
     display: flex;
@@ -1855,7 +1855,7 @@ body {
     margin-top: 0%;
 }
 
-.contents-center {
+/* .contents-center {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1864,7 +1864,7 @@ body {
     margin-left: 40%;
     margin-right: 0%;
     margin-top: 4%;
-}
+} */
 
 .contents-center2 {
     display: flex;
@@ -1877,7 +1877,7 @@ body {
     margin-top: 0%;
 }
 
-.image-row {
+/* .image-row {
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -1886,7 +1886,7 @@ body {
     position: relative;
     top: 100px;
     z-index: 10;
-}
+} */
 
 .image-row-2 {
     display: flex;
@@ -1899,7 +1899,7 @@ body {
     z-index: 10;
 }
 
-.text-description {
+/* .text-description {
     background-color: #000000;
     border-radius: 10px;
     width: 88%;
@@ -1914,7 +1914,7 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     overflow: scroll;
-}
+} */
 
 .text-description-sidebar {
     background-color: #000000;
@@ -2056,10 +2056,10 @@ body {
     overflow: auto;
 }
 
-.image-container {
+/* .image-container {
     margin-left: 10px;
     padding: 0;
-}
+} */
 
 .image-right-1 {
     margin-left: 5%;
@@ -2086,25 +2086,25 @@ body {
     width: 40%;
 }
 
-h3 {
+/* h3 {
     color: #ffffff;
     margin-bottom: 2%;
     font-family: 'LemonBold';
     font-size: 30px;
     line-height: 35px;
     margin-top: 3%;
-    /*float: left;*/
-}
+    float: left;       this line was commented out before
+} */
 
-h4 {
+/* h4 {
     color: #000000;
     margin-bottom: 2%;
     font-family: 'LemonBold';
     font-size: 30px;
     line-height: 35px;
     margin-top: 0%;
-    /*float: left;*/
-}
+    float: left;       this line was commented out before
+} */
 
 h5 {
     color: #000000;
@@ -2118,11 +2118,11 @@ h5 {
     /*float: left;*/
 }
 
-img {
+/* img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-}
+} */
 
 .small_gif {
     width: 10%;
@@ -2139,12 +2139,12 @@ img {
     z-index: 100;
 }
 
-.footer {
+/* .footer {
     background-color: #000000;
-}
+} */
 
-p {
-    /*float: left;*/
+/* p {
+    float: left;       this line was commented out before
     margin-top: 2%;
     margin-left: 0;
     padding: 0;
@@ -2157,7 +2157,7 @@ p {
     font-weight: normal;
     line-height: 26.4px;
     color: #ffffff;
-}
+} */
 
 p2 {
     /*float: left;*/
@@ -2209,14 +2209,14 @@ p-black2 {
     color: #000000;
 }
 
-video {
+/* video {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3%;
     height: 280px;
     position: relative;
     border-radius: 10px;
-}
+} */
 
 a {
     color: white;
