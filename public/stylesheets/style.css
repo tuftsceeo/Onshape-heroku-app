@@ -292,7 +292,7 @@ header::before {
 
 .contents-top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     margin-bottom: 2.5%;
@@ -452,7 +452,7 @@ header::before {
   margin-top: 2.5px;
   margin-bottom: 5px;
   width: 90%;
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
