@@ -338,7 +338,7 @@ header::before {
     background-color: #F1F1F5;
     border-radius: 10px;
     width: 90%;
-    height: 555px;
+    height: 600px;
     text-align: left;
     align-content: flex-start;
     padding-left: 20px;
@@ -1376,3 +1376,848 @@ label {
   color: #ddd;
   float: right;
 } */
+
+body {
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR POSITION */
+
+.sidebar {
+    background-color: #000000;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 400px;
+    z-index: 50;
+}
+
+.sidebar2 {
+    background-color: #000000;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 400px;
+}
+
+.sidebar__content {
+    padding: 8px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.sidebar2__content {
+    padding: 8px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+
+/* SIDEBAR HIDDEN STATE */
+
+.sidebar[aria-hidden="true"] {
+    transition: 200ms;
+    transform: translateX(100%);
+}
+
+.sidebar2[aria-hidden="true"] {
+    transition: 200ms;
+    transform: translateX(100%);
+}
+
+
+/* SIDEBAR VISIBLE STATE */
+
+.sidebar:not([aria-hidden]),
+.sidebar[aria-hidden="false"] {
+    transition: 200ms;
+    transform: translateX(0);
+}
+
+.sidebar2:not([aria-hidden]),
+.sidebar2[aria-hidden="false"] {
+    transition: 200ms;
+    transform: translateX(0);
+}
+
+.speech-bubble {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 890px;
+    text-align: center;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 400px;
+    left: 520px;
+}
+
+.speech-bubble .arrow-left {
+    border-style: solid;
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid black;
+    top: 250px;
+    left: -20px;
+}
+
+.bottom {
+    border-color: #000000 transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom: -8px;
+}
+
+.bottom:after {
+    border-color: #000000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    bottom: 1px;
+    content: "";
+    position: absolute;
+    left: -7px;
+}
+
+.speech-bubble2 {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 550px;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 900px;
+}
+
+.speech-bubble2 .arrow-left2 {
+    border-style: solid;
+    position: sticky;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid black;
+    top: 250px;
+    right: -20px;
+}
+
+.bottom2 {
+    border-color: #000000 transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    left: -8px;
+}
+
+.bottom2:after {
+    border-color: #000000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    bottom: 1px;
+    content: "";
+    position: sticky;
+    left: -7px;
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    /* Add a search icon to input */
+    background-position: 10px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 92%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+}
+
+#myInput2 {
+    background-image: url('/css/searchicon.png');
+    /* Add a search icon to input */
+    background-position: 10px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 92%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+}
+
+#myInput3 {
+    background-image: url('/css/searchicon.png');
+    /* Add a search icon to input */
+    background-position: 10px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 92%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL2 {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL3 {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    /* Add a border to all links */
+    margin-top: -1px;
+    /* Prevent double borders */
+    background-color: #f6f6f6;
+    /* Grey background color */
+    padding: 12px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove default text underline */
+    font-size: 18px;
+    /* Increase the font-size */
+    color: black;
+    /* Add a black text color */
+    display: block;
+    /* Make it into a block element to fill the whole list */
+}
+
+#myUL2 li a {
+    border: 1px solid #ddd;
+    /* Add a border to all links */
+    margin-top: -1px;
+    /* Prevent double borders */
+    background-color: #f6f6f6;
+    /* Grey background color */
+    padding: 12px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove default text underline */
+    font-size: 18px;
+    /* Increase the font-size */
+    color: black;
+    /* Add a black text color */
+    display: block;
+    /* Make it into a block element to fill the whole list */
+}
+
+#myUL3 li a {
+    border: 1px solid #ddd;
+    /* Add a border to all links */
+    margin-top: -1px;
+    /* Prevent double borders */
+    background-color: #f6f6f6;
+    /* Grey background color */
+    padding: 12px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove default text underline */
+    font-size: 18px;
+    /* Increase the font-size */
+    color: black;
+    /* Add a black text color */
+    display: block;
+    /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+    /* Add a hover effect to all links, except for headers */
+}
+
+#myUL2 li a:hover:not(.header) {
+    background-color: #eee;
+    /* Add a hover effect to all links, except for headers */
+}
+
+#myUL3 li a:hover:not(.header) {
+    background-color: #eee;
+    /* Add a hover effect to all links, except for headers */
+}
+
+
+/* Set height of body and the document to 100% */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'LemonBold';
+}
+
+
+/* Style tab links */
+
+.tablink {
+    background-color: #000000;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.3%;
+    font-family: 'LemonBold';
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 100px 20px;
+}
+
+#Home {
+    background-color: #3F3888;
+}
+
+#Tools {
+    background-color: #3F3888;
+}
+
+#FAQs {
+    background-color: #3F3888;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    background-image: url("images/cow\ print.jpg");
+    width: 100%;
+    height: 10%;
+    position: static;
+    top: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'LemonBold';
+    font-size: 50px;
+    margin: .7%;
+}
+
+#stroke {
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#stroke2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+h3 {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+blockquote {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+pre {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
+body {
+    background-color: transparent;
+    margin: 0;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.contents1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5%;
+    margin: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.contents2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-top: 0%;
+}
+
+.contents-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0%;
+    margin-left: 40%;
+    margin-right: 0%;
+    margin-top: 4%;
+}
+
+.contents-center2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0%;
+    margin-left: 68%;
+    margin-right: 32%;
+    margin-top: 0%;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 95%;
+    left: 10px;
+    position: relative;
+    top: 100px;
+    z-index: 10;
+}
+
+.image-row-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 95%;
+    left: 10px;
+    position: relative;
+    top: 10px;
+    z-index: 10;
+}
+
+.text-description {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 88%;
+    height: 250px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.text-description-sidebar {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 370px;
+    height: 730px;
+    text-align: justify;
+    align-content: flex-start;
+    margin: 2.5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.text-description-center {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 63%;
+    height: 400px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 2%;
+    margin-bottom: 2.5%;
+    margin-left: 3%;
+    margin-right: 2.5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-description-short {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 40%;
+    height: 400px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+    position: relative;
+    margin-top: 10%;
+}
+
+.text-description-right {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 40%;
+    height: 400px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    margin-left: 50%;
+    margin-bottom: 2.5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+    position: relative;
+}
+
+.text-description-long {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 60%;
+    height: 555px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-description-med {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 87%;
+    height: 400px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-description-longer {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 60%;
+    height: 600px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-description-longerr {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 60%;
+    height: 650px;
+    text-align: left;
+    align-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.image-container {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.image-right-1 {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 160%;
+}
+
+.image-right-2 {
+    margin-left: 35%;
+    margin-right: 20%;
+    width: 30%;
+}
+
+.image-right-3 {
+    margin-left: 17%;
+    margin-right: 20%;
+    margin-top: 5%;
+    width: 65%;
+}
+
+.image-right-4 {
+    margin-left: 2%;
+    margin-right: 5%;
+    width: 40%;
+}
+
+h3 {
+    color: #ffffff;
+    margin-bottom: 2%;
+    font-family: 'LemonBold';
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 3%;
+    /*float: left;*/
+}
+
+h4 {
+    color: #000000;
+    margin-bottom: 2%;
+    font-family: 'LemonBold';
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 0%;
+    /*float: left;*/
+}
+
+h5 {
+    color: #000000;
+    margin-bottom: 2%;
+    font-family: 'LemonBold';
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 0%;
+    position: absolute;
+    top: 180px;
+    /*float: left;*/
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.small_gif {
+    width: 10%;
+    top: 610px;
+    left: 300px;
+    position: absolute;
+}
+
+.cow {
+    width: 8%;
+    top: 700px;
+    left: 1550px;
+    position: fixed;
+    z-index: 100;
+}
+
+.footer {
+    background-color: #000000;
+}
+
+p {
+    /*float: left;*/
+    margin-top: 2%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 4%;
+    font-size: 35px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 26.4px;
+    color: #ffffff;
+}
+
+p2 {
+    /*float: left;*/
+    margin-top: 2%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 4%;
+    font-size: 35px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 26.4px;
+    color: #ffffff;
+}
+
+p-black {
+    /*float: left;*/
+    margin-top: 6%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 4%;
+    font-size: 35px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 26.4px;
+    color: #000000;
+}
+
+p-black2 {
+    /*float: left;*/
+    margin-top: 6%;
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 4%;
+    font-size: 35px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 26.4px;
+    position: absolute;
+    top: 140px;
+    color: #000000;
+}
+
+video {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    height: 280px;
+    position: relative;
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+}
