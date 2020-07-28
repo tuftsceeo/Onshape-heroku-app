@@ -330,6 +330,23 @@ header::before {
     margin-left: 5%;
 }
 
+.text-description2 {
+    background-color: #black;
+    border-radius: 10px;
+    width: 60%;
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    overflow: auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2.5%;
+    margin-left: 5%;
+}
+
 
 /* .text-description-med {
     background-color: #F1F1F5;
@@ -369,6 +386,24 @@ header::before {
 
 .text-description-center {
     background-color: #F1F1F5;
+    border-radius: 10px;
+    width: 100%;
+    height: 220px;
+    text-align: left;
+    align-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0%;
+    margin-top: 0%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-description-center2 {
+    background-color: #black;
     border-radius: 10px;
     width: 100%;
     height: 220px;
@@ -1217,22 +1252,22 @@ label {
 .speech-bubble .arrow-left {
     border-style: solid;
     position: absolute;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid transparent;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
     border-right: 10px solid black;
     top: 250px;
     left: -20px;
 }
 
 .bottom {
-    border-color: #000000 transparent transparent transparent;
+    border-color: #000000 black black black;
     border-width: 8px 8px 0px 8px;
     bottom: -8px;
 }
 
 .bottom:after {
-    border-color: #000000 transparent transparent transparent;
+    border-color: #000000 black black black;
     border-style: solid;
     border-width: 7px 7px 0px 7px;
     bottom: 1px;
@@ -1256,22 +1291,22 @@ label {
 .speech-bubble2 .arrow-left2 {
     border-style: solid;
     position: sticky;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid transparent;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
     border-right: 10px solid black;
     top: 250px;
     right: -20px;
 }
 
 .bottom2 {
-    border-color: #000000 transparent transparent transparent;
+    border-color: #000000 black black black;
     border-width: 8px 8px 0px 8px;
     left: -8px;
 }
 
 .bottom2:after {
-    border-color: #000000 transparent transparent transparent;
+    border-color: #000000 black black black;
     border-style: solid;
     border-width: 7px 7px 0px 7px;
     bottom: 1px;
@@ -1524,6 +1559,7 @@ p1 {
     font-variant: normal;
     font-weight: 400;
     line-height: 20px;
+    color: black;
 }
 
 blockquote {
