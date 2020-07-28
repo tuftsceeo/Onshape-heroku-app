@@ -1596,11 +1596,11 @@ pre {
     width: 100%;
     margin-bottom: 2.5%;
     margin: 0;
-    background-color: transparent;
+    background-color: #30223a;
     z-index: 1;
 }
 
-*/ .contents2 {
+.contents2 {
     display: flex;
     flex-direction: row;
     align-items: center;
