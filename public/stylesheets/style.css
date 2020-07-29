@@ -490,6 +490,16 @@ header::before {
     align-self: center;
 }
 
+.text-sneakpeek {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10%;
+    width: 90%;
+}
+
 .image-row {
     display: flex;
     flex-direction: row;
