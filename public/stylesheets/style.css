@@ -322,12 +322,6 @@ header::before {
     background-color: #30223a;
 }
 
-.overview {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .contents-button {
     display: flex;
     flex-direction: row;
@@ -336,6 +330,18 @@ header::before {
     width: 100%;
     margin-bottom: 10%;
     width: 90%;
+}
+
+.page-overview {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.overview {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .overlay-icon {
@@ -351,7 +357,7 @@ header::before {
     background-color: #F1F1F5;
 }
 
-.contents-button:hover .overlay-icon {
+.page-overview:hover .overlay-icon {
     opacity: 1; 
 }
 
