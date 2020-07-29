@@ -460,7 +460,7 @@ header::before {
     height: 90%;
 }
 
-.image-sneakpeak {
+.image-sneakpeek {
     margin: 10;
     padding: 0;
     margin-left: 2px;
@@ -468,14 +468,14 @@ header::before {
     margin-top: 2.5px;
     margin-bottom: 5px;
     width: 50%;
-    height: 30%;
+    height: 500px;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-self: center;
 }
 
-.image-sneakpeak2 {
+.image-sneakpeek2 {
     margin: 10;
     padding: 0;
     margin-left: 2px;
