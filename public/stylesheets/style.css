@@ -371,6 +371,7 @@ header::before {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    text-align: center; 
 }
 .hvr-icon-rotate .hvr-icon {
     -webkit-transform: translateZ(0);
