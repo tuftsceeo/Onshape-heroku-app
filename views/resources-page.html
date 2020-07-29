@@ -50,18 +50,26 @@
                 </div>
             </div>
             <h2 class="header-text"> Resources </h2>
-            <p> Text </p>
         </div>
 
         <!--- <div class="mid">
             <div class="contents-center">
                 <h3 class="title-white"> Still under construction, check back soon! </h3><br/>
             </div>
+        </div>-->
+
+        <div class="mid">
+            <button class="tablink" onclick="openPage('Home', this, '#3F3888')" id="defaultOpen">Home</button>
+            <button class="tablink" onclick="openPage('Tools', this, '#3F3888')">Tools</button>
+            <button class="tablink" onclick="openPage('FAQs', this, '#3F3888')">FAQs</button>
+            <p>Text</p>
+
         </div>
-    </div>-->
+
+    </div>
 
 
-        <!--  <div id="Help" class="mid">
+    <!--  <div id="Help" class="mid">
             <link href="stylesheets/styles.css" rel="stylesheet">
             <div class="container">
                 <div class="top">
@@ -72,94 +80,94 @@
         </div>-->
 
 
-        <script>
-            $('#feedback').submit(function() {
-                formPost();
-                return false;
+    <script>
+        $('#feedback').submit(function() {
+            formPost();
+            return false;
+        });
+
+        function formPost() {
+            let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+            let method = "POST";
+            let headers = {
+                "Content-Type": "multipart/form-data"
+            }
+            let elements = document.getElementById("feedback").elements;
+            // const form = document.forms['google-sheets'];
+            let body = {};
+            const formData = new FormData();
+            for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text") {
+                    let name = element.name;
+                    body[name] = element.value;
+                    formData.append(name, element.value);
+                }
+            }
+            console.log(body);
+            console.log(formData);
+
+            // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+            fetch(url, {
+                method: method,
+                body: formData
+            }).then(res => console.log(res));
+
+            formSubmitClose();
+        }
+
+        function formSubmitClose() {
+            var form = document.getElementById("feedback-form");
+            document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("form-closed").style.display = "flex";
+        }
+
+        function openNav() {
+            hamburger.classList.add("is-active");
+            document.getElementById("popUpNav").style.display = "block";
+        }
+
+        function closeNav() {
+            hamburger.classList.remove("is-active");
+            document.getElementById("popUpNav").style.display = "none";
+        }
+
+        // Hamburger Menu Spin
+        var hamburger = document.querySelector(".hamburger");
+        // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+        hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+        closeNav();
+        var $wrapper = $(".mid");
+        var $el = $(".contents");
+        var elHeight = $el.outerHeight();
+        var elWidth = $el.outerWidth();
+        var starterData = {
+            size: {
+                width: $wrapper.width(),
+                height: $wrapper.height()
+            }
+        }
+
+        function doResize(event, ui) {
+
+            var scale, origin;
+
+            scale = Math.min(
+                ui.size.width / elWidth,
+                ui.size.height / elHeight
+            );
+
+            $el.css({
+                transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
             });
 
-            function formPost() {
-                let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-                let method = "POST";
-                let headers = {
-                    "Content-Type": "multipart/form-data"
-                }
-                let elements = document.getElementById("feedback").elements;
-                // const form = document.forms['google-sheets'];
-                let body = {};
-                const formData = new FormData();
-                for (var i = 0, element; element = elements[i++];) {
-                    if (element.type === "text") {
-                        let name = element.name;
-                        body[name] = element.value;
-                        formData.append(name, element.value);
-                    }
-                }
-                console.log(body);
-                console.log(formData);
-
-                // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-                fetch(url, {
-                    method: method,
-                    body: formData
-                }).then(res => console.log(res));
-
-                formSubmitClose();
-            }
-
-            function formSubmitClose() {
-                var form = document.getElementById("feedback-form");
-                document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-                document.getElementById("feedback-form").style.display = "none";
-                document.getElementById("form-closed").style.display = "flex";
-            }
-
-            function openNav() {
-                hamburger.classList.add("is-active");
-                document.getElementById("popUpNav").style.display = "block";
-            }
-
-            function closeNav() {
-                hamburger.classList.remove("is-active");
-                document.getElementById("popUpNav").style.display = "none";
-            }
-
-            // Hamburger Menu Spin
-            var hamburger = document.querySelector(".hamburger");
-            // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
-            hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
-
-            closeNav();
-            var $wrapper = $(".mid");
-            var $el = $(".contents");
-            var elHeight = $el.outerHeight();
-            var elWidth = $el.outerWidth();
-            var starterData = {
-                size: {
-                    width: $wrapper.width(),
-                    height: $wrapper.height()
-                }
-            }
-
-            function doResize(event, ui) {
-
-                var scale, origin;
-
-                scale = Math.min(
-                    ui.size.width / elWidth,
-                    ui.size.height / elHeight
-                );
-
-                $el.css({
-                    transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
-                });
-
-            }
-            $wrapper.resizable({
-                resize: doResize
-            });
-            doResize(null, starterData);
-            $('.mid').css('min-height', screen.height);
-            $('.mid').css('min-width', screen.width);
-        </script>
+        }
+        $wrapper.resizable({
+            resize: doResize
+        });
+        doResize(null, starterData);
+        $('.mid').css('min-height', screen.height);
+        $('.mid').css('min-width', screen.width);
+    </script>
 </body>
