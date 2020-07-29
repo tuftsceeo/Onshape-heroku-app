@@ -133,19 +133,7 @@ body {
   text-transform: uppercase; */
 }
 
-.header-test{
-    height: 100vh;
-    width: 100vw;
-    border-radius: 10px;
-    background-image: url("../images/home-bg2.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-
-.header-test h7 {
+.header h7 {
     padding: 0; 
     margin: 0; 
     color: white; 
@@ -155,17 +143,18 @@ body {
 
 span:before {
     content: '';
-    animation: animate infinite 8s;
+    color: #E56878;
+    animation: animate infinite 5s;
 }
 @keyframes animate{
     0%{
-        content: 'create';
+        content: 'Create';
     }
     33%{
-        content: 'alter';
+        content: 'Alter';
     }
     66%{
-        content: 'design';
+        content: 'Design';
     }
     100%{
         content: 'CAD';
