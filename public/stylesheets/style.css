@@ -320,7 +320,17 @@ header::before {
     justify-content: center;
     width: 100%;
     margin-bottom: 10%;
-    width: 90%;
+    /* width: 90%; */
+}
+
+.pages-summary {
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    width: 100; 
+    margin-bottom: 10%; 
+    margin-top: 10%; 
 }
 
 .page-overview {
@@ -842,7 +852,7 @@ p.description {
 p.header-description {
     padding: 0; 
     margin: 0; 
-    line-height: 10px;
+    line-height: 40px;
     color: white;
     font-family: "Swansea"; 
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
