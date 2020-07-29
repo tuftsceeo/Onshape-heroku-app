@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 
 <head>
-  <script src="javascripts/jquery-1.8.3.min.js"></script>
-  <script src="javascripts/bootstrap.min.js"></script>
-  <script src="javascripts/threejs/three.min.js"></script>
+    <script src="javascripts/jquery-1.8.3.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/threejs/three.min.js"></script>
 
-  <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
-  <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
-  <script src="javascripts/threejs/js/Detector.js"></script>
-  <script src="javascripts/threejs/js/libs/stats.min.js"></script>
-  <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+    <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+    <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+    <script src="javascripts/threejs/js/Detector.js"></script>
+    <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+    <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
 
-  <script src="javascripts/index.js"></script>
+    <script src="javascripts/index.js"></script>
 
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/hamburger.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
-  <div class="container">
-    <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
+    <div class="container">
+        <div class="top">
+            <!-- <div class="menu-button" onclick=""> 
         <div class="bar1" style="--delay: 0.00s"></div>
         <div class="bar2" style="--delay: 0.10s"></div>
         <div class="bar3" style="--delay: 0.20s"></div>
       </div>  -->
-      <button class="hamburger hamburger--spin" type="button">
+            <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
-      <div id="popUpNav" class="overlay" onclick="closeNav()">
-        <div class="overlay-content">
-          <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
-          <hr class="small">
-          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
-          <hr class="small">
-          <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
-          <hr class="small">
-          <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
+      </button>
+            <div id="popUpNav" class="overlay" onclick="closeNav()">
+                <div class="overlay-content">
+                    <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
+                    <hr class="small">
+                    <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+                    <hr class="small">
+                    <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+                    <hr class="small">
+                    <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
+                </div>
+            </div>
+            <h2 class="header-text"> Activities Home Page </h2>
+
         </div>
-      </div>
-      <h2 class="header-text"> Activities Home Page </h2> 
 
-    </div>
+        <div class="header-activities">
+            <!-- <img src="/images/activities-bg.png" alt="background-img"> -->
+            <div class="center">Try out some CAD problems!
+            </div>
+        </div>
 
-    <div class="header-activities">
-      <!-- <img src="/images/activities-bg.png" alt="background-img"> -->
-      <div class="center">Try out some CAD problems!
-      </div>
-    </div>
+        <script>
+            $(window).scroll(function() {
+                $(".header").css("opacity", 1 - $(window).scrollTop() / 500);
+            });
+        </script>
 
-    <script>
-      $(window).scroll(function(){
-        $(".header").css("opacity", 1 - $(window).scrollTop() / 500);
-      });
-    </script>
-
-    <!-- <script type="text/javascript">
+        <!-- <script type="text/javascript">
       var headerBg = document.getElementById('header')
       window.addEventListener('scroll', function(){
         headerBg.style.opacity = 1 - +window.pageYOffset/550+''
@@ -70,19 +71,19 @@
         headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
       })
     </script> -->
-    
-    <div class="mid">
-      <div class="contents-button">
-        <div class="wrapper-small">
-          <h3 class="title-white">Try making a cube with a hole!</h3><br/>
-          <div class="image-sneakpeek">
-            <img src="images/cube-hole-final.png" alt="final-cube">
-            <a href="/cube-hole-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-          </div>
-        </div>
-      </div>
 
-      <!-- <div class="contents-button">
+        <div class="mid">
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Try making a cube with a hole!</h3><br/>
+                    <div class="image-sneakpeek">
+                        <img src="images/cube-hole-final.png" alt="final-cube">
+                        <a href="/cube-hole-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="contents-button">
         <div class="wrapper-small">
           <h3 class="title-white">Try making a cup or a mug!</h3><br/>
           <div class="image-sneakpeek">
@@ -112,17 +113,17 @@
         </div>
       </div> -->
 
-      <div class="contents-button">
-        <div class="wrapper-small">
-          <h3 class="title-white">Try making a volcano!</h3><br/>
-          <div class="image-sneakpeek">
-            <img src="images/volcano-final.png" alt="volcano-final">
-            <a href="/volcano-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-          </div>
-        </div>
-      </div>
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Try making a volcano!</h3><br/>
+                    <div class="image-sneakpeek">
+                        <img src="images/volcano-final.png" alt="volcano-final">
+                        <a href="/volcano-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                    </div>
+                </div>
+            </div>
 
-      <!-- <div class="contents-button">
+            <!-- <div class="contents-button">
         <div class="wrapper-small">
           <h3 class="title-white">Try making a paperclip!</h3><br/>
           <div class="image-sneakpeek">
@@ -152,62 +153,69 @@
         </div>
       </div> -->
 
+        </div>
+        <div class="footer">
+        </div>
     </div>
-    <div class="footer">
-    </div>
-  </div>
-  <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
+    <script>
+        $('#feedback').submit(function() {
+            formPost();
+            return false;
+        });
 
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+        function formPost() {
+            let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+            let method = "POST";
+            let headers = {
+                "Content-Type": "multipart/form-data"
+            }
+            let elements = document.getElementById("feedback").elements;
+            // const form = document.forms['google-sheets'];
+            let body = {};
+            const formData = new FormData();
+            for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text") {
+                    let name = element.name;
+                    body[name] = element.value;
+                    formData.append(name, element.value);
+                }
+            }
+            console.log(body);
+            console.log(formData);
 
-      formSubmitClose();
-    }
+            // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+            fetch(url, {
+                method: method,
+                body: formData
+            }).then(res => console.log(res));
 
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
+            formSubmitClose();
+        }
 
-    function openNav() {
-      hamburger.classList.add("is-active");
-      document.getElementById("popUpNav").style.display = "block";
-    }
-  
-    function closeNav() {
-      hamburger.classList.remove("is-active");
-      document.getElementById("popUpNav").style.display = "none";
-    }
-  
-    // Hamburger Menu Spin
-    var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
-    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
-  
-    closeNav();
-  </script> 
+        function formSubmitClose() {
+            var form = document.getElementById("feedback-form");
+            document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("form-closed").style.display = "flex";
+        }
+
+        function openNav() {
+            hamburger.classList.add("is-active");
+            document.getElementById("popUpNav").style.display = "block";
+        }
+
+        function closeNav() {
+            hamburger.classList.remove("is-active");
+            document.getElementById("popUpNav").style.display = "none";
+        }
+
+        // Hamburger Menu Spin
+        var hamburger = document.querySelector(".hamburger");
+        // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+        hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+        closeNav();
+    </script>
 </body>
+
 </html>
