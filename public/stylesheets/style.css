@@ -491,13 +491,18 @@ header::before {
 }
 
 .text-sneakpeek {
+    margin: 10;
+    padding: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2.5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 400px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10%;
-    width: 90%;
+    align-self: center;
 }
 
 .image-row {
