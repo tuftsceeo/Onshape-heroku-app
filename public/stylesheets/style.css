@@ -337,6 +337,10 @@ header::before {
     position: relative;
     width: 100%;
     max-width: 400px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    border-color: #F1F1F5;
+    border-style: solid;
 }
 
 .overview {
@@ -856,7 +860,7 @@ p.header-description {
     color: white;
     font-family: "Swansea"; 
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-    font-size: 35px; 
+    font-size: 25px; 
 }
 
 #feedback-form {
