@@ -354,16 +354,22 @@ header::before {
 }
 
 .hvr-icon-rotate {
-    display: inline-block;
+    /* display: inline-block;
     vertical-align: middle;
-    /* -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0); */
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    text-align: center; 
+    text-align: center;  */
+    color: #E56878;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 .hvr-icon-rotate .hvr-icon {
     -webkit-transform: translateZ(0);
@@ -836,7 +842,7 @@ p.description {
 p.header-description {
     padding: 0; 
     margin: 0; 
-    line-height: 2px;
+    line-height: 10px;
     color: white;
     font-family: "Swansea"; 
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
