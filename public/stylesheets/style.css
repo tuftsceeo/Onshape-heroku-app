@@ -170,6 +170,7 @@ body {
 .header-description {
     padding: 0; 
     margin: 0; 
+    line-height: 2px;
     color: white;
     font-family: "Swansea"; 
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
@@ -353,6 +354,7 @@ header::before {
     height: 100%;
     width: 100%;
     opacity: 0;
+    border-radius: 10px;
     transition: .3s ease;
     background-color: #F1F1F5;
 }
