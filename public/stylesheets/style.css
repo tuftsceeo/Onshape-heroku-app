@@ -136,15 +136,16 @@ body {
 .header h7 {
     padding: 0; 
     margin: 0; 
-    color: white; 
+    color: white;
+    font-family: "Swansea"; 
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 50px; 
 }
 
-span:before {
+.emphasis:before {
     content: '';
     color: #E56878;
-    animation: animate infinite 5s;
+    animation: animate infinite 6s;
 }
 @keyframes animate{
     0%{
