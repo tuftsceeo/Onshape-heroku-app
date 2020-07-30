@@ -147,11 +147,11 @@ body2 {
     height: 100vh;
     width: 100vw;
     border-radius: 10px;
-    /* background-image: url("../images/activities-bg3.jpg");
+    background-image: url("../images/activities-bg3.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     background-color: #251C2C;
     text-align: center;
     /* opacity: 1; */
@@ -738,6 +738,15 @@ video {
     margin-left: 5%;
     margin-top: 3%;
     margin-bottom: 3%;
+}
+
+video2 {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    height: 280px;
+    position: relative;
+    border-radius: 10px;
 }
 
 .footer {
@@ -1710,7 +1719,7 @@ html {
 }
 
 .top2 {
-    background-image: url("images/cow\ print.jpg");
+    background-image: url("images/cow print.jpg");
     width: 100%;
     height: 10%;
     position: static;
