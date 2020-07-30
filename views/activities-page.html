@@ -1,251 +1,254 @@
 <!DOCTYPE html>
 
 <head>
-  <script src="javascripts/jquery-1.8.3.min.js"></script>
-  <script src="javascripts/bootstrap.min.js"></script>
-  <script src="javascripts/threejs/three.min.js"></script>
+    <script src="javascripts/jquery-1.8.3.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/threejs/three.min.js"></script>
 
-  <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
-  <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
-  <script src="javascripts/threejs/js/Detector.js"></script>
-  <script src="javascripts/threejs/js/libs/stats.min.js"></script>
-  <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
-  <!-- <script src="https://kit.fontawesome.com/599eca6782.js" crossorigin="anonymous"></script> -->
+    <script src="javascripts/threejs/js/loaders/STLLoader.js"></script>
+    <script src="javascripts/threejs/js/wip/TypedGeometry.js"></script>
+    <script src="javascripts/threejs/js/Detector.js"></script>
+    <script src="javascripts/threejs/js/libs/stats.min.js"></script>
+    <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/599eca6782.js" crossorigin="anonymous"></script> -->
 
-  <script src="javascripts/index.js"></script>
+    <script src="javascripts/index.js"></script>
 
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/font-awesome.css" rel="stylesheet"> -->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/hamburger.css" rel="stylesheet">
+    <!-- <link href="stylesheets/font-awesome.css" rel="stylesheet"> -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
-  <div class="container">
-    <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
+    <div class="container">
+        <div class="top">
+            <!-- <div class="menu-button" onclick=""> 
         <div class="bar1" style="--delay: 0.00s"></div>
         <div class="bar2" style="--delay: 0.10s"></div>
         <div class="bar3" style="--delay: 0.20s"></div>
       </div>  -->
-      <button class="hamburger hamburger--spin" type="button">
+            <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
-      <div id="popUpNav" class="overlay" onclick="closeNav()">
-        <div class="overlay-content">
-          <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
-          <hr class="small">
-          <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
-          <hr class="small">
-          <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
-          <hr class="small">
-          <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
+      </button>
+            <div id="popUpNav" class="overlay" onclick="closeNav()">
+                <div class="overlay-content">
+                    <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
+                    <hr class="small">
+                    <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+                    <hr class="small">
+                    <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+                    <hr class="small">
+                    <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
+                </div>
+            </div>
+            <h2 class="header-text"> Onshape- </h2>
         </div>
-      </div>
-      <h2 class="header-text"> Onshape- </h2> 
-    </div>
 
-    <!-- <div class="header">
+        <!-- <div class="header">
       <div class="center">An app to facilitate learning CAD</div>
     </div> -->
 
-    <div class="header-activities">
-      <div class="top-center">
-          <h3 class="title-white">Try out some CAD challenges!</h3>
-          <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
-      </div>
+        <div class="header-activities">
+            <div class="top-center">
+                <h3 class="title-white">Try out some CAD challenges!</h3>
+                <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
+            </div>
+        </div>
+
+        <div class="mid">
+            <div id="btn-filters">
+                <button class="btn active" onclick="filterSelection('all')">Show all</button>
+                <button class="btn" onclick="filterSelection('easy')">Easy</button>
+                <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
+                <button class="btn" onclick="filterSelection('hard')">Hard</button>
+            </div>
+
+            <div class="gallery-row">
+                <div class="column easy">
+                    <div class="gallery-content">
+                        <img src="images/cube-hole-final.png" alt="final-cube">
+                        <p class="page-title">Cube with hole</p>
+                        <p class="normal"><a href="/cube-hole-placemat" target="_self">Get Started</a></p>
+                    </div>
+                </div>
+                <div class="column easy">
+                    <div class="gallery-content">
+                        <img src="images/cup-final.png" alt="cup-final">
+                        <p class="page-title">Cup</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+
+                <div class="column intermediate">
+                    <div class="gallery-content">
+                        <img src="images/dog-collar-final.png" alt="collar-final">
+                        <p class="page-title">Dog collar</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+                <div class="column intermediate">
+                    <div class="gallery-content">
+                        <img src="images/paperclip-final.png" alt="paperclip-final">
+                        <p class="page-title">Paperclip</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+
+                <div class="column hard">
+                    <div class="gallery-content">
+                        <img src="images/volcano-final.png" alt="volcano-final">
+                        <p class="page-title">Volcano</p>
+                        <a href="/volcano-placemat" target="_self">Get Started</a>
+                    </div>
+                </div>
+                <div class="column hard">
+                    <div class="gallery-content">
+                        <img src="images/hinge-final.png" alt="hinge-final">
+                        <p class="page-title">Hinge</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
     </div>
-    
-    <div class="mid">
-      <div id="btn-filters">
-        <button class="btn active" onclick="filterSelection('all')">Show all</button>
-        <button class="btn" onclick="filterSelection('easy')">Easy</button>
-        <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
-        <button class="btn" onclick="filterSelection('hard')">Hard</button>
-    </div>
+    <script>
+        filterSelection("all")
 
-    <div class="gallery-row">
-      <div class="column easy">
-        <div class="gallery-content">
-          <img src="images/cube-hole-final.png" alt="final-cube">
-          <p class="page-title">Cube with hole</p>
-          <p class="normal"><a href="/cube-hole-placemat" target="_self">Get Started</a></p>
-        </div>
-      </div>
-      <div class="column easy">
-        <div class="gallery-content">
-          <img src="images/cup-final.png" alt="cup-final">
-          <p class="page-title">Cup</p>
-          <p class="normal">Try this challenge!</p>
-        </div>
-      </div>
-
-      <div class="column intermediate">
-        <div class="gallery-content">
-          <img src="images/dog-collar-final.png" alt="collar-final">
-          <p class="page-title">Dog collar</p>
-          <p class="normal">Try this challenge!</p>
-        </div>
-      </div>
-      <div class="column intermediate">
-        <div class="gallery-content">
-          <img src="images/paperclip-final.png" alt="paperclip-final">
-          <p class="page-title">Paperclip</p>
-          <p class="normal">Try this challenge!</p>
-        </div>
-      </div>
-
-      <div class="column hard">
-        <div class="gallery-content">
-          <img src="images/volcano-final.png" alt="volcano-final">
-          <p class="page-title">Volcano</p>
-          <a href="/volcano-placemat" target="_self">Get Started</a>
-        </div>
-      </div>
-      <div class="column hard">
-        <div class="gallery-content">
-          <img src="images/hinge-final.png" alt="hinge-final">
-          <p class="page-title">Hinge</p>
-          <p class="normal">Try this challenge!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-  </div>
-  </div>
-  <script>
-    filterSelection("all")
-    function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("column");
-        if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-    }
-
-    function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {
-                element.className += " " + arr2[i];
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
             }
         }
-    }
 
-    function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
             }
         }
-        element.className = arr1.join(" ");
-    }
 
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        // $('#feedback').submit(function () {
+        //   formPost();
+        //   return false;
+        // });
+        // function formPost() { 
+        //   let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+        //   let method = "POST";
+        //   let headers = {"Content-Type": "multipart/form-data"}
+        //   let elements = document.getElementById("feedback").elements;
+        //   // const form = document.forms['google-sheets'];
+        //   let body = {};
+        //   const formData = new FormData();
+        //   for (var i = 0, element; element = elements[i++];) {
+        //       if (element.type === "text"){
+        //         let name = element.name;
+        //         body[name] = element.value;
+        //         formData.append(name, element.value);
+        //       }
+        //   }
+        //   console.log(body);
+        //   console.log(formData);
+
+        //   // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+        //   fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+        //   formSubmitClose();
+        // }
+
+        // function formSubmitClose() { 
+        //   var form = document.getElementById("feedback-form");
+        //   document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+        //   document.getElementById("feedback-form").style.display = "none";
+        //   document.getElementById("form-closed").style.display = "flex";
+        // }
+
+        function openNav() {
+            hamburger.classList.add("is-active");
+            document.getElementById("popUpNav").style.display = "block";
+        }
+
+        function closeNav() {
+            hamburger.classList.remove("is-active");
+            document.getElementById("popUpNav").style.display = "none";
+        }
+
+        // Hamburger Menu Spin
+        var hamburger = document.querySelector(".hamburger");
+        // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
+        hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+
+        closeNav();
+        var $wrapper = $(".mid");
+        var $el = $(".contents");
+        var elHeight = $el.outerHeight();
+        var elWidth = $el.outerWidth();
+        var starterData = {
+            size: {
+                width: $wrapper.width(),
+                height: $wrapper.height()
+            }
+        }
+
+        function doResize(event, ui) {
+
+            var scale, origin;
+
+            scale = Math.min(
+                ui.size.width / elWidth,
+                ui.size.height / elHeight
+            );
+
+            $el.css({
+                transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+            });
+
+        }
+        $wrapper.resizable({
+            resize: doResize
         });
-    }
-    // $('#feedback').submit(function () {
-    //   formPost();
-    //   return false;
-    // });
-    // function formPost() { 
-    //   let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-    //   let method = "POST";
-    //   let headers = {"Content-Type": "multipart/form-data"}
-    //   let elements = document.getElementById("feedback").elements;
-    //   // const form = document.forms['google-sheets'];
-    //   let body = {};
-    //   const formData = new FormData();
-    //   for (var i = 0, element; element = elements[i++];) {
-    //       if (element.type === "text"){
-    //         let name = element.name;
-    //         body[name] = element.value;
-    //         formData.append(name, element.value);
-    //       }
-    //   }
-    //   console.log(body);
-    //   console.log(formData);
-
-    //   // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-    //   fetch(url, {method: method, body: formData}).then(res => console.log(res));
-
-    //   formSubmitClose();
-    // }
-
-    // function formSubmitClose() { 
-    //   var form = document.getElementById("feedback-form");
-    //   document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-    //   document.getElementById("feedback-form").style.display = "none";
-    //   document.getElementById("form-closed").style.display = "flex";
-    // }
-
-    function openNav() {
-      hamburger.classList.add("is-active");
-      document.getElementById("popUpNav").style.display = "block";
-    }
-  
-    function closeNav() {
-      hamburger.classList.remove("is-active");
-      document.getElementById("popUpNav").style.display = "none";
-    }
-  
-    // Hamburger Menu Spin
-    var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
-    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
-  
-    closeNav();
-    var $wrapper = $(".mid");
-    var $el = $(".contents");
-    var elHeight = $el.outerHeight();
-    var elWidth = $el.outerWidth();
-    var starterData = { 
-      size: {
-        width: $wrapper.width(),
-        height: $wrapper.height()
-      }
-    }
-    function doResize(event, ui) {
-      
-      var scale, origin;
-        
-      scale = Math.min(
-        ui.size.width / elWidth,    
-        ui.size.height / elHeight
-      );
-      
-      $el.css({
-        transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
-      });
-      
-    }
-    $wrapper.resizable({
-      resize: doResize
-    });
-    doResize(null, starterData);
-    $('.mid').css('min-height', screen.height);
-    $('.mid').css('min-width', screen.width);
-  </script> 
+        doResize(null, starterData);
+        $('.mid').css('min-height', screen.height);
+        $('.mid').css('min-width', screen.width);
+    </script>
 </body>
