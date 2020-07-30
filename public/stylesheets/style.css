@@ -208,6 +208,17 @@ body {
     background-color: #30223a;
 }
 
+.contents-mod {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5%;
+    margin: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
 .contents-example {
     display: flex;
     flex-direction: column;
@@ -1716,7 +1727,7 @@ html {
     -webkit-text-stroke-color: black;
 }
 
-h6 {
+p9 {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 14px;
     font-style: normal;
@@ -2165,4 +2176,36 @@ a {
     float: left;
     width: 33.33%;
     display: none;
+}
+
+.gallery-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gallery-content {
+    background-color: white;
+    padding: 10px;
+}
+
+.show {
+    display: block; 
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: gray; 
+}
+
+.btn.active {
+    background-color: #E56878;
+    color: white; 
 }
