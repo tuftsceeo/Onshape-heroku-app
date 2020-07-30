@@ -93,7 +93,7 @@ body {
 }
 
 body2 {
-    background-color: ;
+    background-color: #3C4FCC;
     margin: 0;
 }
 
@@ -2180,8 +2180,8 @@ a {
     float: left;
     width: 33.33%;
     height: 100%;
-    max-width: 200px; 
-    max-height: 300px; 
+    max-width: 200px;
+    max-height: 300px;
     display: none;
 }
 
