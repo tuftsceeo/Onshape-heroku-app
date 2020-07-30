@@ -2167,6 +2167,17 @@ a {
     padding: 0;
 }
 
+.gallery-container {
+    display: flex; 
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px; 
+    background-color: #453053;
+}
+
 .gallery-row {
     margin: 8px -16px;
 }
@@ -2194,6 +2205,8 @@ a {
 .gallery-content {
     background-color: white;
     padding: 10px;
+    border-radius: 10px; 
+    box-shadow: #443450;
 }
 
 .show {
