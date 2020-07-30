@@ -52,25 +52,337 @@
             <h2 class="header-text"> Resources </h2>
         </div>
 
-        <!--- <div class="mid">
-            <div class="contents-center">
-                <h3 class="title-white"> Still under construction, check back soon! </h3><br/>
+        <div class="container">
+            <div class="top">
+                <!-- <div class="menu-button" onclick=""> 
+            <div class="bar1" style="--delay: 0.00s"></div>
+            <div class="bar2" style="--delay: 0.10s"></div>
+            <div class="bar3" style="--delay: 0.20s"></div>
+          </div>  -->
+                <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+                <div id="popUpNav" class="overlay" onclick="closeNav()">
+                    <div class="overlay-content">
+                        <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
+                        <hr class="small">
+                        <a href="/tools" target="_self" data-scroll onclick="closeNav()">Tools</a>
+                        <hr class="small">
+                        <a href="/activities" target="_self" data-scroll onclick="closeNav()">Activities</a>
+                        <hr class="small">
+                        <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
+                    </div>
+                </div>
+                <h2 class="header-text"> Resources </h2>
             </div>
-        </div>-->
 
-    </div>
+            <!--- <div class="mid">
+                <div class="contents-center">
+                    <h3 class="title-white"> Still under construction, check back soon! </h3><br/>
+                </div>
+            </div>-->
 
+        </div>
 
-    <!--  <div id="Help" class="mid">
-            <link href="stylesheets/styles.css" rel="stylesheet">
-            <div class="container">
-                <div class="top">
-                    <h2 class="header-text" id="stroke"> RESOURCES </h2>
+        <div class="container">
+            <div class="top">
+                <h2 class="header-text" id="stroke"> RESOURCES </h2>
+            </div>
+        </div>
+
+        <button class="tablink" onclick="openPage('Home', this, '#3F3888')" id="defaultOpen">Home</button>
+        <button class="tablink" onclick="openPage('Tools', this, '#3F3888')">Tools</button>
+        <button class="tablink" onclick="openPage('FAQs', this, '#3F3888')">FAQs</button>
+
+        <div id="Home" class="tabcontent">
+            <h4 id="stroke3">Home</h4>
+            <p2> Welcome to the resources page! Here, you'll find tutorials, introductions to tools and features, and answers to commonly asked questions. Explore the page further for resources that explain sources of confusion in Onshape. </p2>
+            <!-- title -->
+            <div class="speech-bubble">
+                <div class="arrow-left"></div>
+                <div class="text-description">
+                    <h3 style="text-align:center;"> Having trouble finding what you need? </h3>
+                    <p style="text-align:center;">I'm the Onshape help cow! What are you looking for?</p>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for keyword...">
+                    <ul id="myUL">
+                        <li><a href="#">Line</a></li>
+                        <li><a href="#">Corner Rectangle</a></li>
+                        <li><a href="#">Center Point Rectangle</a></li>
+                        <li><a href="#">3 Point Circle</a></li>
+                        <li><a href="#">Ellipse</a></li>
+                        <li><a href="#">3 Point Arc</a></li>
+                        <li><a href="#">Tangent Arc</a></li>
+                        <li><a href="#">Center Point Arc</a></li>
+                        <li><a href="#">Inscribed Polygon</a></li>
+                        <li><a href="#">Circumscribed Polygon</a></li>
+                        <li><a href="#">Spline</a></li>
+                        <li><a href="#">Spline Point</a></li>
+                        <li><a href="#">Point</a></li>
+                        <li><a href="#">Text</a></li>
+                    </ul>
+                    <script>
+                        function myFunction() {
+                            // Declare variables
+                            var input, filter, ul, li, a, i, txtValue;
+                            input = document.getElementById("myInput");
+                            filter = input.value.toUpperCase();
+                            ul = document.getElementById("myUL");
+                            li = ul.getElementsByTagName('li');
+
+                            // Loop through all list items, and hide those who don't match the search query
+                            for (i = 0; i < li.length; i++) {
+                                a = li[i].getElementsByTagName("a")[0];
+                                txtValue = a.textContent || a.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    li[i].style.display = "";
+                                } else {
+                                    li[i].style.display = "none";
+                                }
+                            }
+                        }
+                    </script>
                 </div>
             </div>
+            <div class="small_gif">
+                <img src="images/Cartoon-Cow.png" alt="cow">
+            </div>
+        </div>
 
-        </div>-->
+        <div id="Tools" class="tabcontent" height="400%;">
+            <div class="contents">
+                <div id="sidebar1" class="sidebar" aria-label="Main sidebar containing navigation links and some information" aria-hidden="true">
+                    <div class="sidebar__content">
+                        <div class="text-description-sidebar">
+                            <h3 style="text-align:center;"> Having trouble finding what you need? </h3>
+                            <p style="text-align:center;">I'm the Onshape help cow! Which tool are you after?</p>
+                            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search for keyword...">
+                            <ul id="myUL2">
+                                <li><a href="#">Line</a></li>
+                                <li><a href="#">Corner Rectangle</a></li>
+                                <li><a href="#">Center Point Rectangle</a></li>
+                                <li><a href="3_point_circle">3 Point Circle</a></li>
+                                <li><a href="#">Ellipse</a></li>
+                                <li><a href="#">3 Point Arc</a></li>
+                                <li><a href="#">Tangent Arc</a></li>
+                                <li><a href="#">Center Point Arc</a></li>
+                                <li><a href="#">Inscribed Polygon</a></li>
+                                <li><a href="#">Circumscribed Polygon</a></li>
+                                <li><a href="#">Spline</a></li>
+                                <li><a href="#">Spline Point</a></li>
+                                <li><a href="#">Point</a></li>
+                                <li><a href="#">Text</a></li>
+                            </ul>
+                            <script>
+                                function myFunction2() {
+                                    // Declare variables
+                                    var input, filter, ul, li, a, i, txtValue;
+                                    input = document.getElementById("myInput2");
+                                    filter = input.value.toUpperCase();
+                                    ul = document.getElementById("myUL2");
+                                    li = ul.getElementsByTagName('li');
 
+                                    // Loop through all list items, and hide those who don't match the search query
+                                    for (i = 0; i < li.length; i++) {
+                                        a = li[i].getElementsByTagName("a")[0];
+                                        txtValue = a.textContent || a.innerText;
+                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                            li[i].style.display = "";
+                                        } else {
+                                            li[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="cow" data-toggle-sidebar="sidebar1" aria-label="Toggle the document main sidebar visibility">
+                    <img src="images/Cartoon-Cow left.png" alt="cow">
+                    <p2 id="stroke2"> Click me! </p2>
+                </div>
+                <script>
+                    // Catch all the `[data-toggle-sidebar]` elements on the document.
+                    document.querySelectorAll('[data-toggle-sidebar]').forEach(toggle => {
+                        // Add an event listener on those elements "click" event
+                        toggle.addEventListener('click', e => {
+                            // get the sidebar ID from the current element data attribute
+                            const sidebarID = toggle.dataset.toggleSidebar;
+                            // check if there is an element on the doc with the id
+                            const sidebarElement = sidebarID ? document.getElementById(sidebarID) : undefined;
+                            // if there is a sidebar with the passed id (data-toggle-sidebar)
+                            if (sidebarElement) {
+                                // toggle the aria-hidden state of the given sidebar
+                                let sidebarState = sidebarElement.getAttribute('aria-hidden');
+                                sidebarElement.setAttribute('aria-hidden', sidebarState == 'true' ? false : true);
+                            }
+                        });
+                    });
+                </script>
+                <h5 id="stroke3">Tools</h5>
+                <p3>An introduction to basic CAD tools in Onshape. Click on the underlined headings for more information on each tool!</p3>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-linesegment.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____1" target="_blank">Line</a>
+                            <video autoplay loop muted>
+                                <source src="images/Line demo.mov" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        </h3>
+                    </div>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-spline.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____13" target="_blank">Spline</a>
+                            <video autoplay loop muted>
+                                <source src="images/spline demo.mov" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-splinepoint.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____14" target="_blank">Spline Point</a>
+                            <video autoplay loop muted>
+                            <source src="images/spline point demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-rectangle_two_corners.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____2" target="_blank">Corner Rectangle</a>
+                            <video autoplay loop muted>
+                            <source src="images/corner rectangle demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-rectangle_center.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____3" target="_blank">Center Point Rectangle</a>
+                            <video autoplay loop muted>
+                            <source src="images/center point rectangle demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-circle_center_radius.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____4" target="_blank">Center Point Circle</a>
+                            <video autoplay loop muted>
+                            <source src="images/center point circle demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <a id="3_point_circle">
+                        <div class="text-description-center">
+                            <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-circle_perimeter.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____5" target="_blank">3 Point Circle</a>
+                                <video autoplay loop muted>
+                            <source src="images/3 point circle demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                            </h3>
+                        </div>
+                    </a>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/ellipse.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____6" target="_blank">Ellipse</a>
+                            <video autoplay loop muted>
+                            <source src="images/ellipse demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-arc_start_end_radius.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____7" target="_blank">3 Point Arc</a>
+                            <video autoplay loop muted>
+                            <source src="images/3 point arc demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-arc_tangent.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____8" target="_blank">Tangent Arc</a>
+                            <video autoplay loop muted>
+                            <source src="images/tangent arc demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="image-row">
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch_tools_center_arc.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____9" target="_blank">Center Point Arc</a>
+                            <video autoplay loop muted>
+                            <source src="images/center point arc demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                    <div class="text-description-center">
+                        <h3 style="text-align:center;"> <a href="https://cad.onshape.com/help/Content/sketch-tools-point.htm?tocpath=Part%20Studios%7CSketch%20Tools%7C_____15" target="_blank">Point</a>
+                            <video autoplay loop muted>
+                            <source src="images/point demo.mov" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="FAQs" class="tabcontent" margin-top="0%;" height="400%;">
+            <h4 id="stroke3">FAQs</h4>
+            <p2> Answers to questions frequently asked by Onshape beginners. Click on the underlined text to view the original question and answer exchange. </p2>
+            <div class="text-description-med" style="height:680px; overflow: hidden;">
+                <h3 style="text-align:center;"> <a href="https://forum.onshape.com/discussion/10483/probably-a-very-basic-question" target="_blank"> How can I attach two parts? </a></h3>
+                <p style="text-align:center;"> Use the <a href='https://cad.onshape.com/help/Content/mate-fastened.htm' target='_blank'>fastened mate</a> in an Assembly studio to attach two parts. Fastened mate operates using <a href='https://cad.onshape.com/help/Content/mateconnector_a.htm?tocpath=Assemblies%7C_____8'
+                        target='_blank'>mate connectors</a> to fix the parts together. </p>
+                <p style="text-align:center;">Learn more about the basics of mate connectors here:
+                </p>
+                <p style="text-align:center;">
+                    <a href="https://cad.onshape.com/help/Content/mateconnector_a.htm?tocpath=Assemblies%7C_____8&amp;wvideo=j7w2uuyrcn" target="_blank"><img src="https://embedwistia-a.akamaihd.net/deliveries/15300ad72af7c709aefc4bf30d7fc20440f7f9fe.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=1b5faae0" width="400"
+                            height="225" style="width: 400px; height: 225px; "></a>
+                </p>
+            </div>
+            <div class="text-description-med" style="height:680px; overflow: hidden;">
+                <h3 style="text-align:center;"> <a href="https://forum.onshape.com/discussion/11333/move-sketch-to-the-origin" target="_blank"> How can I move the position of a sketch inside a part studio? </a></h3>
+                <p style="text-align:center;"> Use the <a href='https://cad.onshape.com/help/Content/transform.htm' target='_blank'>transform tool</a> in a part studio to shift a sketch in any direction. The transform tool operates using line, distance, or x, y, and z coordinates to
+                    change the positioning of a part. </p>
+                <p style="text-align:center;">Watch the transform tool in action here:
+                </p>
+                <p style="text-align:center;">
+                    <a href="https://forum.onshape.com/discussion/11333/move-sketch-to-the-origin?wvideo=otxyng760q" target="_blank"><img src="https://embed-fastly.wistia.com/deliveries/06b01979b3ba752e1b64fde76e6beb7840426a91.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=f88701e0" target="_blank"
+                            width="400" height="225" style="width: 400px; height: 225px;"></a>
+                </p>
+            </div>
+            <div class="text-description-med" style="height:610px; overflow: hidden;">
+                <h3 style="text-align:center;"> <a href="https://forum.onshape.com/discussion/comment/60636" target="_blank"> How can I extrude multiple parts of the same sketch, and why isn't my sketch geometry appearing after I create it? </a></h3>
+                <p style="text-align:center;">In order to extrude multiple sections of the same part, they must be separate sketches. These sketches must be toggled to "show" instead of "hide" in order to appear as an option for extrusion.</p>
+                <div class="image-right-2">
+                    <img src="https://us.v-cdn.net/5022071/uploads/editor/on/7z5stypmjitf.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
     <script>
         $('#feedback').submit(function() {
