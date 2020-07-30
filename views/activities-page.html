@@ -57,14 +57,12 @@
       <div class="center">An app to facilitate learning CAD</div>
     </div> -->
 
-        <div class="header-activities">
-            <div class="top-center">
-                <h3 class="title-white">Try out some CAD challenges!</h3>
+        <div class="mid">
+            <div class="contents-center">
+                <h3 class="title-white">Try out some CAD challenges!</h3><br/>
                 <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
             </div>
-        </div>
 
-        <div class="mid">
             <div id="btn-filters">
                 <button class="btn active" onclick="filterSelection('all')">Show all</button>
                 <button class="btn" onclick="filterSelection('easy')">Easy</button>
@@ -123,6 +121,7 @@
         </div>
     </div>
     <script>
+        // Portfolio gallery 
         filterSelection("all")
 
         function filterSelection(c) {
@@ -168,40 +167,49 @@
                 this.className += " active";
             });
         }
-        // $('#feedback').submit(function () {
-        //   formPost();
-        //   return false;
-        // });
-        // function formPost() { 
-        //   let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-        //   let method = "POST";
-        //   let headers = {"Content-Type": "multipart/form-data"}
-        //   let elements = document.getElementById("feedback").elements;
-        //   // const form = document.forms['google-sheets'];
-        //   let body = {};
-        //   const formData = new FormData();
-        //   for (var i = 0, element; element = elements[i++];) {
-        //       if (element.type === "text"){
-        //         let name = element.name;
-        //         body[name] = element.value;
-        //         formData.append(name, element.value);
-        //       }
-        //   }
-        //   console.log(body);
-        //   console.log(formData);
 
-        //   // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-        //   fetch(url, {method: method, body: formData}).then(res => console.log(res));
+        // Feedback form 
 
-        //   formSubmitClose();
-        // }
+        $('#feedback').submit(function() {
+            formPost();
+            return false;
+        });
 
-        // function formSubmitClose() { 
-        //   var form = document.getElementById("feedback-form");
-        //   document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-        //   document.getElementById("feedback-form").style.display = "none";
-        //   document.getElementById("form-closed").style.display = "flex";
-        // }
+        function formPost() {
+            let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+            let method = "POST";
+            let headers = {
+                "Content-Type": "multipart/form-data"
+            }
+            let elements = document.getElementById("feedback").elements;
+            // const form = document.forms['google-sheets'];
+            let body = {};
+            const formData = new FormData();
+            for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text") {
+                    let name = element.name;
+                    body[name] = element.value;
+                    formData.append(name, element.value);
+                }
+            }
+            console.log(body);
+            console.log(formData);
+
+            // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+            fetch(url, {
+                method: method,
+                body: formData
+            }).then(res => console.log(res));
+
+            formSubmitClose();
+        }
+
+        function formSubmitClose() {
+            var form = document.getElementById("feedback-form");
+            document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("form-closed").style.display = "flex";
+        }
 
         function openNav() {
             hamburger.classList.add("is-active");
@@ -219,6 +227,7 @@
         hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
 
         closeNav();
+
         var $wrapper = $(".mid");
         var $el = $(".contents");
         var elHeight = $el.outerHeight();
