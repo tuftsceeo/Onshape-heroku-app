@@ -10,12 +10,15 @@
     <script src="javascripts/threejs/js/Detector.js"></script>
     <script src="javascripts/threejs/js/libs/stats.min.js"></script>
     <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/599eca6782.js" crossorigin="anonymous"></script> -->
 
     <script src="javascripts/index.js"></script>
 
     <link href="stylesheets/style.css" rel="stylesheet">
     <link href="stylesheets/hamburger.css" rel="stylesheet">
+    <!-- <link href="stylesheets/font-awesome.css" rel="stylesheet"> -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
     <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
@@ -26,11 +29,16 @@
 <body>
     <div class="container">
         <div class="top">
+            <!-- <div class="menu-button" onclick=""> 
+        <div class="bar1" style="--delay: 0.00s"></div>
+        <div class="bar2" style="--delay: 0.10s"></div>
+        <div class="bar3" style="--delay: 0.20s"></div>
+      </div>  -->
             <button class="hamburger hamburger--spin" type="button">
-          <span class="hamburger-box">
+        <span class="hamburger-box">
           <span class="hamburger-inner"></span>
-          </span>
-        </button>
+        </span>
+      </button>
             <div id="popUpNav" class="overlay" onclick="closeNav()">
                 <div class="overlay-content">
                     <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -45,10 +53,9 @@
             <h2 class="header-text"> Onshape- </h2>
         </div>
 
-        <!-- <div class="header-activities">
-        <div class="center">Try out some CAD problems!
-        </div>
-      </div> -->
+        <!-- <div class="header">
+      <div class="center">An app to facilitate learning CAD</div>
+    </div> -->
 
         <div class="header-activities">
             <div class="top-center">
@@ -57,203 +64,148 @@
             </div>
         </div>
 
-        <!-- <script>
-          $(window).scroll(function() {
-              $(".header").css("opacity", 1 - $(window).scrollTop() / 500);
-          });
-      </script> -->
-
         <div class="mid">
-            <!-- Filter buttons -->
-            <div id="btn-filters">
-                <button class="btn active" onclick="filterSelection('all')">Show all</button>
-                <button class="btn" onclick="filterSelection('easy')">Easy</button>
-                <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
-                <button class="btn" onclick="filterSelection('hard')">Hard</button>
+            <div class="contents-button">
+                <h3 class="title-white">For both teachers and students in a classroom</h3>
+            </div>
+            <!-- <div class="contents-button">
+        <div class="wrapper-small3">
+          <h3 class="title-white">Check out our Tools page</h3><br/>
+          <p class="description">where you will find a unique and new external tool from Onahpe that will allow you to upload your very own hand-drawn sketches to an Onshape part studio!</p><br/>
+          <div class="overlay-icon">
+            <a href="/tools" class="hvr-icon-rotate" target="_self"><button type="button" class="btn-home">Tools Page<i class="fa fa-wrench hvr-icon"></i></button></a>
+          </div>
+        </div>
+      </div> -->
+
+            <div class="pages-summary">
+                <div class="total-overview">
+                    <div class="page-overview">
+                        <img src="images/tools-overview2.gif" alt="tools-gif" class="overview">
+                        <div class="overlay-icon">
+                            <a href="/tools" class="hvr-icon-rotate" target="_self"><i class="fa fa-wrench hvr-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-overview">
+                        <p class="page-title">Tools</p>
+                        <p class="description">Find a unique and external tool from Onshape that will allow you to upload your very own hand-drawn sketches to an Onshape part studio!</p>
+                    </div>
+                </div>
+
+                <div class="total-overview">
+                    <div class="page-overview">
+                        <img src="images/activities-overview.gif" alt="activities-gif" class="overview">
+                        <div class="overlay-icon">
+                            <a href="/activities" class="hvr-icon-rotate" target="_self"><i class="fa fa-drafting-compass hvr-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-overview">
+                        <p class="page-title">Activities</p>
+                        <p class="description">Find numerous CAD challenges ranked according to difficulty as well as sample solutions with written and visual guidelines!</p>
+                    </div>
+                </div>
+
+                <div class="total-overview">
+                    <div class="page-overview">
+                        <img src="images/resources-overview.gif" alt="resources-gif" class="overview">
+                        <div class="overlay-icon">
+                            <a href="/resources-page" class="hvr-icon-rotate" target="_self"><i class="fa fa-book-open hvr-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-overview">
+                        <p class="page-title">Resources</p>
+                        <p class="description">Find additional resources, such as thorough explanations of the basic tools available on Onshape and FAQs!</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="gallery-row">
-                <div class="column easy">
-                    <div class="gallery-content">
-                        <img src="images/cube-hole-final.png" alt="final-cube">
-                        <p class="page-title">Cube with hole</p>
-                        <p class="normal"><a href="/cube-hole-placemat" target="_self">Get Started</a></p>
+            <div class="more-info">
+                <h3 class="title-white">Don't know where to start? Start by letting us help you:</h3><br/>
+                <div class="pages-summary">
+                    <div class="text-overview2">
+                        <p class="page-title"><strong>"WHAT'S CAD/ONSHAPE?"</strong></p>
+                        <p class="description">Complete beginner? Welcome! We recommend that you start out with familiarizing yourself with Onshape's platform because even if you've tried out different CAD platforms, every one is different. Go out our <a href="/tools" target="_self"
+                                class="embed-link">Tools page</a> to get used to the Onshape environment: no CAD experience needed! However, this is where you can start to familiarize yourself with some of the tools that Onshape provides. Maybe then take
+                            a look at the Tools tab on the <a href="/resources-page" target="_self" class="embed-link">Resources page</a> to learn how to use each of the tools.</p>
                     </div>
-                </div>
-                <div class="column easy">
-                    <div class="gallery-content">
-                        <img src="images/cup-final.png" alt="cup-final">
-                        <p class="page-title">Cup</p>
-                        <p class="normal">Try this challenge!</p>
-                    </div>
-                </div>
 
-                <div class="column intermediate">
-                    <div class="gallery-content">
-                        <img src="images/dog-collar-final.png" alt="collar-final">
-                        <p class="page-title">Dog collar</p>
-                        <p class="normal">Try this challenge!</p>
+                    <div class="text-overview2">
+                        <p class="page-title"><strong>"I'VE DABBLED IN CAD A BIT."</strong></p>
+                        <p class="description">So you've been exposed to CAD and even Onshape already, but still a little rough on the skills? Start off with a challenge or two on our <a href="/activities" target="_self" class="embed-link">Activities page</a> to assess just
+                            how comfortable you really are! Start out with the harder ones if you're really feeling confident, but otherwise, start with creating a <a href="/cube-hole" target="_self" class="embed-link">cube with a hole</a>. Practicing
+                            is where most of the learning happens, so try it for yourself and go through some of our approaches as well. Refer to the FAQs tab on the <a href="/resources-page" target="_self" class="embed-link">Resources page</a> if you
+                            have any questions.</p>
                     </div>
-                </div>
-                <div class="column intermediate">
-                    <div class="gallery-content">
-                        <img src="images/paperclip-final.png" alt="paperclip-final">
-                        <p class="page-title">Paperclip</p>
-                        <p class="normal">Try this challenge!</p>
-                    </div>
-                </div>
 
-                <div class="column hard">
-                    <div class="gallery-content">
-                        <img src="images/volcano-final.png" alt="volcano-final">
-                        <p class="page-title">Volcano</p>
-                        <a href="/volcano-placemat" target="_self">Get Started</a>
-                    </div>
-                </div>
-                <div class="column hard">
-                    <div class="gallery-content">
-                        <img src="images/hinge-final.png" alt="hinge-final">
-                        <p class="page-title">Hinge</p>
-                        <p class="normal">Try this challenge!</p>
+                    <div class="text-overview2">
+                        <p class="page-title"><strong>"CAD IS MY OTHER HALF. WHAT'S NEXT?"</strong></p>
+                        <p class="description">Alright you expert, wondering what this app could possibly do for you? Well we can still point you to our <a href="/activities" target="_self" class="embed-link">Activities page</a>: start off with the more difficult challenges
+                            and try to solve them in at least 3 different ways! Still want more? Then go through our gallery of different CAD projects and try to recreate them (and we won't be giving you any guidelines or instructions on where to start,
+                            so good luck!). Go off and CAD away!</p>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="contents-button2">
-              <div class="wrapper-small2">
-                <div class="image-sneakpeek">
-                  <img src="images/cube-hole-final.png" alt="final-cube">
-                </div>
-                <div class="text-sneakpeek">
-                  <h3 class="title-white">Try making a cube with a hole!</h3><br/>
-                  <br/>
-                  <a href="/cube-hole-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-                </div>
-              </div>
-          </div> -->
-
             <!-- <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a cup or a mug!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/cup-final.png" alt="cup-final">
+        <div class="wrapper-small">
+          <h3 class="title-white">Check out our Activities page</h3><br/>
+          <p class="description">where you will find numerous CAD challenges ranked from easiest to most difficult to solve! Not to worry if you get stuck; you'll also find sample solutions with written and visual guidelines!</p><br/>
+          <a href="/activities" class="hvr-icon-forward" target="_self"><button type="button" class="btn-home">Activities Page<br><i class="fa fa-chevron-circle-right hvr-icon"></i></button></a>
         </div>
-        <a href="/cup-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
       </div>
-    </div>
 
-    <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a valentine!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/valentine-final.png" alt="valentine-final">
+      <div class="contents-button">
+        <div class="wrapper-small">
+          <h3 class="title-white">Check out our Resources page</h3><br/>
+          <p class="description">where you will find additional resources, such as thorough explanations of the basic tools available on Onshape and FAQs!</p><br/>
+          <a href="/resources-page" class="hvr-icon-forward" target="_self"><button type="button" class="btn-home">Resources<br><i class="fa fa-chevron-circle-right hvr-icon"></i></button></a>
         </div>
-        <a href="/valentine-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-      </div>
-    </div>
-
-    <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a dog collar!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/dog-collar-final.png" alt="collar-final">
-        </div>
-        <a href="/dog-collar-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-      </div>
-    </div> -->
-
-            <!-- <div class="contents-button">
-            <div class="wrapper-small2">
-              <div class="image-sneakpeek2">
-                <img src="images/volcano-final.png" alt="volcano-final">
-              </div>
-              <div class="text-sneakpeek">
-                <h3 class="title-white">Try making a volcano!</h3><br/>
-                <br/>
-                <a href="/volcano-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-              </div>
-            </div>
-        </div> -->
-
-            <!-- <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a paperclip!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/paperclip-final.png" alt="paperclip-final">
-        </div>
-        <a href="/paperclip-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-      </div>
-    </div>
-
-    <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a spring!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/spring-final.png" alt="spring-final">
-        </div>
-        <a href="/spring-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Spring Placemat</button></a>
-      </div>
-    </div>
-
-    <div class="contents-button">
-      <div class="wrapper-small">
-        <h3 class="title-white">Try making a hinge!</h3><br/>
-        <div class="image-sneakpeek">
-          <img src="images/hinge-final.png" alt="hinge-final">
-        </div>
-        <a href="/hinge" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-home">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
-      </div>
-    </div> -->
+      </div> -->
 
         </div>
         <div class="footer">
         </div>
     </div>
     <script>
-        filterSelection("all")
+        $('#feedback').submit(function() {
+            formPost();
+            return false;
+        });
 
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("column");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        function formPost() {
+            let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+            let method = "POST";
+            let headers = {
+                "Content-Type": "multipart/form-data"
             }
-        }
-
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                    element.className += " " + arr2[i];
+            let elements = document.getElementById("feedback").elements;
+            // const form = document.forms['google-sheets'];
+            let body = {};
+            const formData = new FormData();
+            for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text") {
+                    let name = element.name;
+                    body[name] = element.value;
+                    formData.append(name, element.value);
                 }
             }
+            console.log(body);
+            console.log(formData);
+
+            // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+            fetch(url, {
+                method: method,
+                body: formData
+            }).then(res => console.log(res));
+
+            formSubmitClose();
         }
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
-
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
+        function formSubmitClose() {
+            var form = document.getElementById("feedback-form");
+            document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("form-closed").style.display = "flex";
         }
 
         function openNav() {
@@ -272,7 +224,36 @@
         hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
 
         closeNav();
+        var $wrapper = $(".mid");
+        var $el = $(".contents");
+        var elHeight = $el.outerHeight();
+        var elWidth = $el.outerWidth();
+        var starterData = {
+            size: {
+                width: $wrapper.width(),
+                height: $wrapper.height()
+            }
+        }
+
+        function doResize(event, ui) {
+
+            var scale, origin;
+
+            scale = Math.min(
+                ui.size.width / elWidth,
+                ui.size.height / elHeight
+            );
+
+            $el.css({
+                transform: "translate(-50%, -50%) " + "scale(" + scale + ")"
+            });
+
+        }
+        $wrapper.resizable({
+            resize: doResize
+        });
+        doResize(null, starterData);
+        $('.mid').css('min-height', screen.height);
+        $('.mid').css('min-width', screen.width);
     </script>
 </body>
-
-</html>
