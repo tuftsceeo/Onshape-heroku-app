@@ -2190,7 +2190,7 @@ a {
 }
 
 .show {
-    display: block; 
+    display: block;
 }
 
 .btn {
@@ -2202,10 +2202,10 @@ a {
 }
 
 .btn:hover {
-    background-color: gray; 
+    background-color: gray;
 }
 
 .btn.active {
     background-color: #E56878;
-    color: white; 
+    color: white;
 }

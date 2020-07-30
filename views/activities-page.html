@@ -57,10 +57,10 @@
         </div> -->
 
         <div class="header-activities">
-          <div class="top-center">
-            <h3 class="title-white">Try out some CAD challenges!</h3>
-            <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
-          </div>
+            <div class="top-center">
+                <h3 class="title-white">Try out some CAD challenges!</h3>
+                <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
+            </div>
         </div>
 
         <!-- <script>
@@ -70,61 +70,61 @@
         </script> -->
 
         <div class="mid">
-          <!-- Filter buttons -->
-          <div id="btn-filters">
-            <button class="btn active" onclick="filterSelection('all')">Show all</button>
-            <button class="btn" onclick="filterSelection('easy')">Easy</button>
-            <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
-            <button class="btn" onclick="filterSelection('hard')">Hard</button>
-          </div>
-
-          <div class="gallery-row">
-            <div class="column easy">
-              <div class="gallery-content">
-                <img src="images/cube-hole-final.png" alt="final-cube">
-                <p class="page-title">Cube with hole</p>
-                <a href="/cube-hole-placemat" target="_self">Get Started</a>
-              </div>
-            </div>
-            <div class="column easy">
-              <div class="gallery-content">
-                <img src="images/cup-final.png" alt="cup-final">
-                <p class="page-title">Cup</p>
-                <p class="normal">Try this challenge!</p>
-              </div>
+            <!-- Filter buttons -->
+            <div id="btn-filters">
+                <button class="btn active" onclick="filterSelection('all')">Show all</button>
+                <button class="btn" onclick="filterSelection('easy')">Easy</button>
+                <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
+                <button class="btn" onclick="filterSelection('hard')">Hard</button>
             </div>
 
-            <div class="column intermediate">
-              <div class="gallery-content">
-                <img src="images/dog-collar-final.png" alt="collar-final">
-                <p class="page-title">Dog collar</p>
-                <p class="normal">Try this challenge!</p>
-              </div>
-            </div>
-            <div class="column intermediate">
-              <div class="gallery-content">
-                <img src="images/paperclip-final.png" alt="paperclip-final">
-                <p class="page-title">Paperclip</p>
-                <p class="normal">Try this challenge!</p>
-              </div>
+            <div class="gallery-row">
+                <div class="column easy">
+                    <div class="gallery-content">
+                        <img src="images/cube-hole-final.png" alt="final-cube">
+                        <p class="page-title">Cube with hole</p>
+                        <a href="/cube-hole-placemat" target="_self">Get Started</a>
+                    </div>
+                </div>
+                <div class="column easy">
+                    <div class="gallery-content">
+                        <img src="images/cup-final.png" alt="cup-final">
+                        <p class="page-title">Cup</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+
+                <div class="column intermediate">
+                    <div class="gallery-content">
+                        <img src="images/dog-collar-final.png" alt="collar-final">
+                        <p class="page-title">Dog collar</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+                <div class="column intermediate">
+                    <div class="gallery-content">
+                        <img src="images/paperclip-final.png" alt="paperclip-final">
+                        <p class="page-title">Paperclip</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
+
+                <div class="column hard">
+                    <div class="gallery-content">
+                        <img src="images/volcano-final.png" alt="volcano-final">
+                        <p class="page-title">Volcano</p>
+                        <a href="/volcano-placemat" target="_self">Get Started</a>
+                    </div>
+                </div>
+                <div class="column hard">
+                    <div class="gallery-content">
+                        <img src="images/hinge-final.png" alt="hinge-final">
+                        <p class="page-title">Hinge</p>
+                        <p class="normal">Try this challenge!</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="column hard">
-              <div class="gallery-content">
-                <img src="images/volcano-final.png" alt="volcano-final">
-                <p class="page-title">Volcano</p>
-                <a href="/volcano-placemat" target="_self">Get Started</a>
-              </div>
-            </div>
-            <div class="column hard">
-              <div class="gallery-content">
-                <img src="images/hinge-final.png" alt="hinge-final">
-                <p class="page-title">Hinge</p>
-                <p class="normal">Try this challenge!</p>
-              </div>
-            </div>
-          </div>
-        
             <!-- <div class="contents-button2">
                 <div class="wrapper-small2">
                   <div class="image-sneakpeek">
@@ -168,7 +168,7 @@
         </div>
       </div> -->
 
-          <!-- <div class="contents-button">
+            <!-- <div class="contents-button">
               <div class="wrapper-small2">
                 <div class="image-sneakpeek2">
                   <img src="images/volcano-final.png" alt="volcano-final">
@@ -216,48 +216,51 @@
         </div>
     </div>
     <script>
-      filterSelection("all")
-      function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("column");
-        if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-          w3RemoveClass(x[i], "show");
-          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-      }
+        filterSelection("all")
 
-      function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
         }
-      }
 
-      function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);     
-          }
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
         }
-        element.className = arr1.join(" ");
-      }
 
-      // Add active class to the current button (highlight it)
-      var btnContainer = document.getElementById("myBtnContainer");
-      var btns = btnContainer.getElementsByClassName("btn");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function(){
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-      }
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
 
         function openNav() {
             hamburger.classList.add("is-active");
