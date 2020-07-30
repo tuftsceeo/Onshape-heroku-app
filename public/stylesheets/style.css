@@ -333,6 +333,15 @@ header::before {
     margin-top: 10%;
 }
 
+.total-overview {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-direction: column; 
+}
+
 .page-overview {
     position: relative;
     width: 100%;
@@ -348,6 +357,16 @@ header::before {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.text-overview {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center; 
+    justify-items: center;
 }
 
 .overlay-icon {
@@ -863,10 +882,18 @@ p.normal {
     font-size: 18px;
 }
 
+p.page-title {
+    font-family: "Swansea";
+    font-size: 25px; 
+    color: #F1F1F5;
+    line-height: 35px; 
+}
+
 p.description {
     font-family: "Swansea";
     font-size: 18px;
     color: #F1F1F5;
+    line-height: 20px; 
 }
 
 p.header-description {
@@ -2165,5 +2192,5 @@ a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0; 
+    padding: 0;
 }
