@@ -47,30 +47,45 @@
                     <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
                 </div>
             </div>
-            <h2 class="header-text"> Activities Home Page </h2>
+            <h2 class="header-text"> Onshape- </h2>
 
         </div>
+
+        <!-- <div class="header-activities">
+          <div class="center">Try out some CAD problems!
+          </div>
+        </div> -->
 
         <div class="header-activities">
-            <!-- <img src="/images/activities-bg.png" alt="background-img"> -->
-            <div class="center">Try out some CAD problems!
-            </div>
+          <div class="top-center">
+            <h3 class="title-white">Try out some CAD challenges!</h3>
+            <p class="header-description">Challenges range from easiest to hardest: look through our gallery and choose a challenge!</p>
+          </div>
         </div>
 
-        <script>
+        <!-- <script>
             $(window).scroll(function() {
                 $(".header").css("opacity", 1 - $(window).scrollTop() / 500);
             });
-        </script>
+        </script> -->
 
-        <!-- <script type="text/javascript">
-      var headerBg = document.getElementById('header')
-      window.addEventListener('scroll', function(){
-        headerBg.style.opacity = 1 - +window.pageYOffset/550+''
-        headerBg.style.top = +window.pageYOffset+'px'
-        headerBg.style.backgroundPositionY = +window.pageYOffset/2+'px'
-      })
-    </script> -->
+        <!-- Filter buttons -->
+        <div id="btn-filters">
+          <button class="btn active" onclick="filterSelection('all')">Show all</button>
+          <button class="btn" onclick="filterSelection('easy')">Easy</button>
+          <button class="btn" onclick="filterSelection('intermediate')">Intermediate</button>
+          <button class="btn" onclick="filterSelection('hard')">Hard</button>
+        </div>
+
+        <div class="gallery-row">
+          <div class="column-easy">
+            <div class="gallery-content">
+              <img src="images/cube-hole-final.png" alt="final-cube">
+              <p class="page-title">Cube with hole</p>
+              <p class="normal">Try this challenge!</p>
+            </div>
+          </div>
+        </div>
 
         <div class="mid">
             <div class="contents-button2">
