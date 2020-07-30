@@ -262,6 +262,43 @@
             });
         }
 
+
+        function formPost() {
+            let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+            let method = "POST";
+            let headers = {
+                "Content-Type": "multipart/form-data"
+            }
+            let elements = document.getElementById("feedback").elements;
+            // const form = document.forms['google-sheets'];
+            let body = {};
+            const formData = new FormData();
+            for (var i = 0, element; element = elements[i++];) {
+                if (element.type === "text") {
+                    let name = element.name;
+                    body[name] = element.value;
+                    formData.append(name, element.value);
+                }
+            }
+            console.log(body);
+            console.log(formData);
+
+            // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+            fetch(url, {
+                method: method,
+                body: formData
+            }).then(res => console.log(res));
+
+            formSubmitClose();
+        }
+
+        function formSubmitClose() {
+            var form = document.getElementById("feedback-form");
+            document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("form-closed").style.display = "flex";
+        }
+
         function openNav() {
             hamburger.classList.add("is-active");
             document.getElementById("popUpNav").style.display = "block";

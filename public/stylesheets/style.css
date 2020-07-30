@@ -700,13 +700,11 @@ h3.title-white {
 
 h4 {
     color: #F1F1F5;
+    margin-bottom: 2%;
     font-family: 'LemonBold';
     font-size: 30px;
-    margin: 0;
-    align-self: center;
-    /* flex: 2 0 auto;
-    order: 2;
-    margin-right: 60px; */
+    line-height: 35px;
+    margin-top: 0%;
 }
 
 img.med {
@@ -812,6 +810,7 @@ p0 {
     font-size: 23px;
     text-align: center;
     line-height: 20px;
+    color: white;
 }
 
 .warning-container {
@@ -2094,18 +2093,17 @@ h5 {
 } */
 
 p2 {
-    /*float: left;*/
-    margin-top: 2%;
+    margin-top: 6%;
     margin-left: 0;
     padding: 0;
     margin-bottom: 4%;
-    font-size: 35px;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 24px;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
     line-height: 26.4px;
-    color: #ffffff;
+    color: white;
 }
 
 p-black {
