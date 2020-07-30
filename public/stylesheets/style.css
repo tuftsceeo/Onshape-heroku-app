@@ -134,37 +134,37 @@ body {
 }
 
 .header h7 {
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
     color: white;
-    font-family: "Swansea"; 
+    font-family: "Swansea";
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-    font-size: 50px; 
+    font-size: 50px;
 }
 
 .emphasis:before {
     content: '';
     color: #E56878;
-    font-size: 65px; 
+    font-size: 65px;
     animation: animate infinite 6s;
 }
-@keyframes animate{
-    0%{
+
+@keyframes animate {
+    0% {
         content: 'CAD';
     }
-    25%{
+    25% {
         content: 'Create';
     }
-    50%{
+    50% {
         content: 'Animate';
     }
-    75%{
+    75% {
         content: 'Design';
     }
-    100%{
+    100% {
         content: 'CAD'
     }
-
 }
 
 .header-activities {
@@ -324,24 +324,24 @@ header::before {
 }
 
 .pages-summary {
-    display: flex; 
+    display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
-    width: 100; 
-    margin-bottom: 10%; 
-    margin-top: 10%; 
+    width: 100;
+    margin-bottom: 10%;
+    margin-top: 10%;
 }
 
 .page-overview {
     position: relative;
     width: 100%;
     max-width: 400px;
-    margin-left: 15px; 
-    margin-right: 15px; 
+    margin-left: 15px;
+    margin-right: 15px;
     border-color: #F1F1F5;
     border-style: solid;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .overview {
@@ -365,7 +365,7 @@ header::before {
 }
 
 .page-overview:hover .overlay-icon {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .hvr-icon-rotate {
@@ -386,6 +386,7 @@ header::before {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .hvr-icon-rotate .hvr-icon {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -396,7 +397,10 @@ header::before {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.hvr-icon-rotate:hover .hvr-icon, .hvr-icon-rotate:focus .hvr-icon, .hvr-icon-rotate:active .hvr-icon {
+
+.hvr-icon-rotate:hover .hvr-icon,
+.hvr-icon-rotate:focus .hvr-icon,
+.hvr-icon-rotate:active .hvr-icon {
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
 }
@@ -812,6 +816,17 @@ p {
     line-height: 20px;
 }
 
+p0 {
+    /*float: left;*/
+    margin-top: 2%;
+    margin-left: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 23px;
+    text-align: center;
+    line-height: 20px;
+}
+
 .warning-container {
     display: flex;
     flex-direction: row;
@@ -855,13 +870,13 @@ p.description {
 }
 
 p.header-description {
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
     line-height: 40px;
     color: white;
-    font-family: "Swansea"; 
+    font-family: "Swansea";
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-    font-size: 25px; 
+    font-size: 25px;
 }
 
 #feedback-form {
@@ -2144,4 +2159,11 @@ p-black2 {
 
 a {
     color: white;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0; 
 }
