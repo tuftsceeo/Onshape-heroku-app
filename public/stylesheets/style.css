@@ -2233,8 +2233,8 @@ img.gallery-display {
 .gallery-content {
     background-color: #cec8da;
     padding: 10px;
-    /* width: 100%; */
-    /* border-radius: 10px;  */
+    width: 100%;
+    border-radius: 10px; 
     /* flex-direction: row;  */
 }
 
