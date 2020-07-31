@@ -14,6 +14,7 @@
 
   <script src="javascripts/index.js"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/font-awesome.css" rel="stylesheet"> -->
@@ -77,7 +78,10 @@
               <div class="gallery-image">
                 <img id="img-preview" src="images/cube-hole-final.png" alt="At least 3 steps" class="gallery-display">
                 <div id="modal-container" class="modal">
-                  <span class="close">x</span>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <!-- <span class="close">&times;</span> -->
                   <img class="modal-content" src="images/cube-hole-view.gif" id="img-modal">
                   <div id="caption"></div>
                 </div>
