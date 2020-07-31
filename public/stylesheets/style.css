@@ -2310,7 +2310,9 @@ img.gallery-display {
     margin: auto;
     display: block;
     width: 80%;
+    height: 80%;
     max-width: 700px;
+    max-height: 500px;
 }
 
 #caption {
