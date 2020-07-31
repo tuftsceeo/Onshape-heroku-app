@@ -2210,11 +2210,11 @@ img.gallery-display {
 }
 
 .gallery-row {
-    margin: 8px -16px;
+    margin: 10px -16px;
 }
 
 .gallery-row,
-.gallery-row>.column {
+.gallery-row > .column {
     padding: 8px;
 }
 
@@ -2234,7 +2234,7 @@ img.gallery-display {
     background-color: #cec8da;
     padding: 10px;
     /* width: 100%; */
-    border-radius: 10px; 
+    /* border-radius: 10px;  */
     /* flex-direction: row;  */
 }
 
