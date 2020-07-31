@@ -1150,6 +1150,23 @@ label {
     overflow: hidden;
 }
 
+.btn-activity {
+    background-color: #F1F1F5;
+    font-family: "LemonBold";
+    color: #E56878;
+    font-size: 18px;
+    border-radius: 16px;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    opacity: 0.9;
+    text-transform: capitalize;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
 .hvr-icon-forward {
     display: inline-block;
     vertical-align: middle;
