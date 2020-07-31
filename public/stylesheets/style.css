@@ -2199,10 +2199,10 @@ img.gallery-display {
 
 .gallery-container {
     display: flex; 
-    /* flex-direction: column;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-left: 10px;
+    /* margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
     margin-top: 5px;  */
