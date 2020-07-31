@@ -2187,11 +2187,11 @@ a {
 }
 
 img.gallery-display {
-    /* height: 100px;
+    height: 100px;
     width: 125px;
     max-width: 100%; 
-    max-height: 100%;  */
-    width: 100%;
+    max-height: 100%; 
+    /* width: 100%; */
     /* max-width: 150px; 
     max-height: 150px; */
     /* display: block;  */
@@ -2235,7 +2235,7 @@ img.gallery-display {
     padding: 10px;
     /* width: 100%; */
     border-radius: 10px; 
-    flex-direction: row; 
+    /* flex-direction: row;  */
 }
 
 /* .gallery-image {
