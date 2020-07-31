@@ -2238,10 +2238,10 @@ img.gallery-display {
     flex-direction: row;  */
 }
 
-/* .gallery-image {
+.gallery-image {
     height: 100px;
     width: 125px;
-} */
+}
 
 .show {
     display: block;
