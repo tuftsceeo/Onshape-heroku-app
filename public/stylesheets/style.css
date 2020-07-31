@@ -2187,10 +2187,10 @@ a {
 }
 
 img.gallery-display {
-    max-height: 100px;
-    max-width: 125px;
+    /* max-height: 100px;
+    max-width: 125px; */
     width: 100%; 
-    height: 100%; 
+    /* height: 100%;  */
     /* width: 100%; */
     /* max-width: 150px; 
     max-height: 150px; */
@@ -2233,9 +2233,9 @@ img.gallery-display {
 .gallery-content {
     background-color: #cec8da;
     padding: 10px;
-    width: 100%;
+    /* width: 100%;
     border-radius: 10px; 
-    flex-direction: row; 
+    flex-direction: row;  */
 }
 
 /* .gallery-image {
