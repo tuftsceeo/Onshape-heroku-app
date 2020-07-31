@@ -75,14 +75,42 @@
           <div class="column easy">
             <div class="gallery-content">
               <div class="gallery-image">
-                <img src="images/cube-hole-final.png" alt="final-cube" class="gallery-display">
+                <img id="img-preview" src="images/cube-hole-final.png" alt="At least 3 steps" class="gallery-display">
+                <div id="modal-container" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img-modal">
+                  <div id="caption"></div>
+                </div>
               </div>
               <div class="text-overview">
                 <p class="page-title2">Cube with hole</p>
-                <a href="/cube-hole-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/cube-hole-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
+          <script>
+            // Get the modal
+            var modal = document.getElementById("modal-container");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("img-preview");
+            var modalImg = document.getElementById("img-modal");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+          </script>
+
           <div class="column easy">
             <div class="gallery-content">
               <div class="gallery-image">
@@ -90,7 +118,7 @@
               </div>
               <div class="text-overview">
                 <p class="page-title2">Cup</p>
-                <a href="/cup-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/cup-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
@@ -102,7 +130,7 @@
               </div>
               <div class="text-overview">
                 <p class="page-title2">Dog collar</p>
-                <a href="/dog-collar-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/dog-collar-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
@@ -113,7 +141,7 @@
               </div>
               <div class="text-overview">
                 <p class="page-title2">Paperclip</p>
-                <a href="/paperclip-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/paperclip-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
@@ -125,7 +153,7 @@
               </div>
               <div class="text-overview">
                 <p class="page-title2">Volcano</p>
-                <a href="/volcano-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/volcano-placemat" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
@@ -136,7 +164,7 @@
               </div>
               <div class="text-overview">
                 <p class="page-title2">Hinge</p>
-                <a href="/hinge" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a>
+                <a href="/hinge" class="hvr-icon-wobble-horizontal" target="_self"><button type="button" class="btn-activity">Get Started <i class="fa fa-angle-double-right hvr-icon"></i></button></a><br/>
               </div>
             </div>
           </div>
