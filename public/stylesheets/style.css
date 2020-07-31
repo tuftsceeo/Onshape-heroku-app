@@ -596,12 +596,13 @@ body2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-self: center;
 }
 
 img.challenge-examples {
     width: 60%;
     height: 60%;
+    margin-left: 5px; 
+    margin-right: 5px; 
 }
 
 .text-sneakpeek {
