@@ -2235,7 +2235,7 @@ img.gallery-display {
     padding: 10px;
     width: 100%;
     border-radius: 10px; 
-    /* flex-direction: row;  */
+    flex-direction: row; 
 }
 
 /* .gallery-image {
