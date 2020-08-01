@@ -529,8 +529,10 @@ body2 {
 }
 
 img.demo-videos {
-    max-width: 300px;
-    max-height: 200px; 
+    max-width: 450px;
+    max-height: 300px;
+    margin: 3%; 
+    align-self: center;
     position: relative; 
 }
 
@@ -1796,15 +1798,15 @@ html {
 }
 
 #Home {
-    background-color: #3F3888;
+    background-color: #453053;
 }
 
 #Tools {
-    background-color: #3F3888;
+    background-color: #453053;
 }
 
 #FAQs {
-    background-color: #3F3888;
+    background-color: #453053;
 }
 
 .top2 {
