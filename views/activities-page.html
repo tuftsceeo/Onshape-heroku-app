@@ -173,20 +173,21 @@
 
         <script>
           // Get the modal
-          // var modal = document.getElementById("modal-container");
-          var modal = document.getElementsByClassName("modal");
+          var modal = document.getElementById("modal-container");
+          // var modal = document.getElementsByClassName("modal");
           
           // Get the image and insert it inside the modal - use its "alt" text as a caption
           var imgs = document.getElementsByClassName("gallery-display");
           var modalImg = document.getElementById("img-modal");
+          var modalGif = document.getElementsByClassName("modal-content");
           var captionText = document.getElementById("caption");
           for (var i = 0; i < imgs.length; i++) {
             var img = imgs[i];
-            var modalGif = modal[i];
+            // var modalGif = modal[i];
             img.onclick = function(evt){
               console.log(evt);
-              modalGif.style.display = "block";
-              // modalImg.src = this.src;
+              modal.style.display = "block";
+              modalImg.src = modalGif.src;
               captionText.innerHTML = this.alt;
           }
           }
