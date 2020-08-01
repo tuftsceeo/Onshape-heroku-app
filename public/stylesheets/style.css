@@ -440,8 +440,8 @@ body2 {
 .text-description2 {
     background-color: black;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -1507,19 +1507,29 @@ label {
     height: 300px;
     padding: 20px;
     position: absolute;
-    top: 600px;
+    top: 550px;
     left: 520px;
 }
 
-.speech-bubble .arrow-left {
-    border-style: solid;
+.arrow-left {
+    /* border-style: solid;
     position: absolute;
     border-top: 10px solid black;
     border-bottom: 10px solid black;
     border-left: 10px solid black;
     border-right: 10px solid black;
     top: 250px;
-    left: -20px;
+    left: -20px; */
+    width: 8px; 
+    height: 8px; 
+    color: black; 
+}
+
+.arrow-left-corner {
+    width: 6px; 
+    height: 0; 
+    border-top: 3px solid black; 
+    border-left: 3px solid #3F3888;
 }
 
 .bottom {
