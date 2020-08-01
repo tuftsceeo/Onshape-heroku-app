@@ -744,7 +744,7 @@ h3.title-white {
     font-size: 35px;
     color: #F1F1F5;
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 h4 {
@@ -1785,6 +1785,10 @@ html {
 
 .tablink:hover {
     background-color: #777;
+}
+
+.tablink:after {
+    background-color: #453053;
 }
 
 
