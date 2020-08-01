@@ -888,6 +888,12 @@ p.normal {
     font-size: 18px;
 }
 
+p.normal2 {
+    font-family: "Swansea";
+    font-size: 18px;
+    color: white; 
+}
+
 p.page-title {
     font-family: "Swansea";
     font-size: 25px;
@@ -1304,6 +1310,7 @@ label {
 .panel {
     padding: 0 18px;
     background-color: #30223a;
+    border-radius: 10px; 
     display: none;
     width: 100%;
     overflow: hidden;
