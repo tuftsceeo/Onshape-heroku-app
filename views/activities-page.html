@@ -188,9 +188,13 @@
             img.onclick = function(evt){
               console.log(evt);
               modal.style.display = "block";
-              modalImg.src = modalGif.src;
+              // modalImg.src = modalGif.src;
               captionText.innerHTML = this.alt;
           }
+          }
+          for (var j = 0; j < modalGif.length; j++) {
+            var gif = modalGif[j];
+            modalImg.src = gif.src;
           }
           
           // Get the <span> element that closes the modal
