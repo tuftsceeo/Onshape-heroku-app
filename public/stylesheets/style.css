@@ -440,8 +440,8 @@ body2 {
 .text-description2 {
     background-color: black;
     border-radius: 10px;
-    width: 60%;
-    height: 555px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -1507,7 +1507,7 @@ label {
     height: 300px;
     padding: 20px;
     position: absolute;
-    top: 400px;
+    top: 600px;
     left: 520px;
 }
 
@@ -1747,6 +1747,7 @@ html {
     display: flex; 
     float: left; 
     flex-direction: row;
+    width: 100%
 }
 
 .tablink {
@@ -2178,7 +2179,7 @@ h5 {
 } */
 
 p2 {
-    margin-top: 6%;
+    margin-top: 5px;
     margin-left: 0;
     padding: 0;
     margin-bottom: 4%;
