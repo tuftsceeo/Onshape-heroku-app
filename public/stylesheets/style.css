@@ -651,9 +651,8 @@ img.challenge-examples {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    margin-bottom: 2.5%;
-    margin-left: 5%;
-    margin-top: 0%;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .big-container {
