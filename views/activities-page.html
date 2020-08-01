@@ -183,20 +183,20 @@
           var modalImg = document.getElementById("img-modal");
           var modalGif = document.getElementsByClassName("modal-content");
           var captionText = document.getElementById("caption");
-          for (var i = 0; i < imgs.length; i++) {
+          for (var i = 0, j = 0; i < imgs.length, j < modalGif.length; i++, j++) {
             var img = imgs[i];
-            // var gif = modalGif[i];
+            var gif = modalGif[j];
             img.onclick = function(evt){
               console.log(evt);
               modal.style.display = "block";
-              // modalImg.src = gif.src;
+              modalImg.src = gif.src;
               captionText.innerHTML = this.alt;
           }
           }
-          for (var j = 0; j < modalGif.length; j++) {
-            var gif = modalGif[j];
-            modalImg.src = gif.src;
-          }
+          // for (var j = 0; j < modalGif.length; j++) {
+          //   var gif = modalGif[j];
+          //   modalImg.src = gif.src;
+          // }
           
           // Get the <span> element that closes the modal
           var span = document.getElementsByClassName("close")[0];
