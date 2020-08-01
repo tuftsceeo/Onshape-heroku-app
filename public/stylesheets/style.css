@@ -1743,6 +1743,12 @@ html {
 
 /* Style tab links */
 
+.tablink-format {
+    display: flex; 
+    float: left; 
+    flex-direction: row;
+}
+
 .tablink {
     background-color: #000000;
     color: white;
