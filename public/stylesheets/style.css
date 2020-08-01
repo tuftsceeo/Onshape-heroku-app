@@ -2282,6 +2282,10 @@ a {
     padding: 0;
 }
 
+img.preview-gif {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
 }
