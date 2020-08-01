@@ -528,6 +528,12 @@ body2 {
     overflow: auto;
 }
 
+img.demo-videos {
+    max-width: 300px;
+    max-height: 200px; 
+    position: relative; 
+}
+
 .text-description-panel {
     background-color: #251C2C;
     border-radius: 10px;
