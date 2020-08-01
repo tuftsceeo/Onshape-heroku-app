@@ -77,10 +77,10 @@
             <div class="gallery-content">
               <div class="gallery-image">
                 <img id="img-preview" src="images/cube-hole-final.png" alt="Minimum of 3 steps" class="gallery-display">
-                <img class="preview-gif" src="images/cube-hole-view.gif">
+                <!-- <img class="preview-gif" > -->
                 <div id="modal-container" class="modal">
                   <span class="close">&times;</span>
-                  <img class="modal-content" id="img-modal">
+                  <img class="modal-content" src="images/cube-hole-view.gif" id="img-modal">
                   <div id="caption"></div>
                 </div>
               </div>
@@ -95,10 +95,10 @@
             <div class="gallery-content">
               <div class="gallery-image">
                 <img id="img-preview" src="images/cup-final.png" alt="Minimum of 5 steps" class="gallery-display">
-                <img class="preview-gif" src="images/cup-view.gif">
+                <!-- <img class="preview-gif" > -->
                 <div id="modal-container" class="modal">
                   <span class="close">&times;</span>
-                  <img class="modal-content" id="img-modal">
+                  <img class="modal-content" src="images/cup-view.gif" id="img-modal">
                   <div id="caption"></div>
                 </div>
               </div>
@@ -181,22 +181,22 @@
           // Get the image and insert it inside the modal - use its "alt" text as a caption
           var imgs = document.getElementsByClassName("gallery-display");
           var modalImg = document.getElementById("img-modal");
-          var modalGif = document.getElementsByClassName("preview-gif");
+          var modalGif = document.getElementsByClassName("modal-content");
           var captionText = document.getElementById("caption");
           for (var i = 0; i < imgs.length; i++) {
             var img = imgs[i];
-            var gif = modalGif[i];
+            // var gif = modalGif[i];
             img.onclick = function(evt){
               console.log(evt);
               modal.style.display = "block";
-              modalImg.src = gif.src;
+              // modalImg.src = gif.src;
               captionText.innerHTML = this.alt;
           }
           }
-          // for (var j = 0; j < modalGif.length; j++) {
-          //   var gif = modalGif[j];
-          //   modalImg.src = gif.src;
-          // }
+          for (var j = 0; j < modalGif.length; j++) {
+            var gif = modalGif[j];
+            modalImg.src = gif.src;
+          }
           
           // Get the <span> element that closes the modal
           var span = document.getElementsByClassName("close")[0];
