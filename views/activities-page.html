@@ -179,8 +179,8 @@
           var imgs = document.getElementsByClassName("img-preview");
           var modalImg = document.getElementById("img-modal");
           var captionText = document.getElementById("caption");
-          for (var i = 0; i < images.length; i++) {
-            var img = images[i];
+          for (var i = 0; i < imgs.length; i++) {
+            var img = imgs[i];
             img.onclick = function(){
               modal.style.display = "block";
               // modalImg.src = this.src;
