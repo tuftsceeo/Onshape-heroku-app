@@ -185,18 +185,18 @@
           var captionText = document.getElementById("caption");
           for (var i = 0; i < imgs.length; i++) {
             var img = imgs[i];
-            // var modalGiff = modalGif[i];
+            var gif = modalGif[i];
             img.onclick = function(evt){
               console.log(evt);
               modal.style.display = "block";
-              // modalImg.src = modalGif.src;
+              modalImg.src = gif.src;
               captionText.innerHTML = this.alt;
           }
           }
-          for (var j = 0; j < modalGif.length; j++) {
-            var gif = modalGif[j];
-            modalImg.src = gif.src;
-          }
+          // for (var j = 0; j < modalGif.length; j++) {
+          //   var gif = modalGif[j];
+          //   modalImg.src = gif.src;
+          // }
           
           // Get the <span> element that closes the modal
           var span = document.getElementsByClassName("close")[0];
