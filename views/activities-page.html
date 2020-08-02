@@ -177,6 +177,9 @@
           // Get the modal
           var modal = document.getElementById("modal-container");
           // var modal = document.getElementsByClassName("modal");
+
+          // let's just try this out 
+          var image = document.getElementsByClassName("gallery-image");
           
           // Get the image and insert it inside the modal - use its "alt" text as a caption
           var imgs = document.getElementsByClassName("gallery-display");
@@ -185,6 +188,7 @@
           var captionText = document.getElementById("caption");
           for (var i = 0; i < imgs.length; i++) {
             var img = imgs[i];
+            var imagee = image[i]
             // var gif = modalGif[j];
             img.onclick = function(evt){
               console.log(evt);
