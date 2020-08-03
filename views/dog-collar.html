@@ -17,18 +17,11 @@
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
   <div class="container">
     <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
-        <div class="bar1" style="--delay: 0.00s"></div>
-        <div class="bar2" style="--delay: 0.10s"></div>
-        <div class="bar3" style="--delay: 0.20s"></div>
-      </div>  -->
       <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -45,292 +38,378 @@
           <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
         </div>
       </div>
-      <h2 class="header-text"> Our Approach </h2> 
+      <h2 class="header-text"> Onshape- </h2> 
     </div>
-    
-    <div class="mid">
-      <div class="contents-top">
-        <div class="text-description">
-          <h3> Challenge </h3>
-          <p class="normal">Use Onshape to construct a dog collar!</p>
-        </div> 
-        <img src="images/dog-collar.gif" alt="dog-collar-gif">
+    <div class="mid"> 
+      <div class="contents-center">
+        <h4 id="stroke"> Dog Collar Approaches </h4><br/>
       </div>
 
-      <div class="contents-top">
-        <div class="text-description-center">
-          <h3> We tried! </h3>
-          <p class="normal">We used CIRCLE, LINE, SPLINE, MIRROR, and EXTRUDE.</p>
-        </div>
+      <div class="tablink-format">
+        <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
+        <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
+        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
       </div>
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-circle.webm" type="video/webm">
-        </video>
-        <div class="text-description">
-            <h3>Step 1: Use the circle tool to create the collar</h3>
-            <p class="normal">Create the round shape of the collar by drawing two circles. To draw the outer circle, click on the circle tool with the new sketch still in editing mode. Click on the origin with the circle tool, and drag outwards until the circle has
-            your desired diameter. Once the circle is the proper size, release your cursor, and the circle will be complete.</p>
-            <p class="normal">Draw the inner circle with its center at the origin again. The inner circle should have a slightly smaller diameter than the outer circle (about .5 inches less).</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 2: Use the extrude tool to make the collar 3D</h3>
-            <p class="normal">Begin a new extrusion by clicking the "extrude" icon in the toolbar. Then select the space between the inner and outer circle. This will automatically give your collar a depth of 1 inch. You can change the depth of the sketch in the menu
-            that appears when you edit the extrusion.</p>
-        </div>
-
-        <video controls>
-          <source src="videos/dog-collar-extrude.webm" type="video/webm">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-color.webm" type="video/webm">
-        </video>
-        <div class="text-description">
-          <h3>Step 3: Use the appearance panel to change the color of your collar</h3>
-          <p class="normal">Begin a new extrusion by clicking the "extrude" icon in the toolbar. Then select the space between the inner and outer circle. This will automatically give your collar a depth of 1 inch. You can change the depth of the sketch in the menu
-            that appears when you edit the extrusion.</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 4: Use the 3 point arc tool to create a ring</h3>
-          <p class="normal">Create a new part studio by clicking on the "+" icon at the bottom left corner of the screen. If you wish to name the part studios according to the parts they contain, you do this by right clicking on the part studio tabs. Pivot your screen
-            to see the front plane head-on. Create a new sketch in the front plane.</p>
-          <p class="normal">Within the sketch, draw an arc by clicking where you'd like to place the starting point of the arc, the end of the arc, and the radius of the arc. The distance between the ends of the arc should be at least 0.5 inches since our collar is 0.5 inches tall.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-ring-sketch1.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-ring-sketch2.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 5: Use the 3 point arc tool again to create outer part of ring</h3>
-          <p class="normal">Draw another arc that is slightly bigger than the first arc you drew.</p>
-          <p class="normal">Use the dimension tool to make sure that the distance between the first arc and the second arc are about 0.1 inches.</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 6: Use the line tool to close off the ring</h3>
-          <p class="normal">Use lines to attach the outer arc to the inner arc.</p>
-          <p class="normal">Use the dimension tool to make sure that the thickness of the ring is still about 0.1 inches.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-ring-sketch3.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-ring-extrude.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 7: Use the extrude tool</h3>
-          <p class="normal">While still in Sketch mode, click on the extrude tool and extrude add to make your ring 3D.</p>
-          <p class="normal">This works because we closed off our ring with the lines; if we didn't close off our ring, we would not get a 3D ring.</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 8: Color your ring</h3>
-          <p class="normal">Use the Appearance Panel to give your ring some color.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-ring-color.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-tag-sketch1.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 9: Use the line tool to start creating your tag</h3>
-          <p class="normal">Start by creating a quarter of the tag.</p>
-          <p class="normal">Use the dimension tool to make sure that the distance from the line you drew to the center is 0.15 inches.</p>
-          <p class="normal">Depending on how long you want your tag to be, specify a length for the line segment. In this case, I set it to 0.2 inches.</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 10: Use the spline tool to shape the tag</h3>
-          <p class="normal">To get a tag that looks like a dog bone, use the spline tool to create the curves of the dog bone.</p>
-          <p class="normal">To have more control over how curved the bone is, click several times to create checkpoints and move in a circular path.</p>
-          <p class="normal">To make life simpler, only create one out of the four curves of the bone. This will make sense in the next step.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-tag-spline.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-tag-mirror.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 11: Use the mirror tool to finish the tag sketch</h3>
-          <p class="normal">While still in sketch mode, click on the mirror tool to mirror your sketch, which represents a quarter of the collar, across the x and y axes.</p>
-          <p class="normal"><strong>** Note: You can choose which axis to mirror your sketch across first. Just remember that after you mirror it across one axis, you have to deselect the mirror tool and then select it again to be able to choose another axis.**</strong></p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 12: Use the extrude tool</h3>
-          <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-tag-extrude.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-tag-hole.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 13: Use the circle tool to create a hole for the ring</h3>
-          <p class="normal">Create a new sketch on the origin on top of one of the faces of the tag.</p>
-          <p class="normal">Use the circle tool to create a hole. Use the dimension tool and make the hole have a radius of 0.05 inches (diameter of 0.1 inches).</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 14: Use the extrude tool again for the hole</h3>
-          <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
-          <p class="normal">To create the hole, you want to extrude remove.</p>
-        </div>
-        <video controls>
-          <source src="videos/dog-collar-tag-extrude2.mov" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/dog-collar-tag-color.mov" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 15: Give your tag some color</h3>
-          <p class="normal">Use the appearance panel to change the color of your tag.</p>
-        </div>
-      </div>
-
-      <div class="contents-button">
-        <div class="wrapper-small">
-            <h3 class="title-white">Take me back to the placemat</h3><br/>
-            <a href="/dog-collar-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-        </div>
-      </div>
-
-      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
-      <div id="feedback-form">
-        <div class="form-container">
-          <h3 class="title-white">Feedback Form</h3>
-          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="dummy" name="google-sheets">
-            <hr>
-            <div class="text-input">
-              <label for="liked">What did you like?</label>
-              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
-            </div> 
-            
-            <div class="text-input">
-              <label for="disliked">What didn't you like?</label>
-              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+      <div id="Approach1" class="tabcontent">
+        <div class="mid">
+          <div class="contents-top2">
+            <div class="text-description">
+              <h3>Overview of Steps</h3><br/>
+              <p class="normal">1) <a href="#step1-dog-collar" class="embed-link2">Use the Circle Tool to Create the Collar</a></p>
+              <p class="normal">2) <a href="#step2-dog-collar" class="embed-link2">Use the Extrude Tool to Make the Collar 3D</a></p>
+              <p class="normal">*) <a href="#stepopt-dog-collar" class="embed-link2">Use the Appearance Panel to Change the Color of your Collar</a></p>
+              <p class="normal">3) <a href="#step3-dog-collar" class="embed-link2">Use the 3 Point Arc Tool to Create a Ring</a></p>
+              <p class="normal">4) <a href="#step4-dog-collar" class="embed-link2">Use the 3 Point Arc Tool Again to Create Outer Part of Ring</a></p>
+              <p class="normal">5) <a href="#step5-dog-collar" class="embed-link2">Use the Line Tool to Close Off the Ring</a></p>
+              <p class="normal">6) <a href="#step6-dog-collar" class="embed-link2">Use the Extrude Tool</a></p>
+              <p class="normal">*) <a href="#stepop2-dog-collar" class="embed-link2">Color your Ring</a></p>
+              <p class="normal">7) <a href="#step7-dog-collar" class="embed-link2">Use the Line Tool to Start Creating your Tag</a></p>
+              <p class="normal">8) <a href="#step8-dog-collar" class="embed-link2">Use the Spline Tool to Shape the Tag</a></p>
+              <p class="normal">9) <a href="#step9-dog-collar" class="embed-link2">Use the Mirror Tool to Finish the Tag Sketch</a></p>
+              <p class="normal">10) <a href="#step10-dog-collar" class="embed-link2">Use the Extrude Tool to Finish the Tag</a></p>
+              <p class="normal">11) <a href="#step11-dog-collar" class="embed-link2">Use the Circle Tool to Create a Hole for the Tag</a></p>
+              <p class="normal">12) <a href="#step12-dog-collar" class="embed-link2">Use the Extrude Tool Again for the Hole</a></p>
+              <p class="normal">*) <a href="#stepopt3-dog-collar" class="embed-link2">Give your Tag Some Color</a></p>
             </div>
+
+            <script>
+              // The function actually applying the offset
+              function offsetAnchor() {
+                if (location.hash.length !== 0) {
+                  window.scrollTo(window.scrollX, window.scrollY - 70);
+                }
+              }
+
+              // Captures click events of all a elements with href starting with #
+              $(document).on('click', 'a[href^="#"]', function(event) {
+                // Click events are captured before hashchanges. Timeout
+                // causes offsetAnchor to be called after the page jump.
+                window.setTimeout(function() {
+                  offsetAnchor();
+                }, 0);
+              });
+
+              // Set the offset when entering page with hash present in the url
+              window.setTimeout(offsetAnchor, 0);
+            </script>
             
-            <div class="text-input">
-              <label for="comments">What did you wish/didn't wish to see?</label>
-              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
-            </div> 
-
-            <div class="text-input">
-              <label for="additional">Any additional comments?</label>
-              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
-            </div>
-            <hr>
-
-            <!-- <div class="rate">
-              <label for="rate-app">Rate our app!</label><br>
-              <div class="rating">
-                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
-                <label for="star5">☆</label>
-                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
-                <label for="star4">☆</label>
-                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
-                <label for="star3">☆</label>
-                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
-                <label for="star2">☆</label>
-                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
-                <label for="star1">☆</label>
+            <div class="text-description">
+              <h3>Approach #1</h3><br/>
+              <div class="image-sneakpeek3">
+                <img src="images/dog-collar-view.gif" alt="dog-collar-gif">
               </div>
-            </div> -->
+            </div> 
+          </div>
+          
+          <hr class="divider">
 
-            <input type="submit" class="submitbtn" value="Submit">
-          </form>
+          <div class="contents-top">
+            <div class="text-description-center">
+              <h3> We tried! </h3>
+              <p class="normal">We used CIRCLE, LINE, SPLINE, MIRROR, and EXTRUDE.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step1-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-circle.webm" type="video/webm">
+            </video>
+            <div class="text-description">
+                <h3>Step 1: Use the Circle Tool to Create the Collar</h3>
+                <p class="normal">Create the round shape of the collar by drawing two circles. To draw the outer circle, click on the circle tool with the new sketch still in editing mode. Click on the origin with the circle tool, and drag outwards until the circle has
+                your desired diameter. Once the circle is the proper size, release your cursor, and the circle will be complete.</p>
+                <p class="normal">Draw the inner circle with its center at the origin again. The inner circle should have a slightly smaller diameter than the outer circle (about .5 inches less).</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step2-dog-collar">
+            <div class="text-description">
+              <h3>Step 2: Use the Extrude Tool to Make the Collar 3D</h3>
+                <p class="normal">Begin a new extrusion by clicking the "extrude" icon in the toolbar. Then select the space between the inner and outer circle. This will automatically give your collar a depth of 1 inch. You can change the depth of the sketch in the menu
+                that appears when you edit the extrusion.</p>
+            </div>
+
+            <video controls>
+              <source src="videos/dog-collar-extrude.webm" type="video/webm">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="stepopt-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-color.webm" type="video/webm">
+            </video>
+            <div class="text-description">
+              <h3>Optional Step: Use the Appearance Panel to Change the Color of your Collar</h3>
+              <p class="normal">Right click on the collar part and select "edit appearance."</p>
+              <p class="normal">Then choose the color of your liking using the Palette or Mixer. </p>
+            </div>
+          </div>
+
+          <div class="contents-top">
+            <div class="new-part">
+              <h6>-- New Part --</h6>
+            </div>
+          </div>
+
+          <div class="contents" id="step3-dog-collar">
+            <div class="text-description">
+              <h3>Step 3: Use the 3 Point Arc Tool to Create a Ring</h3>
+              <p class="normal">Create a new part studio by clicking on the "+" icon at the bottom left corner of the screen. If you wish to name the part studios according to the parts they contain, you do this by right clicking on the part studio tabs. Pivot your screen
+                to see the front plane head-on. Create a new sketch in the front plane.</p>
+              <p class="normal">Within the sketch, draw an arc by clicking where you'd like to place the starting point of the arc, the end of the arc, and the radius of the arc. The distance between the ends of the arc should be at least 0.5 inches since our collar is 0.5 inches tall.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-ring-sketch1.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step4-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-ring-sketch2.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 4: Use the 3 Point Arc Tool Again to Create Outer Part of Ring</h3>
+              <p class="normal">Draw another arc that is slightly bigger than the first arc you drew.</p>
+              <p class="normal">Use the dimension tool to make sure that the distance between the first arc and the second arc are about 0.1 inches.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step5-dog-collar">
+            <div class="text-description">
+              <h3>Step 5: Use the Line Tool to Close Off the Ring</h3>
+              <p class="normal">Use lines to attach the outer arc to the inner arc.</p>
+              <p class="normal">Use the dimension tool to make sure that the thickness of the ring is still about 0.1 inches.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-ring-sketch3.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step6-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-ring-extrude.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 6: Use the Extrude Tool</h3>
+              <p class="normal">While still in Sketch mode, click on the extrude tool and extrude add to make your ring 3D.</p>
+              <p class="normal">This works because we closed off our ring with the lines; if we didn't close off our ring, we would not get a 3D ring.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="stepopt2-dog-collar">
+            <div class="text-description">
+              <h3>Optional Step: Color your Ring</h3>
+              <p class="normal">Use the Appearance Panel to give your ring some color.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-ring-color.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="contents-top">
+            <div class="new-part">
+              <h6>-- New Part --</h6>
+            </div>
+          </div>
+
+
+          <div class="contents" id="step7-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-tag-sketch1.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 7: Use the Line Tool to Start Creating your Tag</h3>
+              <p class="normal">Start by creating a quarter of the tag.</p>
+              <p class="normal">Use the dimension tool to make sure that the distance from the line you drew to the center is 0.15 inches.</p>
+              <p class="normal">Depending on how long you want your tag to be, specify a length for the line segment. In this case, I set it to 0.2 inches.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step8-dog-collar">
+            <div class="text-description">
+              <h3>Step 8: Use the Spline Tool to Shape the Tag</h3>
+              <p class="normal">To get a tag that looks like a dog bone, use the spline tool to create the curves of the dog bone.</p>
+              <p class="normal">To have more control over how curved the bone is, click several times to create checkpoints and move in a circular path.</p>
+              <p class="normal">To make life simpler, only create one out of the four curves of the bone. This will make sense in the next step.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-tag-spline.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step9-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-tag-mirror.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 9: Use the Mirror Tool to Finish the Tag Sketch</h3>
+              <p class="normal">While still in sketch mode, click on the mirror tool to mirror your sketch, which represents a quarter of the collar, across the x and y axes.</p>
+              <p class="normal"><strong>** Note: You can choose which axis to mirror your sketch across first. Just remember that after you mirror it across one axis, you have to deselect the mirror tool and then select it again to be able to choose another axis.**</strong></p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step10-dog-collar">
+            <div class="text-description">
+              <h3>Step 10: Use the Extrude Tool to Finish the Tag</h3>
+              <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-tag-extrude.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step11-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-tag-hole.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 11: Use the Circle Tool to Create a Hole for the Tag</h3>
+              <p class="normal">Create a new sketch on the origin on top of one of the faces of the tag.</p>
+              <p class="normal">Use the circle tool to create a hole. Use the dimension tool and make the hole have a radius of 0.05 inches (diameter of 0.1 inches).</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step12-dog-collar">
+            <div class="text-description">
+              <h3>Step 12: Use the Extrude Tool Again for the Hole</h3>
+              <p class="normal">While still in sketch mode, select the extrude tool to make your tag 3D.</p>
+              <p class="normal">To create the hole, you want to extrude remove.</p>
+            </div>
+            <video controls>
+              <source src="videos/dog-collar-tag-extrude2.mov" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="stepopt3-dog-collar">
+            <video controls>
+              <source src="videos/dog-collar-tag-color.mov" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Optional Step: Give your Tag Some Color</h3>
+              <p class="normal">Use the appearance panel to change the color of your tag.</p>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="contents-button">
+            <div class="wrapper-small">
+                <h3 class="title-white">Take me back to the placemat</h3><br/>
+                <a href="/dog-collar-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="form-closed">
-        <h3 class="title-white"> Thanks for your feedback! </h3>
+
+      <div id="Approach2" class="tabcontent">
+        <div class="mid">
+            <div class="contents-top2">
+                <div class="text-description">
+                  <h3>Overview of Steps</h3><br/>
+                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
+                </div>
+
+                <script>
+                  // The function actually applying the offset
+                  function offsetAnchor() {
+                    if (location.hash.length !== 0) {
+                      window.scrollTo(window.scrollX, window.scrollY - 70);
+                    }
+                  }
+
+                  // Captures click events of all a elements with href starting with #
+                  $(document).on('click', 'a[href^="#"]', function(event) {
+                    // Click events are captured before hashchanges. Timeout
+                    // causes offsetAnchor to be called after the page jump.
+                    window.setTimeout(function() {
+                      offsetAnchor();
+                    }, 0);
+                  });
+
+                  // Set the offset when entering page with hash present in the url
+                  window.setTimeout(offsetAnchor, 0);
+                </script>
+                
+                <div class="text-description">
+                  <h3>Approach #2</h3><br/>
+                  <div class="image-sneakpeek2">
+                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
+                  </div>
+                </div> 
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-top">
+                <div class="text-description-center">
+                  <h3> We tried! </h3>
+                  <p class="normal">This is an example using ...</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Take me back to the challenge</h3><br/>
+                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+                </div>
+            </div>
+        </div>
       </div>
 
-    </div>
-    <div class="footer">
-    </div>
+      <div id="Approach3" class="tabcontent">
+        <h3 class="title-white">Approach #3</h3>
+        
+      </div> 
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
   </div>
+
   <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
-
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
-
-      formSubmitClose();
-    }
-
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
-
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
