@@ -420,6 +420,17 @@ body2 {
     margin-top: 2.5%;
 }
 
+.contents-top2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
 .text-description {
     background-color: #F1F1F5;
     border-radius: 10px;
@@ -598,8 +609,8 @@ img.demo-videos {
     margin-right: 2px;
     margin-top: 2.5px;
     margin-bottom: 5px;
-    /* max-width: 300px;
-    max-height: 300px;  */
+    max-width: 300px;
+    max-height: 300px; 
     display: flex;
     align-items: center; 
     flex-direction: row;
