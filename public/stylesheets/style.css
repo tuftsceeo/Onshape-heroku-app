@@ -319,6 +319,15 @@ body2 {
     color: gray;
 }
 
+.embed-link2 {
+    font-size: 20px;
+    color: #000000;
+    font-family: "LemonBold";
+}
+.embed-link2:hover {
+    color: #E56878; 
+}
+
 .overlay-icon {
     position: absolute;
     top: 0;
