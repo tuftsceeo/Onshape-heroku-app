@@ -615,7 +615,7 @@ img.demo-videos {
 }
 
 .image-sneakpeek2 {
-    max-width: 200px;
+    /* max-width: 200px;
     max-height: 200px; 
     display: flex;
     margin-left: 2px;
@@ -623,10 +623,14 @@ img.demo-videos {
     margin-top: 2.5px;
     margin-bottom: 5px;
     flex-direction: row;
-
     padding: 0;
     align-items: center;
-    align-self: center;
+    align-self: center; */
+    display: flex; 
+    flex-direction: row; 
+    height: 400px; 
+    margin-left: 5px; 
+    margin-right: 5px; 
 }
 
 .image-sneakpeek3 {
@@ -670,6 +674,7 @@ img.challenge-examples {
     height: 250px;
     margin-left: 5px; 
     margin-right: 5px; 
+    float: left; 
 }
 
 .text-sneakpeek {
