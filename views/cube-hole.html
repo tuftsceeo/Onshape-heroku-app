@@ -52,11 +52,33 @@
       <div class="contents-top2">
         <div class="text-description">
           <h3>Overview of Steps</h3><br/>
-          <p class="normal">1) <a href="#step1-cube-hole" style="position:absolute; top:-100px;" class="embed-link2">Sketch a 2"X 2" Square</a></p>
-          <p class="normal">2) <a href="#step2-cube-hole" style="position:absolute; top:-100px;" class="embed-link2">Extrude Add a Face</a></p>
-          <p class="normal">3) <a href="#step3-cube-hole" style="position:absolute; top:-100px;" class="embed-link2">Sketch a Circle with a Diameter of 1 in</a></p>
-          <p class="normal">4) <a href="#step4-cube-hole" style="position:absolute; top:-100px;" class="embed-link2">Extrude Remove a Hole</a></p>
+          <p class="normal">1) <a href="#step1-cube-hole" class="embed-link2">Sketch a 2"X 2" Square</a></p>
+          <p class="normal">2) <a href="#step2-cube-hole" class="embed-link2">Extrude Add a Face</a></p>
+          <p class="normal">3) <a href="#step3-cube-hole" class="embed-link2">Sketch a Circle with a Diameter of 1 in</a></p>
+          <p class="normal">4) <a href="#step4-cube-hole" class="embed-link2">Extrude Remove a Hole</a></p>
         </div>
+
+        <script>
+          // The function actually applying the offset
+          function offsetAnchor() {
+            if (location.hash.length !== 0) {
+              window.scrollTo(window.scrollX, window.scrollY - 100);
+            }
+          }
+
+          // Captures click events of all a elements with href starting with #
+          $(document).on('click', 'a[href^="#"]', function(event) {
+            // Click events are captured before hashchanges. Timeout
+            // causes offsetAnchor to be called after the page jump.
+            window.setTimeout(function() {
+              offsetAnchor();
+            }, 0);
+          });
+
+          // Set the offset when entering page with hash present in the url
+          window.setTimeout(offsetAnchor, 0);
+        </script>
+        
         <div class="text-description">
           <h3>Approach #1</h3><br/>
           <div class="image-sneakpeek2">
