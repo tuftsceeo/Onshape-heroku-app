@@ -557,17 +557,17 @@ body2 {
     height: 100px;
     text-align: center;
     align-content: center;
-    padding-left: 20px;
+    /* padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px; 
-    padding-bottom: 5px; 
-    margin: 0%;
+    padding-bottom: 5px; */
+    padding: 20px 10px; 
+    /* margin: 0%;
     margin-top: 0%;
-    margin-bottom: 5px;
+    margin-bottom: 5px; */
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    overflow: auto;
 }
 
 img.demo-videos {
@@ -694,13 +694,14 @@ img.demo-videos {
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
     color: #f1f1f1; 
     width: 100%;
-    max-width: 300px; 
+    /* max-width: 300px;  */
     transition: .5s ease;
     opacity:0;
     color: white;
     font-size: 20px;
-    padding: 20px;
+    padding: 0;
     text-align: center;
+    align-self: center;
 }
 
 .sneakpeek-container:hover .feature-name {
