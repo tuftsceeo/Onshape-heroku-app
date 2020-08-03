@@ -2301,6 +2301,10 @@ img.gallery-display {
     /* display: block;  */
 }
 
+img.gallery-display1 {
+    width: 100%;
+}
+
 .gallery-container {
     display: flex; 
     flex-direction: column;
@@ -2453,4 +2457,21 @@ img.gallery-display {
     .modal-content {
         width: 100%;
     }
+}
+
+.close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
