@@ -17,18 +17,11 @@
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
   <div class="container">
     <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
-        <div class="bar1" style="--delay: 0.00s"></div>
-        <div class="bar2" style="--delay: 0.10s"></div>
-        <div class="bar3" style="--delay: 0.20s"></div>
-      </div>  -->
       <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -45,176 +38,416 @@
           <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
         </div>
       </div>
-      <h2 class="header-text"> Our Approach </h2> 
+      <h2 class="header-text"> Onshape- </h2> 
     </div>
-    
-    <div class="mid">
-      <div class="contents-top">
-        <div class="text-description">
-          <h3> Challenge </h3>
-          <p class="normal">Use Onshape to construct a hinge!</p>
-        </div> 
-        <img src="images/paperclip-final.gif" alt="paperclip-gif">
+    <div class="mid"> 
+      <div class="contents-center">
+        <h4 id="stroke"> Hinge Approaches </h4><br/>
       </div>
 
-      <div class="contents-top">
-        <div class="text-description-center">
-          <h3> We tried! </h3>
-          <p class="normal">We used LINE, CIRCLE, TANGENT, TRIM, MIRROR, LOFT, EXTRUDE, DIMENSION, and TRANSFORM.</p>
-        </div>
+      <div class="tablink-format">
+        <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
+        <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
+        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
       </div>
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-sketch.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-            <h3>Step 1: </h3>
-            <p class="normal">description</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 2: </h3>
-            <p class="normal">description</p>
-        </div>
-
-        <video controls>
-          <source src="videos/cup-dimension.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 3:</h3>
-          <p class="normal">description</p>
-        </div>
-      </div>
-
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 4: </h3>
-          <p class="normal">description</p>
-        </div>
-        <video controls>
-          <source src="videos/cup-handle-plane.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 5: </h3>
-          <p class="normal">description</p>
-        </div>
-      </div>
-
-      <div class="contents-button">
-        <div class="wrapper-small">
-            <h3 class="title-white">Take me back to the placemat</h3><br/>
-            <a href="/hinge-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-        </div>
-      </div>
-
-      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
-      <div id="feedback-form">
-        <div class="form-container">
-          <h3 class="title-white">Feedback Form</h3>
-          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="dummy" name="google-sheets">
-            <hr>
-            <div class="text-input">
-              <label for="liked">What did you like?</label>
-              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
-            </div> 
-            
-            <div class="text-input">
-              <label for="disliked">What didn't you like?</label>
-              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+      <div id="Approach1" class="tabcontent">
+        <div class="mid">
+          <div class="contents-top2">
+            <div class="text-description">
+              <h3>Overview of Steps</h3><br/>
+              <p class="normal">1) <a href="#step1-hinge" class="embed-link2">Use the Line Tool to Start Sketching Half of the Hinge</a></p>
+              <p class="normal">2) <a href="#step2-hinge" class="embed-link2">Use the Circle Tool to Draw the Center of the Hinge</a></p>
+              <p class="normal">3) <a href="#step3-hinge" class="embed-link2">Use the Line Tool again to Connect the Circles and the Lines</a></p>
+              <p class="normal">4) <a href="#step4-hinge" class="embed-link2">Use the Tangent Tool to Connect the Circles to the Lines</a></p>
+              <p class="normal">5) <a href="#step5-hinge" class="embed-link2">Use the Trim Tool to Remove Excess Sketch Lines</a></p>
+              <p class="normal">*) <a href="#stepopt-hinge" class="embed-link2">Use the Dimension Tool to Resize your Hinge</a></p>
+              <p class="normal">6) <a href="#step6-hinge" class="embed-link2">Use the Extrude Tool to Make your Hinge 3D</a></p>
+              <p class="normal">7) <a href="#step7-hinge" class="embed-link2">Use the Circle Tool to Make Nail Holes</a></p>
+              <p class="normal">8) <a href="#step8-hinge" class="embed-link2">Use the Line Tool to Create a Construction Line</a></p>
+              <p class="normal">9) <a href="#step9-hinge" class="embed-link2">Use the Circle Tool to Create More Nail Holes</a></p>
+              <p class="normal">10) <a href="#step10-hinge" class="embed-link2">Use the Mirror Tool to Replicate the Circle</a></p>
+              <p class="normal">11) <a href="#step11-hinge" class="embed-link2">Use the Circle Tool to Create the Holes on the Other Side of the Hinge</a></p>
+              <p class="normal">12) <a href="#step12-hinge" class="embed-link2">Use the Loft Tool to Remove the Holes</a></p>
+              <p class="normal">13) <a href="#step13-hinge" class="embed-link2">Use the Plane Tool and Mirror Tool to Create the Other Half of the Hinge</a></p>
+              <p class="normal">14) <a href="#step14-hinge" class="embed-link2">Use the Corner Rectangle Tool to Sketch the Hinge Sleeves</a></p>
+              <p class="normal">15) <a href="#step15-hinge" class="embed-link2">Use the Extrude Remove Tool to Finish Creating the Hinges</a></p>
+              <p class="normal">16) <a href="#step16-hinge" class="embed-link2">Use the Transform Tool to Move the Two Halves Together</a></p>
+              <p class="normal">17) <a href="#step17-hinge" class="embed-link2">Use the Circle Tool and Extrude Tool to Create the Pin</a></p>
             </div>
+
+            <script>
+              // The function actually applying the offset
+              function offsetAnchor() {
+                if (location.hash.length !== 0) {
+                  window.scrollTo(window.scrollX, window.scrollY - 70);
+                }
+              }
+
+              // Captures click events of all a elements with href starting with #
+              $(document).on('click', 'a[href^="#"]', function(event) {
+                // Click events are captured before hashchanges. Timeout
+                // causes offsetAnchor to be called after the page jump.
+                window.setTimeout(function() {
+                  offsetAnchor();
+                }, 0);
+              });
+
+              // Set the offset when entering page with hash present in the url
+              window.setTimeout(offsetAnchor, 0);
+            </script>
             
-            <div class="text-input">
-              <label for="comments">What did you wish/didn't wish to see?</label>
-              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
-            </div> 
-
-            <div class="text-input">
-              <label for="additional">Any additional comments?</label>
-              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
-            </div>
-            <hr>
-
-            <!-- <div class="rate">
-              <label for="rate-app">Rate our app!</label><br>
-              <div class="rating">
-                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
-                <label for="star5">☆</label>
-                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
-                <label for="star4">☆</label>
-                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
-                <label for="star3">☆</label>
-                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
-                <label for="star2">☆</label>
-                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
-                <label for="star1">☆</label>
+            <div class="text-description">
+              <h3>Approach #1</h3><br/>
+              <div class="image-sneakpeek3">
+                <img src="images/hinge-view.gif" alt="hinge-gif">
               </div>
-            </div> -->
+            </div> 
+          </div>
+          
+          <hr class="divider">
 
-            <input type="submit" class="submitbtn" value="Submit">
-          </form>
+          <div class="contents-top">
+            <div class="text-description-center">
+              <h3> We tried! </h3>
+              <p class="normal">We used LINE, CIRCLE, TANGENT, TRIM, MIRROR, LOFT, EXTRUDE, DIMENSION, and TRANSFORM.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step1-hinge">
+            <video controls>
+              <source src="videos/hinge-sketch1.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+                <h3>Step 1: Use the Line Tool to Start Sketching Half of the Hinge</h3>
+                <p class="normal">Select the line tool and start drawing 3 sides of a normal rectangle. In other words, draw the top, the left side, and the bottom.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step2-hinge">
+            <div class="text-description">
+              <h3>Step 2: Use the Circle Tool to Draw the Center of the Hinge</h3>
+                <p class="normal">Within the same sketch, click out of the circle tool and draw two cocentric circles right next to the 3 lines that you just drew.</p>
+                <p class="normal">The circles should be on the open side of the "rectangle," or the 3 lines, that you drew.</p>
+                <p class="normal">Approximate the size of the circles by having the diameters be about 4 times the "width" of the incomplete rectangle. 
+            </div>
+
+            <video controls>
+              <source src="videos/hinge-sketch2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step3-hinge">
+            <video controls>
+              <source src="videos/hinge-sketch3.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 3: Use the Line Tool again to Connect the Circles and the Lines</h3>
+              <p class="normal">Click on the line tool and draw a line from the right edge of the top line of the incomplete rectangle (point closest to the circles) to the edge of the inner circle. Just make this line straight along the same axis. </p>
+              <p class="normal">Then, from that same starting point, draw another line angled downwards. It doesn't really matter where you stop the line, so just click anywhere inside or outside the circle. This will make sense later on.</p>
+              <p class="normal">From the right edge of the bottom line of the incomplete rectangle (the point right below where you started drawing the last line), draw another angled line downwards and click anywhere. If it helps, try to make this line parallel to the last angled line you just drew. 
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step4-hinge">
+            <div class="text-description">
+              <h3>Step 4: Use the Tangent Tool to Connect the Circles to the Lines</h3>
+              <p class="normal">Still in the same sketch, click on the tangent tool. Select 2 entities at a time that you want to be tangent to each other.</p>
+              <p class="normal">First click on the first line angled downwards and click on the inner circle edge. The line will now be tangent to the inner circle.</p>
+              <p class="normal">Repeat this for the other line angled downwards. Select the line and then click on the outer circle edge.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-tangent.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step5-hinge">
+            <video controls>
+              <source src="videos/hinge-trim.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 5: Use the Trim Tool to Remove Excess Sketch Lines</h3>
+              <p class="normal">In the same sketch, select the trim tool to remove the sketch lines that you no longer need/want.</p>
+              <p class="normal">You want to end up with a sort of hook at one end of half the hinge (the circular side should be the hook). View the end of the video to see what we mean.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="stepopt-hinge">
+            <div class="text-description">
+              <h3>Optional Step: Use the Dimension Tool to Resize your Hinge</h3>
+              <p class="normal">Click on the dimension tool if you would like to change some of the part sizes for your hinge.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-dimension.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step6-hinge">
+            <video controls>
+              <source src="videos/hinge-extrude.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 6: Use the Extrude Tool to Make your Hinge 3D</h3>
+              <p class="normal">You can either stay in the sketch and click the extrude tool or you can exit out of the sketch, click the extrude tool, and then select the face that you just created.</p>
+              <p class="normal">Set the height of the hinge to whatever you want. In our case, we will set it to 2.5 inches.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step7-hinge">
+            <div class="text-description">
+              <h3>Step 7: Use the Circle Tool to Make Nail Holes</h3>
+              <p class="normal">Start a new sketch on the flat surface of the hinge. Select the circle tool and draw a small-medium circle, or however big you think the diameter of a nail might be with respect to the hinge.</p>
+              <p class="normal">Draw this circle approximately at the vertical halfway mark. Perhaps have it close to the edge of the hinge as well.
+            </div>
+            <video controls>
+              <source src="videos/hinge-circles.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step8-hinge">
+            <video controls>
+              <source src="videos/hinge-construction.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 8: Use the Line Tool to Create a Construction Line</h3>
+              <p class="normal">Using the line tool in the same sketch, draw a line all the way across the hinge, passing through the center of the circle that you just draw. Try your best to have this line exactly in the middle of the hinge. You may use the dimension tool to help you, but we will just approximate.</p>
+              <p class="normal">Right click on the line that you just drew and select contruction. You have now created a line that you can use as an anchor, measure sketches from, and mirror sketches across. This will be useful for later steps.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step9-hinge">
+            <div class="text-description">
+              <h3>Step 9: Use the Circle Tool to Create More Nail Holes</h3>
+              <p class="normal">Sketch another circle above the contruction line that you just created.</p>
+              <p class="normal">Right click on this circle and select "construction" again if you see that you are still in construction mode (the dotted outlines).</p>
+              <p class="normal">Use the dimension tool to make sure that the two circles you have are the same size.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-more-circles.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step10-hinge">
+            <video controls>
+              <source src="videos/hinge-mirror.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 10: Use the Mirror Tool to Replicate the Circle</h3>
+              <p class="normal">In the same sketch, use the mirror tool to create the same circle that you just drew on the other side of the construction line.</p>
+              <p class="normal">Select the line over which you wish to mirror the circle, and then click on the circle itself.</p>
+              <p class="normal">Afterwards, you may delete the construction line and click the green check mark to finish this sketch.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step11-hinge">
+            <div class="text-description">
+              <h3>Step 11: Use the Circle Tool to Create the Holes on the Other Side of the Hinge</h3>
+              <p class="normal">On the other side of the hinge, use the circle tool to create slightly smaller circles with the same center as the circles on the first side you drew them on.</p>
+              <p class="normal">You can see your first circle sketches on the first side by having them visible (the eye icon in the left bar next to the sketch).</p>
+              <p class="normal">You can use the dimension tool to make them all the same size.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-small-circles.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step12-hinge">
+            <video controls>
+              <source src="videos/hinge-loft.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 12: Use the Loft Tool to Remove the Holes</h3>
+              <p class="normal">Select the loft tool to finally remove the holes from the circle sketches that you made.</p>
+              <p class="normal">When using the loft tool, you want to select two entities/faces: one face lofts to the other.</p>
+              <p class="normal">Select the respective large and small circles to remove the holes through the flat surface of the hinge.</p>
+              <p class="normal">Do this for all three of the holes</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step13-hinge">
+            <div class="text-description">
+              <h3>Step 13: Use the Plane Tool and Mirror Tool to Create the Other Half of the Hinge</h3>
+              <p class="normal">Select the plane tool and offset the new Right plane by however many inches. We kept it to 1 inch.</p>
+              <p class="normal">Use the mirror tool and mirror the entire hinge half that you just created across the new plane.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-plane.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step14-hinge">
+            <video controls>
+              <source src="videos/hinge-rectangles.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 14: Use the Corner Rectangle Tool to Sketch the Hinge Knuckles</h3>
+              <p class="normal">In a new sketch, select the corner rectangle tool to draw the knuckles of the hinge. Work your way down the hinge, and make sure the rectangles on one half of the hinge don't interfere with those on the other half.</p>
+              <p class="normal">If you would like, you can use the dimension tool to make exact measurements.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step15-hinge">
+            <div class="text-description">
+              <h3>Step 15: Use the Extrude Remove Tool to Finish Creating the Hinges</h3>
+              <p class="normal">Select the extrude tool and make sure that it is set to "Remove" instead of "Add."</p>
+              <p class="normal">First extrude remove the front half of the hinge knuckles and make sure to select "merge with all" to remove all of the rectangles.</p>
+              <p class="normal">Repeat that same process but for the back half of the hinge knuckles.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-rectangle-remove.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step16-hinge">
+            <video controls>
+              <source src="videos/hinge-rectangles.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 16: Use the Transform Tool to Move the Two Halves Together</h3>
+              <p class="normal">Select the transform tool and use the displayed arrows to move the two halves of the hinge together.</p>
+            </div>
+          </div>
+
+          <hr class="step-divider">
+
+          <div class="contents" id="step17-hinge">
+            <div class="text-description">
+              <h3>Step 17: Use the Circle Tool and Extrude Tool to Create the Pin</h3>
+              <p class="normal">In the middle where the two hingles come together, draw a circle with the circle tool.</p>
+              <p class="normal">Use the extrude tool to extrude the circle to create a cylinder, which will act as a pin for the hinge. Make this as tall as the hinge itself.</p>
+            </div>
+            <video controls>
+              <source src="videos/hinge-pin.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="divider">
+
+          <div class="contents-button">
+            <div class="wrapper-small">
+                <h3 class="title-white">Take me back to the challenge</h3><br/>
+                <a href="/hinge-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="form-closed">
-        <h3 class="title-white"> Thanks for your feedback! </h3>
+
+      <div id="Approach2" class="tabcontent">
+        <div class="mid">
+            <div class="contents-top2">
+                <div class="text-description">
+                  <h3>Overview of Steps</h3><br/>
+                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
+                </div>
+
+                <script>
+                  // The function actually applying the offset
+                  function offsetAnchor() {
+                    if (location.hash.length !== 0) {
+                      window.scrollTo(window.scrollX, window.scrollY - 70);
+                    }
+                  }
+
+                  // Captures click events of all a elements with href starting with #
+                  $(document).on('click', 'a[href^="#"]', function(event) {
+                    // Click events are captured before hashchanges. Timeout
+                    // causes offsetAnchor to be called after the page jump.
+                    window.setTimeout(function() {
+                      offsetAnchor();
+                    }, 0);
+                  });
+
+                  // Set the offset when entering page with hash present in the url
+                  window.setTimeout(offsetAnchor, 0);
+                </script>
+                
+                <div class="text-description">
+                  <h3>Approach #2</h3><br/>
+                  <div class="image-sneakpeek2">
+                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
+                  </div>
+                </div> 
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-top">
+                <div class="text-description-center">
+                  <h3> We tried! </h3>
+                  <p class="normal">This is an example using ...</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Take me back to the challenge</h3><br/>
+                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+                </div>
+            </div>
+        </div>
       </div>
 
-    </div>
-    <div class="footer">
-    </div>
+      <div id="Approach3" class="tabcontent">
+        <h3 class="title-white">Approach #3</h3>
+        
+      </div> 
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
   </div>
+
   <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
-
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
-
-      formSubmitClose();
-    }
-
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
-
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";

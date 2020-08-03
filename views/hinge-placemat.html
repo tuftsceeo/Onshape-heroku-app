@@ -45,17 +45,28 @@
           <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
         </div>
       </div>
-      <h2 class="header-text"> Hinge </h2> 
+      <h2 class="header-text"> Onshape- </h2> 
     </div>
     
     <div class="mid">
       <div class="contents-top">
-        <div class="text-description">
-          <h3> Challenge </h3>
+        <div class="text-description-center">
+          <h3>Challenge Statement</h3>
           <p class="normal">Use Onshape to create a hinge!</p>
-        </div> 
-        <img src="images/paperclip-final.gif" alt="paperclip-gif">
+        </div>
+        <div class="contents-example">
+          <h4>Example(s):</h4>
+          <div class="image-sneakpeek2">
+            <!-- <img src="images/cube-hole-view.gif" alt="cube-view-gif" class="challenge-examples"> -->
+            <div class="sneakpeek-container">
+              <img src="images/hinge-view.gif" alt="hinge-view" class="challenge-examples">
+              <div class="feature-name">Our hinge</div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <hr class="divider">
 
       <div class="contents-top">
         <div class="text-description-center">
@@ -65,29 +76,32 @@
       </div>
 
       <div class="contents">
-        <div class="image-container">
-            <img src="images/line-tool.png" alt="line-tool">
+        <div class="tools-container">
+          <h4>Initial Tool bar</h4>
+          <p class="normal2">Tool bar outside of a sketch</p>
         </div>
-        <div class="image-container">
-            <img src="images/spline-tool.png" alt="spline-tool">
-        </div>
-        <div class="image-container">
-            <img src="images/3pointarc-tool.png" alt="3pointarc-tool">
+        <div class="tools-container">
+          <img src="images/hinge-tools.png" alt="hinge-tools1">
         </div>
       </div>
-
       <div class="contents">
-        <div class="image-container">
-            <img src="images/3pointcircle-tool.png" alt="3pointcircle-tool">
+        <div class="tools-container">
+          <h4>Sketch Tool bar</h4>
+          <p class="normal2">Tool bar once inside a sketch</p>
         </div>
-        <div class="image-container">
-            <img src="images/appearance-tool.png" alt="appearance-tool">
+        <div class="tools-container">
+          <img src="images/hinge-tools2.png" alt="hinge-tools2">
         </div>
       </div>
 
-      <button class="accordion"><h3>Hints:</h3></button>
-      <div class="panel">
-        <p class="normal">ONSHAPE TIP: </p>
+      <hr class="divider">
+
+      <div class="text-description-panel">
+        <button class="accordion"><h3>Click here for some hints:</h3></button>
+        <div class="panel">
+          <p class="normal2">ONSHAPE TIP: Using the Tangent tool.</p>
+          <p class="normal2">You want to make sure that you connect the cocentric circles that you drew to the initial lines that you drew so that when you use the Tangent tool, the size of the circles don't change. Instead, they will move so that the lines are tangent to the circles. This is possible because of that line connection that you draw between the circles and the lines. The line anchors the size of the circles.</p>
+        </div>
       </div>
 
       <script>
@@ -111,14 +125,19 @@
         }
       </script>
 
-      <hr class="divider"> 
+      <hr class="divider">
 
-      <div class="contents-button">
-          <div class="wrapper-small">
-              <h3 class="title-white">See how we did it!</h3><br/>
-              <a href="/hinge" class="hvr-grow" target="_self"><button type="button" class="btn-home">Our hinge</button></a>
-          </div>
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3>See some solutions!</h3><br/>
+          <p class="normal">Follow this button to learn how others did it!</p>
+        </div>
+        <br/>
+        <a href="/hinge" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approaches</button></a><br/>
+        <!-- <a href="/cube-hole2" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approach #2</button></a> -->
       </div>
+
+      <hr class="divider">
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
