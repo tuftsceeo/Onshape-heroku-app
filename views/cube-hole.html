@@ -17,18 +17,11 @@
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
   <div class="container">
     <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
-        <div class="bar1" style="--delay: 0.00s"></div>
-        <div class="bar2" style="--delay: 0.10s"></div>
-        <div class="bar3" style="--delay: 0.20s"></div>
-      </div>  -->
       <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -47,223 +40,303 @@
       </div>
       <h2 class="header-text"> Onshape- </h2> 
     </div>
-    
-    <div class="mid">
-      <div class="contents-top2">
-        <div class="text-description">
-          <h3>Overview of Steps</h3><br/>
-          <p class="normal">1) <a href="#step1-cube-hole" class="embed-link2">Sketch a 2"X 2" Square</a></p>
-          <p class="normal">2) <a href="#step2-cube-hole" class="embed-link2">Extrude Add a Face</a></p>
-          <p class="normal">3) <a href="#step3-cube-hole" class="embed-link2">Sketch a Circle with a Diameter of 1 in</a></p>
-          <p class="normal">4) <a href="#step4-cube-hole" class="embed-link2">Extrude Remove a Hole</a></p>
-        </div>
-
-        <script>
-          // The function actually applying the offset
-          function offsetAnchor() {
-            if (location.hash.length !== 0) {
-              window.scrollTo(window.scrollX, window.scrollY - 100);
-            }
-          }
-
-          // Captures click events of all a elements with href starting with #
-          $(document).on('click', 'a[href^="#"]', function(event) {
-            // Click events are captured before hashchanges. Timeout
-            // causes offsetAnchor to be called after the page jump.
-            window.setTimeout(function() {
-              offsetAnchor();
-            }, 0);
-          });
-
-          // Set the offset when entering page with hash present in the url
-          window.setTimeout(offsetAnchor, 0);
-        </script>
-        
-        <div class="text-description">
-          <h3>Approach #1</h3><br/>
-          <div class="image-sneakpeek2">
-            <img src="images/cube-hole-view.gif" alt="cube-view-gif">
-          </div>
-        </div> 
-      </div>
-      
-      <hr class="divider">
-
-      <div class="contents-top">
-        <div class="text-description-center">
-          <h3> We tried! </h3>
-          <p class="normal">This is an example using RECTANGLE, CIRCLE, and EXTRUDE ADD/REMOVE.</p>
-        </div>
+    <div class="mid"> 
+      <div class="contents-center">
+        <h4 id="stroke"> Cube with a hole Approaches </h4><br/>
       </div>
 
-      <div class="contents" id="step1-cube-hole">
-        <video controls>
-          <source src="videos/cube-with-hole-sketch1.mp4" type="video/mp4">
-        </video>
-          <!-- <div class="video-container">
-          </div> -->
-        <div class="text-description">
-            <h3>Step 1: Sketch a 2" x 2" square</h3>
-            <p class="normal">In a new sketch, draw a Center Point Rectangle at the origin by going to the tool bar on the top and then clicking on the drop down arrow to select the Center Point Rectangle tool.</p> 
-            <p class="normal">Then click once to start sketching and then click again to stop.</p> 
-            <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
-            <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. Click on a side of the rectangle to adjust the length to 2in.</p>
-            <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
-        </div>
+      <div class="tablink-format">
+        <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
+        <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
+        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
       </div>
 
-      <div class="contents" id="step2-cube-hole">
-        <div class="text-description">
-          <h3>Step 2: Extrude Add a Face</h3>
-            <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the left side of the tool bar.</p>
-            <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
-            <p class="normal"><strong>1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
-            <p class="normal"><strong>2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
-            <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
-            <p class="normal">Change the depth of the extrude (or height of the cube) to 2in.</p>
-        </div>
-
-        <video controls>
-          <source src="videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
-        </video>
-
-        <!-- <div class="video-container">
-        </div> -->
-      </div>
-
-      <div class="contents" id="step3-cube-hole">
-        <!-- <div class="video-container">
-        </div> -->
-        <video controls>
-          <source src="videos/cube-with-hole-sketch2.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 3: Sketch a Circle with a Diameter of 1 in</h3>
-          <p class="normal">To make a hole, we need to start with a new sketch and draw a circle, a tool which can be found in the sketch tool bar.</p>
-          <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
-          <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
-          <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once to start the sketch and then clicking again to stop.</p>
-          <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1 in.</p>
-        </div>
-      </div>
-
-      <div class="contents" id="step4-cube-hole">
-        <div class="text-description">
-          <h3>Step 4: Extrude Remove a Hole</h3>
-          <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
-          <p class="normal">In the same sketch, click the extrude tool and click remove.</p>
-          <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube (and remember that our cube is 2 inches tall). </p>
-          <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot extrude remove a surface. **</strong></p>
-        </div>
-        <video controls>
-          <source src="videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <hr class="divider">
-
-      <div class="contents-button">
-        <div class="wrapper-small">
-            <h3 class="title-white">Take me back to the challenge</h3><br/>
-            <a href="/cube-hole-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-        </div>
-      </div>
-
-      <hr class="divider">
-
-      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
-      <div id="feedback-form">
-        <div class="form-container">
-          <h3 class="title-white">Feedback Form</h3>
-          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="dummy" name="google-sheets">
-            <hr>
-            <div class="text-input">
-              <label for="liked">What did you like?</label>
-              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
-            </div> 
-            
-            <div class="text-input">
-              <label for="disliked">What didn't you like?</label>
-              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+      <div id="Approach1" class="tabcontent">
+        <div class="mid">
+          <div class="contents-top2">
+            <div class="text-description">
+              <h3>Overview of Steps</h3><br/>
+              <p class="normal">1) <a href="#step1-cube-hole" class="embed-link2">Sketch a 2"X 2" Square</a></p>
+              <p class="normal">2) <a href="#step2-cube-hole" class="embed-link2">Extrude Add a Face</a></p>
+              <p class="normal">3) <a href="#step3-cube-hole" class="embed-link2">Sketch a Circle with a Diameter of 1 in</a></p>
+              <p class="normal">4) <a href="#step4-cube-hole" class="embed-link2">Extrude Remove a Hole</a></p>
             </div>
+
+            <script>
+              // The function actually applying the offset
+              function offsetAnchor() {
+                if (location.hash.length !== 0) {
+                  window.scrollTo(window.scrollX, window.scrollY - 100);
+                }
+              }
+
+              // Captures click events of all a elements with href starting with #
+              $(document).on('click', 'a[href^="#"]', function(event) {
+                // Click events are captured before hashchanges. Timeout
+                // causes offsetAnchor to be called after the page jump.
+                window.setTimeout(function() {
+                  offsetAnchor();
+                }, 0);
+              });
+
+              // Set the offset when entering page with hash present in the url
+              window.setTimeout(offsetAnchor, 0);
+            </script>
             
-            <div class="text-input">
-              <label for="comments">What did you wish/didn't wish to see?</label>
-              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
-            </div> 
-
-            <div class="text-input">
-              <label for="additional">Any additional comments?</label>
-              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
-            </div>
-            <hr>
-
-            <!-- <div class="rate">
-              <label for="rate-app">Rate our app!</label><br>
-              <div class="rating">
-                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
-                <label for="star5">☆</label>
-                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
-                <label for="star4">☆</label>
-                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
-                <label for="star3">☆</label>
-                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
-                <label for="star2">☆</label>
-                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
-                <label for="star1">☆</label>
+            <div class="text-description">
+              <h3>Approach #1</h3><br/>
+              <div class="image-sneakpeek2">
+                <img src="images/cube-hole-view.gif" alt="cube-view-gif">
               </div>
-            </div> -->
+            </div> 
+          </div>
+          
+          <hr class="divider">
 
-            <input type="submit" class="submitbtn" value="Submit">
-          </form>
+          <div class="contents-top">
+            <div class="text-description-center">
+              <h3> We tried! </h3>
+              <p class="normal">This is an example using RECTANGLE, CIRCLE, and EXTRUDE ADD/REMOVE.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step1-cube-hole">
+            <video controls>
+              <source src="videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+            </video>
+              <!-- <div class="video-container">
+              </div> -->
+            <div class="text-description">
+                <h3>Step 1: Sketch a 2" x 2" square</h3>
+                <p class="normal">In a new sketch, draw a Center Point Rectangle at the origin by going to the tool bar on the top and then clicking on the drop down arrow to select the Center Point Rectangle tool.</p> 
+                <p class="normal">Then click once to start sketching and then click again to stop.</p> 
+                <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
+                <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. Click on a side of the rectangle to adjust the length to 2in.</p>
+                <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step2-cube-hole">
+            <div class="text-description">
+              <h3>Step 2: Extrude Add a Face</h3>
+                <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the left side of the tool bar.</p>
+                <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
+                <p class="normal"><strong>1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
+                <p class="normal"><strong>2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
+                <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
+                <p class="normal">Change the depth of the extrude (or height of the cube) to 2in.</p>
+            </div>
+
+            <video controls>
+              <source src="videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
+            </video>
+
+            <!-- <div class="video-container">
+            </div> -->
+          </div>
+
+          <div class="contents" id="step3-cube-hole">
+            <!-- <div class="video-container">
+            </div> -->
+            <video controls>
+              <source src="videos/cube-with-hole-sketch2.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 3: Sketch a Circle with a Diameter of 1 in</h3>
+              <p class="normal">To make a hole, we need to start with a new sketch and draw a circle, a tool which can be found in the sketch tool bar.</p>
+              <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
+              <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
+              <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once to start the sketch and then clicking again to stop.</p>
+              <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1 in.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step4-cube-hole">
+            <div class="text-description">
+              <h3>Step 4: Extrude Remove a Hole</h3>
+              <p class="normal">To actually make a hole, we want to use the Extrude function again, but instead of adding an extrude, we want to remove an extrude.</p>
+              <p class="normal">In the same sketch, click the extrude tool and click remove.</p>
+              <p class="normal">Set the depth to 2in because we want the hole to go all the way through our cube (and remember that our cube is 2 inches tall). </p>
+              <p class="normal"><strong>** Note: You can only Extrude Remove a sketch if there already is an extruded part. In other words, you cannot extrude remove a surface. **</strong></p>
+            </div>
+            <video controls>
+              <source src="videos/cube-with-hole-extrude-cut.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <hr class="divider">
+
+          <div class="contents-button">
+            <div class="wrapper-small">
+                <h3 class="title-white">Take me back to the challenge</h3><br/>
+                <a href="/cube-hole-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="form-closed">
-        <h3 class="title-white"> Thanks for your feedback! </h3>
+
+      <div id="Approach2" class="tabcontent">
+        <div class="mid">
+            <div class="contents-top2">
+                <div class="text-description">
+                  <h3>Overview of Steps</h3><br/>
+                  <p class="normal">1) <a href="#step1-cube-hole2" class="embed-link2">Sketch a 2"X 2" Square</a></p>
+                  <p class="normal">2) <a href="#step2-cube-hole2" class="embed-link2">Extrude Add a Face</a></p>
+                  <p class="normal">3) <a href="#step3-cube-hole2" class="embed-link2">Sketch a Circle with a Diameter of 1 in</a></p>
+                  <p class="normal">4) <a href="#step4-cube-hole2" class="embed-link2">Sketch a Line Path for the Hole</a></p>
+                  <p class="normal">5) <a href="#step5-cube-hole2" class="embed-link2">Cut Out a Hole in the Cube</a></p>
+                </div>
+
+                <script>
+                  // The function actually applying the offset
+                  function offsetAnchor() {
+                    if (location.hash.length !== 0) {
+                      window.scrollTo(window.scrollX, window.scrollY - 100);
+                    }
+                  }
+
+                  // Captures click events of all a elements with href starting with #
+                  $(document).on('click', 'a[href^="#"]', function(event) {
+                    // Click events are captured before hashchanges. Timeout
+                    // causes offsetAnchor to be called after the page jump.
+                    window.setTimeout(function() {
+                      offsetAnchor();
+                    }, 0);
+                  });
+
+                  // Set the offset when entering page with hash present in the url
+                  window.setTimeout(offsetAnchor, 0);
+                </script>
+                
+                <div class="text-description">
+                  <h3>Approach #2</h3><br/>
+                  <div class="image-sneakpeek2">
+                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
+                  </div>
+                </div> 
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-top">
+                <div class="text-description-center">
+                  <h3> We tried! </h3>
+                  <p class="normal">This is an example using RECTANGLE, CIRCLE, LINE, EXTRUDE ADD, and SWEEP REMOVE.</p>
+                  <p class="normal">Note: The first 3 steps of this approach are the exact same as those in Approach #1.</p>
+                </div>
+            </div>
+
+            <div class="contents" id="step1-cube-hole2">
+                <video controls>
+                  <source src="videos/cube-with-hole-sketch1.mp4" type="video/mp4">
+                </video>
+                  <!-- <div class="video-container">
+                  </div> -->
+                <div class="text-description">
+                    <h3>Step 1: Sketch a 2" x 2" Square</h3>
+                    <p class="normal">In a new sketch, draw a Center Point Rectangle at the origin by going to the tool bar on the top and then clicking on the drop down arrow to select the Center Point Rectangle tool.</p> 
+                    <p class="normal">Then click once to start sketching and then click again to stop.</p> 
+                    <p class="normal"><strong>** Note: Every time you draw a new sketch, Onshape prompts you to define a plane to draw the sketch on. It's like picking which side of a sheet of paper you will be drawing on. **</strong></p>
+                    <p class="normal">On the tool bar, we will use the Dimension tool to specify the lengths of the sides. Click on a side of the rectangle to adjust the length to 2in.</p>
+                    <p class="normal">Do the same for the other side of the rectangle to create a square.</p>
+                </div>
+            </div>
+
+            <div class="contents" id="step2-cube-hole2">
+                <div class="text-description">
+                  <h3>Step 2: Extrude Add a Face</h3>
+                    <p class="normal">To create a cube, we want to use the Extrude function, which can be found on the left side of the tool bar.</p>
+                    <p class="normal"><strong>** Note: There are two ways you can use the Extrude function: **</strong></p>
+                    <p class="normal"><strong>1) Click Extrude while you are still in Sketch 1 (the sketch of the square from before) or </strong></p>
+                    <p class="normal"><strong>2) Click the check mark to finish Sketch 1, click Extrude, and then click on Sketch 1 to specify what you are extruding</strong></p>
+                    <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
+                    <p class="normal">Change the depth of the extrude (or height of the cube) to 2in.</p>
+                </div>
+
+                <video controls>
+                  <source src="videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="contents" id="step3-cube-hole2">
+                <video controls>
+                  <source src="videos/cube-with-hole-sketch2.mp4" type="video/mp4">
+                </video>
+                <div class="text-description">
+                  <h3>Step 3: Sketch a Circle with a Diameter of 1 in (radius of 0.5 inches)</h3>
+                  <p class="normal">To make a hole, we need to start with a new sketch and draw a circle, a tool which can be found in the sketch tool bar.</p>
+                  <p class="normal">** Remember again that Onshape will always prompt you to define a plane where the sketch will be drawn, so click on any plane that you want to extrude a hole through. **</p>
+                  <p class="normal"><strong>** For a better view, you can change your perspective view to the plane you chose to draw a sketch on. Ex: top view for sketching on the top plane **</strong></p>
+                  <p class="normal">Click on the circle icon in the tool bar and draw a Center Point Circle by clicking once to start the sketch and then clicking again to stop.</p>
+                  <p class="normal">We can use the Dimension tool again to specify the length of the diameter by clicking on the rim of the circle (circumference). Set this to 1 in.</p>
+                </div>
+            </div>
+
+            <div class="contents" id="step4-cube-hole2">
+                <div class="text-description">
+                  <h3>Step 4: Sketch a Line Path for the Hole</h3>
+                  <p class="normal">Another way to tell Onshape that you want a specific part of your piece empty is to specify the path in which a surface should follow through.</p>
+                  <p class="normal">Since our cube and our circle on top are centered at the origin, we'll use the line tool to draw a line from the center of the circle that you just drew to the origin, which is there the bottom face of the cube lies.</p>
+                  <p class="normal">To do this, select either the Front plane or the Right plane and then draw a line from the center point of the circle to the origin and click the green check mark to finish your sketch.</p>
+                  <p class="normal"><strong>** Note: We chose either the Front plane or the Right plane because remember that whichever plane we choose is where our sketch will go. Therefore, we have to choose a plane that clearly intersects the center of the circle and the origin. For this reason, we cannot choose the Top plane since it doesn't go through the center points; our line would just be drawn on the bottom of our cube. **</strong></p>
+                </div>
+                <video controls>
+                  <source src="videos/cube-hole2-line.mov" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="contents" id="step5-cube-hole2">
+                <video controls>
+                  <source src="videos/cube-hole2-sweep.mov" type="video/mp4">
+                </video>
+                <div class="text-description">
+                  <h3>Step 5: Cut Out a Hole in the Cube</h3>
+                  <p class="normal">Now that we have the shape of our hole (circle on the top plane) and a clear path for it (the line that goes through the cube from the top center to the origin, or the bottom center), we can use the sweep tool to cut out our hole.</p>
+                  <p class="normal">Select the sweep tool and make sure you are under "Solid" instead of "Surface." We want to sweep the entire circle to create a solid hole and not just the surface of the circle.</p>
+                  <p class="normal">Select the face of the circle on the top for the "Faces and sketch regions to sweep," then select "Sweep path" and click on the line going through the cube.</p>
+                  <p class="normal">Onshape by default assumes that you are always Adding a feature (like sweep, extrude, etc.), so you'll probably receive an error at this point. Make sure to switch it to "Remove" instead of "Add" sweep because again, we want to remove the solid hole from the cube.</p>
+                  <p class="normal">Click the green check mark to finish your sweep.</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Take me back to the challenge</h3><br/>
+                    <a href="/cube-hole-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+                </div>
+            </div>
+        </div>
       </div>
 
-    </div>
-    <div class="footer">
-    </div>
+      <div id="Approach3" class="tabcontent">
+        <h3 class="title-white">Approach #3</h3>
+        
+      </div> 
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
   </div>
+
   <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
-
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
-
-      formSubmitClose();
-    }
-
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
-
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
