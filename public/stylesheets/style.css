@@ -208,11 +208,12 @@ body2 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 5px; 
+    margin: 5px; 
+    /* margin-top: 5px; 
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
-    background-color: #30223a;
+    margin-bottom: 5px; */
+    background-color: #453053;
 }
 
 .contents-mod {
@@ -438,7 +439,7 @@ body2 {
     margin-bottom: 2.5%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2.5%;
+    margin-top: 5px;
 }
 
 .text-description {
@@ -614,6 +615,16 @@ img.demo-videos {
 }
 
 .image-sneakpeek2 {
+    padding: 0;
+    max-width: 500px;
+    max-height: 500px; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+    flex-direction: row;
+}
+
+.image-sneakpeek3 {
     padding: 0;
     max-width: 500px;
     max-height: 500px; 
@@ -1035,6 +1046,13 @@ hr {
 
 .divider {
     border: 1px solid #F1F1F5;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 95%;
+}
+
+.step-divider {
+    border-top: 1px dashed #F1F1F5;
     margin-bottom: 25px;
     margin-top: 25px;
     width: 90%;
@@ -1827,6 +1845,18 @@ html {
 }
 
 #FAQs {
+    background-color: #453053;
+}
+
+#Approach1 {
+    background-color: #453053;
+}
+
+#Approach2 {
+    background-color: #453053;
+}
+
+#Approach3 {
     background-color: #453053;
 }
 
