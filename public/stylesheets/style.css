@@ -618,11 +618,11 @@ img.demo-videos {
     margin-right: 2px;
     margin-top: 2.5px;
     margin-bottom: 5px;
-    max-width: 300px;
-    max-height: 300px; 
+    max-width: 500px;
+    max-height: 500px; 
     display: flex;
     align-items: center; 
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .sneakpeek-container {
