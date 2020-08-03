@@ -17,18 +17,11 @@
   <link href="stylesheets/hamburger.css" rel="stylesheet">
   <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
   <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
+
 <body>
   <div class="container">
     <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
-        <div class="bar1" style="--delay: 0.00s"></div>
-        <div class="bar2" style="--delay: 0.10s"></div>
-        <div class="bar3" style="--delay: 0.20s"></div>
-      </div>  -->
       <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -45,225 +38,267 @@
           <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
         </div>
       </div>
-      <h2 class="header-text"> Our Approach </h2> 
+      <h2 class="header-text"> Onshape- </h2> 
     </div>
-    
-    <div class="mid">
-      <div class="contents-top">
-        <div class="text-description">
-          <h3> Challenge </h3>
-          <p class="normal">Use Onshape to construct a cup or a mug!</p>
-        </div> 
-        <img src="images/cup-final.gif" alt="cup-gif">
+    <div class="mid"> 
+      <div class="contents-center">
+        <h4 id="stroke"> Cup/Mug Approaches </h4><br/>
       </div>
 
-      <div class="contents-top">
-        <div class="text-description-center">
-          <h3> We tried! </h3>
-          <p class="normal">We used LINE, REVOLVE, ADD PLANE, SWEEP, and APPEARANCE PANEL.</p>
-        </div>
+      <div class="tablink-format">
+        <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
+        <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
+        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
       </div>
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-sketch.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-            <h3>Step 1: Sketch the cross-sectional area for half of the cup</h3>
-            <p class="normal">Start out with a new Part Studio Sketch, and pick a plane to sketch on.</p>
-            <p class="normal">Use the Line tool, located on the left in the tool bar, to roughly draw the cross-section of half of your cup. Make sure to connect all of the lines to each other.</p>
-            <p class="normal"><strong>** Note: When we revolve this sketch, we want to revolve it around the center axis, so make sure that you have a vertical line (part of the sketch) that runs through the center point. Therefore, when we use the Revolve function, we can revolve around this vertical line.</strong></p>
-        </div>
-      </div>
+      <div id="Approach1" class="tabcontent">
+        <div class="mid">
+          <div class="contents-top2">
+            <div class="text-description">
+              <h3>Overview of Steps</h3><br/>
+              <p class="normal">1) <a href="#step1-cup" class="embed-link2">Sketch the Cross-Sectional Area for Half of the Cup</a></p>
+              <p class="normal">*) <a href="#stepopt-cup" class="embed-link2">Dimension your Cup</a></p>
+              <p class="normal">2) <a href="#step2-cup" class="embed-link2">Revolve Sketch</a></p>
+              <p class="normal">3) <a href="#step3-cup" class="embed-link2">Create the Handle by Sketching a Circle</a></p>
+              <p class="normal">4) <a href="#step4-cup" class="embed-link2">Sketch the Path of the Handle</a></p>
+              <p class="normal">5) <a href="#step5-cup" class="embed-link2">Sweep to Create the Handle</a></p>
+              <p class="normal">6) <a href="#step6-cup" class="embed-link2">Give your Handle some Color</a></p>
+              <p class="normal">*) <a href="#stepopt2-cup-cup" class="embed-link2">Give your Cup some Color!</a></p>
+            </div>
 
-      <div class="contents">
-        <div class="text-description">
-          <h3>Optional step: Dimension your cup</h3>
-            <p class="normal">Make your cup more exact by using the Dimension tool.</p>
-            <p class="normal">You can dimension your cup however you want - it depends on how thick you want your cup. In our case, we set it to 0.4 inches.</p>
-        </div>
+            <script>
+              // The function actually applying the offset
+              function offsetAnchor() {
+                if (location.hash.length !== 0) {
+                  window.scrollTo(window.scrollX, window.scrollY - 100);
+                }
+              }
 
-        <video controls>
-          <source src="videos/cup-dimension.mp4" type="video/mp4">
-        </video>
-      </div>
+              // Captures click events of all a elements with href starting with #
+              $(document).on('click', 'a[href^="#"]', function(event) {
+                // Click events are captured before hashchanges. Timeout
+                // causes offsetAnchor to be called after the page jump.
+                window.setTimeout(function() {
+                  offsetAnchor();
+                }, 0);
+              });
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-revolve.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 2: Revolve sketch</h3>
-          <p class="normal">To actually create the cup, we can use the Revolve function, located on the left in the tool bar.</p>
-          <p class="normal">Select your cross-sectional area sketch as the sketch region to revolve, and then click on the vertical axis that passes through the center point, which you drew, as the revolve axis.</p>
-          <p class="normal">** Remember that we intentionally drew a vertical line to act as the vertical axis. You can start to make sense of why we drew that - it also acts as the bottom of the cup.</p>
-          <p class="normal">Then click the green check button to finish the Revolve.</p>
-        </div>
-      </div>
+              // Set the offset when entering page with hash present in the url
+              window.setTimeout(offsetAnchor, 0);
+            </script>
+            
+            <div class="text-description">
+              <h3>Approach #1</h3><br/>
+              <div class="image-sneakpeek2">
+                <img src="images/cup-view.gif" alt="cup-gif">
+              </div>
+            </div> 
+          </div>
+          
+          <hr class="divider">
 
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 3: Create the handle by sketching a circle</h3>
-          <p class="normal">To make a handle, we will use a new Part Studio, which you can add by clicking on the "+" button on the bottom left of your screen.</p>
-          <p class="normal">We will sketch a circle on the plane that we just created. This circle is essentially the cross-sectional area of the handle.</p>
-          <p class="normal">You may dimension this circle if you want with the Dimension tool, but it is not necessary.</p>
-        </div>
-        <video controls>
-          <source src="videos/cup-handle-circle.webm" type="video/webm">
-        </video>
-      </div>
+          <div class="contents-top">
+            <div class="text-description-center">
+              <h3> We tried! </h3>
+              <p class="normal">We used LINE, REVOLVE, ADD PLANE, SWEEP, and APPEARANCE PANEL.</p>
+            </div>
+          </div>
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/cup-handle-arc.webm" type="video/webm">
-        </video>
-        <div class="text-description">
-          <h3>Step 4: Sketch the path of the handle</h3>
-          <p class="normal">We want to sketch the path in which the handle will go. To do this, we can use the 3 point arc tool, located on the left in the tool bar.</p>
-          <p class="normal"><strong>** Note: We do this because we will be using the Sweep tool, which requires an initial sketch and the path which it will follow through.</strong></p>
-          <p class="normal">After selecting the 3 point arc tool, click once on the center of the circle that we just made, once near the bottom of the cup where the handle will end, and then once in between the first two points but outside of the revolved cup to give the handle a curve.</p>
-        </div>
-      </div>
+          <div class="contents" id="step1-cup">
+            <video controls>
+              <source src="videos/cup-sketch.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+                <h3>Step 1: Sketch the Cross-Sectional Area for Half of the Cup</h3>
+                <p class="normal">Start out with a new Part Studio Sketch, and pick a plane to sketch on.</p>
+                <p class="normal">Use the Line tool, located on the left in the tool bar, to roughly draw the cross-section of half of your cup. Make sure to connect all of the lines to each other.</p>
+                <p class="normal"><strong>** Note: When we revolve this sketch, we want to revolve it around the center axis, so make sure that you have a vertical line (part of the sketch) that runs through the center point. Therefore, when we use the Revolve function, we can revolve around this vertical line.</strong></p>
+            </div>
+          </div>
 
-      <div class="contents">
-        <div class="text-description">
-          <h3>Step 5: Sweep to create the handle</h3>
-          <p class="normal">We will use the Sweep function, which is located on the left in the tool bar.</p>
-          <p class="normal">Select the circle as the sketch curve to sweep. Then select the 3 point arc that you just sketched as the sweep path.</p>
-          <p class="normal">Click the green check to finish the sweep.</p>
-        </div>
-        <video controls>
-          <source src="videos/cup-handle-sweep.webm" type="video/webm">
-        </video>
-      </div>
+          <div class="contents" id="stepopt-cup">
+            <div class="text-description">
+              <h3>Optional step: Dimension your Cup</h3>
+                <p class="normal">Make your cup more exact by using the Dimension tool.</p>
+                <p class="normal">You can dimension your cup however you want - it depends on how thick you want your cup. In our case, we set it to 0.4 inches.</p>
+            </div>
 
-      <div class="contents">
-        <video controls>
-          <source src="videos/hinge-7.mp4" type="video/mp4">
-        </video>
-        <div class="text-description">
-          <h3>Step 6: Give your handle some color</h3>
-          <p class="normal">We will use the Sweep function, which is located on the left in the tool bar.</p>
-          <p class="normal">Select the circle as the sketch curve to sweep. Then select the 3 point arc that you just sketched as the sweep path.</p>
-          <p class="normal">Click the green check to finish the sweep.</p>
-          <div class="image-container">
-            <source src="videos/cup-handle-sweep.mp4" type="video/mp4">
+            <video controls>
+              <source src="videos/cup-dimension.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="contents" id="step2-cup">
+            <video controls>
+              <source src="videos/cup-revolve.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 2: Revolve Sketch</h3>
+              <p class="normal">To actually create the cup, we can use the Revolve function, located on the left in the tool bar.</p>
+              <p class="normal">Select your cross-sectional area sketch as the sketch region to revolve, and then click on the vertical axis that passes through the center point, which you drew, as the revolve axis.</p>
+              <p class="normal">** Remember that we intentionally drew a vertical line to act as the vertical axis. You can start to make sense of why we drew that - it also acts as the bottom of the cup.</p>
+              <p class="normal">Then click the green check button to finish the Revolve.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step3-cup">
+            <div class="text-description">
+              <h3>Step 3: Create the Handle by Sketching a Circle</h3>
+              <p class="normal">To make a handle, we will use a new Part Studio, which you can add by clicking on the "+" button on the bottom left of your screen.</p>
+              <p class="normal">We will sketch a circle on the plane that we just created. This circle is essentially the cross-sectional area of the handle.</p>
+              <p class="normal">You may dimension this circle if you want with the Dimension tool, but it is not necessary.</p>
+            </div>
+            <video controls>
+              <source src="videos/cup-handle-circle.webm" type="video/webm">
+            </video>
+          </div>
+
+          <div class="contents" id="step4-cup">
+            <video controls>
+              <source src="videos/cup-handle-arc.webm" type="video/webm">
+            </video>
+            <div class="text-description">
+              <h3>Step 4: Sketch the Path of the Handle</h3>
+              <p class="normal">We want to sketch the path in which the handle will go. To do this, we can use the 3 point arc tool, located on the left in the tool bar.</p>
+              <p class="normal"><strong>** Note: We do this because we will be using the Sweep tool, which requires an initial sketch and the path which it will follow through.</strong></p>
+              <p class="normal">After selecting the 3 point arc tool, click once on the center of the circle that we just made, once near the bottom of the cup where the handle will end, and then once in between the first two points but outside of the revolved cup to give the handle a curve.</p>
+            </div>
+          </div>
+
+          <div class="contents" id="step5-cup">
+            <div class="text-description">
+              <h3>Step 5: Sweep to Create the Handle</h3>
+              <p class="normal">We will use the Sweep function, which is located on the left in the tool bar.</p>
+              <p class="normal">Select the circle as the sketch curve to sweep. Then select the 3 point arc that you just sketched as the sweep path.</p>
+              <p class="normal">Click the green check to finish the sweep.</p>
+            </div>
+            <video controls>
+              <source src="videos/cup-handle-sweep.webm" type="video/webm">
+            </video>
+          </div>
+
+          <div class="contents" id="step6-cup">
+            <video controls>
+              <source src="videos/hinge-7.mp4" type="video/mp4">
+            </video>
+            <div class="text-description">
+              <h3>Step 6: Give your Handle some Color</h3>
+              <p class="normal">We will use the Sweep function, which is located on the left in the tool bar.</p>
+              <p class="normal">Select the circle as the sketch curve to sweep. Then select the 3 point arc that you just sketched as the sweep path.</p>
+              <p class="normal">Click the green check to finish the sweep.</p>
+              <div class="image-container">
+                <source src="videos/cup-handle-sweep.mp4" type="video/mp4">
+              </div>
+            </div>
+          </div>
+
+          <div class="contents" id="stepopt2-cup">
+            <div class="text-description">
+              <h3>Optional step: Give your Cup some Color!</h3>
+              <p class="normal">Your cup is all done, but you might think that it looks a little boring. We will use the Appearance Panel to change the colors.</p>
+              <p class="normal"><strong>** Note: The cup itself and the handle are two separate parts because the cup is a part while the handle is just a surface that was modified with Sweep. So, in the Appearance Panel, there will be two options to change colors.</strong></p>
+              <p class="normal">There are different ways you can change the color, such as the Palette or the Mixer.</p>
+            </div>
+            <video controls>
+              <source src="videos/cup-color.webm" type="video/webm">
+            </video>
+          </div>
+
+          <div class="contents-button">
+            <div class="wrapper-small">
+                <h3 class="title-white">Take me back to the placemat</h3><br/>
+                <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="contents">
-        <div class="text-description">
-          <h3>Optional step: Give your cup some color!</h3>
-          <p class="normal">Your cup is all done, but you might think that it looks a little boring. We will use the Appearance Panel to change the colors.</p>
-          <p class="normal"><strong>** Note: The cup itself and the handle are two separate parts because the cup is a part while the handle is just a surface that was modified with Sweep. So, in the Appearance Panel, there will be two options to change colors.</strong></p>
-          <p class="normal">There are different ways you can change the color, such as the Palette or the Mixer.</p>
-        </div>
-        <video controls>
-          <source src="videos/cup-color.webm" type="video/webm">
-        </video>
-      </div>
+      <hr class="divider">
 
-      <div class="contents-button">
-        <div class="wrapper-small">
-            <h3 class="title-white">Take me back to the placemat</h3><br/>
-            <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-        </div>
-      </div>
 
-      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
-      <div id="feedback-form">
-        <div class="form-container">
-          <h3 class="title-white">Feedback Form</h3>
-          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
-          <form id="feedback" target="dummy" name="google-sheets">
-            <hr>
-            <div class="text-input">
-              <label for="liked">What did you like?</label>
-              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
-            </div> 
-            
-            <div class="text-input">
-              <label for="disliked">What didn't you like?</label>
-              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+      <div id="Approach2" class="tabcontent">
+        <div class="mid">
+            <div class="contents-top2">
+                <div class="text-description">
+                  <h3>Overview of Steps</h3><br/>
+                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
+                </div>
+
+                <script>
+                  // The function actually applying the offset
+                  function offsetAnchor() {
+                    if (location.hash.length !== 0) {
+                      window.scrollTo(window.scrollX, window.scrollY - 100);
+                    }
+                  }
+
+                  // Captures click events of all a elements with href starting with #
+                  $(document).on('click', 'a[href^="#"]', function(event) {
+                    // Click events are captured before hashchanges. Timeout
+                    // causes offsetAnchor to be called after the page jump.
+                    window.setTimeout(function() {
+                      offsetAnchor();
+                    }, 0);
+                  });
+
+                  // Set the offset when entering page with hash present in the url
+                  window.setTimeout(offsetAnchor, 0);
+                </script>
+                
+                <div class="text-description">
+                  <h3>Approach #2</h3><br/>
+                  <div class="image-sneakpeek2">
+                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
+                  </div>
+                </div> 
             </div>
-            
-            <div class="text-input">
-              <label for="comments">What did you wish/didn't wish to see?</label>
-              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
-            </div> 
 
-            <div class="text-input">
-              <label for="additional">Any additional comments?</label>
-              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+            <hr class="divider">
+
+            <div class="contents-top">
+                <div class="text-description-center">
+                  <h3> We tried! </h3>
+                  <p class="normal">This is an example using ...</p>
+                </div>
             </div>
-            <hr>
 
-            <!-- <div class="rate">
-              <label for="rate-app">Rate our app!</label><br>
-              <div class="rating">
-                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
-                <label for="star5">☆</label>
-                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
-                <label for="star4">☆</label>
-                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
-                <label for="star3">☆</label>
-                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
-                <label for="star2">☆</label>
-                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
-                <label for="star1">☆</label>
-              </div>
-            </div> -->
+            <hr class="divider">
 
-            <input type="submit" class="submitbtn" value="Submit">
-          </form>
+            <div class="contents-button">
+                <div class="wrapper-small">
+                    <h3 class="title-white">Take me back to the challenge</h3><br/>
+                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
+                </div>
+            </div>
         </div>
       </div>
 
-      <div id="form-closed">
-        <h3 class="title-white"> Thanks for your feedback! </h3>
-      </div>
+      <div id="Approach3" class="tabcontent">
+        <h3 class="title-white">Approach #3</h3>
+        
+      </div> 
 
-    </div>
-    <div class="footer">
-    </div>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
   </div>
+
   <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
-
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
-
-      formSubmitClose();
-    }
-
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
-
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";

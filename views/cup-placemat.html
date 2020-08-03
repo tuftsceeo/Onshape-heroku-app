@@ -50,12 +50,22 @@
     
     <div class="mid">
       <div class="contents-top">
-        <div class="text-description">
-          <h3> Challenge </h3>
+        <div class="text-description-center">
+          <h3>Challenge Statement</h3>
           <p class="normal">Use Onshape to create a cup or a mug!</p>
         </div>
-        <img src="images/cup-final.gif" alt="cup-gif">
+        <div class="contents-example">
+          <h4>Example(s):</h4>
+          <div class="image-sneakpeek2">
+            <div class="sneakpeek-container">
+              <img src="images/cup-view.gif" alt="cup-gif">
+              <div class="feature-name">My Cup</div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <hr class="divider">
 
       <div class="contents-top">
         <div class="text-description-center">
@@ -65,29 +75,31 @@
       </div>
 
       <div class="contents">
-        <div class="image-container">
-            <img src="images/line-tool.png" alt="line-tool">
+        <div class="tools-container">
+          <h4>Initial Tool bar</h4>
+          <p class="normal2">Tool bar outside of a sketch</p>
         </div>
-        <div class="image-container">
-            <img src="images/revolve-tool.png" alt="revolve-tool">
-        </div>
-        <div class="image-container">
-            <img src="images/plane-tool.png" alt="plane-tool">
+        <div class="tools-container">
+          <img src="images/cup-tools.png" alt="cup-tools1">
         </div>
       </div>
-
       <div class="contents">
-        <div class="image-container">
-            <img src="images/sweep-tool.png" alt="sweep-tool">
+        <div class="tools-container">
+          <h4>Sketch Tool bar</h4>
+          <p class="normal2">Tool bar once inside a sketch</p>
         </div>
-        <div class="image-container">
-            <img src="images/appearance-tool.png" alt="appearance-tool">
+        <div class="tools-container">
+          <img src="images/cup-tools2.png" alt="cup-tools2">
         </div>
       </div>
 
-      <button class="accordion"><h3>Hints:</h3></button>
-      <div class="panel">
-        <p class="normal">Think about what the cross-sectional area of a cup or a mug would look like. Once you have that, try using the revolve tool.<br/>The handle is made with the sweep function.</p>
+      <hr class="divider">
+
+      <div class="text-description-panel">
+        <button class="accordion"><h3>Hints:</h3></button>
+        <div class="panel">
+          <p class="normal2">Think about what the cross-sectional area of a cup or a mug would look like. Once you have that, try using the revolve tool.<br/>The handle is made with the sweep function.</p>
+        </div>
       </div>
 
       <script>
@@ -111,14 +123,19 @@
         }
       </script>
 
-      <hr class="divider"> 
+      <hr class="divider">
 
-      <div class="contents-button">
-          <div class="wrapper-small">
-              <h3 class="title-white">See how we did it!</h3><br/>
-              <a href="/cup" class="hvr-grow" target="_self"><button type="button" class="btn-home">Our cup</button></a>
-          </div>
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3>See some solutions!</h3><br/>
+          <p class="normal">Follow this button to learn how others did it!</p>
+        </div>
+        <br/>
+        <a href="/cup" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approaches</button></a><br/>
+        <!-- <a href="/cube-hole2" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approach #2</button></a> -->
       </div>
+
+      <hr class="divider">
 
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">

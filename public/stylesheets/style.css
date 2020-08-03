@@ -590,6 +590,19 @@ img.demo-videos {
     margin-right: 2%
 }
 
+.tools-container {
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-right: 2%
+}
+
 .image-right {
     margin: 0;
     padding: 0;
