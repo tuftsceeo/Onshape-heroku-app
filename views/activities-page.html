@@ -77,10 +77,10 @@
             <div class="gallery-content">
               <div class="gallery-image">
                 <img id="img-preview" src="images/cube-hole-final.png" alt="Minimum of 3 steps" class="gallery-display">
-                <img class="preview-gif" src="images/cube-hole-view.gif">
+                <!-- <img class="preview-gif" > -->
                 <div id="modal-container" class="modal">
                   <span class="close">x</span>
-                  <img class="modal-content" id="img-modal">
+                  <img class="modal-content" src="images/cube-hole-view.gif" id="img-modal">
                   <div id="caption"></div>
                 </div>
               </div>
@@ -90,6 +90,39 @@
               </div>
             </div>
           </div>
+
+          <script>
+            // Get the modal
+            var modal = document.getElementById("modal-container");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var imgs = document.getElementsByClassName("gallery-display");
+            var modalImg = document.getElementById("img-modal");
+            var captionText = document.getElementById("caption");
+            for (var i = 0; i < imgs.length; i++) {
+              img.onclick = function(evt){
+                console.log(evt);
+                modal.style.display = "block";
+                // modalImg.src = gif.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+  
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
 
           <div class="column easy">
             <div class="gallery-content">
@@ -108,6 +141,39 @@
               </div>
             </div>
           </div>
+
+          <script>
+            // Get the modal
+            var modal = document.getElementById("modal-container");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var imgs = document.getElementsByClassName("gallery-display");
+            var modalImg = document.getElementById("img-modal");
+            var captionText = document.getElementById("caption");
+            for (var i = 0; i < imgs.length; i++) {
+              img.onclick = function(evt){
+                console.log(evt);
+                modal.style.display = "block";
+                // modalImg.src = gif.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+  
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
 
           <!-- <div class="column easy">
             <div class="gallery-content">
@@ -173,7 +239,7 @@
           </div>
         </div>
 
-        <script>
+        <!-- <script>
           // Get the modal
           var modal = document.getElementById("modal-container");
           // var modal = document.getElementsByClassName("modal");
@@ -184,18 +250,17 @@
           // Get the image and insert it inside the modal - use its "alt" text as a caption
           var imgs = document.getElementsByClassName("gallery-display");
           var modalImg = document.getElementById("img-modal");
-          var modalGif = document.getElementsByClassName("preview-gif");
+          // var modalGif = document.getElementsByClassName("preview-gif");
           var captionText = document.getElementById("caption");
           for (var i = 0; i < imgs.length; i++) {
-            var img = imgs[i];
+            // var img = imgs[i];
             // var imagee = image[i]
-            var gif = modalGif[i];
+            // var gif = modalGif[i];
             img.onclick = function(evt){
               console.log(evt);
               modal.style.display = "block";
-              modalImg.src = gif.src;
-              gif.style.display="block";
-              captionText.innerHTML = img.alt;
+              // modalImg.src = gif.src;
+              captionText.innerHTML = this.alt;
           }
           }
           // for (var j = 0; j < modalGif.length; j++) {
@@ -217,7 +282,7 @@
               modal.style.display = "none";
             }
           }
-        </script>
+        </script> -->
       </div>
       <script>
         // Portfolio gallery 
