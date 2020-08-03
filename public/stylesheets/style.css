@@ -556,18 +556,21 @@ body2 {
     width: 100%;
     height: 100px;
     text-align: center;
-    align-content: center;
     /* padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px; 
     padding-bottom: 5px; */
-    padding: 20px 10px; 
+    /* padding: 20px 10px;  */
     /* margin: 0%;
     margin-top: 0%;
     margin-bottom: 5px; */
-    display: flex;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    /* display: flex; */
     justify-content: flex-start;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 img.demo-videos {
@@ -687,16 +690,15 @@ img.demo-videos {
 }
 
 .feature-name {
-    position: absolute; 
+    position: relative; 
     border-radius: 10px;
     bottom: 0; 
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
     color: #f1f1f1; 
     width: 100%;
-    max-width: 350px; 
     transition: .5s ease;
-    opacity:0;
+    opacity: 0;
     color: white;
     font-size: 20px;
     padding: 20px;
