@@ -2621,4 +2621,6 @@ img.gallery-display1 {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1; 
+    background-color: #f9f9f9a9;
 }
