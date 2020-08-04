@@ -1419,6 +1419,7 @@ label {
     margin-bottom: 0%;
     margin-right: auto;
     margin-left: auto;
+    float: left; 
 }
 
 .hvr-grow {
@@ -1598,13 +1599,14 @@ label {
 .speech-bubble {
     background-color: #000000;
     border: 1px solid #000000;
-    /* display: flex;  */
+    display: flex; 
     border-radius: 5px;
     width: 890px;
     text-align: center;
     height: 300px;
     padding: 20px;
     position: absolute;
+    float: right; 
     /* top: 550px;
     left: 520px; */
 }
