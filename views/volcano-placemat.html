@@ -158,28 +158,28 @@
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
         <div class="form-container">
-          <h3 class="title-white">Share with us how you solved this challenge!</h3>
-          <!-- <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p> -->
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
           <form id="feedback" target="dummy" name="google-sheets">
             <hr>
             <div class="text-input">
-              <label for="approach">Briefly explain how you created your volcano!</label>
-              <input type="text" placeholder="Ex: tell us some of the tools you used..." id="approach" name="approach">
+              <label for="liked">What did you like?</label>
+              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
             </div> 
             
             <div class="text-input">
-              <label for="easy">What was easy about this challenge?</label>
-              <input type="text" placeholder="..." id="easy" name="easy">
+              <label for="disliked">What didn't you like?</label>
+              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
             </div>
             
             <div class="text-input">
-              <label for="hard">What was hard about this challenge?</label>
-              <input type="text" placeholder="..." id="hard" name="hard">
+              <label for="comments">What did you wish/didn't wish to see?</label>
+              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
             </div> 
 
             <div class="text-input">
-              <label for="comments">Any additional comments?</label>
-              <input type="text" placeholder="..." id="comments" name="comments">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
             </div>
             <hr>
 
@@ -189,7 +189,7 @@
       </div>
 
       <div id="form-closed">
-        <h3 class="title-white"> Thanks for sharing! </h3>
+        <h3 class="title-white"> Thanks for your feedback! </h3>
       </div>
 
     </div>
@@ -202,7 +202,7 @@
       return false;
     });
     function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbwna8Fu85-8oe1K7oxjxxCCf5LhlWhh0p8sF29-cxqXovrrUf89/exec";
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
       let method = "POST";
       let headers = {"Content-Type": "multipart/form-data"}
       let elements = document.getElementById("feedback").elements;
