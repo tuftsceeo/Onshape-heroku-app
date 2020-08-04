@@ -1854,7 +1854,7 @@ html {
     display: flex; 
     float: left; 
     flex-direction: row;
-    width: 100%
+    width: 100%;
 }
 
 .tablink {
@@ -1867,6 +1867,7 @@ html {
     padding: 14px 16px;
     font-size: 17px;
     width: 33.3%;
+    /* width: 100%; */
     font-family: 'LemonBold';
 }
 
@@ -1877,6 +1878,15 @@ html {
 .tablink:after {
     background-color: #453053;
 }
+
+/* .tablink-approaches {
+    position: relative;
+    width: 100%;
+    max-width: 300px; 
+    height: 100%;
+    margin-left: 5px; 
+    margin-right: 5px; 
+} */
 
 
 /* Style the tab content (and add height:100% for full page content) */
