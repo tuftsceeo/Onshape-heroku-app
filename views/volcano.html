@@ -123,9 +123,20 @@
                     <p class="normal">The plane that you sketch on matters when you put the parts together in Assembly. It's good to get into the habit of building as if you were physically building it with your hands. Think: if you had some clay and started molding on the wall (Right or Front plane) instead of on a table (Top plane), your volcano will be sideways. But no worries, you can change the orientation in the Assembly; it's just an extra step!</p>
                   </div>
                 </div>
-
                 <p class="normal">Use the spline tool to draw a random shape as the base. Click as many times as you want to make curves in your volcano, and go around in a circular path.</p>
-                <p class="normal"><strong>** Note: Make sure that you close off your volcano base by ending on the first dot/checkoint you made with the spline tool. **</strong></p>
+                <div class="dropdown">
+                  <span>Note:</span>
+                  <div class="dropdown-content">
+                    <p class="normal">With the spline tool, you are essentially playing "connect the dots," except in this case, you are creating and connecting the dots simultaneously. Once you are done using the tool, you can either click "esc" on your keyboard or deselect the tool in the tool bar.</p>
+                  </div>
+                </div>
+                <p class="normal"><strong>** Make sure that you close off your volcano base by ending on the first dot/checkoint you made with the spline tool. **</strong></p>
+                <div class="dropdown">
+                  <span>How? Why?</span>
+                  <div class="dropdown-content">
+                    <p class="normal">You can tell that you made a closed-off shape because your shape's interior will be slightly shaded. If not closed off, you will just see your spline sketches (colored blue). Think: volcanos are solids, so you want a solid base. Let's say you drew an incomplete circle on a piece of paper and ONLY cut along the lines you drew: you wouldn't be able to fully cut out your circle. If you completed the circle, you'd be able to remove your circle from the rest of the paper.</p>
+                  </div>
+                </div>
                 <p class="normal">Click the green check mark to finish the sketch.</p>
             </div>
           </div>
@@ -137,6 +148,12 @@
               <h3>Step 2: Create a New Plane to Sketch the Top of the Volcano</h3>
                 <p class="normal">Change your orientation to the Front view so that you can see the sketch layers better. So far, you can see your first sketch, which will be the base of the volcano.</p>
                 <p class="normal">Before sketching the top of the volcano, use the plane tool to create a new plane. Offset it upwards by how tall you want your volcano to be. In this case, we offsetted it by 3 inches, so this volcano will be 3 inches tall.</p>
+                <div class="dropdown">
+                  <span>Why?</span>
+                  <div class="dropdown-content">
+                    <p class="normal">When 3D modeling, you need to specify where you want things to be and/or where you want them to end up. When you sketch on a plane, you are directly sketching on that plane, wherever it is located. This is why we need to create another plane and offset it so that our sketch for the top of the volcano isn't directly on top of our base. Think: it's like drawing both the base and the top on the same sheet of paper. The paper is 2D, and so your volcano will be 2D as well. Each plane is like a piece of paper: 2D.</p>
+                  </div>
+                </div>
                 <p class="normal">Click the green check mark to finish adding the plane.</p>
             </div>
             <video controls>
@@ -153,7 +170,7 @@
             <div class="text-description">
               <h3>Step 3: Use the Spline Tool to Sketch the Top of the Volcano</h3>
               <p class="normal">On the new plane that you just created (Plane 1), use the spline tool again to sketch the top of the volcano.</p>
-              <p class="normal"><strong>** Note: Remember that a volcano normally has a wide base and a smaller top, so make sure the sketch of the top of the volcano is smaller than that of the base. In other words, make the circular path shorter/smaller.</strong></p>
+              <p class="normal"><strong>** Remember that a volcano normally has a wide base and a smaller top, so make sure the sketch of the top of the volcano is smaller than that of the base. In other words, make the circular path shorter/smaller.</strong></p>
               <p class="normal">Click the green check mark to finish the sketch of the top plane.</p>
             </div>
           </div>
@@ -165,6 +182,12 @@
               <h3>Step 4: Use the Loft Tool to Create the Body of the Volcano</h3>
               <p class="normal">When you look at the Front view, you can see your two sketchs: the larger one on the bottom and the smaller one on top.</p>
               <p class="normal">We want to create the body of the volcano by connecting the larger sketch (base of volcano) to the smaller sketch (top of volcano). To do this, use the loft tool and select the faces of the two sketches.</p>
+              <div class="dropdown">
+                <span>Why Loft?</span>
+                <div class="dropdown-content">
+                  <p class="normal">Loft is a unique tool that gives the users a bit more freedom. We could've just drawn a simple volcano base and use the extrude tool to build it up, but a volcano doesn't look like that, does it? Loft is a nice feature where as long as you have a starting sketch/face and an end sketch/face, Onshape will connect the two. It's almost like the extrude tool, except you can control how and where it ends.</p>
+                </div>
+              </div>
               <p class="normal">Click the green check mark to finish the loft.</p>
             </div>
             <video controls>
@@ -181,7 +204,13 @@
             <div class="text-description">
               <h3>Step 5: Use the Shell Tool to Make the Volcano Hollow</h3>
               <p class="normal">Select the shell tool, and then click on the top surface of the volcano.</p>
-              <p class="normal"><strong>** Note: we want the top of the volcano to be hollow, not the bottom. So make sure to select the top surface and not the bottom. </strong></p>
+              <p class="normal"><strong>** We want the top of the volcano to be hollow, not the bottom. So make sure to select the top surface and not the bottom. </strong></p>
+              <div class="dropdown">
+                <span>Doesn't work. Why?</span>
+                <div class="dropdown-content">
+                  <p class="normal">You may run into some issues with this tool. Perhaps Onshape isn't letting you make your volcano hollow, and there are red outlines on your sketch or you get error messages. This is because of how you made the body of your volcano. Eveybody's is different, so try adjusting your shell thickness by making it smaller. Also, checking "Hollow" will only make the inside of your volcano hollow and won't include the top. The shell tool just empties out your volcano and just leaves the shell of it.</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -191,7 +220,19 @@
             <div class="text-description">
               <h3>Step 6: Use the Fillet Tool to Soften the Edges of the Volcano</h3>
               <p class="normal">Select the fillet tool, and then select the outer edge of the top of the volcano.</p>
+              <div class="dropdown">
+                <span>Note:</span>
+                <div class="dropdown-content">
+                  <p class="normal">Think of the fillet tool as sandpaper. You're softening and curving the edges so that it's not as pointy.</p>
+                </div>
+              </div>
               <p class="normal">Set the fillet radius to 0.1 inches.</p>
+              <div class="dropdown">
+                <span>Doesn't work. Why?</span>
+                <div class="dropdown-content">
+                  <p class="normal">Some of you might run into some issues with this as well. Depending on how thick/thin your shell is, you may have to play around with the fillet radius. Try adjusting it! The fillet radius is the radius of the curve, so if your shell thickness is small, then you might have to decrease the radius of the curve.</p>
+                </div>
+              </div>
               <p class="normal">Click the green check mark to finish the fillet.</p>
             </div>
             <video controls>
@@ -218,8 +259,20 @@
             <div class="text-description">
               <h3>Step 7: Create a New Plane for the Lava</h3>
               <p class="normal">In the same part studio as the volcano body, use the plane tool to create another plane on the Front plane.</p>
+              <div class="dropdown">
+                <span>Note:</span>
+                <div class="dropdown-content">
+                  <p class="normal">You can draw the lava in another part studio; this is just to help people sketch the angle at which they want their lava and to visualize how they want their sketch to look.</p>
+                </div>
+              </div>
               <p class="normal">From the left plane perspective, offset the plane by enough to be near the edge of the volcano's body. In this example, we offset it by 1.5 inches.</p>
-              <p class="normal"><strong>** Note: Make sure that the plane still entirely intersects the volcano body.</strong></p>
+              <p class="normal"><strong>** Make sure that the plane still entirely intersects the volcano body.</strong></p>
+              <div class="dropdown">
+                <span>Why?</span>
+                <div class="dropdown-content">
+                  <p class="normal">Remember that your sketch goes directly on the plane, wherever the plane is located. So, we want to make sure that our plane is just on the edge of the side of our volcano because that is where the lava on a volcano normally is.</p>
+                </div>
+              </div>
               <p class="normal">Click the green check mark to finish creating the new plane.</p>
             </div>
             <video controls>
@@ -236,7 +289,7 @@
             <div class="text-description">
               <h3>Step 8: Use the Spline Tool and Line Tool to Sketch the Lava</h3>
               <p class="normal">On the new plane that you made (Plane 2), use the spline tool to create the lava by drawing out what you think lava falling down a volcano should look like.</p>
-              <p class="normal"><strong>** Note: To make it look more liquidious/smooth, create many dots/checkpoints, which will create curves for the lava. **</strong></p>
+              <p class="normal"><strong>** To make it look more liquidious/smooth, create many dots/checkpoints, which will create curves for the lava. **</strong></p>
               <p class="normal">Use the line tool to connect and close off your lava so that it is its own shape.</p>
             </div>
           </div>
@@ -251,7 +304,12 @@
             <div class="text-description">
               <h3>Step 9: Use the Extrude Tool to Make the Lava 3D</h3>
               <p class="normal">Copy the sketch of the lava that you just made. In a new part studio, paste that sketch into a new sketch (Sketch 1).</p>
-              <p class="normal"><strong>** Note: We want to do this in a separate part studio because we want the lava to be a separate part than the body. If we kept it in the first part studio, it would've simply been a surface instead of its own part. This is an issue when you try to import it into an Assembly or when you try to 3D print it: neither can process a surface. **</strong></p>
+              <div class="dropdown">
+                <span>Why?</span>
+                <div class="dropdown-content">
+                  <p class="normal">We want to do this in a separate part studio because we want the lava to be a separate part than the body. If we kept it in the first part studio, it would've simply been a surface instead of its own part. This is an issue when you try to import it into an Assembly or when you try to 3D print it: neither can process a surface. Think: try building a volcano with something like clay. Normally, we mold the body of the volcano and then use more clay material to mold the lava. We either mold the lava separately and press it onto the body, or we mold it on the body itself. Either way, we can separate the clay lava and the clay body into two parts.</p>
+                </div>
+              </div>
               <p class="normal">Use the extrude tool to extrude add the surface of the lava. This will make the lava 3D.</p>
               <p class="normal">Adjust how thick you want the lava to be, and then click the green check mark to finish the extrude.</p>
             </div>
@@ -296,9 +354,21 @@
             </video>
             <div class="text-description">
               <h3>Step 11: Put the Volcano Together in Assembly</h3>
-              <p class="normal"><strong>** Note: You can add an Assembly tab by clicking on the "+" button on the bottom left hand corner. **</strong></p>
+              <p class="normal"><strong>** You can add an Assembly tab by clicking on the "+" button on the bottom left hand corner. **</strong></p>
               <p class="normal">In a new Assembly, import the two parts that you made (the volcano body and the lava) by clicking on "Insert" at the top left hand corner.</p>
+              <div class="dropdown">
+                <span>Why?</span>
+                <div class="dropdown-content">
+                  <p class="normal">The parts that you made are like LEGO bricks. You have to put the two together, and Assembly is the place to do it. Think: we're now pressing our clay pieces together to finalize our volcano.</p>
+                </div>
+              </div>
               <p class="normal">Use your mouse or the arrows provided on the parts to move your parts around and assemble your volcano.</p>
+              <div class="dropdown">
+                <span>How?</span>
+                <div class="dropdown-content">
+                  <p class="normal">The arrows are used to move the parts linearly: foward, backward, sideways. The circles are used to rotate or turn the part around. The squares are used to move the entire part anywhere you'd like. Recommendation: change your view to just one: Front, Back, Right, etc. Then use the arrows to adjust the part within that view, and then move onto the next view. That way you won't be overwhelmed with all the different arrows, squares, and circles.</p>
+                </div>
+              </div>
             </div>
           </div>
 
