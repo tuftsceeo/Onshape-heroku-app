@@ -11,7 +11,7 @@
   <script src="javascripts/threejs/js/libs/stats.min.js"></script>
   <script src="javascripts/threejs/js/controls/TrackballControls.js"></script>
 
-  <script src="javascripts/paperclip.js"></script>
+  <script src="javascripts/paperclip-placemat.js"></script>
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
@@ -41,253 +41,183 @@
       <h2 class="header-text"> Onshape- </h2> 
     </div>
     <div class="mid"> 
-      <div class="contents-center">
-        <h4 id="stroke"> Paperclip Approaches </h4><br/>
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3> Challenge Statement </h3>
+          <p class="normal">Use Onshape to create a paperclip!</p>
+        </div> 
+        <div class="contents-example">
+          <h4>Example(s):</h4>
+          <div class="image-sneakpeak2">
+            <img src="images/paperclip-view.gif" alt="paperclip-gif">
+          </div>
+        </div>
       </div>
 
-      <div class="tablink-format">
-        <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
-        <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
-        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
+      <hr class="divider">
+
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3> You try! </h3>
+          <p class="normal">Some useful tools for this project can include ARC, LINE, PLANE, CIRCLE, and SWEEP, and any other tools you think can do the trick!</p>
+        </div>
       </div>
 
-      <div id="Approach1" class="tabcontent">
-        <div class="mid">
-          <div class="contents-top2">
-            <div class="text-description">
-              <h3>Overview of Steps</h3><br/>
-              <p class="normal">1) <a href="#step1-paperclip" class="embed-link2">Use the Line Tool to Start Sketching the Paperclip</a></p>
-              <p class="normal">2) <a href="#step2-paperclip" class="embed-link2">Use the 3 Point Arc Tool to Sketch the Curve of the Paperclip</a></p>
-              <p class="normal">3) <a href="#step3-paperclip" class="embed-link2">Finish the Sketch of the Paperclip with the Line Tool and 3 Point Arc Tool</a></p>
-              <p class="normal">4) <a href="#step4-paperclip" class="embed-link2">Use the Plane Tool to Create a New Plane at an End of the Paperclip</a></p>
-              <p class="normal">5) <a href="#step5-paperclip" class="embed-link2">Use the Circle Tool to Create the Cross-Section of the Paperclip</a></p>
-              <p class="normal">6) <a href="#step6-paperclip" class="embed-link2">Use the Sweep Tool to Make the Paperclip 3D</a></p>
-              <p class="normal">*) <a href="#stepopt-paperclip" class="embed-link2">Use the Appearance Panel to Give your Paperclip some Color</a></p>
-            </div>
+      <div class="contents">
+        <div class="tools-container">
+          <h4>Initial Tool bar</h4>
+          <p class="normal2">Tool bar outside of a sketch</p>
+        </div>
+        <div class="tools-container">
+          <img src="images/paperclip-tools.png" alt="paperclip-tools1">
+        </div>
+      </div>
+      <div class="contents">
+        <div class="tools-container">
+          <h4>Sketch Tool bar</h4>
+          <p class="normal2">Tool bar once inside a sketch</p>
+        </div>
+        <div class="tools-container">
+          <img src="images/paperclip-tools2.png" alt="paperclip-tools2">
+        </div>
+      </div>
+      <hr class="divider">
 
-            <script>
-              // The function actually applying the offset
-              function offsetAnchor() {
-                if (location.hash.length !== 0) {
-                  window.scrollTo(window.scrollX, window.scrollY - 70);
+      <div class="text-description-panel">
+        <button class="accordion"><h3>Click here for some hints:</h3></button>
+        <div class="panel">
+          <p class="normal">Think about what the cross-section for a paperclip looks like and think about if you can use the sweep tool.</p>
+        </div>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
                 }
-              }
-
-              // Captures click events of all a elements with href starting with #
-              $(document).on('click', 'a[href^="#"]', function(event) {
-                // Click events are captured before hashchanges. Timeout
-                // causes offsetAnchor to be called after the page jump.
-                window.setTimeout(function() {
-                  offsetAnchor();
-                }, 0);
-              });
-
-              // Set the offset when entering page with hash present in the url
-              window.setTimeout(offsetAnchor, 0);
-            </script>
-            
-            <div class="text-description">
-              <h3>Approach #1</h3><br/>
-              <div class="image-sneakpeek3">
-                <img src="images/paperclip-view.gif" alt="paperclip-gif">
-              </div>
-            </div> 
-          </div>
-          
-          <hr class="divider">
-
-          <div class="contents-top">
-            <div class="text-description-center">
-              <h3> We tried! </h3>
-              <p class="normal">We used CARC, LINE, PLANE, CIRCLE, and SWEEP.</p>
-            </div>
-          </div>
-
-          <div class="contents" id="step1-paperclip">
-            <video controls>
-              <source src="videos/paperclip-sketch1.mov" type="video/mp4">
-            </video>
-            <div class="text-description">
-                <h3>Step 1: Use the Line Tool to Start Sketching the Paperclip</h3>
-                <p class="normal">Start off by creating a line anywhere on any plane. Here, we chose the Top plane and chose to sketch some distance away from the origin. However, to make our lives easier for a later step, we chose to start the line on the same horizontal axis (looking at it from the Top plane view).</p>
-                <p class="normal">You can use the Dimension tool to make this line a specific length. This is one side of the paperclip, and we put 1.5 inches.</p>
-            </div>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="step2-paperclip">
-            <div class="text-description">
-              <h3>Step 2: Use the 3 Point Arc Tool to Sketch the Curve of the Paperclip</h3>
-                <p class="normal">Within the same sketch, click out of the Line tool and select the 3 Point Arc tool. We chose to make the paperclip as wide as the space between the initial line sketch and the origin.</p>
-                <p class="normal">With the 3 Point Arc tool, click once on the endpoint of the initial line sketch that lies on the same axis as the origin, then click again on the origin point. The last click determines the radius; make the radius the same all-around by clicking where the radius is "locked."</p>
-            </div>
-
-            <video controls>
-              <source src="videos/paperclip-sketch2.mov" type="video/mp4">
-            </video>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="step3-paperclip">
-            <video controls>
-              <source src="videos/paperclip-sketch3.mov" type="video/mp4">
-            </video>
-            <div class="text-description">
-              <h3>Step 3: Finish the Sketch of the Paperclip with the Line Tool and 3 Point Arc Tool</h3>
-              <p class="normal">Essentially repeat the first two steps to finish off the paperclip as best as you can.</p>
-              <p class="normal">Remember what a paperclip looks like when you complete this step: it looks like an oval-shaped swirl.</p>
-            </div>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="step4-paperclip">
-            <div class="text-description">
-              <h3>Step 4: Use the Plane Tool to Create a New Plane at an End of the Paperclip</h3>
-              <p class="normal">Click on the plane tool to create a new Front plane, or the plane that is perpendicular to your paperclip sketch. Use the Top view (or whichever view your paperclip is on) to make it easier to see.</p>
-              <p class="normal">Remember the first step, which was to draw a line. Try to offset your plane to the other end of that line (essentially where the paperclip starts). Also remember that we dimensioned it in the first step. This is where dimensioning it makes it easier. Simply offset the plane to however long you made that line. In our case, we will offset it by 1.5 inches since that is how long we made the line in Step 1.</p>
-            </div>
-            <video controls>
-              <source src="videos/paperclip-plane.mov" type="video/mp4">
-            </video>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="step5-paperclip">
-            <video controls>
-              <source src="videos/paperclip-circle.mov" type="video/mp4">
-            </video>
-            <div class="text-description">
-              <h3>Step 5: Use the Circle Tool to Create the Cross-Section of the Paperclip</h3>
-              <p class="normal">On the new plane that you just made, use the circle tool to sketch a small circle at the end of the first line sketch that you drew.</p>
-              <p class="normal">Remember to make the circle relatively small since this circle is essentially the thickness of the paperclip.</p>
-            </div>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="step6-paperclip">
-            <div class="text-description">
-              <h3>Step 6: Use the Sweep Tool to Make the Paperclip 3D</h3>
-              <p class="normal">Click on the sweep tool, which will prompt you to choose a face and a sweep path. Select the circle as the face. Then select the lines and the arcs that you drew as the sweep path: click on each part of it and you will see the sweep function working.</p>
-              <p class="normal">Click the green check mark once you have finished.</p>
-            </div>
-            <video controls>
-              <source src="videos/paperclip-sweep.mov" type="video/mp4">
-            </video>
-          </div>
-
-          <hr class="step-divider">
-
-          <div class="contents" id="stepopt-paperclip">
-            <video controls>
-              <source src="videos/paperclip-color.mov" type="video/mp4">
-            </video>
-            <div class="text-description">
-              <h3>Optional Step: Use the Appearance Panel to Give your Paperclip some Color</h3>
-              <p class="normal">Either right click on your new paperclip or go to the right and click on the Appearance Panel.</p>
-              <p class="normal">Use the Palette or the Mixer to choose a color.</p>
-            </div>
-          </div>
-
-          <hr class="divider">
-
-          <div class="contents-button">
-            <div class="wrapper-small">
-                <h3 class="title-white">Take me back to the challenge</h3><br/>
-                <a href="/paperclip-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div id="Approach2" class="tabcontent">
-        <div class="mid">
-            <div class="contents-top2">
-                <div class="text-description">
-                  <h3>Overview of Steps</h3><br/>
-                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
-                </div>
-
-                <script>
-                  // The function actually applying the offset
-                  function offsetAnchor() {
-                    if (location.hash.length !== 0) {
-                      window.scrollTo(window.scrollX, window.scrollY - 70);
-                    }
-                  }
-
-                  // Captures click events of all a elements with href starting with #
-                  $(document).on('click', 'a[href^="#"]', function(event) {
-                    // Click events are captured before hashchanges. Timeout
-                    // causes offsetAnchor to be called after the page jump.
-                    window.setTimeout(function() {
-                      offsetAnchor();
-                    }, 0);
-                  });
-
-                  // Set the offset when entering page with hash present in the url
-                  window.setTimeout(offsetAnchor, 0);
-                </script>
-                
-                <div class="text-description">
-                  <h3>Approach #2</h3><br/>
-                  <div class="image-sneakpeek2">
-                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
-                  </div>
-                </div> 
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-top">
-                <div class="text-description-center">
-                  <h3> We tried! </h3>
-                  <p class="normal">This is an example using ...</p>
-                </div>
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-button">
-                <div class="wrapper-small">
-                    <h3 class="title-white">Take me back to the challenge</h3><br/>
-                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div id="Approach3" class="tabcontent">
-        <h3 class="title-white">Approach #3</h3>
-        
-      </div> 
-
-    <script>
-        function openPage(pageName, elmnt, color) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-            document.getElementById(pageName).style.display = "block";
-            elmnt.style.backgroundColor = color;
+            });
         }
+      </script>
 
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
+      <hr class="divider"> 
+
+      <div class="contents-top">
+        <div class="text-description-center">
+          <h3>See some solutions!</h3><br/>
+          <p class="normal">Follow this button to learn how others did it!</p>
+        </div>
+        <br/>
+        <a href="/paperclip" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approaches</button></a><br/>
+        <!-- <a href="/cube-hole2" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approach #2</button></a> -->
+      </div>
+
+      <hr class="divider">
+
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <div id="feedback-form">
+        <div class="form-container">
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <form id="feedback" target="dummy" name="google-sheets">
+            <hr>
+            <div class="text-input">
+              <label for="liked">What did you like?</label>
+              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
+            </div> 
+            
+            <div class="text-input">
+              <label for="disliked">What didn't you like?</label>
+              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+            </div>
+            
+            <div class="text-input">
+              <label for="comments">What did you wish/didn't wish to see?</label>
+              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
+            </div> 
+
+            <div class="text-input">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+            </div>
+            <hr>
+
+            <!-- <div class="rate">
+              <label for="rate-app">Rate our app!</label><br>
+              <div class="rating">
+                <input id="star5" type="radio" value="5" class="radio-btn hide" name="entry.1456528451">
+                <label for="star5">☆</label>
+                <input id="star4" type="radio" value="4" class="radio-btn hide" name="entry.1456528451">
+                <label for="star4">☆</label>
+                <input id="star3" type="radio" value="3" class="radio-btn hide" name="entry.1456528451">
+                <label for="star3">☆</label>
+                <input id="star2" type="radio" value="2" class="radio-btn hide" name="entry.1456528451">
+                <label for="star2">☆</label>
+                <input id="star1" type="radio" value="1" class="radio-btn hide" name="entry.1456528451">
+                <label for="star1">☆</label>
+              </div>
+            </div> -->
+
+            <input type="submit" class="submitbtn" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
+      </div>
+
+    </div>
+    <div class="footer">
+    </div>
   </div>
-
   <script>
+    $('#feedback').submit(function () {
+      formPost();
+      return false;
+    });
+    function formPost() { 
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let method = "POST";
+      let headers = {"Content-Type": "multipart/form-data"}
+      let elements = document.getElementById("feedback").elements;
+      // const form = document.forms['google-sheets'];
+      let body = {};
+      const formData = new FormData();
+      for (var i = 0, element; element = elements[i++];) {
+          if (element.type === "text"){
+            let name = element.name;
+            body[name] = element.value;
+            formData.append(name, element.value);
+          }
+      }
+      console.log(body);
+      console.log(formData);
+
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+      formSubmitClose();
+    }
+
+    function formSubmitClose() { 
+      var form = document.getElementById("feedback-form");
+      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+      document.getElementById("feedback-form").style.display = "none";
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
