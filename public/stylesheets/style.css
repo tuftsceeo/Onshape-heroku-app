@@ -1605,6 +1605,7 @@ label {
     text-align: center;
     height: 300px;
     padding: 20px;
+    margin-left: 520px; 
     /* position: absolute; */
     float: right; 
     /* top: 550px;
