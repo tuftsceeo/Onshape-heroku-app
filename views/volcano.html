@@ -96,7 +96,7 @@
             <div class="text-description">
               <h3>Approach #1</h3><br/>
               <div class="image-sneakpeek3">
-                <img src="images/volcano-view.gif" alt="volcano-gif">
+                <img src="images/volcano-final.gif" alt="volcano-gif">
               </div>
             </div> 
           </div>
@@ -117,6 +117,9 @@
             <div class="text-description">
                 <h3>Step 1: Use the Spline Tool to Sketch the Base of the Volcano</h3>
                 <p class="normal">To make sure the volcano appears upright, start with a sketch on the Top plane.</p>
+                <div class="popup" onclick="MyFunction()">Why?
+                  <span class="popuptext" id="myPopup">Sketch on the Top plane so that in Assembly, your volcano will appear upright and you don't have to mess with turning it around. But you may start on other planes; just make sure to orient it correctly in Assembly!</span>
+                </div>
                 <p class="normal">Use the spline tool to draw a random shape as the base. Click as many times as you want to make curves in your volcano, and go around in a circular path.</p>
                 <p class="normal"><strong>** Note: Make sure that you close off your volcano base by ending on the first dot/checkoint you made with the spline tool. **</strong></p>
                 <p class="normal">Click the green check mark to finish the sketch.</p>
@@ -306,69 +309,6 @@
         </div>
       </div>
 
-
-      <div id="Approach2" class="tabcontent">
-        <div class="mid">
-            <div class="contents-top2">
-                <div class="text-description">
-                  <h3>Overview of Steps</h3><br/>
-                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
-                </div>
-
-                <script>
-                  // The function actually applying the offset
-                  function offsetAnchor() {
-                    if (location.hash.length !== 0) {
-                      window.scrollTo(window.scrollX, window.scrollY - 70);
-                    }
-                  }
-
-                  // Captures click events of all a elements with href starting with #
-                  $(document).on('click', 'a[href^="#"]', function(event) {
-                    // Click events are captured before hashchanges. Timeout
-                    // causes offsetAnchor to be called after the page jump.
-                    window.setTimeout(function() {
-                      offsetAnchor();
-                    }, 0);
-                  });
-
-                  // Set the offset when entering page with hash present in the url
-                  window.setTimeout(offsetAnchor, 0);
-                </script>
-                
-                <div class="text-description">
-                  <h3>Approach #2</h3><br/>
-                  <div class="image-sneakpeek2">
-                    <img src="images/cube-hole-view.gif" alt="cube-view-gif">
-                  </div>
-                </div> 
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-top">
-                <div class="text-description-center">
-                  <h3> We tried! </h3>
-                  <p class="normal">This is an example using ...</p>
-                </div>
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-button">
-                <div class="wrapper-small">
-                    <h3 class="title-white">Take me back to the challenge</h3><br/>
-                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div id="Approach3" class="tabcontent">
-        <h3 class="title-white">Approach #3</h3>
-        
-      </div> 
-
     <script>
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
@@ -386,6 +326,12 @@
 
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+
+        // When the user clicks on div, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
     </script>
   </div>
 
