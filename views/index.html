@@ -52,10 +52,6 @@
       <h2 class="header-text"> Onshape- </h2> 
     </div>
 
-    <!-- <div class="header">
-      <div class="center">An app to facilitate learning CAD</div>
-    </div> -->
-
     <div class="header">
       <div class="center">
         <h7>Anybody can <span class="emphasis"></span></h7><br/>
@@ -67,15 +63,6 @@
       <div class="contents-button">
         <h3 class="title-white">For both teachers and students in a classroom</h3>
       </div>
-      <!-- <div class="contents-button">
-        <div class="wrapper-small3">
-          <h3 class="title-white">Check out our Tools page</h3><br/>
-          <p class="description">where you will find a unique and new external tool from Onahpe that will allow you to upload your very own hand-drawn sketches to an Onshape part studio!</p><br/>
-          <div class="overlay-icon">
-            <a href="/tools" class="hvr-icon-rotate" target="_self"><button type="button" class="btn-home">Tools Page<i class="fa fa-wrench hvr-icon"></i></button></a>
-          </div>
-        </div>
-      </div> -->
 
       <div class="pages-summary">
         <div class="total-overview">
@@ -138,61 +125,45 @@
         </div>
       </div>
 
-      <!-- <div class="contents-button">
-        <div class="wrapper-small">
-          <h3 class="title-white">Check out our Activities page</h3><br/>
-          <p class="description">where you will find numerous CAD challenges ranked from easiest to most difficult to solve! Not to worry if you get stuck; you'll also find sample solutions with written and visual guidelines!</p><br/>
-          <a href="/activities" class="hvr-icon-forward" target="_self"><button type="button" class="btn-home">Activities Page<br><i class="fa fa-chevron-circle-right hvr-icon"></i></button></a>
-        </div>
-      </div>
-
-      <div class="contents-button">
-        <div class="wrapper-small">
-          <h3 class="title-white">Check out our Resources page</h3><br/>
-          <p class="description">where you will find additional resources, such as thorough explanations of the basic tools available on Onshape and FAQs!</p><br/>
-          <a href="/resources-page" class="hvr-icon-forward" target="_self"><button type="button" class="btn-home">Resources<br><i class="fa fa-chevron-circle-right hvr-icon"></i></button></a>
-        </div>
-      </div> -->
-
     </div>
     <div class="footer">
     </div>
   </div>
   <script>
-    $('#feedback').submit(function () {
-      formPost();
-      return false;
-    });
-    function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
-      let method = "POST";
-      let headers = {"Content-Type": "multipart/form-data"}
-      let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
-      let body = {};
-      const formData = new FormData();
-      for (var i = 0, element; element = elements[i++];) {
-          if (element.type === "text"){
-            let name = element.name;
-            body[name] = element.value;
-            formData.append(name, element.value);
-          }
-      }
-      console.log(body);
-      console.log(formData);
+    // $('#feedback').submit(function () {
+    //   formPost();
+    //   return false;
+    // });
+    // function formPost() { 
+    //   let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+    //   let method = "POST";
+    //   let headers = {"Content-Type": "multipart/form-data"}
+    //   let elements = document.getElementById("feedback").elements;
+    //   // const form = document.forms['google-sheets'];
+    //   let body = {};
+    //   const formData = new FormData();
+    //   for (var i = 0, element; element = elements[i++];) {
+    //       if (element.type === "text"){
+    //         let name = element.name;
+    //         body[name] = element.value;
+    //         formData.append(name, element.value);
+    //       }
+    //   }
+    //   console.log(body);
+    //   console.log(formData);
 
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
-      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+    //   // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+    //   fetch(url, {method: method, body: formData}).then(res => console.log(res));
 
-      formSubmitClose();
-    }
+    //   formSubmitClose();
+    // }
 
-    function formSubmitClose() { 
-      var form = document.getElementById("feedback-form");
-      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
-      document.getElementById("feedback-form").style.display = "none";
-      document.getElementById("form-closed").style.display = "flex";
-    }
+    // function formSubmitClose() { 
+    //   var form = document.getElementById("feedback-form");
+    //   document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+    //   document.getElementById("feedback-form").style.display = "none";
+    //   document.getElementById("form-closed").style.display = "flex";
+    // }
 
     function openNav() {
       hamburger.classList.add("is-active");
