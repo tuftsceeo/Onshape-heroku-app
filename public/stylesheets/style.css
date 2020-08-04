@@ -1418,7 +1418,7 @@ label {
     margin-top: 10%;
     margin-bottom: 0%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 400px;
     float: left; 
 }
 
@@ -2321,6 +2321,7 @@ h5 {
     width: 10%;
     /* top: 610px;
     left: 300px; */
+    margin-left: 
     display: flex; 
     position: absolute;
 }
