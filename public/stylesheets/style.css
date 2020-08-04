@@ -2604,6 +2604,7 @@ img.gallery-display1 {
 .popup {
     position: relative;
     display: inline-block;
+    text-align: center; 
     cursor: pointer;
 }
 
@@ -2620,6 +2621,7 @@ img.gallery-display1 {
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
+    overflow: auto; 
 }
 
 .popup .popuptext::after {
