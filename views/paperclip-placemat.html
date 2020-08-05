@@ -132,28 +132,28 @@
       <iframe name="dummy" id="dummy" style="display: none;"></iframe>
       <div id="feedback-form">
         <div class="form-container">
-          <h3 class="title-white">Feedback Form</h3>
-          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <h3 class="title-white">Tell us how you solved this challenge!</h3>
+          <!-- <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p> -->
           <form id="feedback" target="dummy" name="google-sheets">
             <hr>
             <div class="text-input">
-              <label for="liked">What did you like?</label>
-              <input type="text" placeholder="I liked the way..." id="liked" name="liked">
+              <label for="approach">What were some of the steps that you took?</label>
+              <input type="text" placeholder="..." id="approach" name="approach">
             </div> 
             
             <div class="text-input">
-              <label for="disliked">What didn't you like?</label>
-              <input type="text" placeholder="I didn't like how..." id="disliked" name="disliked">
+              <label for="easy">What was easy?</label>
+              <input type="text" placeholder="..." id="easy" name="easy">
             </div>
             
             <div class="text-input">
-              <label for="comments">What did you wish/didn't wish to see?</label>
-              <input type="text" placeholder="I wish I saw..." id="comments" name="comments">
+              <label for="hard">What was hard?</label>
+              <input type="text" placeholder="..." id="hard" name="hard">
             </div> 
 
             <div class="text-input">
-              <label for="additional">Any additional comments?</label>
-              <input type="text" placeholder="Awesome app!" id="additional" name="additional">
+              <label for="comment">Any additional comments?</label>
+              <input type="text" placeholder="..." id="comment" name="comment">
             </div>
             <hr>
 
@@ -163,7 +163,7 @@
       </div>
 
       <div id="form-closed">
-        <h3 class="title-white"> Thanks for your feedback! </h3>
+        <h3 class="title-white"> Thanks for sharing! </h3>
       </div>
 
     </div>
@@ -176,7 +176,7 @@
       return false;
     });
     function formPost() { 
-      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let url = "https://script.google.com/macros/s/AKfycbxtMOQmGMRpPcJ1TQ8k_S_v6VbGM5BcQF7IXcKMUKOdmTIoEXrr/exec";
       let method = "POST";
       let headers = {"Content-Type": "multipart/form-data"}
       let elements = document.getElementById("feedback").elements;

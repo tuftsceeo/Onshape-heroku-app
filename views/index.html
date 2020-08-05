@@ -125,11 +125,85 @@
         </div>
       </div>
 
+      <hr class="divider">
+
+      <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+      <div id="feedback-form">
+        <div class="form-container">
+          <h3 class="title-white">Feedback Form</h3>
+          <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p>
+          <form id="feedback" target="dummy" name="google-sheets">
+            <hr>
+            <div class="text-input">
+              <label for="liked">What did you like?</label>
+              <input type="text" placeholder="..." id="liked" name="liked">
+            </div> 
+            
+            <div class="text-input">
+              <label for="disliked">What didn't you like?</label>
+              <input type="text" placeholder="..." id="disliked" name="disliked">
+            </div>
+            
+            <div class="text-input">
+              <label for="comments">What did/didn't you wish to see?</label>
+              <input type="text" placeholder="..." id="comments" name="comments">
+            </div> 
+
+            <div class="text-input">
+              <label for="additional">Any additional comments?</label>
+              <input type="text" placeholder="..." id="additional" name="additional">
+            </div>
+            <hr>
+
+            <input type="submit" class="submitbtn" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="form-closed">
+        <h3 class="title-white"> Thanks for your feedback! </h3>
+      </div>
+
     </div>
     <div class="footer">
     </div>
   </div>
   <script>
+    $('#feedback').submit(function () {
+      formPost();
+      return false;
+    });
+    function formPost() { 
+      let url = "https://script.google.com/macros/s/AKfycbybS5ThQWE78wfbrH8BOBr7CHGfaDwbGBfPtJrLtpevaccPXsE/exec";
+      let method = "POST";
+      let headers = {"Content-Type": "multipart/form-data"}
+      let elements = document.getElementById("feedback").elements;
+      // const form = document.forms['google-sheets'];
+      let body = {};
+      const formData = new FormData();
+      for (var i = 0, element; element = elements[i++];) {
+          if (element.type === "text"){
+            let name = element.name;
+            body[name] = element.value;
+            formData.append(name, element.value);
+          }
+      }
+      console.log(body);
+      console.log(formData);
+
+      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
+      fetch(url, {method: method, body: formData}).then(res => console.log(res));
+
+      formSubmitClose();
+    }
+
+    function formSubmitClose() { 
+      var form = document.getElementById("feedback-form");
+      document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
+      document.getElementById("feedback-form").style.display = "none";
+      document.getElementById("form-closed").style.display = "flex";
+    }
+
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
