@@ -828,13 +828,6 @@ h3.title-white {
     margin-top: 0;
 }
 
-h3.form-title {
-    font-size: 35px;
-    color: black;
-    margin-bottom: 10px;
-    margin-top: 0; 
-}
-
 h4 {
     color: #F1F1F5;
     margin-bottom: 2%;
@@ -1080,11 +1073,11 @@ p.header-description {
     margin: auto;
     width: 80%;
     height: 750px;
-    background-color: #e1c2f7;
+    background-color: #616068;
 }
 
 label {
-    color: black;
+    color: white;
     font-size: 25px;
     font-family: "normal";
     margin-bottom: 0;
