@@ -1416,7 +1416,7 @@ label {
 
 .small_gif {
     width: 50%;
-    height: 50%;
+    height: 30%;
     margin-top: 10%;
     margin-bottom: 0%;
     margin-right: auto;
@@ -1607,7 +1607,7 @@ label {
     text-align: center;
     height: 300px;
     padding: 20px;
-    margin-left: 520px; 
+    margin-left: 10%; 
     /* position: absolute; */
     /* float: right;  */
     /* top: 550px;
