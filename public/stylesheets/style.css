@@ -148,7 +148,7 @@ body {
     overflow-x: hidden;
 }
 
-.contents {
+/* .contents {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -156,7 +156,7 @@ body {
     width: 100%;
     margin: 5px; 
     background-color: #453053;
-}
+} */
 
 .contents-example {
     display: flex;
@@ -639,6 +639,16 @@ p.description {
     line-height: 20px;
 }
 
+p.header-description {
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    color: white;
+    font-family: "Swansea";
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+}
+
 #feedback-form {
     display: flex;
     flex-direction: row;
@@ -1116,8 +1126,7 @@ pre {
     width: 100%;
     margin-bottom: 2.5%;
     margin: 0;
-    background-color: white; 
-    /* background-color: #30223a; */
+    background-color: #30223a;
     z-index: 1;
 }
 
