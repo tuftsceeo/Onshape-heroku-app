@@ -15,18 +15,20 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="container">
+    <!-- heading container for menu button and app name -->
     <div class="top">
+      <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+        <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
+      </button> 
+      <!-- these are the pages in the menu bar --> 
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -38,6 +40,7 @@
           <a href="/resources-page" target="_self" data-scroll onclick="closeNav()">Resources</a>
         </div>
       </div>
+      <!-- this is the overall title of the app -->
       <h2 class="header-text"> Onshape- </h2> 
     </div>
     <div class="mid"> 
@@ -45,21 +48,13 @@
         <h4 id="stroke"> Cube with a hole Approaches </h4><br/>
       </div>
 
+      <!-- tabs for different approaches -->
       <div class="tablink-format">
-        <!-- <div class="tablink-approaches">
-          <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
-        </div>
-        <div class="tablink-approaches">
-          <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
-        </div>
-        <div class="tablink-approaches">
-          <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button>
-        </div> -->
-
         <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
         <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
       </div>
 
+      <!-- first tab for approach 1 -->
       <div id="Approach1" class="tabcontent">
         <div class="mid">
           <div class="contents-top2">
@@ -113,8 +108,6 @@
             <video controls>
               <source src="videos/cube-with-hole-sketch1.mp4" type="video/mp4">
             </video>
-              <!-- <div class="video-container">
-              </div> -->
             <div class="text-description">
                 <h3>Step 1: Sketch a 2" x 2" square</h3>
                 <p class="normal">In a new sketch, draw a Center Point Rectangle at the origin by going to the tool bar on the top and then clicking on the drop down arrow to select the Center Point Rectangle tool.</p> 
@@ -137,20 +130,14 @@
                 <p class="normal">To make the square into a cube, we want to Add an extrude. Since this is our first extrude to this sketch, we are creating a New extrude.</p>
                 <p class="normal">Change the depth of the extrude (or height of the cube) to 2in.</p>
             </div>
-
             <video controls>
               <source src="videos/cube-with-hole-extrude-add.mp4" type="video/mp4">
             </video>
-
-            <!-- <div class="video-container">
-            </div> -->
           </div>
 
           <hr class="step-divider">
 
           <div class="contents" id="step3-cube-hole">
-            <!-- <div class="video-container">
-            </div> -->
             <video controls>
               <source src="videos/cube-with-hole-sketch2.mp4" type="video/mp4">
             </video>
@@ -190,7 +177,7 @@
         </div>
       </div>
 
-
+      <!-- second tab for approach 2 -->
       <div id="Approach2" class="tabcontent">
         <div class="mid">
             <div class="contents-top2">
@@ -246,8 +233,6 @@
                 <video controls>
                   <source src="videos/cube-with-hole-sketch1.mp4" type="video/mp4">
                 </video>
-                  <!-- <div class="video-container">
-                  </div> -->
                 <div class="text-description">
                     <h3>Step 1: Sketch a 2" x 2" Square</h3>
                     <p class="normal">In a new sketch, draw a Center Point Rectangle at the origin by going to the tool bar on the top and then clicking on the drop down arrow to select the Center Point Rectangle tool.</p> 
@@ -334,12 +319,8 @@
         </div>
       </div>
 
-      <!-- <div id="Approach3" class="tabcontent">
-        <h3 class="title-white">Approach #3</h3>
-        
-      </div>  -->
-
     <script>
+      // open the tab pages for the different approaches 
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -360,11 +341,13 @@
   </div>
 
   <script>
+    // open navigation menu bar
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
-  
+
+    // close navigation menu bar 
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -372,7 +355,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();

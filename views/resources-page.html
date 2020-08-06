@@ -15,18 +15,20 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="container">
+      <!-- heading container for menu button and app name -->
     <div class="top">
+        <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+          <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>  
+      <!-- these are the pages in the menu bar -->
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -40,22 +42,26 @@
       </div>
       <h2 class="header-text"> Onshape- </h2> 
     </div>
+
     <div class="mid"> 
       <div class="contents-center">
         <h4 id="stroke"> Resources </h4><br/>
       </div>
 
+      <!-- tabs for different pages -->
       <div class="tablink-format">
         <button class="tablink" onclick="openPage('Home', this, '#453053')" id="defaultOpen">Home</button>
         <button class="tablink" onclick="openPage('Tools', this, '#453053')">Tools</button>
         <button class="tablink" onclick="openPage('FAQs', this, '#453053')">FAQs</button>
       </div>
 
+      <!-- first tab for Home page -->
       <div id="Home" class="tabcontent">
         <h3 class="title-white">Home</h3>
         <p2> Welcome to the resources page! Here, you'll find tutorials, introductions to tools and features, and answers to commonly asked questions. Explore the page further for resources that explain sources of confusion in Onshape. </p2>
       </div>
 
+      <!-- second tab for Tools page -->
       <div id="Tools" class="tabcontent" height="400%;">
         <h3 class="title-white">Tools</h3>
         <p2>An introduction to basic CAD tools in Onshape. Feel free to ask our friendly cow if you're looking for something specific!</p2>
@@ -80,8 +86,8 @@
                         <li><a href="#arc">3 Point Arc</a></li>
                         <li><a href="#arc">Tangent Arc</a></li>
                         <li><a href="#point-tab">Center Point Arc</a></li>
-                        <!-- <li><a href="#">Inscribed Polygon</a></li>
-                        <li><a href="#">Circumscribed Polygon</a></li> -->
+                        <!-- <li><a href="#">Inscribed Polygon</a></li> -->
+                        <!-- <li><a href="#">Circumscribed Polygon</a></li> -->
                         <li><a href="#line-section">Spline</a></li>
                         <li><a href="#corner-rectangle">Spline Point</a></li>
                         <li><a href="#point-tab">Point</a></li>
@@ -191,6 +197,7 @@
         </div>
       </div>
 
+      <!-- third tab for FAQs page -->
       <div id="FAQs" class="tabcontent" margin-top="0%;" height="400%;">
         <h3 class="title-white">FAQs</h3>
         <p2> Answers to questions frequently asked by Onshape beginners. Click on the underlined text to view the original question and answer exchange. </p2>
@@ -227,6 +234,7 @@
     </div> 
 
     <script>
+        // open tabs
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -247,11 +255,13 @@
   </div>
 
   <script>
+    // open navigation menu bar
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
   
+    // close navigation menu bar
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -259,7 +269,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();

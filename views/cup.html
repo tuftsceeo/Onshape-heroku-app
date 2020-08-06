@@ -15,18 +15,20 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="container">
+    <!-- heading container for menu button and app name -->
     <div class="top">
+      <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+        <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>  
+      <!-- these are the pages in the menu bar -->
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -45,12 +47,12 @@
         <h4 id="stroke"> Cup/Mug Approaches </h4><br/>
       </div>
 
+      <!-- tabs to different approaches -->
       <div class="tablink-format">
         <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
-        <!-- <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
-        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button> -->
       </div>
 
+      <!-- first tab for approach 1 -->
       <div id="Approach1" class="tabcontent">
         <div class="mid">
           <div class="contents-top2">
@@ -77,8 +79,7 @@
 
               // Captures click events of all a elements with href starting with #
               $(document).on('click', 'a[href^="#"]', function(event) {
-                // Click events are captured before hashchanges. Timeout
-                // causes offsetAnchor to be called after the page jump.
+                // Click events are captured before hashchanges. Timeout causes offsetAnchor to be called after the page jump.
                 window.setTimeout(function() {
                   offsetAnchor();
                 }, 0);
@@ -231,70 +232,8 @@
         </div>
       </div>
 
-
-      <!-- <div id="Approach2" class="tabcontent">
-        <div class="mid">
-            <div class="contents-top2">
-                <div class="text-description">
-                  <h3>Overview of Steps</h3><br/>
-                  <p class="normal">1) <a href="#" class="embed-link2">Add a step</a></p>
-                </div>
-
-                <script>
-                  // The function actually applying the offset
-                  function offsetAnchor() {
-                    if (location.hash.length !== 0) {
-                      window.scrollTo(window.scrollX, window.scrollY - 70);
-                    }
-                  }
-
-                  // Captures click events of all a elements with href starting with #
-                  $(document).on('click', 'a[href^="#"]', function(event) {
-                    // Click events are captured before hashchanges. Timeout
-                    // causes offsetAnchor to be called after the page jump.
-                    window.setTimeout(function() {
-                      offsetAnchor();
-                    }, 0);
-                  });
-
-                  // Set the offset when entering page with hash present in the url
-                  window.setTimeout(offsetAnchor, 0);
-                </script>
-                
-                <div class="text-description">
-                  <h3>Approach #2</h3><br/>
-                  <div class="image-sneakpeek2">
-                    <img src="images/cup-view.gif" alt="cube-view-gif">
-                  </div>
-                </div> 
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-top">
-                <div class="text-description-center">
-                  <h3> We tried! </h3>
-                  <p class="normal">This is an example using ...</p>
-                </div>
-            </div>
-
-            <hr class="divider">
-
-            <div class="contents-button">
-                <div class="wrapper-small">
-                    <h3 class="title-white">Take me back to the challenge</h3><br/>
-                    <a href="/cup-placemat" class="hvr-grow" target="_self"><button type="button" class="btn-home">Go back</button></a>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div id="Approach3" class="tabcontent">
-        <h3 class="title-white">Approach #3</h3>
-        
-      </div>  -->
-
     <script>
+      // function to open the tabs for the approaches 
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -315,11 +254,13 @@
   </div>
 
   <script>
+    // open navigation menu bar 
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
-  
+
+    // close navigation menu bar 
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -327,7 +268,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();

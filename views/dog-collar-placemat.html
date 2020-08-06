@@ -15,25 +15,19 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 </head>
 <body>
   <div class="container">
+    <!-- heading container for menu button and app name -->
     <div class="top">
-      <!-- <div class="menu-button" onclick=""> 
-        <div class="bar1" style="--delay: 0.00s"></div>
-        <div class="bar2" style="--delay: 0.10s"></div>
-        <div class="bar3" style="--delay: 0.20s"></div>
-      </div>  -->
+      <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+        <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
+      </button>
+      <!-- these are the pages in the menu bar -->
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -57,7 +51,6 @@
         <div class="contents-example">
           <h4>Example(s):</h4>
           <div class="image-sneakpeek2">
-            <!-- <img src="images/cube-hole-view.gif" alt="cube-view-gif" class="challenge-examples"> -->
             <div class="sneakpeek-container">
               <img src="images/dog-collar-view.gif" alt="dog-collar-final" class="challenge-examples">
               <div class="feature-name">Our dog collar</div>
@@ -104,16 +97,16 @@
       </div>
 
       <script>
+        // allows users to click for hints and get a dropdown
         var acc = document.getElementsByClassName("accordion");
         var i;
 
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
+                // Toggle between adding and removing the "active" class, to highlight the button that controls the panel 
                 this.classList.toggle("active");
 
-                /* Toggle between hiding and showing the active panel */
+                // Toggle between hiding and showing the active panel
                 var panel = this.nextElementSibling;
                 if (panel.style.display === "block") {
                     panel.style.display = "none";
@@ -133,7 +126,6 @@
         </div>
         <br/>
         <a href="/dog-collar" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approaches</button></a><br/>
-        <!-- <a href="/cube-hole2" class="hvr-grow" target="_self"><button type="button" class="btn-home">Approach #2</button></a> -->
       </div>
 
       <hr class="divider">
@@ -142,7 +134,6 @@
       <div id="feedback-form">
         <div class="form-container">
           <h3 class="title-white">Tell us how you solved this challenge!</h3>
-          <!-- <p class="normal">Please fill out this quick feedback form and let us know what you think of our app!</p> -->
           <form id="feedback" target="dummy" name="google-sheets">
             <hr>
             <div class="text-input">
@@ -179,16 +170,17 @@
     </div>
   </div>
   <script>
+    // feedback form
     $('#feedback').submit(function () {
       formPost();
       return false;
     });
+    // records data and stores it in Google Sheets
     function formPost() { 
       let url = "https://script.google.com/macros/s/AKfycbxtMOQmGMRpPcJ1TQ8k_S_v6VbGM5BcQF7IXcKMUKOdmTIoEXrr/exec";
       let method = "POST";
       let headers = {"Content-Type": "multipart/form-data"}
       let elements = document.getElementById("feedback").elements;
-      // const form = document.forms['google-sheets'];
       let body = {};
       const formData = new FormData();
       for (var i = 0, element; element = elements[i++];) {
@@ -201,12 +193,12 @@
       console.log(body);
       console.log(formData);
 
-      // fetch(url, { method: method, body: JSON.stringify(body)}).then(res => console.log(res));
       fetch(url, {method: method, body: formData}).then(res => console.log(res));
 
       formSubmitClose();
     }
 
+    // closes the form upon submission 
     function formSubmitClose() { 
       var form = document.getElementById("feedback-form");
       document.getElementById("feedback-form").style.animation = "fadeOut .2s forwards";
@@ -214,11 +206,13 @@
       document.getElementById("form-closed").style.display = "flex";
     }
 
+    // open navigation menu bar
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
   
+    // close navigation menu bar
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -226,7 +220,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();

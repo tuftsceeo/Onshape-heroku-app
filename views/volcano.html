@@ -15,18 +15,20 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="container">
+    <!-- heading container for menu button and app name -->
     <div class="top">
+      <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+        <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
+      </button> 
+      <!-- these are the pages in the menu bar  -->
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -40,17 +42,18 @@
       </div>
       <h2 class="header-text"> Onshape- </h2> 
     </div>
+
     <div class="mid"> 
       <div class="contents-center">
         <h4 id="stroke"> Volcano Approaches </h4><br/>
       </div>
 
+      <!-- tabs for different approaches -->
       <div class="tablink-format">
         <button class="tablink" onclick="openPage('Approach1', this, '#453053')" id="defaultOpen">Approach #1</button>
-<!--         <button class="tablink" onclick="openPage('Approach2', this, '#453053')">Approach #2</button>
-        <button class="tablink" onclick="openPage('Approach3', this, '#453053')">Approach 3</button> -->
       </div>
 
+      <!-- first tab for approach 1 -->
       <div id="Approach1" class="tabcontent">
         <div class="mid">
           <div class="contents-top2">
@@ -384,6 +387,7 @@
       </div>
 
     <script>
+      // open tabs
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -404,11 +408,13 @@
   </div>
 
   <script>
+    // open navigation menu bar
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
   
+    // close navigation menu bar
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -416,7 +422,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();

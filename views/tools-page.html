@@ -15,18 +15,20 @@
 
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/hamburger.css" rel="stylesheet">
-  <!-- <link href="stylesheets/LemonMilkMedium-mLZYV.otf" rel="stylesheet">
-  <link href="stylesheets/LandasansUltraLight-qZYq5.ttf" rel="stylesheet"> -->
 </head>
 
 <body>
   <div class="container">
+    <!-- heading container for menu button and app name -->
     <div class="top">
+      <!-- menu button -->
       <button class="hamburger hamburger--spin" type="button">
+        <!-- transition for menu button -->
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>  
+      </button> 
+      <!-- these are the pages in the menu bar -->
       <div id="popUpNav" class="overlay" onclick="closeNav()">
         <div class="overlay-content">
           <a href="/" target="_self" data-scroll onclick="closeNav()">Home</a>
@@ -40,6 +42,7 @@
       </div>
       <h2 class="header-text"> Tools Page </h2> 
     </div>
+
     <div class="mid"> 
       <div class="contents-center">
         <h3 class="title-white"> Still under construction, check back soon! </h3><br/>
@@ -48,11 +51,13 @@
   </div>
 
   <script>
+    // open navigation menu bar
     function openNav() {
       hamburger.classList.add("is-active");
       document.getElementById("popUpNav").style.display = "block";
     }
   
+    // close navigation menu bar
     function closeNav() {
       hamburger.classList.remove("is-active");
       document.getElementById("popUpNav").style.display = "none";
@@ -60,7 +65,6 @@
   
     // Hamburger Menu Spin
     var hamburger = document.querySelector(".hamburger");
-    // form.addEventListener('click', () => form.classList.contains('submitted') ? formSubmitClose() : 
     hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
   
     closeNav();
