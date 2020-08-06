@@ -148,16 +148,6 @@ body {
     overflow-x: hidden;
 }
 
-/* .contents {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 5px; 
-    background-color: #453053;
-} */
-
 .contents-example {
     display: flex;
     flex-direction: column;
